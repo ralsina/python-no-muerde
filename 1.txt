@@ -120,6 +120,9 @@ Pero... hay que considerar el programa como una criatura en evolución. Tal vez 
 
 La crítica que un programador que conoce OOP [#]_ haría (con justa razón) es que no tenemos encapsulamiento. Que el usuario accede directamente a ``Punto.x`` y ``Punto.y`` por lo que no podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos, etc.
 
+.. [#] Object Oriented Programming, o sea, Programación Orientada a Objetos, pero me
+       niego a usar la abreviatura POO porque pienso en ositos.
+
 Muy bien, supongamos que queremos que el usuario pueda poner sólo valores positivos en x, y que los valores negativos deban ser multiplicados por -1.
 
 En la clase del listado 1, es trivial (muestro sólo la parte que cambia):
@@ -183,6 +186,4 @@ Obviamente esto es casi lo mismo que el listado 1, pero con algunas diferencias:
   Si esos métodos son funcionalmente nulos, cada vez que están en pantalla es como una franja negra de censura de 5 líneas de alto cruzando mi editor. Es *molesto*.
 
 
-
-.. [#] Object Oriented Programming, o sea, Programación Orientada a Objetos, pero me
-       niego a usar la abreviatura POO porque pienso en ositos.
+       
