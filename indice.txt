@@ -166,6 +166,10 @@ Dentro de lo posible, voy a intentar que cada capítulo sea autocontenido, expli
 
    La línea de puntos significa 'no es realmente necesario, pero...'
 
+Acerca del Autor
+~~~~~~~~~~~~~~~~
+
+Habrá que pedirle a alguien que pong algo no demasiado insultante.
 
 .. include:: 1.txt
 
