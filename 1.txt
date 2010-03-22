@@ -209,7 +209,7 @@ Observemos este fragmento de código:
        # en A pero no en B
        return set(a) - set(b)
 
-.. admonition:: Nota
+.. Admonition:: Set
 
    Un set (conjunto) es una estructura de datos que almacena cosas sin repeticiones.
    Por ejemplo, ``set([1,2,3,2])`` es lo mismo que ``set([1, 2, 3])``.
@@ -262,4 +262,111 @@ Al mismo tiempo que da una sensación de libertad (¡Hey, puedo usar dos clases 
 Esa es una diferencia filosófica. Si ``hacerpancho`` verifica que la entrada sea una salchicha, siempre va a producir *por lo menos* un pancho. Nunca va a producir un sandwich con una manguera de jardín en el medio, pero tampoco va a producir un sandwich de portobelos salteados con ciboulette.
 
 Es demasiado fácil imponer restricciones arbitrarias al limitar los tipos de datos aceptables. 
+
+Y por supuesto, si es posible hacer funciones genéricas que funcionan con cualquier tipo medianamente compatible, uno evita tener que implementar veinte variantes de la misma función, cambiando sólo los tipos de argumentos. Evitar esa repetición descerebrante es uno de los grandes beneficios de los lenguajes de programación dinámicos como python.
+
+Genéricos
+~~~~~~~~~
+
+Supongamos que necesito poder crear listas con cantidades arbitrarias de objetos, todos del mismo tipo, inicializados al mismo valor.
+
+.. Admonition:: Comprensión de lista
+
+   En las funciones que siguen, ``[tipo() for i in range(cantidad)]`` se llama una comprensión de lista, y es una forma más compacta de escribir un ``for`` para generar una lista a partir de otra:
+
+   .. code-block:: python
+
+       resultado=[]
+       for i in range(cantidad):
+           resultado.append(tipo())
+
+   No conviene utilizarlo si la expresión es demasiado complicada.
+
+   `Mas información <>`_
+
+Un enfoque ingenuo podría ser este:
+
+.. code-block:: python
+
+    def listadestr(cantidad):
+        return ['' for i in range(cantidad)]
+
+    def listadeint(cantidad):
+        return [0 for i in range(cantidad)]
+
+    # Y así para cada tipo que necesite...
+
+Los defectos de esa solución son obvios. Una mejor solución:
+
+.. code-block:: python
+
+
+    def listadecosas(tipo, cantidad):
+        return [tipo() for i in range(cantidad)]
+
+Esa es una aplicación de programación genérica. Estamos creando código que solo puede tener un efecto cuando, más adelante, lo apliquemos a un tipo. Es un caso extremo de lo mostrado anteriormente, en este caso literalmente el tipo a usar *no importa*. ¡Cualquier tipo que se pueda instanciar sin argumentos sirve!
+
+Desde ya que es posible -- como diría un programador C++ -- "especializar el template":
+
+.. code-block:: pycon
+
+    def templatelistadecosas(tipo):
+        def listadecosas(cantidad):
+            return [tipo() for i in range(cantidad)]
+        return lista
+
+    >>> listadestr=templatelistadecosas(str)
+    >>> listadeint=templatelistadecosas(int)
+    >>>
+    >>> listadestr(10)
+    ['', '', '', '', '', '', '', '', '', '']
+    >>> listadeint(10)
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+El truco de ese fragmento es que ``templatelistadecosas`` crea y devuelve una nueva función cada vez que la invoco con un tipo específico. Esa función es la "especialización" de ``templatelistadecosas``.
+
+Otra forma de hacer lo mismo es utilizar la función ``functools.partial`` de la biblioteca standard:
+
+.. code-block:: python
+
+    import functools
+    def listadecosas(tipo, cantidad):
+        return [tipo() for i in range(cantidad)]
+
+    listadestr=functools.partial(listadecosas, (str))
+    listadeint=functools.partial(listadecosas, (int))
+
+Este enfoque a resolver el problema es más típico de la así llamada "programación funcional", y ``partial`` es una función de orden superior (higher-order function) que es una manera de decir que es una función que se aplica a funciones.
+
+¿Notaron que todo lo que estamos haciendo es crear funciones muy poco específicas?
+
+Por ejemplo, ``listadecosas`` también puede hacer esto:
+
+.. code-block:: python
+
+    import random
+    >>> listaderandom=functools.partial(listadecosas,
+            (lambda : random.randint(0,100)))
+    >>> listaderandom(10)
+    [68, 92, 83, 55, 89, 2, 9, 74, 9, 58]
+
+Después de todo... ¿Quién dijo que ``tipo`` era un tipo de datos? ¡Todo lo que hago con ``tipo`` es ``tipo()``!
+
+O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas que en python se llaman ``callables``.
+
+.. admonition:: lambdas
+
+   ``lambda`` define una "función anónima". EL ejemplo usado es el equivalente de
+
+   .. code-block:: python
+   
+        def f():
+            return random.randint(0,100)
+        listaderandom=functools.partial(listadecosas, f)
+
+   La ventaja de utilizar ``lambda`` es que, si no se necesita utilizarla en otra parte, mantiene la definición de esta función en el lugar donde se usa para evitar tener que buscarlo en otra parte al leer el código.
+
+   `Más información <>`_
+
 

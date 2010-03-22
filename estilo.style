@@ -10,13 +10,15 @@
     "spacing-footer": "5mm"
     },
     "styles" : [
-    [ "listado" , {
-        "parent": "code",
+    [ "code" , {
         "borderWidth": 0,
         "borderPadding": 0,
         "borderColor": null,
         "borderRadius": null,
         "backColor": "white"
+      }],
+    [ "listado" , {
+        "parent": "code"
       }],
     [ "titulo-listado" , {
         "parent": "bodytext",
