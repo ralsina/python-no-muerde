@@ -1,4 +1,14 @@
 {
+  "pageSetup": {
+    "size": "A5",
+    "margin-top": "1cm",
+    "margin-bottom": "1cm",
+    "margin-left": "1cm",
+    "margin-right": "1cm",
+    "margin-gutter": "0cm",
+    "spacing-header": "5mm",
+    "spacing-footer": "5mm"
+    },
     "styles" : [
     [ "listado" , {
         "parent": "code",

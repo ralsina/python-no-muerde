@@ -118,7 +118,7 @@ Si bien sería trivial hacer una función que tome una ``namedtuple`` y calcule 
 
 Pero... hay que considerar el programa como una criatura en evolución. Tal vez al comenzar con una ``namedtuple`` *era suficiente*. No valía la pena demorar lo demás mientras se diseñaba la clase Punto. Y pasar de una ``namedtuple`` a la clase Punto del listado 2 es trivial, ya que la interfaz que presentan es idéntica.
 
-La crítica que un programador que conoce OOP [#] haría (con justa razón) es que no tenemos encapsulamiento. Que el usuario accede directamente a ``Punto.x`` y ``Punto.y`` por lo que no podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos, etc.
+La crítica que un programador que conoce OOP [#]_ haría (con justa razón) es que no tenemos encapsulamiento. Que el usuario accede directamente a ``Punto.x`` y ``Punto.y`` por lo que no podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos, etc.
 
 Muy bien, supongamos que queremos que el usuario pueda poner sólo valores positivos en x, y que los valores negativos deban ser multiplicados por -1.
 
