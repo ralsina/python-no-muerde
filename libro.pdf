@@ -135,7 +135,7 @@ endobj
  /Dest [ 30 0 R
  /XYZ
  34.34646
- 148.3559
+ 160.3559
  0 ]
  /Rect [ 54.34646
  380.6119
@@ -153,7 +153,7 @@ endobj
  /Dest [ 30 0 R
  /XYZ
  34.34646
- 148.3559
+ 160.3559
  0 ]
  /Rect [ 382.1504
  380.6119
@@ -387,11 +387,11 @@ endobj
  /Dest [ 61 0 R
  /XYZ
  40.34646
- 383.9725
+ 413.9725
  0 ]
- /Rect [ 146.2064
+ /Rect [ 141.0197
  490.8119
- 149.5424
+ 144.3557
  502.8119 ]
  /Subtype /Link
  /Type /Annot >>
@@ -441,12 +441,12 @@ endobj
  /Dest [ 61 0 R
  /XYZ
  40.34646
- 359.9725
+ 389.9725
  0 ]
  /Rect [ 307.2128
- 219.6119
+ 231.6119
  310.5488
- 231.6119 ]
+ 243.6119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -459,12 +459,12 @@ endobj
  /Dest [ 61 0 R
  /XYZ
  40.34646
- 299.9725
+ 329.9725
  0 ]
- /Rect [ 261.4316
- 177.6119
- 267.2257
- 189.6119 ]
+ /Rect [ 251.7416
+ 189.6119
+ 255.0776
+ 201.6119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -745,11 +745,11 @@ endobj
  /Dest [ 61 0 R
  /XYZ
  40.34646
- 275.9725
+ 305.9725
  0 ]
- /Rect [ 141.7839
+ /Rect [ 106.3514
  409.2119
- 147.7314
+ 109.6874
  421.2119 ]
  /Subtype /Link
  /Type /Annot >>
@@ -763,11 +763,11 @@ endobj
  /Dest [ 61 0 R
  /XYZ
  40.34646
- 263.9725
+ 293.9725
  0 ]
- /Rect [ 209.1065
+ /Rect [ 165.0905
  397.2119
- 212.4425
+ 168.4265
  409.2119 ]
  /Subtype /Link
  /Type /Annot >>
@@ -822,11 +822,11 @@ endobj
  /Dest [ 61 0 R
  /XYZ
  40.34646
- 239.9725
+ 269.9725
  0 ]
- /Rect [ 219.3104
+ /Rect [ 219.0324
  87.11899
- 225.8129
+ 222.3684
  99.11899 ]
  /Subtype /Link
  /Type /Annot >>
@@ -936,9 +936,9 @@ endobj
  503.8119
  0 ]
  /Rect [ 40.34646
- 370.9725
+ 400.9725
  44.79446
- 382.9725 ]
+ 412.9725 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -951,12 +951,12 @@ endobj
  /Dest [ 30 0 R
  /XYZ
  299.7945
- 232.6119
+ 244.6119
  0 ]
  /Rect [ 40.34646
- 346.9725
+ 376.9725
  44.79446
- 358.9725 ]
+ 388.9725 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -969,12 +969,12 @@ endobj
  /Dest [ 30 0 R
  /XYZ
  253.5305
- 190.6119
+ 202.6119
  0 ]
  /Rect [ 40.34646
- 286.9725
+ 316.9725
  44.79446
- 298.9725 ]
+ 328.9725 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -986,13 +986,13 @@ endobj
  /Contents ()
  /Dest [ 47 0 R
  /XYZ
- 137.0665
+ 105.9385
  422.2119
  0 ]
  /Rect [ 40.34646
- 262.9725
+ 292.9725
  44.79446
- 274.9725 ]
+ 304.9725 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1004,13 +1004,13 @@ endobj
  /Contents ()
  /Dest [ 47 0 R
  /XYZ
- 209.1065
+ 165.0905
  410.2119
  0 ]
  /Rect [ 40.34646
- 250.9725
+ 280.9725
  44.79446
- 262.9725 ]
+ 292.9725 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1026,9 +1026,9 @@ endobj
  100.119
  0 ]
  /Rect [ 40.34646
- 226.9725
+ 256.9725
  44.79446
- 238.9725 ]
+ 268.9725 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1068,8 +1068,8 @@ endobj
 endobj
 % 'R63': class PDFInfo 
 63 0 obj
-<< /Author ()
- /CreationDate (D:20100322142930+03'00')
+<< /Author (Roberto Alsina <ralsina@netmanagers.com.ar>)
+ /CreationDate (D:20100322145333+03'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
@@ -1112,7 +1112,7 @@ endobj
 << /Dest [ 30 0 R
  /XYZ
  34.34646
- 148.3559
+ 160.3559
  0 ]
  /Next 68 0 R
  /Parent 65 0 R
@@ -1200,7 +1200,7 @@ endobj
 % 'R74': class PDFStream 
 74 0 obj
 % page stream
-<< /Length 3275 >>
+<< /Length 3143 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -1222,14 +1222,13 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 49.04737 0 Td (Autor:) Tj T* -49.04737 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 49.04737 0 Td 12 TL /F2 8 Tf 0 0 0 rg (Autor:) Tj T* -49.04737 0 Td ET
 Q
 Q
 q
 1 0 0 1 91.03937 3 cm
 q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Roberto Alsina <) Tj 0 0 .501961 rg (ralsina@netmanagers.com.ar) Tj 0 0 0 rg (>) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Roberto Alsina ) Tj (<) Tj 0 0 .501961 rg (ralsina@netmanagers.com.ar) Tj 0 0 0 rg (>) Tj T* ET
 Q
 Q
 q
@@ -1242,15 +1241,13 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 41.03137 0 Td (Versi\363n:) Tj T* -41.03137 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 41.03137 0 Td 12 TL /F2 8 Tf 0 0 0 rg (Versi\363n:) Tj T* -41.03137 0 Td ET
 Q
 Q
 q
 1 0 0 1 91.03937 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (a49421b5f7fd) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (a49421b5f7fd) Tj T* ET
 Q
 Q
 q
@@ -1259,7 +1256,7 @@ Q
 q
 1 0 0 1 34.34646 432.3559 cm
 q
-BT 1 0 0 1 0 6.748 Tm 16.8 TL /F2 14 Tf 0 0 0 rg (Contents) Tj T* ET
+BT 1 0 0 1 0 6.748 Tm 16.8 TL /F2 14 Tf 0 0 0 rg (Contenido) Tj T* ET
 Q
 Q
 q
@@ -1275,9 +1272,7 @@ Q
 q
 1 0 0 1 280.252 129 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 67.552 0 Td (2) Tj T* -67.552 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 67.552 0 Td 12 TL /F2 8 Tf 0 0 .501961 rg (2) Tj T* -67.552 0 Td ET
 Q
 Q
 q
@@ -1289,9 +1284,7 @@ Q
 q
 1 0 0 1 280.252 111 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 67.552 0 Td (2) Tj T* -67.552 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 67.552 0 Td 12 TL /F1 8 Tf 0 0 .501961 rg (2) Tj T* -67.552 0 Td ET
 Q
 Q
 q
@@ -1303,9 +1296,7 @@ Q
 q
 1 0 0 1 280.252 93 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 67.552 0 Td (2) Tj T* -67.552 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 67.552 0 Td 12 TL /F1 8 Tf 0 0 .501961 rg (2) Tj T* -67.552 0 Td ET
 Q
 Q
 q
@@ -1317,9 +1308,7 @@ Q
 q
 1 0 0 1 280.252 75 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 67.552 0 Td (4) Tj T* -67.552 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 67.552 0 Td 12 TL /F1 8 Tf 0 0 .501961 rg (4) Tj T* -67.552 0 Td ET
 Q
 Q
 q
@@ -1331,9 +1320,7 @@ Q
 q
 1 0 0 1 280.252 57 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 67.552 0 Td (6) Tj T* -67.552 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 67.552 0 Td 12 TL /F1 8 Tf 0 0 .501961 rg (6) Tj T* -67.552 0 Td ET
 Q
 Q
 q
@@ -1345,9 +1332,7 @@ Q
 q
 1 0 0 1 280.252 39 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 67.552 0 Td (7) Tj T* -67.552 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 67.552 0 Td 12 TL /F2 8 Tf 0 0 .501961 rg (7) Tj T* -67.552 0 Td ET
 Q
 Q
 q
@@ -1359,9 +1344,7 @@ Q
 q
 1 0 0 1 280.252 21 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 67.552 0 Td (7) Tj T* -67.552 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 67.552 0 Td 12 TL /F1 8 Tf 0 0 .501961 rg (7) Tj T* -67.552 0 Td ET
 Q
 Q
 q
@@ -1373,9 +1356,7 @@ Q
 q
 1 0 0 1 280.252 3 cm
 q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 63.104 0 Td (11) Tj T* -63.104 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 63.104 0 Td 12 TL /F1 8 Tf 0 0 .501961 rg (11) Tj T* -63.104 0 Td ET
 Q
 Q
 q
@@ -1391,7 +1372,7 @@ endobj
 % 'R75': class PDFStream 
 75 0 obj
 % page stream
-<< /Length 4170 >>
+<< /Length 4751 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -1407,27 +1388,25 @@ BT 1 0 0 1 0 5.784 Tm 14.4 TL /F2 12 Tf 0 0 0 rg (Requisitos) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 461.5559 cm
+1 0 0 1 34.34646 473.5559 cm
 q
-BT 1 0 0 1 0 30.256 Tm .856665 Tw 12 TL /F1 8 Tf 0 0 0 rg (\311ste es un libro sobre Python ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (1) Tj /F1 8 Tf 0 0 0 rg 0 Ts (. Es un libro que trata de explicar una manera posible de usarlo,) Tj T* 0 Tw 1.207292 Tw (una manera de tomar una idea de tu cabeza y convertirla en un programa, que puedas usar y) Tj T* 0 Tw (compartir.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.007791 Tw 12 TL /F1 8 Tf 0 0 0 rg (\311ste es un libro sobre Python ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (1) Tj /F1 8 Tf 0 0 0 rg 0 Ts (. Es un libro que trata de explicar una manera posible de usarlo, una) Tj T* 0 Tw (manera de tomar una idea de tu cabeza y convertirla en un programa, que puedas usar y compartir.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 443.5559 cm
+1 0 0 1 34.34646 455.5559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (\277Qu\351 necesit\341s saber para poder leer este libro?) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (\277Qu\351 necesit\341s saber para poder leer este libro?) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 401.5559 cm
+1 0 0 1 34.34646 413.5559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 30.256 Tm /F1 8 Tf 12 TL 1.268419 Tw (El libro no va a explicar la sintaxis de python, sino que va a asumir que la conoc\351s. De todas) Tj T* 0 Tw .144248 Tw (formas, la primera vez que aparezca algo nuevo, va a indicar d\363nde se puede aprender m\341s sobre) Tj T* 0 Tw (ello. Por ejemplo:) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm -0.239802 Tw 12 TL /F1 8 Tf 0 0 0 rg (El libro no va a explicar la sintaxis de python, sino que va a asumir que la conoc\351s. De todas formas,) Tj T* 0 Tw -0.021414 Tw (la primera vez que aparezca algo nuevo, va a indicar d\363nde se puede aprender m\341s sobre ello. Por) Tj T* 0 Tw (ejemplo:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 356.3559 cm
+1 0 0 1 34.34646 368.3559 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -1447,10 +1426,10 @@ Q
 Q
 Q
 q
-1 0 0 1 34.34646 336.3559 cm
+1 0 0 1 34.34646 348.3559 cm
 Q
 q
-1 0 0 1 34.34646 268.3559 cm
+1 0 0 1 34.34646 280.3559 cm
 .960784 .960784 .862745 rg
 n 0 68 352.252 -68 re f*
 0 0 0 rg
@@ -1459,14 +1438,13 @@ BT 1 0 0 1 6 42 Tm  T* ET
 q
 1 0 0 1 16 40 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F7 10 Tf 12 TL (Referencia) Tj T* ET
+BT 1 0 0 1 0 4.82 Tm 12 TL /F7 10 Tf 0 0 0 rg (Referencia) Tj T* ET
 Q
 Q
 q
 1 0 0 1 16 16 cm
 q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Eso es una ) Tj 1 0 0 rg (`comprensi\363n de lista <) Tj (>) Tj (`_) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Eso es una ) Tj 1 0 0 rg (`comprensi\363n de lista ) Tj (<) Tj (>) Tj (`_) Tj T* ET
 Q
 Q
 q
@@ -1481,57 +1459,46 @@ n 352.252 0 m 352.252 68 l S
 Q
 Q
 q
-1 0 0 1 34.34646 262.3559 cm
+1 0 0 1 34.34646 274.3559 cm
 Q
 q
-1 0 0 1 34.34646 232.3559 cm
+1 0 0 1 34.34646 244.3559 cm
 q
-BT 1 0 0 1 0 18.256 Tm .746398 Tw 12 TL /F1 8 Tf 0 0 0 rg (En general esas referencias van a llevarte al ) Tj 1 0 0 rg (`Tutorial de Python <) Tj (>) Tj (`_ ) Tj 0 0 0 rg (en castellano. En general,) Tj T* 0 Tw (ese libro contiene toda la informaci\363n acerca del lenguaje que se necesita para poder seguir \351ste.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.245252 Tw 12 TL /F1 8 Tf 0 0 0 rg (En general esas referencias van a llevarte al ) Tj 1 0 0 rg (`Tutorial de Python ) Tj (<) Tj (>) Tj (`_) Tj 0 0 0 rg ( en castellano. En general, ese) Tj T* 0 Tw (libro contiene toda la informaci\363n acerca del lenguaje que se necesita para poder seguir \351ste.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 190.3559 cm
+1 0 0 1 34.34646 202.3559 cm
 q
 BT 1 0 0 1 0 30.256 Tm .674398 Tw 12 TL /F1 8 Tf 0 0 0 rg (Cuando una aplicaci\363n requiera una interfaz gr\341fica, vamos a utilizar PyQt ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (2) Tj /F1 8 Tf 0 0 0 rg 0 Ts (. No vamos a asumir) Tj T* 0 Tw 1.212283 Tw (ning\372n conocimiento previo de PyQt pero tampoco se va a explicar en detalle, excepto cuando) Tj T* 0 Tw (involucre un concepto nuevo.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 160.3559 cm
+1 0 0 1 34.34646 172.3559 cm
 q
-BT 1 0 0 1 0 18.256 Tm .790116 Tw 12 TL /F1 8 Tf 0 0 0 rg (Por ejemplo, no voy a explicar el significado de ) Tj /F5 8 Tf (setEnabled) Tj /F1 8 Tf ( ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (3 ) Tj /F1 8 Tf 0 0 0 rg 0 Ts (pero s\355 el concepto de signals y) Tj T* 0 Tw (slots cuando haga falta.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.178891 Tw 12 TL /F1 8 Tf 0 0 0 rg (Por ejemplo, no voy a explicar el significado de ) Tj /F5 8 Tf (setEnabled) Tj /F1 8 Tf ( ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (3) Tj /F1 8 Tf 0 0 0 rg 0 Ts ( pero s\355 el concepto de signals y slots) Tj T* 0 Tw (cuando haga falta.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 133.9559 cm
+1 0 0 1 34.34646 145.9559 cm
 q
 BT 1 0 0 1 0 5.784 Tm 14.4 TL /F2 12 Tf 0 0 0 rg (Convenciones) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 103.9559 cm
+1 0 0 1 34.34646 115.9559 cm
 q
-BT 1 0 0 1 0 18.256 Tm 1.943712 Tw 12 TL /F1 8 Tf 0 0 0 rg (Las variables, funciones y palabras reservadas de python se mostrar\341n en el texto con letra) Tj T* 0 Tw (monoespaciada. Por ejemplo, ) Tj /F5 8 Tf (for ) Tj /F1 8 Tf (es una palabra reservada.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 1.943712 Tw 12 TL /F1 8 Tf 0 0 0 rg (Las variables, funciones y palabras reservadas de python se mostrar\341n en el texto con letra) Tj T* 0 Tw (monoespaciada. Por ejemplo, ) Tj /F5 8 Tf (for) Tj /F1 8 Tf ( es una palabra reservada.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 85.95591 cm
+1 0 0 1 34.34646 97.95591 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Los fragmentos de c\363digo fuente se va a mostrar en cajas:) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Los fragmentos de c\363digo fuente se va a mostrar en cajas:) Tj T* ET
 Q
 Q
- 
-endstream
-
-endobj
-% 'R76': class PDFStream 
-76 0 obj
-% page stream
-<< /Length 972 >>
-stream
-1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 509.5559 cm
+1 0 0 1 34.34646 52.75591 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -1550,15 +1517,24 @@ Q
 Q
 Q
 Q
+ 
+endstream
+
+endobj
+% 'R76': class PDFStream 
+76 0 obj
+% page stream
+<< /Length 383 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 477.5559 cm
+1 0 0 1 34.34646 522.7559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 1.888921 Tw (Los listados extensos o programas completos se incluir\341n sin cajas, separados del texto con) Tj T* 0 Tw (l\355neas, mostrar\341n n\372mero de l\355nea e indicar\341n el nombre del mismo:) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.088288 Tw 12 TL /F1 8 Tf 0 0 0 rg (Los listados extensos o programas completos se incluir\341n sin cajas, separados del texto con l\355neas,) Tj T* 0 Tw (mostrar\341n n\372mero de l\355nea e indicar\341n el nombre del mismo:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 477.5559 cm
+1 0 0 1 34.34646 522.7559 cm
 Q
  
 endstream
@@ -1567,7 +1543,7 @@ endobj
 % 'R77': class PDFStream 
 77 0 obj
 % page stream
-<< /Length 5669 >>
+<< /Length 5674 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -1577,8 +1553,7 @@ Q
 q
 1 0 0 1 34.34646 506.4094 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 300.236 0 Td (cuadrados.py) Tj T* -300.236 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 300.236 0 Td 12 TL /F2 8 Tf 0 0 0 rg (cuadrados.py) Tj T* -300.236 0 Td ET
 Q
 Q
 q
@@ -1612,15 +1587,13 @@ Q
 q
 1 0 0 1 34.34646 381.463 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .626398 Tw (Dentro de lo posible, voy a intentar que cada cap\355tulo sea autocontenido, explicando un tema sin) Tj T* 0 Tw (depender demasiado de los otros, y terminando con un ejemplo concreto y funcional.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .626398 Tw 12 TL /F1 8 Tf 0 0 0 rg (Dentro de lo posible, voy a intentar que cada cap\355tulo sea autocontenido, explicando un tema sin) Tj T* 0 Tw (depender demasiado de los otros, y terminando con un ejemplo concreto y funcional.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 363.463 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (\311stos son los cap\355tulos del libro, con breves descripciones.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (\311stos son los cap\355tulos del libro, con breves descripciones.) Tj T* ET
 Q
 Q
 q
@@ -1636,15 +1609,13 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (1.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (1.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Introducci\363n) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Introducci\363n) Tj T* ET
 Q
 Q
 q
@@ -1663,21 +1634,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 45 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (2.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (2.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 45 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Pensar en python) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Pensar en python) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-BT 1 0 0 1 0 30.256 Tm .911198 Tw 12 TL /F1 8 Tf 0 0 0 rg (Programar en python, a veces, no es como programar en otros lenguajes. Ac\341 vas a ver) Tj T* 0 Tw .658248 Tw (algunos ejemplos. Si te gustan) Tj (\205 python es para vos. Si no te gustan) Tj (\205 bueno, el libro es) Tj T* 0 Tw (barato) Tj (\205 capaz que Java es lo tuyo..) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm .911198 Tw 12 TL /F1 8 Tf 0 0 0 rg (Programar en python, a veces, no es como programar en otros lenguajes. Ac\341 vas a ver) Tj T* 0 Tw .658248 Tw (algunos ejemplos. Si te gustan) Tj (\205) Tj ( python es para vos. Si no te gustan) Tj (\205) Tj ( bueno, el libro es) Tj T* 0 Tw (barato) Tj (\205) Tj ( capaz que Java es lo tuyo..) Tj T* ET
 Q
 Q
 q
@@ -1696,21 +1665,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (3.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (3.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (La vida es corta) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (La vida es corta) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-BT 1 0 0 1 0 18.256 Tm 1.443998 Tw 12 TL /F1 8 Tf 0 0 0 rg (Por eso, hay muchas cosas que no vale la pena hacer. Claro, yo estoy escribiendo un) Tj T* 0 Tw (editor de textos as\355 que este cap\355tulo es pura hipocres\355a) Tj (\205) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.035752 Tw 12 TL /F1 8 Tf 0 0 0 rg (Por eso, hay muchas cosas que no vale la pena hacer. Claro, yo estoy escribiendo un editor) Tj T* 0 Tw (de textos as\355 que este cap\355tulo es pura hipocres\355a) Tj (\205) Tj T* ET
 Q
 Q
 q
@@ -1729,21 +1696,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (4.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (4.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Las capas de una aplicaci\363n) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Las capas de una aplicaci\363n) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-BT 1 0 0 1 0 18.256 Tm 2.01127 Tw 12 TL /F1 8 Tf 0 0 0 rg (Batman, los alfajores santafesinos, el ozono) Tj (\205 las mejores cosas tienen capas. C\363mo) Tj T* 0 Tw (organizar una aplicaci\363n en capas.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 2.01127 Tw 12 TL /F1 8 Tf 0 0 0 rg (Batman, los alfajores santafesinos, el ozono) Tj (\205) Tj ( las mejores cosas tienen capas. C\363mo) Tj T* 0 Tw (organizar una aplicaci\363n en capas.) Tj T* ET
 Q
 Q
 q
@@ -1762,22 +1727,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (5.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (5.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Documentaci\363n y testing) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Documentaci\363n y testing) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Documentar es testear. Testear es documentar.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Documentar es testear. Testear es documentar.) Tj T* ET
 Q
 Q
 q
@@ -1796,22 +1758,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (6.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (6.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (La GUI es la parte f\341cil) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (La GUI es la parte f\341cil) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 1.666151 Tw (Lo dif\355cil es saber que quer\351s. Lamentablemente este cap\355tulo te muestra lo f\341cil. Una) Tj T* 0 Tw (introducci\363n r\341pida a PyQt.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 1.666151 Tw 12 TL /F1 8 Tf 0 0 0 rg (Lo dif\355cil es saber que quer\351s. Lamentablemente este cap\355tulo te muestra lo f\341cil. Una) Tj T* 0 Tw (introducci\363n r\341pida a PyQt.) Tj T* ET
 Q
 Q
 q
@@ -1830,22 +1789,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (7.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (7.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Dise\361o de interfaz gr\341fica) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Dise\361o de interfaz gr\341fica) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 1.135712 Tw (Visto desde la mirada del programador. C\363mo hacer para no meterse en un callej\363n sin) Tj T* 0 Tw (salida. C\363mo hacerle caso a un dise\361ador.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 1.135712 Tw 12 TL /F1 8 Tf 0 0 0 rg (Visto desde la mirada del programador. C\363mo hacer para no meterse en un callej\363n sin) Tj T* 0 Tw (salida. C\363mo hacerle caso a un dise\361ador.) Tj T* ET
 Q
 Q
 q
@@ -1864,7 +1820,7 @@ endobj
 % 'R78': class PDFStream 
 78 0 obj
 % page stream
-<< /Length 4224 >>
+<< /Length 4255 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -1874,22 +1830,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (8.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (8.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Un programa \372til) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Un programa \372til) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Integremos las cosas que vimos 4`antes y us\351moslas para algo.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Integremos las cosas que vimos 4`antes y us\351moslas para algo.) Tj T* ET
 Q
 Q
 q
@@ -1908,22 +1861,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 7.328 0 Td (9.) Tj T* -7.328 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 7.328 0 Td 12 TL /F1 8 Tf 0 0 0 rg (9.) Tj T* -7.328 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Instalaci\363n, deployment y otras yerbas) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Instalaci\363n, deployment y otras yerbas) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Hacer que tu programa funcione en la computadora de otra gente) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Hacer que tu programa funcione en la computadora de otra gente) Tj T* ET
 Q
 Q
 q
@@ -1942,21 +1892,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 2.88 0 Td (10.) Tj T* -2.88 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 2.88 0 Td 12 TL /F1 8 Tf 0 0 0 rg (10.) Tj T* -2.88 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (C\363mo crear un proyecto de software libre) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (C\363mo crear un proyecto de software libre) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-BT 1 0 0 1 0 18.256 Tm 2.414179 Tw 12 TL /F1 8 Tf 0 0 0 rg (\277C\363mo se hace? \277Qu\351 se necesita? \277Me conviene? Las respuestas son \223) Tj (depende) Tj (\224) Tj (,) Tj T* 0 Tw (\223) Tj (ganas) Tj (\224 y \223) Tj (a veces) Tj (\224) Tj (. O \223) Tj (as\355) Tj (\224) Tj (, \223) Tj (una idea) Tj (\224 y \223) Tj (s\355) Tj (\224) Tj (. O sea, no s\351. Pero veamos.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.232336 Tw 12 TL /F1 8 Tf 0 0 0 rg (\277C\363mo se hace? \277Qu\351 se necesita? \277Me conviene? Las respuestas son ) Tj (\223) Tj (depende) Tj (\224) Tj (, ) Tj (\223) Tj (ganas) Tj (\224) Tj T* 0 Tw (y ) Tj (\223) Tj (a veces) Tj (\224) Tj (. O ) Tj (\223) Tj (as\355) Tj (\224) Tj (, ) Tj (\223) Tj (una idea) Tj (\224) Tj ( y ) Tj (\223) Tj (s\355) Tj (\224) Tj (. O sea, no s\351. Pero veamos.) Tj T* ET
 Q
 Q
 q
@@ -1975,22 +1923,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 2.88 0 Td (11.) Tj T* -2.88 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 2.88 0 Td 12 TL /F1 8 Tf 0 0 0 rg (11.) Tj T* -2.88 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Rebeli\363n contra el Zen) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Rebeli\363n contra el Zen) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .212997 Tw (Cu\341ndo es mejor impl\355cito que expl\355cito? \277Cu\341ndo es algo lo suficientemente especial para) Tj T* 0 Tw (ser, realmente, especial?) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .212997 Tw 12 TL /F1 8 Tf 0 0 0 rg (Cu\341ndo es mejor impl\355cito que expl\355cito? \277Cu\341ndo es algo lo suficientemente especial para) Tj T* 0 Tw (ser, realmente, especial?) Tj T* ET
 Q
 Q
 q
@@ -2009,22 +1954,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 2.88 0 Td (12.) Tj T* -2.88 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 2.88 0 Td 12 TL /F1 8 Tf 0 0 0 rg (12.) Tj T* -2.88 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Herramientas) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Herramientas) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Programar tiene m\341s en com\372n con la carpinter\355a que con la arquitectura.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Programar tiene m\341s en com\372n con la carpinter\355a que con la arquitectura.) Tj T* ET
 Q
 Q
 q
@@ -2043,22 +1985,19 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 2.88 0 Td (13.) Tj T* -2.88 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 2.88 0 Td 12 TL /F1 8 Tf 0 0 0 rg (13.) Tj T* -2.88 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Conclusiones, caminos y rutas de escape) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Conclusiones, caminos y rutas de escape) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (\277Y ahora qu\351?) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (\277Y ahora qu\351?) Tj T* ET
 Q
 Q
 q
@@ -2073,8 +2012,7 @@ Q
 q
 1 0 0 1 34.34646 276.7559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 1.401426 Tw (Este es un diagrama de dependencias. Cada cap\355tulo tiene flechas que lo conectan desde los) Tj T* 0 Tw (cap\355tulos que necesit\341s haber le\355do anteriormente.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 1.401426 Tw 12 TL /F1 8 Tf 0 0 0 rg (Este es un diagrama de dependencias. Cada cap\355tulo tiene flechas que lo conectan desde los) Tj T* 0 Tw (cap\355tulos que necesit\341s haber le\355do anteriormente.) Tj T* ET
 Q
 Q
 q
@@ -2086,7 +2024,7 @@ Q
 q
 1 0 0 1 34.34646 240.7559 cm
 q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (La l\355nea de puntos significa \221) Tj (no es realmente necesario, pero) Tj (\205) Tj (\222) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (La l\355nea de puntos significa ) Tj (\221) Tj (no es realmente necesario, pero) Tj (\205) Tj (\222) Tj T* ET
 Q
 Q
  
@@ -2096,7 +2034,7 @@ endobj
 % 'R79': class PDFStream 
 79 0 obj
 % page stream
-<< /Length 654 >>
+<< /Length 652 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -2110,8 +2048,7 @@ Q
 q
 1 0 0 1 6 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F8 8 Tf 12 TL 109.43 0 Td (Este libro se lee siguiendo las flechas) Tj T* -109.43 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 109.43 0 Td 12 TL /F8 8 Tf 0 0 0 rg (Este libro se lee siguiendo las flechas) Tj T* -109.43 0 Td ET
 Q
 Q
 q
@@ -2126,8 +2063,7 @@ Q
 q
 1 0 0 1 34.34646 127.0237 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Habr\341 que pedirle a alguien que pong algo no demasiado insultante.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Habr\341 que pedirle a alguien que pong algo no demasiado insultante.) Tj T* ET
 Q
 Q
 q
@@ -2140,7 +2076,7 @@ endobj
 % 'R80': class PDFStream 
 80 0 obj
 % page stream
-<< /Length 4074 >>
+<< /Length 4105 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -2160,8 +2096,7 @@ BT 1 0 0 1 0 5 Tm  T* ET
 q
 1 0 0 1 23 21 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 30.256 Tm /F1 8 Tf 12 TL .317598 Tw (Lo triste es que esta pobre gente trabaj\363 mucho m\341s de lo necesario, para producir mucho) Tj T* 0 Tw .605844 Tw (m\341s c\363digo del necesario, que funciona mucho m\341s lento que el c\363digo python idiom\341tico) Tj T* 0 Tw (correspondiente.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm .317598 Tw 12 TL /F1 8 Tf 0 0 0 rg (Lo triste es que esta pobre gente trabaj\363 mucho m\341s de lo necesario, para producir mucho) Tj T* 0 Tw .605844 Tw (m\341s c\363digo del necesario, que funciona mucho m\341s lento que el c\363digo python idiom\341tico) Tj T* 0 Tw (correspondiente.) Tj T* ET
 Q
 Q
 q
@@ -2179,14 +2114,13 @@ Q
 q
 1 0 0 1 34.34646 391.9559 cm
 q
-BT 1 0 0 1 0 54.256 Tm .361865 Tw 12 TL /F1 8 Tf 0 0 0 rg (Nuestra misi\363n en este cap\355tulo es pensar en qu\351 quiere decir Eby con \223) Tj (c\363digo python idiom\341tico) Tj (\224) Tj T* 0 Tw .945645 Tw (en esa cita. Nunca nadie va a poder hacer un python\363metro que te mida cu\341n idiom\341tico es un) Tj T* 0 Tw 1.726131 Tw (fragmento de c\363digo, pero es posible desarrollar un instinto, una \223) Tj (nariz) Tj (\224 para sentir el \223) Tj (olor a) Tj T* 0 Tw .943498 Tw (python) Tj (\224) Tj (, as\355 como un en\363filo ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (4 ) Tj /F1 8 Tf 0 0 0 rg 0 Ts (aprende a distinguir el aroma a clavos de hierro-n\355quel n\372mero 7) Tj T* 0 Tw (ligeramente oxidados en un cabernet sauvignon. ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (5) Tj T* ET
+BT 1 0 0 1 0 54.256 Tm .361865 Tw 12 TL /F1 8 Tf 0 0 0 rg (Nuestra misi\363n en este cap\355tulo es pensar en qu\351 quiere decir Eby con ) Tj (\223) Tj (c\363digo python idiom\341tico) Tj (\224) Tj T* 0 Tw .945645 Tw (en esa cita. Nunca nadie va a poder hacer un python\363metro que te mida cu\341n idiom\341tico es un) Tj T* 0 Tw -0.327252 Tw (fragmento de c\363digo, pero es posible desarrollar un instinto, una ) Tj (\223) Tj (nariz) Tj (\224) Tj ( para sentir el ) Tj (\223) Tj (olor a python) Tj (\224) Tj (,) Tj T* 0 Tw .103248 Tw (as\355 como un en\363filo ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (4) Tj /F1 8 Tf 0 0 0 rg 0 Ts ( aprende a distinguir el aroma a clavos de hierro-n\355quel n\372mero 7 ligeramente) Tj T* 0 Tw (oxidados en un cabernet sauvignon. ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (5) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 361.9559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .628598 Tw (Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer el c\363digo es ver) Tj T* 0 Tw (c\363digo.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .628598 Tw 12 TL /F1 8 Tf 0 0 0 rg (Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer el c\363digo es ver) Tj T* 0 Tw (c\363digo.) Tj T* ET
 Q
 Q
 q
@@ -2208,29 +2142,25 @@ BT 1 0 0 1 6 138 Tm  T* ET
 q
 1 0 0 1 16 136 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F7 10 Tf 12 TL (Analog\355a rebuscada) Tj T* ET
+BT 1 0 0 1 0 4.82 Tm 12 TL /F7 10 Tf 0 0 0 rg (Analog\355a rebuscada) Tj T* ET
 Q
 Q
 q
 1 0 0 1 16 76 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 42.256 Tm /F1 8 Tf 12 TL .301065 Tw (En un almac\351n, para tener un paquete de yerba, hay que ped\355rselo al almacenero. En un) Tj T* 0 Tw .131712 Tw (supermercado, para tener un paquete de yerba, hay que agarrar un paquete de yerba. En) Tj T* 0 Tw 1.339712 Tw (una farmacia \(de las grandes\), para obtener un paquete de yerba hay que agarrar un) Tj T* 0 Tw (paquete de yerba, pero para tener un Lexotanil hay que pedirlo al farmac\351utico.) Tj T* ET
+BT 1 0 0 1 0 42.256 Tm .301065 Tw 12 TL /F1 8 Tf 0 0 0 rg (En un almac\351n, para tener un paquete de yerba, hay que ped\355rselo al almacenero. En un) Tj T* 0 Tw .131712 Tw (supermercado, para tener un paquete de yerba, hay que agarrar un paquete de yerba. En) Tj T* 0 Tw 1.339712 Tw (una farmacia \(de las grandes\), para obtener un paquete de yerba hay que agarrar un) Tj T* 0 Tw (paquete de yerba, pero para tener un Lexotanil hay que pedirlo al farmac\351utico.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 16 46 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 3.122997 Tw (En Java o C++, la costumbre es escribir programas como almacenes, porque la) Tj T* 0 Tw (alternativa es escribir supermercados donde chicos de 5 compran raticida.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.127079 Tw 12 TL /F1 8 Tf 0 0 0 rg (En Java o C++, la costumbre es escribir programas como almacenes, porque la alternativa) Tj T* 0 Tw (es escribir supermercados donde chicos de 5 compran raticida.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 16 16 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .536361 Tw (En Python, la costumbre es escribir programas como supermercados, porque se pueden) Tj T* 0 Tw (convertir en farmacias apenas decidamos que tener raticida es buena idea.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .536361 Tw 12 TL /F1 8 Tf 0 0 0 rg (En Python, la costumbre es escribir programas como supermercados, porque se pueden) Tj T* 0 Tw (convertir en farmacias apenas decidamos que tener raticida es buena idea.) Tj T* ET
 Q
 Q
 q
@@ -2250,7 +2180,7 @@ Q
 q
 1 0 0 1 34.34646 117.5559 cm
 q
-BT 1 0 0 1 0 18.256 Tm .896331 Tw 12 TL /F1 8 Tf 0 0 0 rg (Imaginemos que estamos escribiendo un programa que trabaja con \223) Tj (puntos) Tj (\224 o sea coordenadas) Tj T* 0 Tw (\(X,Y\), y que queremos implementarlos con una clase. Por ejemplo:) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .896331 Tw 12 TL /F1 8 Tf 0 0 0 rg (Imaginemos que estamos escribiendo un programa que trabaja con ) Tj (\223) Tj (puntos) Tj (\224) Tj ( o sea coordenadas) Tj T* 0 Tw (\(X,Y\), y que queremos implementarlos con una clase. Por ejemplo:) Tj T* ET
 Q
 Q
 q
@@ -2260,8 +2190,7 @@ Q
 q
 1 0 0 1 34.34646 77.20945 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 317.132 0 Td (Listado 1) Tj T* -317.132 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 317.132 0 Td 12 TL /F2 8 Tf 0 0 0 rg (Listado 1) Tj T* -317.132 0 Td ET
 Q
 Q
  
@@ -2271,7 +2200,7 @@ endobj
 % 'R81': class PDFStream 
 81 0 obj
 % page stream
-<< /Length 3380 >>
+<< /Length 3385 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -2299,21 +2228,19 @@ Q
 q
 1 0 0 1 34.34646 264.2094 cm
 q
-BT 1 0 0 1 0 42.256 Tm .757844 Tw 12 TL /F1 8 Tf 0 0 0 rg (\311sa es una implementaci\363n perfectamente respetable de un punto. Guarda X, guarda Y, permite) Tj T* 0 Tw 1.260939 Tw (volver a averiguar sus valores) Tj (\205 el problema es que eso no es python. Eso es C++. Claro, un) Tj T* 0 Tw .292469 Tw (compilador C++ se negar\355a a procesarlo, pero a m\355 no me enga\361an tan f\341cil, eso ) Tj /F2 8 Tf (es C++ ) Tj /F1 8 Tf (reescrito) Tj T* 0 Tw (para que parezca python.) Tj T* ET
+BT 1 0 0 1 0 42.256 Tm .757844 Tw 12 TL /F1 8 Tf 0 0 0 rg (\311sa es una implementaci\363n perfectamente respetable de un punto. Guarda X, guarda Y, permite) Tj T* 0 Tw 1.260939 Tw (volver a averiguar sus valores) Tj (\205) Tj ( el problema es que eso no es python. Eso es C++. Claro, un) Tj T* 0 Tw .292469 Tw (compilador C++ se negar\355a a procesarlo, pero a m\355 no me enga\361an tan f\341cil, eso ) Tj /F2 8 Tf (es C++) Tj /F1 8 Tf ( reescrito) Tj T* 0 Tw (para que parezca python.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 234.2094 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 3.372283 Tw (\277Porqu\351 eso no es python? Por el obvio abuso de los m\351todos de acceso \(accessors,) Tj T* 0 Tw (getter/setters\), que son completamente innecesarios.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.439202 Tw 12 TL /F1 8 Tf 0 0 0 rg (\277Porqu\351 eso no es python? Por el obvio abuso de los m\351todos de acceso \(accessors, getter/setters\),) Tj T* 0 Tw (que son completamente innecesarios.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 204.2094 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 2.033248 Tw (Si la clase punto es simplemente esto, y nada m\341s que esto, y no tiene otra funcionalidad,) Tj T* 0 Tw (entonces prefiero esta:) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.126825 Tw 12 TL /F1 8 Tf 0 0 0 rg (Si la clase punto es simplemente esto, y nada m\341s que esto, y no tiene otra funcionalidad, entonces) Tj T* 0 Tw (prefiero esta:) Tj T* ET
 Q
 Q
 q
@@ -2323,8 +2250,7 @@ Q
 q
 1 0 0 1 34.34646 163.863 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 317.132 0 Td (Listado 2) Tj T* -317.132 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 317.132 0 Td 12 TL /F2 8 Tf 0 0 0 rg (Listado 2) Tj T* -317.132 0 Td ET
 Q
 Q
 q
@@ -2356,20 +2282,19 @@ endobj
 % 'R82': class PDFStream 
 82 0 obj
 % page stream
-<< /Length 4737 >>
+<< /Length 4743 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
 1 0 0 1 34.34646 522.7559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .925065 Tw (No s\363lo es m\341s corta, sino que su funcionalidad es completamente equivalente, es m\341s f\341cil de) Tj T* 0 Tw (leer porque es completamente obvia \(se puede leer de un vistazo\), y hasta es m\341s eficiente.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.105252 Tw 12 TL /F1 8 Tf 0 0 0 rg (No s\363lo es m\341s corta, sino que su funcionalidad es completamente equivalente, es m\341s f\341cil de leer) Tj T* 0 Tw (porque es completamente obvia \(se puede leer de un vistazo\), y hasta es m\341s eficiente.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 492.7559 cm
 q
-BT 1 0 0 1 0 18.256 Tm 1.741248 Tw 12 TL /F1 8 Tf 0 0 0 rg (La \372nica diferencia es que lo que antes era ) Tj /F5 8 Tf (p.x\(\) ) Tj /F1 8 Tf (ahora es ) Tj /F5 8 Tf (p.x ) Tj /F1 8 Tf (y que ) Tj /F5 8 Tf (p.set_x\(14\) ) Tj /F1 8 Tf (es) Tj T* 0 Tw /F5 8 Tf (p.x=14) Tj /F1 8 Tf (, que no es un cambio importante, pero es una mejora en legibilidad.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .137645 Tw 12 TL /F1 8 Tf 0 0 0 rg (La \372nica diferencia es que lo que antes era ) Tj /F5 8 Tf (p.x\(\)) Tj /F1 8 Tf ( ahora es ) Tj /F5 8 Tf (p.x) Tj /F1 8 Tf ( y que ) Tj /F5 8 Tf (p.set_x\(14\)) Tj /F1 8 Tf ( es ) Tj /F5 8 Tf (p.x=14) Tj /F1 8 Tf (,) Tj T* 0 Tw (que no es un cambio importante, pero es una mejora en legibilidad.) Tj T* ET
 Q
 Q
 q
@@ -2385,8 +2310,7 @@ Q
 q
 1 0 0 1 34.34646 422.4094 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 317.132 0 Td (Listado 3) Tj T* -317.132 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 317.132 0 Td 12 TL /F2 8 Tf 0 0 0 rg (Listado 3) Tj T* -317.132 0 Td ET
 Q
 Q
 q
@@ -2414,7 +2338,7 @@ Q
 q
 1 0 0 1 34.34646 347.863 cm
 q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Y el comportamiento es ) Tj /F8 8 Tf (exactamente el del listado 2 ) Tj /F1 8 Tf (excepto que es a\372n m\341s eficiente.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Y el comportamiento es ) Tj /F8 8 Tf (exactamente el del listado 2) Tj /F1 8 Tf ( excepto que es a\372n m\341s eficiente.) Tj T* ET
 Q
 Q
 q
@@ -2430,15 +2354,13 @@ BT 1 0 0 1 6 66 Tm  T* ET
 q
 1 0 0 1 16 64 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F7 10 Tf 12 TL (Nota) Tj T* ET
+BT 1 0 0 1 0 4.82 Tm 12 TL /F7 10 Tf 0 0 0 rg (Nota) Tj T* ET
 Q
 Q
 q
 1 0 0 1 16 16 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 30.256 Tm /F1 8 Tf 12 TL .989998 Tw (Es fundamental conocer las estructuras de datos que te da el lenguaje. En Python eso) Tj T* 0 Tw 2.122997 Tw (significa conocer las estructuras del lenguaje, como diccionarios, tuplas y listas y el) Tj T* 0 Tw (m\363dulo collections de la biblioteca standard.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm .989998 Tw 12 TL /F1 8 Tf 0 0 0 rg (Es fundamental conocer las estructuras de datos que te da el lenguaje. En Python eso) Tj T* 0 Tw -0.229233 Tw (significa conocer las estructuras del lenguaje, como diccionarios, tuplas y listas y el m\363dulo) Tj T* 0 Tw (collections de la biblioteca standard.) Tj T* ET
 Q
 Q
 q
@@ -2458,26 +2380,25 @@ Q
 q
 1 0 0 1 34.34646 207.863 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 1.664798 Tw (Por supuesto que siempre est\341 la posibilidad de que la clase Punto evolucione, y haga otras) Tj T* 0 Tw (cosas, como por ejemplo calcular la distancia al origen de un punto.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.023252 Tw 12 TL /F1 8 Tf 0 0 0 rg (Por supuesto que siempre est\341 la posibilidad de que la clase Punto evolucione, y haga otras cosas,) Tj T* 0 Tw (como por ejemplo calcular la distancia al origen de un punto.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 153.863 cm
 q
-BT 1 0 0 1 0 42.256 Tm .874748 Tw 12 TL /F1 8 Tf 0 0 0 rg (Si bien ser\355a trivial hacer una funci\363n que tome una ) Tj /F5 8 Tf (namedtuple ) Tj /F1 8 Tf (y calcule ese valor, es mejor) Tj T* 0 Tw .521998 Tw (mantener todo el c\363digo que manipula los datos de Punto dentro de la clase en vez de crear una) Tj T* 0 Tw .268855 Tw (colecci\363n de funciones ad-hoc. Una ) Tj /F5 8 Tf (namedtuple ) Tj /F1 8 Tf (es un reemplazo para las clases sin m\351todos o) Tj T* 0 Tw (los ) Tj /F5 8 Tf (struct ) Tj /F1 8 Tf (de C/C++.) Tj T* ET
+BT 1 0 0 1 0 42.256 Tm 1.035748 Tw 12 TL /F1 8 Tf 0 0 0 rg (Si bien ser\355a trivial hacer una funci\363n que tome una ) Tj /F5 8 Tf (namedtuple) Tj /F1 8 Tf ( y calcule ese valor, es mejor) Tj T* 0 Tw .521998 Tw (mantener todo el c\363digo que manipula los datos de Punto dentro de la clase en vez de crear una) Tj T* 0 Tw .452855 Tw (colecci\363n de funciones ad-hoc. Una ) Tj /F5 8 Tf (namedtuple) Tj /F1 8 Tf ( es un reemplazo para las clases sin m\351todos o) Tj T* 0 Tw (los ) Tj /F5 8 Tf (struct) Tj /F1 8 Tf ( de C/C++.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 99.86299 cm
 q
-BT 1 0 0 1 0 42.256 Tm .511198 Tw 12 TL /F1 8 Tf 0 0 0 rg (Pero) Tj (\205 hay que considerar el programa como una criatura en evoluci\363n. Tal vez al comenzar con) Tj T* 0 Tw 1.475712 Tw (una ) Tj /F5 8 Tf (namedtuple) Tj /F1 8 Tf ( ) Tj /F8 8 Tf (era suficiente) Tj /F1 8 Tf (. No val\355a la pena demorar lo dem\341s mientras se dise\361aba la) Tj T* 0 Tw 1.467776 Tw (clase Punto. Y pasar de una ) Tj /F5 8 Tf (namedtuple ) Tj /F1 8 Tf (a la clase Punto del listado 2 es trivial, ya que la) Tj T* 0 Tw (interfaz que presentan es id\351ntica.) Tj T* ET
+BT 1 0 0 1 0 42.256 Tm .511198 Tw 12 TL /F1 8 Tf 0 0 0 rg (Pero) Tj (\205) Tj ( hay que considerar el programa como una criatura en evoluci\363n. Tal vez al comenzar con) Tj T* 0 Tw .155998 Tw (una ) Tj /F5 8 Tf (namedtuple) Tj /F1 8 Tf ( ) Tj /F8 8 Tf (era suficiente) Tj /F1 8 Tf (. No val\355a la pena demorar lo dem\341s mientras se dise\361aba la clase) Tj T* 0 Tw .30884 Tw (Punto. Y pasar de una ) Tj /F5 8 Tf (namedtuple) Tj /F1 8 Tf ( a la clase Punto del listado 2 es trivial, ya que la interfaz que) Tj T* 0 Tw (presentan es id\351ntica.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 57.86299 cm
 q
-BT 1 0 0 1 0 30.256 Tm 1.498498 Tw 12 TL /F1 8 Tf 0 0 0 rg (La cr\355tica que un programador que conoce OOP ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (6 ) Tj /F1 8 Tf 0 0 0 rg 0 Ts (har\355a \(con justa raz\363n\) es que no tenemos ) Tj T* 0 Tw 1.554767 Tw (encapsulamiento. Que el usuario accede directamente a ) Tj /F5 8 Tf (Punto.x ) Tj /F1 8 Tf (y ) Tj /F5 8 Tf (Punto.y ) Tj /F1 8 Tf (por lo que no ) Tj T* 0 Tw .727075 Tw (podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos,) Tj T* 0 Tw ET
+BT 1 0 0 1 0 30.256 Tm 1.463748 Tw 12 TL /F1 8 Tf 0 0 0 rg (La cr\355tica que un programador que conoce OOP ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (6) Tj /F1 8 Tf 0 0 0 rg 0 Ts ( har\355a \(con justa raz\363n\) es que no tenemos) Tj T* 0 Tw 1.951075 Tw (encapsulamiento. Que el usuario accede directamente a ) Tj /F5 8 Tf (Punto.x) Tj /F1 8 Tf ( y ) Tj /F5 8 Tf (Punto.y) Tj /F1 8 Tf ( por lo que no) Tj T* 0 Tw .727075 Tw (podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos,) Tj T* 0 Tw ET
 Q
 Q
  
@@ -2487,28 +2408,25 @@ endobj
 % 'R83': class PDFStream 
 83 0 obj
 % page stream
-<< /Length 3870 >>
+<< /Length 3856 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
 1 0 0 1 34.34646 534.7559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (etc.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (etc.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 504.7559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .835465 Tw (Muy bien, supongamos que queremos que el usuario pueda poner s\363lo valores positivos en x, y) Tj T* 0 Tw (que los valores negativos deban ser multiplicados por -1.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.189752 Tw 12 TL /F1 8 Tf 0 0 0 rg (Muy bien, supongamos que queremos que el usuario pueda poner s\363lo valores positivos en x, y que) Tj T* 0 Tw (los valores negativos deban ser multiplicados por -1.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 486.7559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (En la clase del listado 1, es trivial \(muestro s\363lo la parte que cambia\):) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (En la clase del listado 1, es trivial:) Tj T* ET
 Q
 Q
 q
@@ -2518,8 +2436,7 @@ Q
 q
 1 0 0 1 34.34646 446.4094 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 317.132 0 Td (Listado 4) Tj T* -317.132 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 317.132 0 Td 12 TL /F2 8 Tf 0 0 0 rg (Listado 4) Tj T* -317.132 0 Td ET
 Q
 Q
 q
@@ -2547,7 +2464,7 @@ Q
 q
 1 0 0 1 34.34646 323.863 cm
 q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Pero) Tj (\205 tambi\351n es trivial en el listado 2, ) Tj /F8 8 Tf (sin cambiar la interfaz que se presenta al usuario) Tj /F1 8 Tf (:) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Pero) Tj (\205) Tj ( tambi\351n es trivial en el listado 2, ) Tj /F8 8 Tf (sin cambiar la interfaz que se presenta al usuario) Tj /F1 8 Tf (:) Tj T* ET
 Q
 Q
 q
@@ -2557,8 +2474,7 @@ Q
 q
 1 0 0 1 34.34646 283.5165 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 317.132 0 Td (Listado 5) Tj T* -317.132 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 317.132 0 Td 12 TL /F2 8 Tf 0 0 0 rg (Listado 5) Tj T* -317.132 0 Td ET
 Q
 Q
 q
@@ -2586,8 +2502,7 @@ Q
 q
 1 0 0 1 34.34646 100.9701 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Obviamente esto es casi lo mismo que el listado 1, pero con algunas diferencias:) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Obviamente esto es casi lo mismo que si partimos del listado 1, pero con algunas diferencias:) Tj T* ET
 Q
 Q
 q
@@ -2603,14 +2518,13 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 15 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 11.2 0 Td (\177) Tj T* -11.2 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 11.2 0 Td 12 TL /F1 8 Tf 0 0 0 rg (\177) Tj T* -11.2 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 3 cm
 q
-BT 1 0 0 1 0 18.256 Tm .926822 Tw 12 TL /F1 8 Tf 0 0 0 rg (La forma de acceder a ) Tj /F5 8 Tf (x ) Tj /F1 8 Tf (o de modificarlo es mejor \227 ) Tj /F5 8 Tf (print p.x ) Tj /F1 8 Tf (en lugar de ) Tj /F5 8 Tf (print) Tj T* 0 Tw (p.x\(\)) Tj /F1 8 Tf (. S\355, es cuesti\363n de gustos nom\341s.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 1.38141 Tw 12 TL /F1 8 Tf 0 0 0 rg (La forma de acceder a ) Tj /F5 8 Tf (x) Tj /F1 8 Tf ( o de modificarlo es mejor ) Tj (\227) Tj ( ) Tj /F5 8 Tf (print p.x) Tj /F1 8 Tf ( en lugar de ) Tj /F5 8 Tf (print) Tj T* 0 Tw (p.x\(\)) Tj /F1 8 Tf (. S\355, es cuesti\363n de gustos nom\341s.) Tj T* ET
 Q
 Q
 q
@@ -2629,7 +2543,7 @@ endobj
 % 'R84': class PDFStream 
 84 0 obj
 % page stream
-<< /Length 4562 >>
+<< /Length 4557 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -2639,28 +2553,25 @@ BT /F3 10 Tf 12 TL ET
 q
 1 0 0 1 6 105 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 11.2 0 Td (\177) Tj T* -11.2 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 11.2 0 Td 12 TL /F1 8 Tf 0 0 0 rg (\177) Tj T* -11.2 0 Td ET
 Q
 Q
 q
 1 0 0 1 23 105 cm
 q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (No se hicieron los m\351todos para ) Tj /F5 8 Tf (y ) Tj /F1 8 Tf (por ser innecesarios.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (No se hicieron los m\351todos para ) Tj /F5 8 Tf (y) Tj /F1 8 Tf ( por ser innecesarios.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 75 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 1.040283 Tw (Esto es importante: de ser necesarios esos m\351todos en el futuro es trivial agregarlos. Si) Tj T* 0 Tw (nunca lo son, entonces el listado 1 tiene dos funciones in\372tiles.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 1.040283 Tw 12 TL /F1 8 Tf 0 0 0 rg (Esto es importante: de ser necesarios esos m\351todos en el futuro es trivial agregarlos. Si) Tj T* 0 Tw (nunca lo son, entonces el listado 1 tiene dos funciones in\372tiles.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 23 33 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 30.256 Tm /F1 8 Tf 12 TL .693664 Tw (S\355, son dos funciones triviales, que seguramente no crean bugs pero tienen implicaciones) Tj T* 0 Tw .212855 Tw (de performance, y tienen un efecto que a m\355 personalmente me molesta: separan el c\363digo) Tj T* 0 Tw (que hace algo metiendo en el medio c\363digo que no hace nada.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm -0.215079 Tw 12 TL /F1 8 Tf 0 0 0 rg (S\355, son dos funciones triviales, que seguramente no crean bugs pero tienen implicaciones de) Tj T* 0 Tw -0.104859 Tw (performance, y tienen un efecto que a m\355 personalmente me molesta: separan el c\363digo que) Tj T* 0 Tw (hace algo metiendo en el medio c\363digo que no hace nada.) Tj T* ET
 Q
 Q
 q
@@ -2701,8 +2612,7 @@ Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 225.884 0 Td (Will Crowther in "Adventure") Tj T* -225.884 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 225.884 0 Td 12 TL /F1 8 Tf 0 0 0 rg (Will Crowther in "Adventure") Tj T* -225.884 0 Td ET
 Q
 Q
 q
@@ -2728,8 +2638,7 @@ Q
 q
 1 0 0 1 23 3 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 231.644 0 Td (Don Woods in "Adventure") Tj T* -231.644 0 Td ET
+BT 1 0 0 1 0 6.256 Tm 231.644 0 Td 12 TL /F1 8 Tf 0 0 0 rg (Don Woods in "Adventure") Tj T* -231.644 0 Td ET
 Q
 Q
 q
@@ -2741,8 +2650,7 @@ Q
 q
 1 0 0 1 34.34646 292.3559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Observemos este fragmento de c\363digo:) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Observemos este fragmento de c\363digo:) Tj T* ET
 Q
 Q
 q
@@ -2778,21 +2686,19 @@ BT 1 0 0 1 6 102 Tm  T* ET
 q
 1 0 0 1 16 100 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 4.82 Tm /F7 10 Tf 12 TL (Nota) Tj T* ET
+BT 1 0 0 1 0 4.82 Tm 12 TL /F7 10 Tf 0 0 0 rg (Nota) Tj T* ET
 Q
 Q
 q
 1 0 0 1 16 64 cm
 q
-BT 1 0 0 1 0 18.256 Tm .931382 Tw 12 TL /F1 8 Tf 0 0 0 rg (Un set \(conjunto\) es una estructura de datos que almacena cosas sin repeticiones. Por) Tj T* 0 Tw (ejemplo, ) Tj /F5 8 Tf (set\([1,2,3,2]\) ) Tj /F1 8 Tf (es lo mismo que ) Tj /F5 8 Tf (set\([1, 2, 3]\)) Tj /F1 8 Tf (.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .931382 Tw 12 TL /F1 8 Tf 0 0 0 rg (Un set \(conjunto\) es una estructura de datos que almacena cosas sin repeticiones. Por) Tj T* 0 Tw (ejemplo, ) Tj /F5 8 Tf (set\([1,2,3,2]\)) Tj /F1 8 Tf ( es lo mismo que ) Tj /F5 8 Tf (set\([1, 2, 3]\)) Tj /F1 8 Tf (.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 16 34 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 2.989997 Tw (Tambi\351n soporta las t\355picas operaciones de conjuntos, como intersecci\363n, uni\363n y) Tj T* 0 Tw (diferencia.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm 2.989997 Tw 12 TL /F1 8 Tf 0 0 0 rg (Tambi\351n soporta las t\355picas operaciones de conjuntos, como intersecci\363n, uni\363n y) Tj T* 0 Tw (diferencia.) Tj T* ET
 Q
 Q
 q
@@ -2818,8 +2724,7 @@ Q
 q
 1 0 0 1 34.34646 51.15591 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Es obvio como funciona con, por ejemplo una lista:) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Es obvio como funciona con, por ejemplo una lista:) Tj T* ET
 Q
 Q
  
@@ -2829,7 +2734,7 @@ endobj
 % 'R85': class PDFStream 
 85 0 obj
 % page stream
-<< /Length 4506 >>
+<< /Length 4591 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -2855,8 +2760,7 @@ Q
 q
 1 0 0 1 34.34646 489.5559 cm
 q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (\277Pero es igual de obvio que funciona con cadenas?) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (\277Pero es igual de obvio que funciona con cadenas?) Tj T* ET
 Q
 Q
 q
@@ -2882,7 +2786,7 @@ Q
 q
 1 0 0 1 34.34646 400.3559 cm
 q
-BT 1 0 0 1 0 30.256 Tm .512921 Tw 12 TL /F1 8 Tf 0 0 0 rg (\277Porqu\351 funciona? \277Es que las cadenas est\341n implementadas como una subclase de ) Tj /F5 8 Tf (list) Tj /F1 8 Tf (? No,) Tj T* 0 Tw 1.543664 Tw (la implementaci\363n de las clases ) Tj /F5 8 Tf (str ) Tj /F1 8 Tf (o ) Tj /F5 8 Tf (unicode ) Tj /F1 8 Tf (es completamente independiente. Pero son) Tj T* 0 Tw /F8 8 Tf (parecidos) Tj /F1 8 Tf (. Tienen muchas cosas en com\372n.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm -0.127145 Tw 12 TL /F1 8 Tf 0 0 0 rg (\277Porqu\351 funciona? \277Es que las cadenas est\341n implementadas como una subclase de ) Tj /F5 8 Tf (list) Tj /F1 8 Tf (? No, la) Tj T* 0 Tw -0.583669 Tw (implementaci\363n de las clases ) Tj /F5 8 Tf (str) Tj /F1 8 Tf ( o ) Tj /F5 8 Tf (unicode) Tj /F1 8 Tf ( es completamente independiente. Pero son ) Tj /F8 8 Tf (parecidos) Tj /F1 8 Tf (.) Tj T* 0 Tw (Tienen muchas cosas en com\372n.) Tj T* ET
 Q
 Q
 q
@@ -2908,25 +2812,25 @@ Q
 q
 1 0 0 1 34.34646 167.1559 cm
 q
-BT 1 0 0 1 0 30.256 Tm .921175 Tw 12 TL /F1 8 Tf 0 0 0 rg (Para la mayor\355a de los usos posibles, listas y cadenas son ) Tj /F8 8 Tf (muy ) Tj /F1 8 Tf (parecidas. Y resulta que son lo) Tj T* 0 Tw 3.175597 Tw (bastante parecidas como para que en nuestra funci\363n ) Tj /F5 8 Tf (diferencia ) Tj /F1 8 Tf (sean completamente) Tj T* 0 Tw (equivalentes.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm .921175 Tw 12 TL /F1 8 Tf 0 0 0 rg (Para la mayor\355a de los usos posibles, listas y cadenas son ) Tj /F8 8 Tf (muy) Tj /F1 8 Tf ( parecidas. Y resulta que son lo) Tj T* 0 Tw 3.433197 Tw (bastante parecidas como para que en nuestra funci\363n ) Tj /F5 8 Tf (diferencia) Tj /F1 8 Tf ( sean completamente) Tj T* 0 Tw (equivalentes.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 137.1559 cm
 q
-BT 1 0 0 1 0 18.256 Tm .895248 Tw 12 TL /F1 8 Tf 0 0 0 rg (Un programa escrito sin pensar en \223) Tj (\277De qu\351 clase es este objeto?) Tj (\224 sino en \223) Tj (\277Qu\351 puede hacer) Tj T* 0 Tw (este objeto?) Tj (\224) Tj (, es un programa muy diferente.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm -0.177649 Tw 12 TL /F1 8 Tf 0 0 0 rg (Un programa escrito sin pensar en ) Tj (\223) Tj (\277De qu\351 clase es este objeto?) Tj (\224) Tj ( sino en ) Tj (\223) Tj (\277Qu\351 puede hacer este) Tj T* 0 Tw (objeto?) Tj (\224) Tj (, es un programa muy diferente.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 107.1559 cm
 q
-BT 1 0 0 1 0 18.256 Tm .421998 Tw 12 TL /F1 8 Tf 0 0 0 rg (Para empezar suele ser un programa m\341s \223) Tj (informal) Tj (\224 en el sentido de que simplemente asumimos) Tj T* 0 Tw (que nos van a dar un objeto que nos sirva. Si no nos sirve, bueno, habr\341 una excepci\363n.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .421998 Tw 12 TL /F1 8 Tf 0 0 0 rg (Para empezar suele ser un programa m\341s ) Tj (\223) Tj (informal) Tj (\224) Tj ( en el sentido de que simplemente asumimos) Tj T* 0 Tw (que nos van a dar un objeto que nos sirva. Si no nos sirve, bueno, habr\341 una excepci\363n.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 34.34646 53.15591 cm
 q
-BT 1 0 0 1 0 42.256 Tm .645248 Tw 12 TL /F1 8 Tf 0 0 0 rg (Al mismo tiempo que da una sensaci\363n de libertad \(\241Hey, puedo usar dos clases sin un ancestro ) Tj T* 0 Tw 10.682 Tw (com\372n!\) tambi\351n puede producir temor \(\277Y qu\351 pasa si alguien llama ) Tj T* 0 Tw 1.790906 Tw /F5 8 Tf (hacerpancho\(Perro\(\)\)) Tj /F1 8 Tf (?\). Pues resulta que ambas cosas son ciertas. Es posible hacer un ) Tj T* 0 Tw .848198 Tw (pancho de perro, en cuyo caso es culpa del que lo hace, y es ) Tj /F8 8 Tf (problema suyo) Tj /F1 8 Tf (, no un error en la) Tj T* 0 Tw ET
+BT 1 0 0 1 0 42.256 Tm .645248 Tw 12 TL /F1 8 Tf 0 0 0 rg (Al mismo tiempo que da una sensaci\363n de libertad \(\241Hey, puedo usar dos clases sin un ancestro) Tj T* 0 Tw .504397 Tw (com\372n!\) tambi\351n puede producir temor \(\277Qu\351 pasa si alguien llama ) Tj /F5 8 Tf (hacerpancho\(Perro\(\)\)) Tj /F1 8 Tf (?\).) Tj T* 0 Tw .266116 Tw (Pues resulta que ambas cosas son ciertas. Es posible hacer un pancho de perro, en cuyo caso es) Tj T* 0 Tw (culpa del que lo hace, y es ) Tj /F8 8 Tf (problema suyo) Tj /F1 8 Tf (, no un error en la definici\363n de ) Tj /F5 8 Tf (hacerpancho) Tj /F1 8 Tf (.) Tj T* ET
 Q
 Q
  
@@ -2936,37 +2840,30 @@ endobj
 % 'R86': class PDFStream 
 86 0 obj
 % page stream
-<< /Length 3640 >>
+<< /Length 3461 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 534.7559 cm
+1 0 0 1 34.34646 510.7559 cm
 q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (definici\363n de ) Tj /F5 8 Tf (hacerpancho) Tj /F1 8 Tf (.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm -0.334574 Tw 12 TL /F1 8 Tf 0 0 0 rg (Esa es una diferencia filos\363fica. Si ) Tj /F5 8 Tf (hacerpancho) Tj /F1 8 Tf ( verifica que la entrada sea una salchicha, siempre) Tj T* 0 Tw .893881 Tw (va a producir ) Tj /F8 8 Tf (por lo menos) Tj /F1 8 Tf ( un pancho. Nunca va a producir un sandwich con una manguera de) Tj T* 0 Tw (jard\355n en el medio, pero tampoco va a producir un sandwich de portobelos salteados con ciboulette.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 480.7559 cm
+1 0 0 1 34.34646 492.7559 cm
 q
-BT 1 0 0 1 0 42.256 Tm 1.800921 Tw 12 TL /F1 8 Tf 0 0 0 rg (Esa es una diferencia filos\363fica. Si ) Tj /F5 8 Tf (hacerpancho ) Tj /F1 8 Tf (verifica que la entrada sea una salchicha,) Tj T* 0 Tw 2.117748 Tw (siempre va a producir ) Tj /F8 8 Tf (por lo menos ) Tj /F1 8 Tf (un pancho. Nunca va a producir un sandwich con una) Tj T* 0 Tw .242398 Tw (manguera de jard\355n en el medio, pero tampoco va a producir un sandwich de portobelos salteados) Tj T* 0 Tw (con ciboulette.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Es demasiado f\341cil imponer restricciones arbitrarias al limitar los tipos de datos aceptables.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 462.7559 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Es demasiado f\341cil imponer restricciones arbitrarias al limitar los tipos de datos aceptables.) Tj T* ET
-Q
+1 0 0 1 34.34646 436.063 cm
 Q
 q
-1 0 0 1 34.34646 406.063 cm
-Q
-q
-1 0 0 1 34.34646 377.7165 cm
+1 0 0 1 34.34646 407.7165 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 353.7165 cm
+1 0 0 1 34.34646 383.7165 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -2985,7 +2882,7 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 293.7165 cm
+1 0 0 1 34.34646 323.7165 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -3004,7 +2901,7 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 269.7165 cm
+1 0 0 1 34.34646 299.7165 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -3016,14 +2913,14 @@ Q
 q
 1 0 0 1 91.03937 0 cm
 q
-BT 1 0 0 1 0 18.256 Tm .860955 Tw 12 TL /F1 8 Tf 0 0 0 rg (PyQt tiene una excelente ) Tj 1 0 0 rg (`documentaci\363n de referencia <) Tj (>) Tj (`_ ) Tj 0 0 0 rg (para esas) Tj T* 0 Tw (cosas.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .860955 Tw 12 TL /F1 8 Tf 0 0 0 rg (PyQt tiene una excelente ) Tj 1 0 0 rg (`documentaci\363n de referencia ) Tj (<) Tj (>) Tj (`_) Tj 0 0 0 rg ( para esas) Tj T* 0 Tw (cosas.) Tj T* ET
 Q
 Q
 q
 Q
 Q
 q
-1 0 0 1 34.34646 257.7165 cm
+1 0 0 1 34.34646 287.7165 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -3042,7 +2939,7 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 233.7165 cm
+1 0 0 1 34.34646 263.7165 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -3061,7 +2958,7 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 209.7165 cm
+1 0 0 1 34.34646 239.7165 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -3257,51 +3154,51 @@ xref
 0000025348 00000 n
 0000025695 00000 n
 0000025854 00000 n
-0000026092 00000 n
-0000026218 00000 n
-0000026438 00000 n
-0000026611 00000 n
-0000026801 00000 n
-0000026982 00000 n
-0000027159 00000 n
-0000027381 00000 n
-0000027552 00000 n
-0000027710 00000 n
-0000027927 00000 n
-0000031303 00000 n
-0000035574 00000 n
-0000036646 00000 n
-0000042416 00000 n
-0000046741 00000 n
-0000047495 00000 n
-0000051670 00000 n
-0000055151 00000 n
-0000059989 00000 n
-0000063960 00000 n
-0000068623 00000 n
-0000073230 00000 n
-0000076975 00000 n
-0000077228 00000 n
-0000077305 00000 n
-0000077382 00000 n
-0000077459 00000 n
-0000077536 00000 n
-0000077613 00000 n
-0000077690 00000 n
-0000077767 00000 n
-0000077844 00000 n
-0000077921 00000 n
-0000077999 00000 n
-0000078077 00000 n
-0000078156 00000 n
+0000026135 00000 n
+0000026261 00000 n
+0000026481 00000 n
+0000026654 00000 n
+0000026844 00000 n
+0000027025 00000 n
+0000027202 00000 n
+0000027424 00000 n
+0000027595 00000 n
+0000027753 00000 n
+0000027970 00000 n
+0000031214 00000 n
+0000036066 00000 n
+0000036549 00000 n
+0000042324 00000 n
+0000046680 00000 n
+0000047432 00000 n
+0000051638 00000 n
+0000055124 00000 n
+0000059968 00000 n
+0000063925 00000 n
+0000068583 00000 n
+0000073275 00000 n
+0000076841 00000 n
+0000077094 00000 n
+0000077171 00000 n
+0000077248 00000 n
+0000077325 00000 n
+0000077402 00000 n
+0000077479 00000 n
+0000077556 00000 n
+0000077633 00000 n
+0000077710 00000 n
+0000077787 00000 n
+0000077865 00000 n
+0000077943 00000 n
+0000078022 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(T\327X\014\262\\\277\254\240\311\270\010g]\033c) (T\327X\014\262\\\277\254\240\311\270\010g]\033c)] 
+ [(\217\264\023\253\015\235\220\347\336nE\237\272\207i&) (\217\264\023\253\015\235\220\347\336nE\237\272\207i&)] 
 
  /Info 63 0 R
  /Root 62 0 R
  /Size 101 >>
 startxref
-78205
+78071
 %%EOF
