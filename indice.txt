@@ -6,8 +6,8 @@ Python no muerde, yo sí
 O: aprenda a programar en 3217 días
 -----------------------------------
 
-:Autor: Roberto Alsina
-:Versión: 0.0.0
+:Autor: Roberto Alsina <ralsina@netmanagers.com.ar>
+:Versión: $Revision$
 
 .. contents::
 
