@@ -1,0 +1,167 @@
+=======================
+Python no muerde, yo sí
+=======================
+
+-----------------------------------
+O: aprenda a programar en 3217 días
+-----------------------------------
+
+:Autor: Roberto Alsina
+:Versión: 0.0.0
+
+
+Introducción
+------------
+
+Requisitos
+~~~~~~~~~~
+
+Éste es un libro sobre Python [1]_. Es un libro que trata de explicar una manera
+posible de usarlo, una manera de tomar una idea de tu cabeza y convertirla en
+un programa, que puedas usar y compartir.
+
+.. [1] ¿Porqué Python? Porque es mi lenguaje favorito. ¿De qué otro lenguaje
+       podría escribir?
+
+¿Qué necesitás saber para poder leer este libro?
+
+El libro no va a explicar la sintaxis de python, sino que va a asumir que la
+conocés. De todas formas, la primera vez que aparezca algo nuevo, va a indicar
+dónde se puede aprender más sobre ello. Por ejemplo:
+
+.. code-block:: python
+
+   # Creamos una lista con los cuadrados de los números impares
+   cuadrados = [ x**2 for x in numers if x%2==0 ]
+
+.. admonition:: Referencia
+
+   Eso es una `comprensión de lista <>`_
+
+En general esas referencias van a llevarte al `Tutorial de Python <>`_
+en castellano. En general, ese libro contiene toda la información
+acerca del lenguaje que se necesita para poder seguir éste.
+
+Cuando una aplicación requiera una interfaz gráfica, vamos a utilizar PyQt [2]_.
+No vamos a asumir ningún conocimiento previo de PyQt pero tampoco se va a
+explicar en detalle, excepto cuando involucre un concepto nuevo.
+
+.. [2] PyQt es software libre, es multiplataforma, y es muy potente y fácil de
+       usar. Eso no quiere decir que las alternativas no tengan las mismas
+       características, pero quiero enfocarme en programar, no en discutir, y
+       **yo** prefiero PyQt. Si preferís una alternativa, este libro es libre:
+       podés hacer una versión propia!
+
+Por ejemplo, no voy a explicar el significado de ``setEnabled`` [3]_ pero sí el
+concepto de signals y slots cuando haga falta.
+
+.. [3] PyQt tiene una excelente `documentación de referencia <>`_ para esas
+       cosas.
+
+Convenciones
+~~~~~~~~~~~~
+
+Las variables, funciones y palabras reservadas de python se mostrarán en el
+texto con letra monoespaciada. Por ejemplo, ``for`` es una palabra reservada.
+
+Los fragmentos de código fuente se va a mostrar en cajas:
+
+.. code-block:: python
+
+   # Creamos una lista con los cuadrados de los números impares
+   cuadrados = [ x**2 for x in numeros if x%2==0 ]
+
+Los listados extensos o programas completos se incluirán sin cajas, separados
+del texto con líneas, mostrarán número de línea e indicarán el nombre del mismo:
+
+.. raw:: pdf
+
+   PageBreak
+
+----------------
+
+.. class:: titulo-listado
+
+cuadrados.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+
+   # Creamos una lista con los cuadrados de los números impares
+   cuadrados = [ x**2 for x in numeros if x%2==0 ]
+
+
+----------------
+
+Mapa
+~~~~
+
+Dentro de lo posible, voy a intentar que cada capítulo sea autocontenido, explicando un tema sin depender demasiado de los otros, y terminando con un ejemplo concreto y funcional.
+
+Éstos son los capítulos del libro, con breves descripciones.
+
+#. Introducción
+
+#. Pensar en python
+
+   Programar en python, a veces, no es como programar en otros lenguajes. Acá vas a ver algunos ejemplos. Si te gustan... python es para vos. Si no te gustan... bueno, el libro es barato... capaz que Java es lo tuyo..
+
+#. La vida es corta
+
+   Por eso, hay muchas cosas que no vale la pena hacer. Claro, yo estoy escribiendo un editor de textos así que este capítulo es pura hipocresía...
+
+#. Las capas de una aplicación
+
+   Batman, los alfajores santafesinos, el ozono... las mejores cosas tienen capas. Cómo organizar una aplicación en capas.
+
+#. Documentación y testing
+
+   Documentar es testear. Testear es documentar.
+
+#. La GUI es la parte fácil
+
+   Lo difícil es saber que querés. Lamentablemente este capítulo te muestra
+   lo fácil. Una introducción rápida a PyQt.
+
+#. Diseño de interfaz gráfica
+
+   Visto desde la mirada del programador. Cómo hacer para no meterse en un callejón sin salida. Cómo hacerle caso a un diseñador.
+
+#. Un programa útil
+
+   Integremos las cosas que vimos antes y usémoslas para algo.
+
+#. Instalación, deployment y otras yerbas
+
+   Hacer que tu programa funcione en la computadora de otra gente
+
+#. Cómo crear un proyecto de software libre
+
+   ¿Cómo se hace? ¿Qué se necesita? ¿Me conviene? Las respuestas son "depende", "ganas" y "a veces". O "así", "una idea" y "sí". O sea, no sé. Pero veamos.
+
+
+#. Rebelión contra el Zen
+
+   Cuándo es mejor implícito que explícito? ¿Cuándo es algo lo suficientemente especial para ser, realmente, especial?
+
+#. Herramientas
+
+   Programar tiene más en común con la carpintería que con la arquitectura.
+
+#. Conclusiones, caminos y rutas de escape
+
+   ¿Y ahora qué?
+
+.. figure:: dependencias.graph.pdf
+   :width: 100%
+
+   Este libro se lee siguiendo las flechas
+
+   Este es un diagrama de dependencias. Cada capítulo tiene flechas que lo conectan
+   desde los capítulos que necesitás haber leído anteriormente.
+
+   Con suerte será un `grafo acíclico <http://es.wikipedia.org/wiki/Grafo_acíclico_dirigido>`_.
+
+   La línea de puntos significa 'no es realmente necesario, pero...'

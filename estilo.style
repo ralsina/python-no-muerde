@@ -1,0 +1,17 @@
+{
+    "styles" : [
+    [ "listado" , {
+        "parent": "code",
+        "borderWidth": 0,
+        "borderPadding": 0,
+        "borderColor": null,
+        "borderRadius": null,
+        "backColor": "white"
+      }],
+    [ "titulo-listado" , {
+        "parent": "bodytext",
+        "fontName": "stdBold",
+        "alignment": "right",
+        "spaceBefore": 0
+      }]
+]}
