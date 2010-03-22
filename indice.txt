@@ -155,17 +155,18 @@ Dentro de lo posible, voy a intentar que cada capítulo sea autocontenido, expli
 
    ¿Y ahora qué?
 
+Este es un diagrama de dependencias. Cada capítulo tiene flechas que lo conectan
+desde los capítulos que necesitás haber leído anteriormente.
+
+Con suerte será un `grafo acíclico <http://es.wikipedia.org/wiki/Grafo_acíclico_dirigido>`_.
+
+La línea de puntos significa 'no es realmente necesario, pero...'
+
 .. figure:: dependencias.graph.pdf
    :width: 100%
 
    Este libro se lee siguiendo las flechas
 
-   Este es un diagrama de dependencias. Cada capítulo tiene flechas que lo conectan
-   desde los capítulos que necesitás haber leído anteriormente.
-
-   Con suerte será un `grafo acíclico <http://es.wikipedia.org/wiki/Grafo_acíclico_dirigido>`_.
-
-   La línea de puntos significa 'no es realmente necesario, pero...'
 
 Acerca del Autor
 ~~~~~~~~~~~~~~~~

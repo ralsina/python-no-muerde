@@ -1,8 +1,189 @@
 Pensar en Python
 ----------------
 
-   So, the sad thing is that these poor folks worked much, much harder than they needed to, in order to produce much more code than they needed to write, that then performs much more slowly than the equivalent idiomatic Python would.
+    Lo triste es que esta pobre gente trabajó mucho más de lo necesario, para producir mucho más código del necesario, que funciona mucho más lento que el código python idiomático correspondiente.
 
-   -- Phillip J. Eby in `Python is not Java <http://dirtsimple.org/2004/12/python-is-not-java.html>`_
+    -- Phillip J. Eby en `Python no es Java <http://dirtsimple.org/2004/12/python-is-not-java.html>`_
 
-   
+
+Nuestra misión en este capítulo es pensar acerca de qué quiere decir Eby con "código python idiomático" en esa cita. Nunca nadie jamás va a poder hacer nu pythonómetro que te mida cuán idiomático es un fragmento de código, pero es posible desarrollar un instinto, una "nariz" para sentir el "olor a python", como un enófilo [#]_ aprende a distinguir el aroma a clavos de hierro-níquel número 7 ligeramente oxidados en un cabernet sauvignon. [#]_
+
+.. [#] En mi barrio los llamábamos curdas
+
+.. [#] Con la esperanza de ser un poco menos pretencioso y/o chanta
+
+Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer código es ver código.
+
+Get/Set
+~~~~~~~
+
+.. admonition:: Analogía rebuscada
+
+    En un almacén, para tener un paquete de yerba, hay que pedírselo al almacenero.
+    En un supermercado, para tener un paquete de yerba, hay que agarrar un paquete de yerba.
+    En una farmacia (de las grandes), para obtener un paquete de yerba hay que agarrar un paquete de yerba, pero para tener un Lexotanil hay que pedirlo al farmacéutico.
+
+    En Java o C++, la costumbre es escribir programas como almacenes, porque la alternativa es escribir supermercados donde chicos de 5 compran raticida.
+
+    En Python, la costumbre es escribir programas como supermercados, porque se pueden convertir en farmacias apenas decidamos que tener raticida es buena idea.
+
+Imaginemos que estamos escribiendo un programa que trabaja con "puntos" o sea coordenadas (X,Y), y que queremos implementarlos con una clase. Por ejemplo: 
+
+----------------
+
+.. class:: titulo-listado
+
+Listado 1
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+
+   class Punto(Object):
+       def __init__(self, x=0, y=0):
+           self.set_x(x)
+           self.set_y(y)
+
+       def x(self):
+           return _x
+
+       def y(self):
+           return _y
+
+       def set_x(self,x):
+           self._x=x
+
+       def set_y(self,y):
+           self._y=y
+
+----------------
+
+Ésa es una implementación perfectamente respetable de un punto. Guarda X, guarda Y, permite volver a averiguar sus valores... el problema es que eso no es python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí no me engañan tan fácil, eso **es C++** reescrito para que parezca python.
+
+Porqué eso no es python? Por el obvio abuso de los métodos de acceso (accessors, getter/setters), que son completamente innecesarios.
+
+Si la clase punto es simplemente esto, y no tiene otra funcionalidad, entonces debería ser tan sólo ésto:
+
+
+----------------
+
+.. class:: titulo-listado
+
+Listado 2
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+
+   class Punto(Object):
+       def __init__(self, x=0, y=0):
+           self.x=x
+           self.y=y
+
+----------------
+
+No sólo es más corta, sino que su funcionalidad es completamente equivalente, es más fácil de leer, es completamente obvia (se puede leer de un vistazo), sino que es más eficiente.
+
+La única diferencia es que lo que antes era ``p.x()`` ahora es ``p.x`` y que ``p.set_x(14)`` es ``p.x=14`` que no es un cambio importante, pero es una mejora en legibilidad.
+
+Es más, si la clase punto fuera solamente ésto, podría ni siquiera ser una clase, sino una ``namedtuple``:
+
+
+----------------
+
+.. class:: titulo-listado
+
+Listado 3
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+
+   Punto = namedtuple('Punto', 'x y')
+
+----------------
+
+Y el comportamiento es *exactamente el del listado 2* excepto que es aún más eficiente.
+
+.. admonition:: Nota
+
+   Es fundamental conocer las estructuras de datos que te da el lenguaje. En Python eso significa conocer las estructuras del lenguaje, como diccionarios, tuplas y listas y el módulo collections de la biblioteca standard.
+
+Por supuesto que siempre está la posibilidad de que la clase Punto evolucione, y haga otras cosas, como por ejemplo calcular la distancia al origen de un punto.
+
+Si bien sería trivial hacer una función que tome una namedtuple y calcule ese valor, es mejor mantener todo el código que manipula los datos de Punto dentro de la clase en vez de crear una colección de funciones ad-hoc.
+
+Pero... hay que considerar el programa como una criatura en evolución. Tal vez al comenzar con una ``namedtuple`` *era suficiente*. No valía la pena demorar lo demás mientras se diseñaba la clase Punto. Y pasar de la namedtuple a la clase Punto del listado 2 es trivial, ya que la interfaz que presentan es idéntica.
+
+La crítica que un programador que conoce OOP [#] haría (con justa razón) es que no tenemos encapsulamiento. Que el usuario accede directamente a ``Punto.x`` y ``Punto.y`` por lo que no podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos, etc.
+
+
+Muy bien, supongamos que queremos que el usuario pueda poner sólo valores positivos en x, y que los valores negativos deban ser multiplicados por -1.
+
+En la clase del listado 1, es trivial (muestro sólo la parte que cambia):
+
+----------------
+
+.. class:: titulo-listado
+
+Listado 4
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+
+   def set_x(self, x):
+       self._x = abs(x)
+
+----------------
+
+
+Pero... también es trivial en el listado 2, *sin cambiar la interfaz que se presenta al usuario*:
+
+----------------
+
+.. class:: titulo-listado
+
+Listado 5
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+
+   class Punto(Object):
+       def __init__(self, x=0, y=0):
+           self._x = x
+           self.y = y
+
+       def get_x(self, x):
+           reutn self._X
+
+       def set_x(self, x):
+           self._x = abs(x)
+
+       x = property(get_x, set_x)
+
+----------------
+
+Obviamente esto es casi lo mismo que el listado 1, pero con algunas diferencias:
+
+* La forma de acceder a ``x`` o de modificarlo es mejor -- ``print p.x`` en lugar de
+  ``print p.x()``. Sí, es cuestión de gustos nomás.
+
+* No se hicieron los métodos para ``y`` por ser innecesarios.
+
+  Esto es importante: de ser necesarios esos métodos en el futuro es trivial agregarlos. Si nunca lo son, entonces el listado 1 tiene dos funciones inútiles.
+
+  Sí, son dos funciones triviales, que seguramente no crean bugs pero tienen implicaciones de performance, y tienen un efecto que a mí personalmente me molesta: separan el código que hace algo metiendo en el medio código que no hace nada.
+
+  Si esos métodos son funcionalmente nulos, cada vez que están en pantalla es como una franja negra de censura de 5 líneas de alto cruzando mi editor. Es *molesto*.
+
+
+
+.. [#] Object Oriented Programming, o sea, Programación Orientada a Objetos, pero me
+       niego a usar la abreviatura POO porque pienso en ositos.
