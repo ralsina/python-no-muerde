@@ -165,3 +165,29 @@ Dentro de lo posible, voy a intentar que cada capítulo sea autocontenido, expli
    Con suerte será un `grafo acíclico <http://es.wikipedia.org/wiki/Grafo_acíclico_dirigido>`_.
 
    La línea de puntos significa 'no es realmente necesario, pero...'
+
+
+.. include:: 1.txt
+
+.. include:: 2.txt
+
+.. include:: 3.txt
+
+.. include:: 4.txt
+
+.. include:: 5.txt
+
+.. include:: 6.txt
+
+.. include:: 7.txt
+
+.. include:: 8.txt
+
+.. include:: 9.txt
+
+.. include:: 10.txt
+
+.. include:: 11.txt
+
+.. include:: 12.txt
+

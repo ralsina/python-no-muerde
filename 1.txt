@@ -1,0 +1,8 @@
+Pensar en Python
+----------------
+
+   So, the sad thing is that these poor folks worked much, much harder than they needed to, in order to produce much more code than they needed to write, that then performs much more slowly than the equivalent idiomatic Python would.
+
+   -- Phillip J. Eby in `Python is not Java <http://dirtsimple.org/2004/12/python-is-not-java.html>`_
+
+   
