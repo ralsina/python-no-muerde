@@ -9,6 +9,7 @@ O: aprenda a programar en 3217 días
 :Autor: Roberto Alsina
 :Versión: 0.0.0
 
+.. contents::
 
 Introducción
 ------------
