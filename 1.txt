@@ -6,13 +6,13 @@ Pensar en Python
     -- Phillip J. Eby en `Python no es Java <http://dirtsimple.org/2004/12/python-is-not-java.html>`_
 
 
-Nuestra misión en este capítulo es pensar acerca de qué quiere decir Eby con "código python idiomático" en esa cita. Nunca nadie jamás va a poder hacer nu pythonómetro que te mida cuán idiomático es un fragmento de código, pero es posible desarrollar un instinto, una "nariz" para sentir el "olor a python", como un enófilo [#]_ aprende a distinguir el aroma a clavos de hierro-níquel número 7 ligeramente oxidados en un cabernet sauvignon. [#]_
+Nuestra misión en este capítulo es pensar en qué quiere decir Eby con "código python idiomático" en esa cita. Nunca nadie va a poder hacer un pythonómetro que te mida cuán idiomático es un fragmento de código, pero es posible desarrollar un instinto, una "nariz" para sentir el "olor a python", así como un enófilo [#]_ aprende a distinguir el aroma a clavos de hierro-níquel número 7 ligeramente oxidados en un cabernet sauvignon. [#]_
 
 .. [#] En mi barrio los llamábamos curdas
 
-.. [#] Con la esperanza de ser un poco menos pretencioso y/o chanta
+.. [#] Con la esperanza de ser un poco menos pretencioso y/o chanta, si Zeus quiere.
 
-Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer código es ver código.
+Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer el código es ver código.
 
 Get/Set
 ~~~~~~~
@@ -61,9 +61,9 @@ Listado 1
 
 Ésa es una implementación perfectamente respetable de un punto. Guarda X, guarda Y, permite volver a averiguar sus valores... el problema es que eso no es python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí no me engañan tan fácil, eso **es C++** reescrito para que parezca python.
 
-Porqué eso no es python? Por el obvio abuso de los métodos de acceso (accessors, getter/setters), que son completamente innecesarios.
+¿Porqué eso no es python? Por el obvio abuso de los métodos de acceso (accessors, getter/setters), que son completamente innecesarios.
 
-Si la clase punto es simplemente esto, y no tiene otra funcionalidad, entonces debería ser tan sólo ésto:
+Si la clase punto es simplemente esto, y nada más que esto, y no tiene otra funcionalidad, entonces prefiero esta:
 
 
 ----------------
@@ -84,9 +84,9 @@ Listado 2
 
 ----------------
 
-No sólo es más corta, sino que su funcionalidad es completamente equivalente, es más fácil de leer, es completamente obvia (se puede leer de un vistazo), sino que es más eficiente.
+No sólo es más corta, sino que su funcionalidad es completamente equivalente, es más fácil de leer porque es completamente obvia (se puede leer de un vistazo), y hasta es más eficiente.
 
-La única diferencia es que lo que antes era ``p.x()`` ahora es ``p.x`` y que ``p.set_x(14)`` es ``p.x=14`` que no es un cambio importante, pero es una mejora en legibilidad.
+La única diferencia es que lo que antes era ``p.x()`` ahora es ``p.x`` y que ``p.set_x(14)`` es ``p.x=14``, que no es un cambio importante, pero es una mejora en legibilidad.
 
 Es más, si la clase punto fuera solamente ésto, podría ni siquiera ser una clase, sino una ``namedtuple``:
 
@@ -114,12 +114,11 @@ Y el comportamiento es *exactamente el del listado 2* excepto que es aún más e
 
 Por supuesto que siempre está la posibilidad de que la clase Punto evolucione, y haga otras cosas, como por ejemplo calcular la distancia al origen de un punto.
 
-Si bien sería trivial hacer una función que tome una namedtuple y calcule ese valor, es mejor mantener todo el código que manipula los datos de Punto dentro de la clase en vez de crear una colección de funciones ad-hoc.
+Si bien sería trivial hacer una función que tome una ``namedtuple`` y calcule ese valor, es mejor mantener todo el código que manipula los datos de Punto dentro de la clase en vez de crear una colección de funciones ad-hoc. Una ``namedtuple`` es un reemplazo para las clases sin métodos o los ``struct`` de C/C++.
 
-Pero... hay que considerar el programa como una criatura en evolución. Tal vez al comenzar con una ``namedtuple`` *era suficiente*. No valía la pena demorar lo demás mientras se diseñaba la clase Punto. Y pasar de la namedtuple a la clase Punto del listado 2 es trivial, ya que la interfaz que presentan es idéntica.
+Pero... hay que considerar el programa como una criatura en evolución. Tal vez al comenzar con una ``namedtuple`` *era suficiente*. No valía la pena demorar lo demás mientras se diseñaba la clase Punto. Y pasar de una ``namedtuple`` a la clase Punto del listado 2 es trivial, ya que la interfaz que presentan es idéntica.
 
 La crítica que un programador que conoce OOP [#] haría (con justa razón) es que no tenemos encapsulamiento. Que el usuario accede directamente a ``Punto.x`` y ``Punto.y`` por lo que no podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos, etc.
-
 
 Muy bien, supongamos que queremos que el usuario pueda poner sólo valores positivos en x, y que los valores negativos deban ser multiplicados por -1.
 
