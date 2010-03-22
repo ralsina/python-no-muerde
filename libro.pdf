@@ -315,7 +315,7 @@ endobj
  /Dest [ 53 0 R
  /XYZ
  34.34646
- 432.7559
+ 414.7559
  0 ]
  /Rect [ 54.34646
  290.6119
@@ -333,7 +333,7 @@ endobj
  /Dest [ 53 0 R
  /XYZ
  34.34646
- 432.7559
+ 414.7559
  0 ]
  /Rect [ 377.7024
  290.6119
@@ -879,9 +879,9 @@ endobj
  0
  0 ]
  /Rect [ 50.34646
- 114.4119
+ 96.41191
  109.0265
- 126.4119 ]
+ 108.4119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1069,7 +1069,7 @@ endobj
 % 'R63': class PDFInfo 
 63 0 obj
 << /Author ()
- /CreationDate (D:20100322142435+03'00')
+ /CreationDate (D:20100322142930+03'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
@@ -1172,7 +1172,7 @@ endobj
 << /Dest [ 53 0 R
  /XYZ
  34.34646
- 432.7559
+ 414.7559
  0 ]
  /Parent 70 0 R
  /Prev 71 0 R
@@ -1250,7 +1250,7 @@ q
 1 0 0 1 91.03937 3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (e0e01e94cc31) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (a49421b5f7fd) Tj T* ET
 Q
 Q
 q
@@ -1864,7 +1864,7 @@ endobj
 % 'R78': class PDFStream 
 78 0 obj
 % page stream
-<< /Length 4222 >>
+<< /Length 4224 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -1889,7 +1889,7 @@ q
 1 0 0 1 23 3 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Integremos las cosas que vimos antes y us\351moslas para algo.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Integremos las cosas que vimos 4`antes y us\351moslas para algo.) Tj T* ET
 Q
 Q
 q
@@ -2286,7 +2286,7 @@ q
 n 0 0 352.052 192 re f*
 Q
 q
-BT 1 0 0 1 0 186.968 Tm 12 TL /F5 8 Tf 0 0 0 rg ( 1 ) Tj /F6 8 Tf (class) Tj /F5 8 Tf ( ) Tj /F6 8 Tf (Punto) Tj /F5 8 Tf (\() Tj (Object) Tj (\):) Tj  T* ( 2 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (__init__) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (=) Tj (0) Tj (,) Tj ( ) Tj (y) Tj (=) Tj (0) Tj (\):) Tj  T* ( 3 ) Tj (        ) Tj (self) Tj (.) Tj (set_x) Tj (\() Tj (x) Tj (\)) Tj  T* ( 4 ) Tj (        ) Tj (self) Tj (.) Tj (set_y) Tj (\() Tj (y) Tj (\)) Tj  T* ( 5 ) Tj  T* ( 6 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (x) Tj (\() Tj (self) Tj (\):) Tj  T* ( 7 ) Tj (        ) Tj /F6 8 Tf (return) Tj /F5 8 Tf ( ) Tj (_x) Tj  T* ( 8 ) Tj  T* ( 9 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (y) Tj (\() Tj (self) Tj (\):) Tj  T* (10 ) Tj (        ) Tj /F6 8 Tf (return) Tj /F5 8 Tf ( ) Tj (_y) Tj  T* (11 ) Tj  T* (12 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_x) Tj (\() Tj (self) Tj (,) Tj (x) Tj (\):) Tj  T* (13 ) Tj (        ) Tj (self) Tj (.) Tj (_x) Tj (=) Tj (x) Tj  T* (14 ) Tj  T* (15 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_y) Tj (\() Tj (self) Tj (,) Tj (y) Tj (\):) Tj  T* (16 ) Tj (        ) Tj (self) Tj (.) Tj (_y) Tj (=) Tj (y) Tj T* ET
+BT 1 0 0 1 0 186.968 Tm 12 TL /F5 8 Tf 0 0 0 rg ( 1 ) Tj /F6 8 Tf (class) Tj /F5 8 Tf ( ) Tj /F6 8 Tf (Punto) Tj /F5 8 Tf (\() Tj (object) Tj (\):) Tj  T* ( 2 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (__init__) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (=) Tj (0) Tj (,) Tj ( ) Tj (y) Tj (=) Tj (0) Tj (\):) Tj  T* ( 3 ) Tj (        ) Tj (self) Tj (.) Tj (set_x) Tj (\() Tj (x) Tj (\)) Tj  T* ( 4 ) Tj (        ) Tj (self) Tj (.) Tj (set_y) Tj (\() Tj (y) Tj (\)) Tj  T* ( 5 ) Tj  T* ( 6 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (x) Tj (\() Tj (self) Tj (\):) Tj  T* ( 7 ) Tj (        ) Tj /F6 8 Tf (return) Tj /F5 8 Tf ( ) Tj (_x) Tj  T* ( 8 ) Tj  T* ( 9 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (y) Tj (\() Tj (self) Tj (\):) Tj  T* (10 ) Tj (        ) Tj /F6 8 Tf (return) Tj /F5 8 Tf ( ) Tj (_y) Tj  T* (11 ) Tj  T* (12 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_x) Tj (\() Tj (self) Tj (,) Tj (x) Tj (\):) Tj  T* (13 ) Tj (        ) Tj (self) Tj (.) Tj (_x) Tj (=) Tj (x) Tj  T* (14 ) Tj  T* (15 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_y) Tj (\() Tj (self) Tj (,) Tj (y) Tj (\):) Tj  T* (16 ) Tj (        ) Tj (self) Tj (.) Tj (_y) Tj (=) Tj (y) Tj T* ET
 Q
 Q
 Q
@@ -2339,7 +2339,7 @@ q
 n 0 0 352.052 48 re f*
 Q
 q
-BT 1 0 0 1 0 42.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (1 ) Tj /F6 8 Tf (class) Tj /F5 8 Tf ( ) Tj /F6 8 Tf (Punto) Tj /F5 8 Tf (\() Tj (Object) Tj (\):) Tj  T* (2 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (__init__) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (=) Tj (0) Tj (,) Tj ( ) Tj (y) Tj (=) Tj (0) Tj (\):) Tj  T* (3 ) Tj (        ) Tj (self) Tj (.) Tj (x) Tj (=) Tj (x) Tj  T* (4 ) Tj (        ) Tj (self) Tj (.) Tj (y) Tj (=) Tj (y) Tj T* ET
+BT 1 0 0 1 0 42.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (1 ) Tj /F6 8 Tf (class) Tj /F5 8 Tf ( ) Tj /F6 8 Tf (Punto) Tj /F5 8 Tf (\() Tj (object) Tj (\):) Tj  T* (2 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (__init__) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (=) Tj (0) Tj (,) Tj ( ) Tj (y) Tj (=) Tj (0) Tj (\):) Tj  T* (3 ) Tj (        ) Tj (self) Tj (.) Tj (x) Tj (=) Tj (x) Tj  T* (4 ) Tj (        ) Tj (self) Tj (.) Tj (y) Tj (=) Tj (y) Tj T* ET
 Q
 Q
 Q
@@ -2487,7 +2487,7 @@ endobj
 % 'R83': class PDFStream 
 83 0 obj
 % page stream
-<< /Length 4197 >>
+<< /Length 3870 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -2523,7 +2523,7 @@ BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 317.132 0 Td (Listado 4) Tj T* -317.132 0 T
 Q
 Q
 q
-1 0 0 1 34.34646 414.2094 cm
+1 0 0 1 34.34646 378.2094 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -2531,38 +2531,38 @@ q
 1 0 0 1 .1 .1 cm
 q
 1 1 1 rg
-n 0 0 352.052 24 re f*
+n 0 0 352.052 60 re f*
 Q
 q
-BT 1 0 0 1 0 18.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (1 ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_x) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (\):) Tj  T* (2 ) Tj (    ) Tj (self) Tj (.) Tj (_x) Tj ( ) Tj (=) Tj ( ) Tj (abs) Tj (\() Tj (x) Tj (\)) Tj T* ET
+BT 1 0 0 1 0 54.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (1 ) Tj ( ) Tj /F6 8 Tf (class) Tj /F5 8 Tf ( ) Tj /F6 8 Tf (PuntoDerecho) Tj /F5 8 Tf (\() Tj (Punto) Tj (\):) Tj  T* (2 ) Tj (     ) Tj /F4 8 Tf ('''Un punto que solo puede estar a la derecha del eje Y''') Tj /F5 8 Tf  T* (3 ) Tj  T* (4 ) Tj (     ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_x) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (\):) Tj  T* (5 ) Tj (         ) Tj (self) Tj (.) Tj (_x) Tj ( ) Tj (=) Tj ( ) Tj (abs) Tj (\() Tj (x) Tj (\)) Tj T* ET
 Q
 Q
 Q
 Q
 Q
 q
-1 0 0 1 34.34646 377.863 cm
+1 0 0 1 34.34646 341.863 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 359.863 cm
+1 0 0 1 34.34646 323.863 cm
 q
 BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Pero) Tj (\205 tambi\351n es trivial en el listado 2, ) Tj /F8 8 Tf (sin cambiar la interfaz que se presenta al usuario) Tj /F1 8 Tf (:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 331.5165 cm
+1 0 0 1 34.34646 295.5165 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 319.5165 cm
+1 0 0 1 34.34646 283.5165 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F2 8 Tf 12 TL 317.132 0 Td (Listado 5) Tj T* -317.132 0 Td ET
 Q
 Q
 q
-1 0 0 1 34.34646 167.3165 cm
+1 0 0 1 34.34646 155.3165 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -2570,34 +2570,34 @@ q
 1 0 0 1 .1 .1 cm
 q
 1 1 1 rg
-n 0 0 352.052 144 re f*
+n 0 0 352.052 120 re f*
 Q
 q
-BT 1 0 0 1 0 138.968 Tm 12 TL /F5 8 Tf 0 0 0 rg ( 1 ) Tj /F6 8 Tf (class) Tj /F5 8 Tf ( ) Tj /F6 8 Tf (Punto) Tj /F5 8 Tf (\() Tj (Object) Tj (\):) Tj  T* ( 2 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (__init__) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (=) Tj (0) Tj (,) Tj ( ) Tj (y) Tj (=) Tj (0) Tj (\):) Tj  T* ( 3 ) Tj (        ) Tj (self) Tj (.) Tj (_x) Tj ( ) Tj (=) Tj ( ) Tj (x) Tj  T* ( 4 ) Tj (        ) Tj (self) Tj (.) Tj (y) Tj ( ) Tj (=) Tj ( ) Tj (y) Tj  T* ( 5 ) Tj  T* ( 6 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (get_x) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (\):) Tj  T* ( 7 ) Tj (        ) Tj (reutn) Tj ( ) Tj (self) Tj (.) Tj (_X) Tj  T* ( 8 ) Tj  T* ( 9 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_x) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (\):) Tj  T* (10 ) Tj (        ) Tj (self) Tj (.) Tj (_x) Tj ( ) Tj (=) Tj ( ) Tj (abs) Tj (\() Tj (x) Tj (\)) Tj  T* (11 ) Tj  T* (12 ) Tj (    ) Tj (x) Tj ( ) Tj (=) Tj ( ) Tj (property) Tj (\() Tj (get_x) Tj (,) Tj ( ) Tj (set_x) Tj (\)) Tj T* ET
+BT 1 0 0 1 0 114.968 Tm 12 TL /F5 8 Tf 0 0 0 rg ( 1 ) Tj /F6 8 Tf (class) Tj /F5 8 Tf ( ) Tj /F6 8 Tf (PuntoDerecho) Tj /F5 8 Tf (\() Tj (object) Tj (\):) Tj  T* ( 2 ) Tj (    ) Tj /F4 8 Tf ('''Un punto que solo puede estar a la derecha del eje Y''') Tj /F5 8 Tf  T* ( 3 ) Tj  T* ( 4 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (get_x) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (\):) Tj  T* ( 5 ) Tj (        ) Tj (reutn) Tj ( ) Tj (self) Tj (.) Tj (_X) Tj  T* ( 6 ) Tj  T* ( 7 ) Tj (    ) Tj /F6 8 Tf (def) Tj /F5 8 Tf ( ) Tj (set_x) Tj (\() Tj (self) Tj (,) Tj ( ) Tj (x) Tj (\):) Tj  T* ( 8 ) Tj (        ) Tj (self) Tj (.) Tj (_x) Tj ( ) Tj (=) Tj ( ) Tj (abs) Tj (\() Tj (x) Tj (\)) Tj  T* ( 9 ) Tj  T* (10 ) Tj (    ) Tj (x) Tj ( ) Tj (=) Tj ( ) Tj (property) Tj (\() Tj (get_x) Tj (,) Tj ( ) Tj (set_x) Tj (\)) Tj T* ET
 Q
 Q
 Q
 Q
 Q
 q
-1 0 0 1 34.34646 130.9701 cm
+1 0 0 1 34.34646 118.9701 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 112.9701 cm
+1 0 0 1 34.34646 100.9701 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Obviamente esto es casi lo mismo que el listado 1, pero con algunas diferencias:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 106.9701 cm
+1 0 0 1 34.34646 94.97008 cm
 Q
 q
-1 0 0 1 34.34646 106.9701 cm
+1 0 0 1 34.34646 94.97008 cm
 Q
 q
-1 0 0 1 34.34646 76.97008 cm
+1 0 0 1 34.34646 64.97008 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -2617,30 +2617,10 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 76.97008 cm
+1 0 0 1 34.34646 64.97008 cm
 Q
 q
-1 0 0 1 34.34646 76.97008 cm
-Q
-q
-1 0 0 1 34.34646 58.97008 cm
-0 0 0 rg
-BT /F3 10 Tf 12 TL ET
-q
-1 0 0 1 6 3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 11.2 0 Td (\177) Tj T* -11.2 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 3 cm
-q
-BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (No se hicieron los m\351todos para ) Tj /F5 8 Tf (y ) Tj /F1 8 Tf (por ser innecesarios.) Tj T* ET
-Q
-Q
-q
-Q
+1 0 0 1 34.34646 64.97008 cm
 Q
  
 endstream
@@ -2649,14 +2629,26 @@ endobj
 % 'R84': class PDFStream 
 84 0 obj
 % page stream
-<< /Length 4296 >>
+<< /Length 4562 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 444.7559 cm
+1 0 0 1 34.34646 426.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
-BT 1 0 0 1 6 89 Tm  T* ET
+q
+1 0 0 1 6 105 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL 11.2 0 Td (\177) Tj T* -11.2 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 105 cm
+q
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (No se hicieron los m\351todos para ) Tj /F5 8 Tf (y ) Tj /F1 8 Tf (por ser innecesarios.) Tj T* ET
+Q
+Q
 q
 1 0 0 1 23 75 cm
 q
@@ -2681,22 +2673,22 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 444.7559 cm
+1 0 0 1 34.34646 426.7559 cm
 Q
 q
-1 0 0 1 34.34646 444.7559 cm
+1 0 0 1 34.34646 426.7559 cm
 Q
 q
-1 0 0 1 34.34646 418.3559 cm
+1 0 0 1 34.34646 400.3559 cm
 q
 BT 1 0 0 1 0 5.784 Tm 14.4 TL /F2 12 Tf 0 0 0 rg (Patos y Tipos) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 406.3559 cm
+1 0 0 1 34.34646 388.3559 cm
 Q
 q
-1 0 0 1 34.34646 370.3559 cm
+1 0 0 1 34.34646 352.3559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 BT 1 0 0 1 0 5 Tm  T* ET
@@ -2717,13 +2709,13 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 370.3559 cm
+1 0 0 1 34.34646 352.3559 cm
 Q
 q
-1 0 0 1 34.34646 364.3559 cm
+1 0 0 1 34.34646 346.3559 cm
 Q
 q
-1 0 0 1 34.34646 328.3559 cm
+1 0 0 1 34.34646 310.3559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 BT 1 0 0 1 0 5 Tm  T* ET
@@ -2744,17 +2736,17 @@ q
 Q
 Q
 q
-1 0 0 1 34.34646 328.3559 cm
+1 0 0 1 34.34646 310.3559 cm
 Q
 q
-1 0 0 1 34.34646 310.3559 cm
+1 0 0 1 34.34646 292.3559 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Observemos este fragmento de c\363digo:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 241.1559 cm
+1 0 0 1 34.34646 223.1559 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -2774,10 +2766,10 @@ Q
 Q
 Q
 q
-1 0 0 1 34.34646 221.1559 cm
+1 0 0 1 34.34646 203.1559 cm
 Q
 q
-1 0 0 1 34.34646 93.15591 cm
+1 0 0 1 34.34646 75.15591 cm
 .960784 .960784 .862745 rg
 n 0 128 352.252 -128 re f*
 0 0 0 rg
@@ -2821,10 +2813,10 @@ n 352.252 0 m 352.252 128 l S
 Q
 Q
 q
-1 0 0 1 34.34646 87.15591 cm
+1 0 0 1 34.34646 69.15591 cm
 Q
 q
-1 0 0 1 34.34646 69.15591 cm
+1 0 0 1 34.34646 51.15591 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Es obvio como funciona con, por ejemplo una lista:) Tj T* ET
@@ -3280,36 +3272,36 @@ xref
 0000035574 00000 n
 0000036646 00000 n
 0000042416 00000 n
-0000046739 00000 n
-0000047493 00000 n
-0000051668 00000 n
-0000055149 00000 n
-0000059987 00000 n
-0000064285 00000 n
-0000068682 00000 n
-0000073289 00000 n
-0000077034 00000 n
-0000077287 00000 n
-0000077364 00000 n
-0000077441 00000 n
-0000077518 00000 n
-0000077595 00000 n
-0000077672 00000 n
-0000077749 00000 n
-0000077826 00000 n
-0000077903 00000 n
-0000077980 00000 n
-0000078058 00000 n
-0000078136 00000 n
-0000078215 00000 n
+0000046741 00000 n
+0000047495 00000 n
+0000051670 00000 n
+0000055151 00000 n
+0000059989 00000 n
+0000063960 00000 n
+0000068623 00000 n
+0000073230 00000 n
+0000076975 00000 n
+0000077228 00000 n
+0000077305 00000 n
+0000077382 00000 n
+0000077459 00000 n
+0000077536 00000 n
+0000077613 00000 n
+0000077690 00000 n
+0000077767 00000 n
+0000077844 00000 n
+0000077921 00000 n
+0000077999 00000 n
+0000078077 00000 n
+0000078156 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\353\362?\012\374Y\334}\222\301k\307d\244\007\317) (\353\362?\012\374Y\334}\222\301k\307d\244\007\317)] 
+ [(T\327X\014\262\\\277\254\240\311\270\010g]\033c) (T\327X\014\262\\\277\254\240\311\270\010g]\033c)] 
 
  /Info 63 0 R
  /Root 62 0 R
  /Size 101 >>
 startxref
-78264
+78205
 %%EOF
