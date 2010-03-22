@@ -132,7 +132,7 @@ Dentro de lo posible, voy a intentar que cada capítulo sea autocontenido, expli
 
 #. Un programa útil
 
-   Integremos las cosas que vimos antes y usémoslas para algo.
+   Integremos las cosas que vimos 4`antes y usémoslas para algo.
 
 #. Instalación, deployment y otras yerbas
 

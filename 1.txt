@@ -40,7 +40,7 @@ Listado 1
 .. code-block:: python
    :linenos:
 
-   class Punto(Object):
+   class Punto(object):
        def __init__(self, x=0, y=0):
            self.set_x(x)
            self.set_y(y)
@@ -77,7 +77,7 @@ Listado 2
 .. code-block:: python
    :linenos:
 
-   class Punto(Object):
+   class Punto(object):
        def __init__(self, x=0, y=0):
            self.x=x
            self.y=y
@@ -138,8 +138,11 @@ Listado 4
 .. code-block:: python
    :linenos:
 
-   def set_x(self, x):
-       self._x = abs(x)
+    class PuntoDerecho(Punto):
+        '''Un punto que solo puede estar a la derecha del eje Y'''
+        
+        def set_x(self, x):
+            self._x = abs(x)
 
 ----------------
 
@@ -157,10 +160,8 @@ Listado 5
 .. code-block:: python
    :linenos:
 
-   class Punto(Object):
-       def __init__(self, x=0, y=0):
-           self._x = x
-           self.y = y
+   class PuntoDerecho(object):
+       '''Un punto que solo puede estar a la derecha del eje Y'''
 
        def get_x(self, x):
            reutn self._X
@@ -185,5 +186,80 @@ Obviamente esto es casi lo mismo que el listado 1, pero con algunas diferencias:
 
   Si esos métodos son funcionalmente nulos, cada vez que están en pantalla es como una franja negra de censura de 5 líneas de alto cruzando mi editor. Es *molesto*.
 
+Patos y Tipos
+~~~~~~~~~~~~~
 
-       
+    "You are in a maze of twisty little passages, all alike."
+
+    -- Will Crowther in "Adventure"
+
+..
+
+    "You are in a maze of twisty little passages, all different."
+
+    -- Don Woods in "Adventure"
+
+
+Observemos este fragmento de código:
+
+.. code-block:: python
+
+   def diferencia(a,b):
+       # Devuelve un conjunto con las cosas que están
+       # en A pero no en B
+       return set(a) - set(b)
+
+.. admonition:: Nota
+
+   Un set (conjunto) es una estructura de datos que almacena cosas sin repeticiones.
+   Por ejemplo, ``set([1,2,3,2])`` es lo mismo que ``set([1, 2, 3])``.
+
+   También soporta las típicas operaciones de conjuntos, como intersección, unión y diferencia.
+
+   `Más información <http://docs.python.org/library/stdtypes.html#set-types-set-frozenset>`_
+
+Es obvio como funciona con, por ejemplo una lista:
+
+.. code-block:: pycon
+
+    >>> diferencia([1,2],[2,3])
+    set([1])
+
+¿Pero es igual de obvio que funciona con cadenas?
+
+.. code-block:: pycon
+
+    >>> diferencia("batman","murciélago")
+    set(['b', 't', 'n'])
+
+¿Porqué funciona? ¿Es que las cadenas están implementadas como una subclase de ``list``? No, la implementación de las clases ``str`` o ``unicode`` es completamente independiente. Pero son *parecidos*. Tienen muchas cosas en común.
+
+.. code-block:: pycon
+
+    >>> l=['c','a','s','a']
+    >>> s='casa'
+    >>> l[0] , s[0]
+    ('c', 'c')
+    >>> l[-2:] , s[-2:]
+    (['s', 'a'], 'sa')
+    >>> '-'.join(l)
+    'c-a-s-a'
+    >>> '-'.join(s)
+    'c-a-s-a'
+    >>> set(l)
+    set(['a', 'c', 's'])
+    >>> set(s)
+    set(['a', 'c', 's'])
+
+Para la mayoría de los usos posibles, listas y cadenas son *muy* parecidas. Y resulta que son lo bastante parecidas como para que en nuestra función ``diferencia`` sean completamente equivalentes.
+
+Un programa escrito sin pensar en "¿De qué clase es este objeto?" sino en "¿Qué puede hacer este objeto?", es un programa muy diferente.
+
+Para empezar suele ser un programa más "informal" en el sentido de que simplemente asumimos que nos van a dar un objeto que nos sirva. Si no nos sirve, bueno, habrá una excepción.
+
+Al mismo tiempo que da una sensación de libertad (¡Hey, puedo usar dos clases sin un ancestro común!) también puede producir temor (¿Y qué pasa si alguien llama ``hacerpancho(Perro())``?). Pues resulta que ambas cosas son ciertas. Es posible hacer un pancho de perro, en cuyo caso es culpa del que lo hace, y es *problema suyo*, no un error en la definición de ``hacerpancho``.
+
+Esa es una diferencia filosófica. Si ``hacerpancho`` verifica que la entrada sea una salchicha, siempre va a producir *por lo menos* un pancho. Nunca va a producir un sandwich con una manguera de jardín en el medio, pero tampoco va a producir un sandwich de portobelos salteados con ciboulette.
+
+Es demasiado fácil imponer restricciones arbitrarias al limitar los tipos de datos aceptables. 
+
