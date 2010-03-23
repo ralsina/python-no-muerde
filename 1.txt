@@ -441,11 +441,18 @@ Mejor:
         if item.is_happy:
             happy_items.append(index)
 
-Mejor (pero tal vez demasiado astuto?):
+Mejor (¿pero tal vez demasiado astuto?):
 
 .. code-block:: python
 
     happy_items=[ index for (index, item) in enumerate(lista) if item.is_happy ]
+
+Demasiado (y ni siquiera es más corto):
+
+.. code-block:: python
+
+    happy_items=[x[0] for x in filter(lambda x: x[0].is_happy, enumerate(lista))]
+
 
 Lambdas vs funciones
 
