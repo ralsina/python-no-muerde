@@ -92,6 +92,13 @@ cuadrados.py
 
 ----------------
 
+Lenguaje
+~~~~~~~~
+
+Las discusiones acerca de como escribir un libro técnico en castellano son eternas. Que en España se traduce todo todo todo. Que en Argentina no. Que decir "cadena de caracteres" en lugar de string es malo para la ecología.
+
+Por suerte en este libro hay un único criterio superador que ojalá otros libros adopten: Está escrito como escribo yo. Ni un poquito distinto. No creo que siquiera califique como castellano, como mucho está escrito en argentino. Si a los lectores de la ex madre patria les molesta el estilo... tradúzcanlo.
+
 Mapa
 ~~~~
 
@@ -128,7 +135,7 @@ Dentro de lo posible, voy a intentar que cada capítulo sea autocontenido, expli
 
 #. Un programa útil
 
-   Integremos las cosas que vimos 4`antes y usémoslas para algo.
+   Integremos las cosas que vimos antes y usémoslas para algo.
 
 #. Instalación, deployment y otras yerbas
 
@@ -167,7 +174,7 @@ La línea de puntos significa 'no es realmente necesario, pero...'
 Acerca del Autor
 ~~~~~~~~~~~~~~~~
 
-Habrá que pedirle a alguien que pong algo no demasiado insultante.
+Habrá que pedirle a alguien que ponga algo no demasiado insultante.
 
 .. include:: 1.txt
 

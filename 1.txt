@@ -227,7 +227,7 @@ Observemos este fragmento de código:
 .. Admonition:: Set
 
    Un set (conjunto) es una estructura de datos que almacena cosas sin repeticiones.
-   Por ejemplo, ``set([1,2,3,2])`` es lo mismo que ``set([1, 2, 3])``.
+   Por ejemplo, ``set([1,2,3,2])`` es lo mismo que ``set([1,2,3])``.
 
    También soporta las típicas operaciones de conjuntos, como intersección, unión y diferencia.
 
@@ -415,7 +415,7 @@ El problema es que el código se escribe una sola vez, pero se lee cientos. Cada
 
 Funciones de 1000 líneas, ifs anidados de 5 niveles, cascadas de condicionales con 200 ramas... todas esas cosas son a veces tan ilegibles como el ejemplo anterior.
 
-Lo importante es lograr un balance, hacer que el código sea corto, pero *no más corto*. En python hay varias estructuras de control o de datos que ayudan en esa misión.
+Lo importante es lograr un balance, hacer que el código sea corto, pero *no demasiado corto*. En python hay varias estructuras de control o de datos que ayudan en esa misión.
 
 Consideremos la tercera cosa que aprende todo programador: iteración. En python, se itera sobre listas [#]_ por lo que no sabemos, a priori, la posición del item que estamos examinando, y a veces es necesaria.
 
