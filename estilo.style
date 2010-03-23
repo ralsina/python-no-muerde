@@ -20,6 +20,17 @@
     [ "listado" , {
         "parent": "code"
       }],
+    ["endnote", {
+        "parent": "bodytext",
+        "commands": [
+            ["VALIGN", [ 0, 0 ], [ -1, -1 ], "TOP" ],
+            ["TOPPADDING", [ 0, 0 ], [ -1, -1 ], 0 ],
+            ["BOTTOMPADDING", [ 0, 0 ], [ -1, -1 ], 0 ],
+            ["RIGHTPADDING", [ 0, 0 ], [ 1, -1 ], 0 ],
+            ["LINEAFTER", [0,0],[0,-1], 1. , "#C0C0C0"]
+	],
+        "colWidths": ["1cm", null]
+    }],
     [ "titulo-listado" , {
         "parent": "bodytext",
         "fontName": "stdBold",
