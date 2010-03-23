@@ -387,8 +387,8 @@ O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas qu
 Claro pero corto
 ~~~~~~~~~~~~~~~~
 
-    Depurar es dos veces más fifícil que programar. Por lo tanto, si
-    escribís el código más astuto posible, por definicion, no sos lo
+    Depurar es dos veces más difícil que programar. Por lo tanto, si
+    escribís el código más astuto posible, por definición, no sos lo
     suficientemente inteligente para depurarlo.
 
     --Brian W. Kernighan
@@ -411,9 +411,41 @@ Una de las tentaciones de todo programador es escribir código corto [#]_. Yo mi
         _|  | _| _|  |
 
 
+El problema es que el código se escribe una sola vez, pero se lee cientos. Cada vez que vayas a cambiar algo del programa, vas a leer más de lo que escribís. Por lo tanto es fundamental que sea fácil de leer. El código *muy* corto es ilegible. El código demasiado largo también.
 
+Funciones de 1000 líneas, ifs anidados de 5 niveles, cascadas de condicionales con 200 ramas... todas esas cosas son a veces tan ilegibles como el ejemplo anterior.
 
-Comprensión de listas vs loops
+Lo importante es lograr un balance, hacer que el código sea corto, pero *no más corto*. En python hay varias estructuras de control o de datos que ayudan en esa misión.
+
+Consideremos la tercera cosa que aprende todo programador: iteración. En python, se itera sobre listas [#]_ por lo que no sabemos, a priori, la posición del item que estamos examinando, y a veces es necesaria.
+
+.. [#] No exactamente, se itera sobre iterables, valga la redundancia, pero los podemos pensar como listas.
+
+Malo:
+
+.. code-block:: python
+
+    index=0
+    happy_items=[]
+    for item in lista:
+        if item.is_happy:
+            happy_items.append(index)
+        index+=1
+
+Mejor:
+
+.. code-block:: python
+
+    happy_items=[]
+    for index, item in enumerate(lista):
+        if item.is_happy:
+            happy_items.append(index)
+
+Mejor (pero tal vez demasiado astuto?):
+
+.. code-block:: python
+
+    happy_items=[ index for (index, item) in enumerate(lista) if item.is_happy ]
 
 Lambdas vs funciones
 
