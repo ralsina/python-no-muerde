@@ -75,10 +75,6 @@ Los fragmentos de código fuente se va a mostrar en cajas:
 Los listados extensos o programas completos se incluirán sin cajas, separados
 del texto con líneas, mostrarán número de línea e indicarán el nombre del mismo:
 
-.. raw:: pdf
-
-   PageBreak
-
 ----------------
 
 .. class:: titulo-listado
