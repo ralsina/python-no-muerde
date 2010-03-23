@@ -387,6 +387,32 @@ O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas qu
 Claro pero corto
 ~~~~~~~~~~~~~~~~
 
+    Depurar es dos veces más fifícil que programar. Por lo tanto, si
+    escribís el código más astuto posible, por definicion, no sos lo
+    suficientemente inteligente para depurarlo.
+
+    --Brian W. Kernighan
+
+Una de las tentaciones de todo programador es escribir código corto [#]_. Yo mismo soy débil ante esa tentación.
+
+.. [#] Esta peculiar perversión se llama "code golfing". Y es muy divertida, si no es un modo de vida.
+
+.. admonition:: Código Corto
+
+   .. code-block:: pycon
+
+        j=''.join
+        seven_seg=lambda z:j(j('   _  |_ _|_| |'[ord(\
+        "ucd*\]Rml"[int(a)])/u%8*2:][:3]for a in z)+\
+        "\n"for u in(64,8,1))
+        >>> print seven_seg('31337')
+        _     _  _  _
+        _|  | _| _|  |
+        _|  | _| _|  |
+
+
+
+
 Comprensión de listas vs loops
 
 Lambdas vs funciones
