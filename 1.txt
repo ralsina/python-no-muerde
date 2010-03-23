@@ -12,7 +12,7 @@ Nuestra misión en este capítulo es pensar en qué quiere decir Eby con "códig
 
 .. [#] Con la esperanza de ser un poco menos pretencioso y/o chanta, si Zeus quiere.
 
-Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer el código es ver código.
+Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer el código es ver código. Este capítulo no es exhaustivo, no muestra todas las maneras en que python es peculiar, ni todas las cosas que hacen que tu código sea "pythonic" -- entre otros motivos porque *no las conozco* -- pero muestra varias. El resto es cuestión de gustos.
 
 Get/Set
 ~~~~~~~
@@ -185,6 +185,17 @@ Obviamente esto es casi lo mismo que si partimos del listado 1, pero con algunas
   Sí, son dos funciones triviales, que seguramente no crean bugs pero tienen implicaciones de performance, y tienen un efecto que a mí personalmente me molesta: separan el código que hace algo metiendo en el medio código que no hace nada.
 
   Si esos métodos son funcionalmente nulos, cada vez que están en pantalla es como una franja negra de censura de 5 líneas de alto cruzando mi editor. Es *molesto*.
+
+Singletons y Globales
+~~~~~~~~~~~~~~~~~~~~~
+
+Un singleton es una variable global disfrazada.
+
+Loops y medios loops
+~~~~~~~~~~~~~~~~~~~~
+
+while True: ... break etc.
+
 
 Patos y Tipos
 ~~~~~~~~~~~~~
@@ -368,5 +379,3 @@ O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas qu
    La ventaja de utilizar ``lambda`` es que, si no se necesita utilizarla en otra parte, mantiene la definición de esta función en el lugar donde se usa para evitar tener que buscarlo en otra parte al leer el código.
 
    `Más información <>`_
-
-
