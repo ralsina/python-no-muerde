@@ -411,7 +411,7 @@ Una de las tentaciones de todo programador es escribir código corto [#]_. Yo mi
         _|  | _| _|  |
 
 
-El problema es que el código se escribe una sola vez, pero se lee cientos. Cada vez que vayas a cambiar algo del programa, vas a leer más de lo que escribís. Por lo tanto es fundamental que sea fácil de leer. El código *muy* corto es ilegible. El código demasiado largo también.
+El problema es que el código se escribe una sola vez, pero se lee cientos. Cada vez que vayas a cambiar algo del programa, vas a leer más de lo que escribís. Por lo tanto es fundamental que sea fácil de leer. El código *muy* corto es ilegible. El código demasiado largo *también*.
 
 Funciones de 1000 líneas, ifs anidados de 5 niveles, cascadas de condicionales con 200 ramas... todas esas cosas son a veces tan ilegibles como el ejemplo anterior.
 
@@ -447,7 +447,7 @@ Mejor (¿pero tal vez demasiado astuto?):
 
     happy_items=[ index for (index, item) in enumerate(lista) if item.is_happy ]
 
-Demasiado (y ni siquiera es más corto):
+Probablemente demasiado (y no es más corto):
 
 .. code-block:: python
 
