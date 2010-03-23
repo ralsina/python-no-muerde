@@ -394,3 +394,7 @@ Lambdas vs funciones
 ternarios vs ifs
 
 ¿otros?
+
+-------------------------
+
+Faltan subsecciones? Se pueden agregar si la idea surge viendo los otros capítulos.
