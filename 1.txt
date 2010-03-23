@@ -196,6 +196,10 @@ Loops y medios loops
 
 while True: ... break etc.
 
+Switches
+~~~~~~~~
+
+cadena de ifs vs alternativas
 
 Patos y Tipos
 ~~~~~~~~~~~~~
@@ -379,3 +383,14 @@ O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas qu
    La ventaja de utilizar ``lambda`` es que, si no se necesita utilizarla en otra parte, mantiene la definición de esta función en el lugar donde se usa para evitar tener que buscarlo en otra parte al leer el código.
 
    `Más información <>`_
+
+Claro pero corto
+~~~~~~~~~~~~~~~~
+
+Comprensión de listas vs loops
+
+Lambdas vs funciones
+
+ternarios vs ifs
+
+¿otros?
