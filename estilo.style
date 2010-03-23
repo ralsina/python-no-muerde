@@ -15,7 +15,7 @@
         "borderPadding": 0,
         "borderColor": null,
         "borderRadius": null,
-        "backColor": "white"
+        "backColor": "#00000000"
       }],
     [ "listado" , {
         "parent": "code"
