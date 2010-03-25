@@ -553,12 +553,29 @@ Mejor (¿pero tal vez demasiado astuto?):
     happy_items=[ index for (index, item) in enumerate(lista) \
         if item.is_happy ]
 
-Probablemente demasiado (y no es más corto):
+Tal vez demasiado:
 
 .. code-block:: python
 
-    happy_items=[x[0] for x in filter(lambda x: x[0].is_happy, \
-        enumerate(lista))]
+    filter(lambda x: x[0] if x[1].is_happy else None, enumerate(lista))
+
+.. admonition:: Nota
+
+   Esto se llama una expresión ternaria:
+
+   .. code-block:: python
+
+       r = x[0] if x[1].is_happy else None
+
+   Y es el equivalente de:
+
+   .. code-block:: python
+
+       
+       if x[1].is_happy:
+           r = x[1]
+       else:
+           r = x[0]
 
 
 Lambdas vs funciones
