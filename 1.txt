@@ -573,10 +573,9 @@ Tal vez demasiado:
 
        
        if x[1].is_happy:
-           r = x[1]
-       else:
            r = x[0]
-
+       else:
+           r = None
 
 Lambdas vs funciones
 
