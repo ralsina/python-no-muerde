@@ -1,33 +1,53 @@
 Pensar en Python
 ----------------
 
-    Lo triste es que esta pobre gente trabajó mucho más de lo necesario, para producir mucho más código del necesario, que funciona mucho más lento que el código python idiomático correspondiente.
+    Lo triste es que esta pobre gente trabajó mucho más de lo necesario, para
+    producir mucho más código del necesario, que funciona mucho más lento que el
+    código python idiomático correspondiente.
 
-    -- Phillip J. Eby en `Python no es Java <http://dirtsimple.org/2004/12/python-is-not-java.html>`_
+    -- Phillip J. Eby en `Python no es Java
+    <http://dirtsimple.org/2004/12/python-is-not-java.html>`_
 
 
-Nuestra misión en este capítulo es pensar en qué quiere decir Eby con "código python idiomático" en esa cita. Nunca nadie va a poder hacer un pythonómetro que te mida cuán idiomático es un fragmento de código, pero es posible desarrollar un instinto, una "nariz" para sentir el "olor a python", así como un enófilo [#]_ aprende a distinguir el aroma a clavos de hierro-níquel número 7 ligeramente oxidados en un cabernet sauvignon. [#]_
+Nuestra misión en este capítulo es pensar en qué quiere decir Eby con "código
+python idiomático" en esa cita. Nunca nadie va a poder hacer un pythonómetro que
+te mida cuán idiomático es un fragmento de código, pero es posible desarrollar
+un instinto, una "nariz" para sentir el "olor a python", así como un enófilo
+[#]_ aprende a distinguir el aroma a clavos de hierro-níquel número 7
+ligeramente oxidados en un cabernet sauvignon. [#]_
 
 .. [#] En mi barrio los llamábamos curdas
 
-.. [#] Con la esperanza de ser un poco menos pretencioso y/o chanta, si Zeus quiere.
+.. [#] Con la esperanza de ser un poco menos pretencioso y/o chanta, si Zeus
+       quiere.
 
-Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer el código es ver código. Este capítulo no es exhaustivo, no muestra todas las maneras en que python es peculiar, ni todas las cosas que hacen que tu código sea "pythonic" -- entre otros motivos porque *no las conozco* -- pero muestra varias. El resto es cuestión de gustos.
+Y si la mejor forma de conocer el vino es tomar vino, la mejor forma de conocer
+el código es ver código. Este capítulo no es exhaustivo, no muestra todas las
+maneras en que python es peculiar, ni todas las cosas que hacen que tu código
+sea "pythonic" -- entre otros motivos porque *no las conozco* -- pero muestra
+varias. El resto es cuestión de gustos.
 
 Get/Set
 ~~~~~~~
 
 .. admonition:: Analogía rebuscada
 
-    En un almacén, para tener un paquete de yerba, hay que pedírselo al almacenero.
-    En un supermercado, para tener un paquete de yerba, hay que agarrar un paquete de yerba.
-    En una farmacia (de las grandes), para obtener un paquete de yerba hay que agarrar un paquete de yerba, pero para tener un Lexotanil hay que pedirlo al farmacéutico.
+    En un almacén, para tener un paquete de yerba, hay que pedírselo al
+    almacenero.
+    En un supermercado, para tener un paquete de yerba, hay que agarrar un
+    paquete de yerba.
+    En una farmacia (de las grandes), para obtener un paquete de yerba hay que
+    agarrar un paquete de yerba, pero para tener un Lexotanil hay que pedirlo al
+    farmacéutico.
 
-    En Java o C++, la costumbre es escribir programas como almacenes, porque la alternativa es escribir supermercados donde chicos de 5 compran raticida.
+    En Java o C++, la costumbre es escribir programas como almacenes, porque la
+    alternativa es escribir supermercados donde chicos de 5 compran raticida.
 
-    En Python, la costumbre es escribir programas como supermercados, porque se pueden convertir en farmacias apenas decidamos que tener raticida es buena idea.
+    En Python, la costumbre es escribir programas como supermercados, porque se
+    pueden convertir en farmacias apenas decidamos que tener raticida es buena idea.
 
-Imaginemos que estamos escribiendo un programa que trabaja con "puntos" o sea coordenadas (X,Y), y que queremos implementarlos con una clase. Por ejemplo: 
+Imaginemos que estamos escribiendo un programa que trabaja con "puntos" o sea
+coordenadas (X,Y), y que queremos implementarlos con una clase. Por ejemplo: 
 
 ----------------
 
@@ -59,11 +79,16 @@ Listado 1
 
 ----------------
 
-Ésa es una implementación perfectamente respetable de un punto. Guarda X, guarda Y, permite volver a averiguar sus valores... el problema es que eso no es python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí no me engañan tan fácil, eso **es C++** reescrito para que parezca python.
+Ésa es una implementación perfectamente respetable de un punto. Guarda X, guarda
+Y, permite volver a averiguar sus valores... el problema es que eso no es
+python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí
+no me engañan tan fácil, eso **es C++** reescrito para que parezca python.
 
-¿Porqué eso no es python? Por el obvio abuso de los métodos de acceso (accessors, getter/setters), que son completamente innecesarios.
+¿Porqué eso no es python? Por el obvio abuso de los métodos de acceso
+(accessors, getter/setters), que son completamente innecesarios.
 
-Si la clase punto es simplemente esto, y nada más que esto, y no tiene otra funcionalidad, entonces prefiero esta:
+Si la clase punto es simplemente esto, y nada más que esto, y no tiene otra
+funcionalidad, entonces prefiero esta:
 
 
 ----------------
@@ -84,11 +109,16 @@ Listado 2
 
 ----------------
 
-No sólo es más corta, sino que su funcionalidad es completamente equivalente, es más fácil de leer porque es completamente obvia (se puede leer de un vistazo), y hasta es más eficiente.
+No sólo es más corta, sino que su funcionalidad es completamente equivalente, es
+más fácil de leer porque es completamente obvia (se puede leer de un vistazo), y
+hasta es más eficiente.
 
-La única diferencia es que lo que antes era ``p.x()`` ahora es ``p.x`` y que ``p.set_x(14)`` es ``p.x=14``, que no es un cambio importante, pero es una mejora en legibilidad.
+La única diferencia es que lo que antes era ``p.x()`` ahora es ``p.x`` y que
+``p.set_x(14)`` es ``p.x=14``, que no es un cambio importante, pero es una
+mejora en legibilidad.
 
-Es más, si la clase punto fuera solamente ésto, podría ni siquiera ser una clase, sino una ``namedtuple``:
+Es más, si la clase punto fuera solamente ésto, podría ni siquiera ser una
+clase, sino una ``namedtuple``:
 
 
 ----------------
@@ -106,24 +136,40 @@ Listado 3
 
 ----------------
 
-Y el comportamiento es *exactamente el del listado 2* excepto que es aún más eficiente.
+Y el comportamiento es *exactamente el del listado 2* excepto que es aún más
+eficiente.
 
 .. admonition:: Nota
 
-   Es fundamental conocer las estructuras de datos que te da el lenguaje. En Python eso significa conocer las estructuras del lenguaje, como diccionarios, tuplas y listas y el módulo collections de la biblioteca standard.
+   Es fundamental conocer las estructuras de datos que te da el lenguaje. En
+   Python eso significa conocer las estructuras del lenguaje, como diccionarios,
+   tuplas y listas y el módulo collections de la biblioteca standard.
 
-Por supuesto que siempre está la posibilidad de que la clase Punto evolucione, y haga otras cosas, como por ejemplo calcular la distancia al origen de un punto.
+Por supuesto que siempre está la posibilidad de que la clase Punto evolucione, y
+haga otras cosas, como por ejemplo calcular la distancia al origen de un punto.
 
-Si bien sería trivial hacer una función que tome una ``namedtuple`` y calcule ese valor, es mejor mantener todo el código que manipula los datos de Punto dentro de la clase en vez de crear una colección de funciones ad-hoc. Una ``namedtuple`` es un reemplazo para las clases sin métodos o los ``struct`` de C/C++.
+Si bien sería trivial hacer una función que tome una ``namedtuple`` y calcule
+ese valor, es mejor mantener todo el código que manipula los datos de Punto
+dentro de la clase en vez de crear una colección de funciones ad-hoc. Una
+``namedtuple`` es un reemplazo para las clases sin métodos o los ``struct`` de
+C/C++.
 
-Pero... hay que considerar el programa como una criatura en evolución. Tal vez al comenzar con una ``namedtuple`` *era suficiente*. No valía la pena demorar lo demás mientras se diseñaba la clase Punto. Y pasar de una ``namedtuple`` a la clase Punto del listado 2 es trivial, ya que la interfaz que presentan es idéntica.
+Pero... hay que considerar el programa como una criatura en evolución. Tal vez
+al comenzar con una ``namedtuple`` *era suficiente*. No valía la pena demorar lo
+demás mientras se diseñaba la clase Punto. Y pasar de una ``namedtuple`` a la
+clase Punto del listado 2 es trivial, ya que la interfaz que presentan es
+idéntica.
 
-La crítica que un programador que conoce OOP [#]_ haría (con justa razón) es que no tenemos encapsulamiento. Que el usuario accede directamente a ``Punto.x`` y ``Punto.y`` por lo que no podemos comprobar la validez de los valores asignados, o hacer operaciones sobre los mismos, etc.
+La crítica que un programador que conoce OOP [#]_ haría (con justa razón) es que
+no tenemos encapsulamiento. Que el usuario accede directamente a ``Punto.x`` y
+``Punto.y`` por lo que no podemos comprobar la validez de los valores asignados,
+o hacer operaciones sobre los mismos, etc.
 
-.. [#] Object Oriented Programming, o sea, Programación Orientada a Objetos, pero me
-       niego a usar la abreviatura POO porque pienso en ositos.
+.. [#] Object Oriented Programming, o sea, Programación Orientada a Objetos,
+       pero me niego a usar la abreviatura POO porque pienso en ositos.
 
-Muy bien, supongamos que queremos que el usuario pueda poner sólo valores positivos en x, y que los valores negativos deban ser multiplicados por -1.
+Muy bien, supongamos que queremos que el usuario pueda poner sólo valores
+positivos en x, y que los valores negativos deban ser multiplicados por -1.
 
 En la clase del listado 1, es trivial:
 
@@ -146,8 +192,8 @@ Listado 4
 
 ----------------
 
-
-Pero... también es trivial en el listado 2, *sin cambiar la interfaz que se presenta al usuario*:
+Pero... también es trivial en el listado 2, *sin cambiar la interfaz que se
+presenta al usuario*:
 
 ----------------
 
@@ -173,18 +219,25 @@ Listado 5
 
 ----------------
 
-Obviamente esto es casi lo mismo que si partimos del listado 1, pero con algunas diferencias:
+Obviamente esto es casi lo mismo que si partimos del listado 1, pero con algunas
+diferencias:
 
-* La forma de acceder a ``x`` o de modificarlo es mejor -- ``print p.x`` en lugar de
-  ``print p.x()``. Sí, es cuestión de gustos nomás.
+* La forma de acceder a ``x`` o de modificarlo es mejor -- ``print p.x`` en
+  lugar de ``print p.x()``. Sí, es cuestión de gustos nomás.
 
 * No se hicieron los métodos para ``y`` por ser innecesarios.
 
-  Esto es importante: de ser necesarios esos métodos en el futuro es trivial agregarlos. Si nunca lo son, entonces el listado 1 tiene dos funciones inútiles.
+  Esto es importante: de ser necesarios esos métodos en el futuro es trivial
+  agregarlos. Si nunca lo son, entonces el listado 1 tiene dos funciones inútiles.
 
-  Sí, son dos funciones triviales, que seguramente no crean bugs pero tienen implicaciones de performance, y tienen un efecto que a mí personalmente me molesta: separan el código que hace algo metiendo en el medio código que no hace nada.
+  Sí, son dos funciones triviales, que seguramente no crean bugs pero tienen
+  implicaciones de performance, y tienen un efecto que a mí personalmente me
+  molesta: separan el código que hace algo metiendo en el medio código que no hace
+  nada.
 
-  Si esos métodos son funcionalmente nulos, cada vez que están en pantalla es como una franja negra de censura de 5 líneas de alto cruzando mi editor. Es *molesto*.
+  Si esos métodos son funcionalmente nulos, cada vez que están en pantalla es
+  como una franja negra de censura de 5 líneas de alto cruzando mi editor. Es
+  *molesto*.
 
 Singletons y Globales
 ~~~~~~~~~~~~~~~~~~~~~
@@ -226,12 +279,14 @@ Observemos este fragmento de código:
 
 .. Admonition:: Set
 
-   Un set (conjunto) es una estructura de datos que almacena cosas sin repeticiones.
-   Por ejemplo, ``set([1,2,3,2])`` es lo mismo que ``set([1,2,3])``.
+   Un set (conjunto) es una estructura de datos que almacena cosas sin
+   repeticiones. Por ejemplo, ``set([1,2,3,2])`` es lo mismo que ``set([1,2,3])``.
 
-   También soporta las típicas operaciones de conjuntos, como intersección, unión y diferencia.
+   También soporta las típicas operaciones de conjuntos, como intersección,
+   unión y diferencia.
 
-   `Más información <http://docs.python.org/library/stdtypes.html#set-types-set-frozenset>`_
+   `Más información
+   <http://docs.python.org/library/stdtypes.html#set-types-set-frozenset>`_
 
 Es obvio como funciona con, por ejemplo una lista:
 
@@ -247,7 +302,9 @@ Es obvio como funciona con, por ejemplo una lista:
     >>> diferencia("batman","murciélago")
     set(['b', 't', 'n'])
 
-¿Porqué funciona? ¿Es que las cadenas están implementadas como una subclase de ``list``? No, la implementación de las clases ``str`` o ``unicode`` es completamente independiente. Pero son *parecidos*. Tienen muchas cosas en común.
+¿Porqué funciona? ¿Es que las cadenas están implementadas como una subclase de
+``list``? No, la implementación de las clases ``str`` o ``unicode`` es
+completamente independiente. Pero son *parecidos*. Tienen muchas cosas en común.
 
 .. code-block:: pycon
 
@@ -266,28 +323,48 @@ Es obvio como funciona con, por ejemplo una lista:
     >>> set(s)
     set(['a', 'c', 's'])
 
-Para la mayoría de los usos posibles, listas y cadenas son *muy* parecidas. Y resulta que son lo bastante parecidas como para que en nuestra función ``diferencia`` sean completamente equivalentes.
+Para la mayoría de los usos posibles, listas y cadenas son *muy* parecidas. Y
+resulta que son lo bastante parecidas como para que en nuestra función
+``diferencia`` sean completamente equivalentes.
 
-Un programa escrito sin pensar en "¿De qué clase es este objeto?" sino en "¿Qué puede hacer este objeto?", es un programa muy diferente.
+Un programa escrito sin pensar en "¿De qué clase es este objeto?" sino en "¿Qué
+puede hacer este objeto?", es un programa muy diferente.
 
-Para empezar suele ser un programa más "informal" en el sentido de que simplemente asumimos que nos van a dar un objeto que nos sirva. Si no nos sirve, bueno, habrá una excepción.
+Para empezar suele ser un programa más "informal" en el sentido de que
+simplemente asumimos que nos van a dar un objeto que nos sirva. Si no nos sirve,
+bueno, habrá una excepción.
 
-Al mismo tiempo que da una sensación de libertad (¡Hey, puedo usar dos clases sin un ancestro común!) también puede producir temor (¿Qué pasa si alguien llama ``hacerpancho(Perro())``?). Pues resulta que ambas cosas son ciertas. Es posible hacer un pancho de perro, en cuyo caso es culpa del que lo hace, y es *problema suyo*, no un error en la definición de ``hacerpancho``.
+Al mismo tiempo que da una sensación de libertad (¡Hey, puedo usar dos clases
+sin un ancestro común!) también puede producir temor (¿Qué pasa si alguien llama
+``hacerpancho(Perro())``?). Pues resulta que ambas cosas son ciertas. Es posible
+hacer un pancho de perro, en cuyo caso es culpa del que lo hace, y es *problema
+suyo*, no un error en la definición de ``hacerpancho``.
 
-Esa es una diferencia filosófica. Si ``hacerpancho`` verifica que la entrada sea una salchicha, siempre va a producir *por lo menos* un pancho. Nunca va a producir un sandwich con una manguera de jardín en el medio, pero tampoco va a producir un sandwich de portobelos salteados con ciboulette.
+Esa es una diferencia filosófica. Si ``hacerpancho`` verifica que la entrada sea
+una salchicha, siempre va a producir *por lo menos* un pancho. Nunca va a
+producir un sandwich con una manguera de jardín en el medio, pero tampoco va a
+producir un sandwich de portobelos salteados con ciboulette.
 
-Es demasiado fácil imponer restricciones arbitrarias al limitar los tipos de datos aceptables. 
+Es demasiado fácil imponer restricciones arbitrarias al limitar los tipos de
+datos aceptables. 
 
-Y por supuesto, si es posible hacer funciones genéricas que funcionan con cualquier tipo medianamente compatible, uno evita tener que implementar veinte variantes de la misma función, cambiando sólo los tipos de argumentos. Evitar esa repetición descerebrante es uno de los grandes beneficios de los lenguajes de programación dinámicos como python.
+Y por supuesto, si es posible hacer funciones genéricas que funcionan con
+cualquier tipo medianamente compatible, uno evita tener que implementar veinte
+variantes de la misma función, cambiando sólo los tipos de argumentos. Evitar
+esa repetición descerebrante es uno de los grandes beneficios de los lenguajes
+de programación dinámicos como python.
 
 Genéricos
 ~~~~~~~~~
 
-Supongamos que necesito poder crear listas con cantidades arbitrarias de objetos, todos del mismo tipo, inicializados al mismo valor.
+Supongamos que necesito poder crear listas con cantidades arbitrarias de
+objetos, todos del mismo tipo, inicializados al mismo valor.
 
 .. Admonition:: Comprensión de lista
 
-   En las funciones que siguen, ``[tipo() for i in range(cantidad)]`` se llama una comprensión de lista, y es una forma más compacta de escribir un ``for`` para generar una lista a partir de otra:
+   En las funciones que siguen, ``[tipo() for i in range(cantidad)]`` se llama
+   una comprensión de lista, y es una forma más compacta de escribir un ``for``
+   para generar una lista a partir de otra:
 
    .. code-block:: python
 
@@ -319,9 +396,13 @@ Los defectos de esa solución son obvios. Una mejor solución:
     def listadecosas(tipo, cantidad):
         return [tipo() for i in range(cantidad)]
 
-Esa es una aplicación de programación genérica. Estamos creando código que solo puede tener un efecto cuando, más adelante, lo apliquemos a un tipo. Es un caso extremo de lo mostrado anteriormente, en este caso literalmente el tipo a usar *no importa*. ¡Cualquier tipo que se pueda instanciar sin argumentos sirve!
+Esa es una aplicación de programación genérica. Estamos creando código que solo
+puede tener un efecto cuando, más adelante, lo apliquemos a un tipo. Es un caso
+extremo de lo mostrado anteriormente, en este caso literalmente el tipo a usar
+*no importa*. ¡Cualquier tipo que se pueda instanciar sin argumentos sirve!
 
-Desde ya que es posible -- como diría un programador C++ -- "especializar el template":
+Desde ya que es posible -- como diría un programador C++ -- "especializar el
+template":
 
 .. code-block:: pycon
 
@@ -339,9 +420,12 @@ Desde ya que es posible -- como diría un programador C++ -- "especializar el te
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
-El truco de ese fragmento es que ``templatelistadecosas`` crea y devuelve una nueva función cada vez que la invoco con un tipo específico. Esa función es la "especialización" de ``templatelistadecosas``.
+El truco de ese fragmento es que ``templatelistadecosas`` crea y devuelve una
+nueva función cada vez que la invoco con un tipo específico. Esa función es la
+"especialización" de ``templatelistadecosas``.
 
-Otra forma de hacer lo mismo es utilizar la función ``functools.partial`` de la biblioteca standard:
+Otra forma de hacer lo mismo es utilizar la función ``functools.partial`` de la
+biblioteca standard:
 
 .. code-block:: python
 
@@ -352,9 +436,13 @@ Otra forma de hacer lo mismo es utilizar la función ``functools.partial`` de la
     listadestr=functools.partial(listadecosas, (str))
     listadeint=functools.partial(listadecosas, (int))
 
-Este enfoque a resolver el problema es más típico de la así llamada "programación funcional", y ``partial`` es una función de orden superior (higher-order function) que es una manera de decir que es una función que se aplica a funciones.
+Este enfoque para resolver el problema es más típico de la así llamada
+"programación funcional", y ``partial`` es una función de orden superior
+(higher-order function) que es una manera de decir que es una función que se
+aplica a funciones.
 
-¿Notaron que todo lo que estamos haciendo es crear funciones muy poco específicas?
+¿Notaron que todo lo que estamos haciendo es crear funciones muy poco
+específicas?
 
 Por ejemplo, ``listadecosas`` también puede hacer esto:
 
@@ -366,13 +454,16 @@ Por ejemplo, ``listadecosas`` también puede hacer esto:
     >>> listaderandom(10)
     [68, 92, 83, 55, 89, 2, 9, 74, 9, 58]
 
-Después de todo... ¿Quién dijo que ``tipo`` era un tipo de datos? ¡Todo lo que hago con ``tipo`` es ``tipo()``!
+Después de todo... ¿Quién dijo que ``tipo`` era un tipo de datos? ¡Todo lo que
+hago con ``tipo`` es ``tipo()``!
 
-O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas que en python se llaman ``callables``.
+O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas que
+en python se llaman ``callables``.
 
 .. admonition:: lambdas
 
-   ``lambda`` define una "función anónima". EL ejemplo usado es el equivalente de
+   ``lambda`` define una "función anónima". EL ejemplo usado es el equivalente
+   de
 
    .. code-block:: python
    
@@ -380,7 +471,9 @@ O sea que tipo puede ser una clase, o una función, o cualquiera de las cosas qu
             return random.randint(0,100)
         listaderandom=functools.partial(listadecosas, f)
 
-   La ventaja de utilizar ``lambda`` es que, si no se necesita utilizarla en otra parte, mantiene la definición de esta función en el lugar donde se usa para evitar tener que buscarlo en otra parte al leer el código.
+   La ventaja de utilizar ``lambda`` es que, si no se necesita utilizarla en
+   otra parte, mantiene la definición de esta función en el lugar donde se usa
+   para evitar tener que buscarlo en otra parte al leer el código.
 
    `Más información <>`_
 
@@ -393,9 +486,11 @@ Claro pero corto
 
     --Brian W. Kernighan
 
-Una de las tentaciones de todo programador es escribir código corto [#]_. Yo mismo soy débil ante esa tentación.
+Una de las tentaciones de todo programador es escribir código corto [#]_. Yo
+mismo soy débil ante esa tentación.
 
-.. [#] Esta peculiar perversión se llama "code golfing". Y es muy divertida, si no es un modo de vida.
+.. [#] Esta peculiar perversión se llama "code golfing". Y es muy divertida, si
+       no es un modo de vida.
 
 .. admonition:: Código Corto
 
@@ -411,15 +506,25 @@ Una de las tentaciones de todo programador es escribir código corto [#]_. Yo mi
         _|  | _| _|  |
 
 
-El problema es que el código se escribe una sola vez, pero se lee cientos. Cada vez que vayas a cambiar algo del programa, vas a leer más de lo que escribís. Por lo tanto es fundamental que sea fácil de leer. El código *muy* corto es ilegible. El código demasiado largo *también*.
+El problema es que el código se escribe una sola vez, pero se lee cientos. Cada
+vez que vayas a cambiar algo del programa, vas a leer más de lo que escribís.
+Por lo tanto es fundamental que sea fácil de leer. El código *muy* corto es
+ilegible. El código demasiado largo *también*.
 
-Funciones de 1000 líneas, ifs anidados de 5 niveles, cascadas de condicionales con 200 ramas... todas esas cosas son a veces tan ilegibles como el ejemplo anterior.
+Funciones de 1000 líneas, ifs anidados de 5 niveles, cascadas de condicionales
+con 200 ramas... todas esas cosas son a veces tan ilegibles como el ejemplo
+anterior.
 
-Lo importante es lograr un balance, hacer que el código sea corto, pero *no demasiado corto*. En python hay varias estructuras de control o de datos que ayudan en esa misión.
+Lo importante es lograr un balance, hacer que el código sea corto, pero *no
+demasiado corto*. En python hay varias estructuras de control o de datos que
+ayudan en esa misión.
 
-Consideremos la tercera cosa que aprende todo programador: iteración. En python, se itera sobre listas [#]_ por lo que no sabemos, a priori, la posición del item que estamos examinando, y a veces es necesaria.
+Consideremos la tercera cosa que aprende todo programador: iteración. En python,
+se itera sobre listas [#]_ por lo que no sabemos, a priori, la posición del item
+que estamos examinando, y a veces es necesaria.
 
-.. [#] No exactamente, se itera sobre iterables, valga la redundancia, pero los podemos pensar como listas.
+.. [#] No exactamente, se itera sobre iterables, valga la redundancia, pero los
+       podemos pensar como listas.
 
 Malo:
 
@@ -445,13 +550,15 @@ Mejor (¿pero tal vez demasiado astuto?):
 
 .. code-block:: python
 
-    happy_items=[ index for (index, item) in enumerate(lista) if item.is_happy ]
+    happy_items=[ index for (index, item) in enumerate(lista) \
+        if item.is_happy ]
 
 Probablemente demasiado (y no es más corto):
 
 .. code-block:: python
 
-    happy_items=[x[0] for x in filter(lambda x: x[0].is_happy, enumerate(lista))]
+    happy_items=[x[0] for x in filter(lambda x: x[0].is_happy, \
+        enumerate(lista))]
 
 
 Lambdas vs funciones
@@ -462,4 +569,5 @@ ternarios vs ifs
 
 -------------------------
 
-Faltan subsecciones? Se pueden agregar si la idea surge viendo los otros capítulos.
+Faltan subsecciones? Se pueden agregar si la idea surge viendo los otros
+capítulos.

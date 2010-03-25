@@ -616,7 +616,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 464.9725
+ 418.6261
  0 ]
  /Rect [ 146.2064
  490.8119
@@ -670,7 +670,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 431.9725
+ 385.6261
  0 ]
  /Rect [ 307.2128
  232.6119
@@ -688,7 +688,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 398.9725
+ 352.6261
  0 ]
  /Rect [ 261.4316
  190.6119
@@ -957,7 +957,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 383.9725
+ 337.6261
  0 ]
  /Rect [ 141.7839
  415.2119
@@ -975,7 +975,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 368.9725
+ 322.6261
  0 ]
  /Rect [ 209.1065
  403.2119
@@ -1035,7 +1035,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 347.9725
+ 301.6261
  0 ]
  /Rect [ 219.3104
  87.11899
@@ -1209,7 +1209,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 320.9725
+ 280.6261
  0 ]
  /Rect [ 287.8192
  267.4119
@@ -1257,7 +1257,7 @@ endobj
  /Dest [ 82 0 R
  /XYZ
  40.34646
- 293.9725
+ 259.6261
  0 ]
  /Rect [ 54.86393
  426.0119
@@ -1299,9 +1299,9 @@ endobj
  503.8119
  0 ]
  /Rect [ 40.34646
- 451.9725
+ 405.6261
  44.79446
- 463.9725 ]
+ 417.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1317,9 +1317,9 @@ endobj
  245.6119
  0 ]
  /Rect [ 40.34646
- 418.9725
+ 372.6261
  44.79446
- 430.9725 ]
+ 384.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1335,9 +1335,9 @@ endobj
  203.6119
  0 ]
  /Rect [ 40.34646
- 385.9725
+ 339.6261
  44.79446
- 397.9725 ]
+ 351.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1353,9 +1353,9 @@ endobj
  428.2119
  0 ]
  /Rect [ 40.34646
- 370.9725
+ 324.6261
  44.79446
- 382.9725 ]
+ 336.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1371,9 +1371,9 @@ endobj
  416.2119
  0 ]
  /Rect [ 40.34646
- 355.9725
+ 309.6261
  44.79446
- 367.9725 ]
+ 321.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1389,9 +1389,9 @@ endobj
  100.119
  0 ]
  /Rect [ 40.34646
- 334.9725
+ 288.6261
  44.79446
- 346.9725 ]
+ 300.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1407,9 +1407,9 @@ endobj
  280.4119
  0 ]
  /Rect [ 40.34646
- 307.9725
+ 267.6261
  44.79446
- 319.9725 ]
+ 279.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1425,9 +1425,9 @@ endobj
  439.0119
  0 ]
  /Rect [ 40.34646
- 280.9725
+ 246.6261
  44.79446
- 292.9725 ]
+ 258.6261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1470,7 +1470,7 @@ endobj
 % 'R84': class PDFInfo 
 84 0 obj
 << /Author (Roberto Alsina <ralsina@netmanagers.com.ar>)
- /CreationDate (D:20100325143307+03'00')
+ /CreationDate (D:20100325153847+03'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
@@ -3759,7 +3759,7 @@ endobj
 % 'R114': class PDFStream 
 114 0 obj
 % page stream
-<< /Length 4585 >>
+<< /Length 4588 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -3815,7 +3815,7 @@ Q
 q
 1 0 0 1 34.34646 264.3559 cm
 q
-BT 1 0 0 1 0 30.256 Tm .837065 Tw 12 TL /F1 8 Tf 0 0 0 rg (Este enfoque a resolver el problema es m\341s t\355pico de la as\355 llamada \223) Tj (programaci\363n funcional) Tj (\224) Tj (, y) Tj T* 0 Tw .047731 Tw /F5 8 Tf (partial ) Tj /F1 8 Tf (es una funci\363n de orden superior \(higher-order function\) que es una manera de decir que) Tj T* 0 Tw (es una funci\363n que se aplica a funciones.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm .066398 Tw 12 TL /F1 8 Tf 0 0 0 rg (Este enfoque para resolver el problema es m\341s t\355pico de la as\355 llamada \223) Tj (programaci\363n funcional) Tj (\224) Tj (, y) Tj T* 0 Tw .047731 Tw /F5 8 Tf (partial ) Tj /F1 8 Tf (es una funci\363n de orden superior \(higher-order function\) que es una manera de decir que) Tj T* 0 Tw (es una funci\363n que se aplica a funciones.) Tj T* ET
 Q
 Q
 q
@@ -3872,7 +3872,7 @@ endobj
 % 'R115': class PDFStream 
 115 0 obj
 % page stream
-<< /Length 3823 >>
+<< /Length 3947 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -3981,10 +3981,17 @@ BT 1 0 0 1 0 18.256 Tm .770248 Tw 12 TL /F1 8 Tf 0 0 0 rg (Una de las tentacione
 Q
 Q
 q
-1 0 0 1 34.34646 238.1559 cm
+1 0 0 1 34.34646 232.1559 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (no es un modo de vida.) Tj T* ET
+Q
 Q
 q
-1 0 0 1 34.34646 83.95591 cm
+1 0 0 1 34.34646 220.1559 cm
+Q
+q
+1 0 0 1 34.34646 65.95591 cm
 .960784 .960784 .862745 rg
 n 0 154.2 352.252 -154.2 re f*
 0 0 0 rg
@@ -4028,7 +4035,7 @@ n 352.252 0 m 352.252 154.2 l S
 Q
 Q
 q
-1 0 0 1 34.34646 77.95591 cm
+1 0 0 1 34.34646 59.95591 cm
 Q
  
 endstream
@@ -4037,7 +4044,7 @@ endobj
 % 'R116': class PDFStream 
 116 0 obj
 % page stream
-<< /Length 4918 >>
+<< /Length 4661 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -4124,80 +4131,69 @@ BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Mejor \(\277pero tal vez demasiado astuto?
 Q
 Q
 q
-1 0 0 1 34.34646 194.582 cm
+1 0 0 1 34.34646 182.1559 cm
 q
 q
-.965074 0 0 .965074 0 0 cm
+1 0 0 1 0 0 cm
 q
-1 0 0 1 .1 .103619 cm
+1 0 0 1 .1 .1 cm
 q
 0 0 0 rg
 /GS0 gs
-n 0 0 364.8 12 re f*
+n 0 0 352.052 24 re f*
 Q
 q
-BT 1 0 0 1 0 6.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (happy_items) Tj (=) Tj ([) Tj ( ) Tj (index) Tj ( ) Tj /F6 8 Tf (for) Tj /F5 8 Tf ( ) Tj (\() Tj (index) Tj (,) Tj ( ) Tj (item) Tj (\)) Tj ( ) Tj /F6 8 Tf (in) Tj /F5 8 Tf ( ) Tj (enumerate) Tj (\() Tj (lista) Tj (\)) Tj ( ) Tj /F6 8 Tf (if) Tj /F5 8 Tf ( ) Tj (item) Tj (.) Tj (is_happy) Tj ( ) Tj (]) Tj T* ET
+BT 1 0 0 1 0 18.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (happy_items) Tj (=) Tj ([) Tj ( ) Tj (index) Tj ( ) Tj /F6 8 Tf (for) Tj /F5 8 Tf ( ) Tj (\() Tj (index) Tj (,) Tj ( ) Tj (item) Tj (\)) Tj ( ) Tj /F6 8 Tf (in) Tj /F5 8 Tf ( ) Tj (enumerate) Tj (\() Tj (lista) Tj (\)) Tj ( \\) Tj T* (    ) Tj /F6 8 Tf (if) Tj /F5 8 Tf ( ) Tj (item) Tj (.) Tj (is_happy) Tj ( ) Tj (]) Tj T* ET
 Q
 Q
 Q
 Q
 Q
 q
-1 0 0 1 34.34646 174.582 cm
+1 0 0 1 34.34646 162.1559 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Probablemente demasiado \(y no es m\341s corto\):) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 154.9609 cm
+1 0 0 1 34.34646 129.9559 cm
 q
 q
-.952547 0 0 .952547 0 0 cm
+1 0 0 1 0 0 cm
 q
-1 0 0 1 .1 .104982 cm
+1 0 0 1 .1 .1 cm
 q
 0 0 0 rg
 /GS0 gs
-n 0 0 369.6 12 re f*
+n 0 0 352.052 24 re f*
 Q
 q
-BT 1 0 0 1 0 6.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (happy_items) Tj (=) Tj ([) Tj (x) Tj ([) Tj (0) Tj (]) Tj ( ) Tj /F6 8 Tf (for) Tj /F5 8 Tf ( ) Tj (x) Tj ( ) Tj /F6 8 Tf (in) Tj /F5 8 Tf ( ) Tj (filter) Tj (\() Tj /F6 8 Tf (lambda) Tj /F5 8 Tf ( ) Tj (x) Tj (:) Tj ( ) Tj (x) Tj ([) Tj (0) Tj (]) Tj (.) Tj (is_happy) Tj (,) Tj ( ) Tj (enumerate) Tj (\() Tj (lista) Tj (\)\)]) Tj T* ET
+BT 1 0 0 1 0 18.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (happy_items) Tj (=) Tj ([) Tj (x) Tj ([) Tj (0) Tj (]) Tj ( ) Tj /F6 8 Tf (for) Tj /F5 8 Tf ( ) Tj (x) Tj ( ) Tj /F6 8 Tf (in) Tj /F5 8 Tf ( ) Tj (filter) Tj (\() Tj /F6 8 Tf (lambda) Tj /F5 8 Tf ( ) Tj (x) Tj (:) Tj ( ) Tj (x) Tj ([) Tj (0) Tj (]) Tj (.) Tj (is_happy) Tj (,) Tj ( \\) Tj T* (    ) Tj (enumerate) Tj (\() Tj (lista) Tj (\)\)]) Tj T* ET
 Q
 Q
 Q
 Q
 Q
 q
-1 0 0 1 34.34646 134.9609 cm
+1 0 0 1 34.34646 109.9559 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Lambdas vs funciones) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 116.9609 cm
+1 0 0 1 34.34646 91.95591 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (ternarios vs ifs) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 98.96093 cm
+1 0 0 1 34.34646 73.95591 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (\277otros?) Tj T* ET
-Q
-Q
-q
-1 0 0 1 34.34646 70.61447 cm
-n 0 14.17323 m 352.252 14.17323 l S
-Q
-q
-1 0 0 1 34.34646 52.61447 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Faltan subsecciones? Se pueden agregar si la idea surge viendo los otros cap\355tulos.) Tj T* ET
 Q
 Q
  
@@ -4207,18 +4203,29 @@ endobj
 % 'R117': class PDFStream 
 117 0 obj
 % page stream
-<< /Length 4055 >>
+<< /Length 4269 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 490.063 cm
-Q
-q
-1 0 0 1 34.34646 461.7165 cm
+1 0 0 1 34.34646 518.4094 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 446.7165 cm
+1 0 0 1 34.34646 500.4094 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Faltan subsecciones? Se pueden agregar si la idea surge viendo los otros cap\355tulos.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34.34646 443.7165 cm
+Q
+q
+1 0 0 1 34.34646 415.3701 cm
+n 0 14.17323 m 352.252 14.17323 l S
+Q
+q
+1 0 0 1 34.34646 400.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4242,7 +4249,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 395.7165 cm
+1 0 0 1 34.34646 349.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4266,7 +4273,7 @@ n 28.34646 0 m 28.34646 51 l S
 Q
 Q
 q
-1 0 0 1 34.34646 380.7165 cm
+1 0 0 1 34.34646 334.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4290,7 +4297,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 365.7165 cm
+1 0 0 1 34.34646 319.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4314,7 +4321,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 350.7165 cm
+1 0 0 1 34.34646 304.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4338,7 +4345,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 323.7165 cm
+1 0 0 1 34.34646 277.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4362,11 +4369,11 @@ n 28.34646 0 m 28.34646 27 l S
 Q
 Q
 q
-1 0 0 1 34.34646 296.7165 cm
+1 0 0 1 34.34646 262.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
-1 0 0 1 6 6 cm
+1 0 0 1 6 0 cm
 q
 BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 .501961 rg (7) Tj T* ET
 Q
@@ -4374,7 +4381,7 @@ Q
 q
 1 0 0 1 34.34646 0 cm
 q
-BT 1 0 0 1 0 18.256 Tm .166594 Tw 12 TL /F1 8 Tf 0 0 0 rg (Esta peculiar perversi\363n se llama \223) Tj (code golfing) Tj (\224) Tj (. Y es muy divertida, si no es un modo de) Tj T* 0 Tw (vida.) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm 12 TL /F1 8 Tf 0 0 0 rg (Esta peculiar perversi\363n se llama \223) Tj (code golfing) Tj (\224) Tj (. Y es muy divertida, si) Tj T* ET
 Q
 Q
 q
@@ -4382,11 +4389,11 @@ q
 1 j
 .752941 .752941 .752941 RG
 1 w
-n 28.34646 0 m 28.34646 27 l S
+n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 269.7165 cm
+1 0 0 1 34.34646 235.3701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4670,35 +4677,35 @@ xref
 0000082373 00000 n
 0000085625 00000 n
 0000090101 00000 n
-0000094789 00000 n
-0000098715 00000 n
-0000103736 00000 n
-0000107898 00000 n
-0000108225 00000 n
-0000108304 00000 n
-0000108383 00000 n
-0000108462 00000 n
-0000108541 00000 n
-0000108620 00000 n
-0000108699 00000 n
-0000108778 00000 n
-0000108857 00000 n
-0000108936 00000 n
-0000109016 00000 n
-0000109096 00000 n
-0000109176 00000 n
-0000109256 00000 n
-0000109336 00000 n
-0000109416 00000 n
-0000109496 00000 n
+0000094792 00000 n
+0000098842 00000 n
+0000103606 00000 n
+0000107982 00000 n
+0000108309 00000 n
+0000108388 00000 n
+0000108467 00000 n
+0000108546 00000 n
+0000108625 00000 n
+0000108704 00000 n
+0000108783 00000 n
+0000108862 00000 n
+0000108941 00000 n
+0000109020 00000 n
+0000109100 00000 n
+0000109180 00000 n
+0000109260 00000 n
+0000109340 00000 n
+0000109420 00000 n
+0000109500 00000 n
+0000109580 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\251\242\035\257\253\372\037\235\243Wq\362d@V\276) (\251\242\035\257\253\372\037\235\243Wq\362d@V\276)] 
+ [(\275\216\330\273:!\272\307,\373\3422\364\002\234\241) (\275\216\330\273:!\272\307,\373\3422\364\002\234\241)] 
 
  /Info 84 0 R
  /Root 83 0 R
  /Size 136 >>
 startxref
-109545
+109629
 %%EOF
