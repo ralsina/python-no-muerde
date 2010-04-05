@@ -269,6 +269,35 @@ loop). Es algo así:
    ¡Se sale por el medio! Como siempre se pasa al menos por una parte del loop
    (A), Knuth le puso "loop n y medio".
 
+Ésta es la representación de esta estructura en Python:
+
+.. code-block:: python
+
+   while True:
+       frob(gargle)
+       # Cortamos?
+       if gargle.blasted:
+           # Cortamos!
+           break
+       refrob(gargle)
+
+No, no quiero que me discutan. Ésa es la forma de hacerlo. No hay que tenerle
+miedo al ``break``! En particular la siguiente forma me parece mucho peor:
+
+.. code-block:: python
+
+    frob(gargle)
+    # Seguimos?
+    while not gargle.blasted:
+        refrob(gargle)
+        frob(gargle)
+
+Es más propensa a errores. Antes, podía ser que ``frob(gargle)`` no fuera lo
+correcto. Ahora no solo puede ser incorrecto, sino que puede ser incorrecto o inconsistente, si cambio solo una de las dos veces que se usa.
+
+Claro, en un ejemplo de juguete esa repetición no molesta. En la vida real, tal
+vez haya 40 líneas entre una y otra y no sea obvio que sea un loop de este tipo.
+
 Switches
 ~~~~~~~~
 
