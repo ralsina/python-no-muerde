@@ -34,7 +34,7 @@
         "parent": "bodytext",
         "fontName": "stdBold",
         "alignment": "right",
-        "keepWithNext: "True",
+        "keepWithNext": "True",
         "spaceBefore": 0
       }]
 ]}
