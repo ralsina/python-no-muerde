@@ -588,12 +588,133 @@ difícil al divino botón, o para ahorrar media línea.
        else:
            r = None
 
-Lambdas vs funciones
-~~~~~~~~~~~~~~~~~~~~
+Lambdas vs alternativas
+~~~~~~~~~~~~~~~~~~~~~~~
 
+En ejemplos anteriores he usado ``lambda``. ¿Qué es ``lambda``? Es otra manera
+de definir una función, nada más. En lo que a python respecta, estos dos
+fragmentos son exactamente lo mismo:
+
+.. code-block:: python
+
+   suma = lambda a,b: a+b
+..
+
+.. code-block:: python
+
+   def suma(a,b):
+       return a+b
+
+
+Lambda tiene una limitación:  Su contenido solo puede ser una expresión,
+es decir, algo que "devuelve un resultado". El resultado de esa expresión es el resultado del lambda.
+
+¿Cuando conviene usar ``lambda``, y cuándo definir una función? Más allá de la
+obviedad de "cuando ``lambda`` no alcanza, usá funciones", en general, me parece
+más claro usar funciones, a menos que haya un excelente motivo.
+
+Por otro lado, hay veces que queda muy bonito como para resistirse, especialmente
+combinado con filter:
+
+.. code-block:: python
+
+    # Devuelve los items mayores que 0 de una lista
+    filter (lambda x: max(x,0), lista)
+
+Pero yo probablemente haría esto:
+
+.. code-block:: python
+
+    # Devuelve los items mayores que 0 de una lista
+    [ x for x in lista if x > 0 ]
+
+¿Es uno más legible que el otro? No lo sé. Si sé que el primero tiene un "gusto"
+más a programación funcional, mientras que el segundo es más únicamente python,
+pero es cuestión de preferencias personales.
+
+Usar ``lambda`` en el medio de líneas de código o como argumentos a funciones
+puede hacer que la complejidad de la línea pase el umbral de "expresivo" a
+"farolero", y disminuye la legibilidad del código.
+
+Un caso en el que ``lambda`` es mejor que una función es cuando se usa una única
+vez en el código y el significado es obvio, porque insertar definiciones de
+funciones "internas" en el medio del código arruina el flujo.
+
+.. code-block:: python
+
+    import random
+    >>> listaderandom=functools.partial(listadecosas,
+            (lambda : random.randint(0,100)))
+    >>> listaderandom(10)
+    [68, 92, 83, 55, 89, 2, 9, 74, 9, 58]
+
+Me parece más elegante que esto:
+
+.. code-block:: python
+
+    import random
+    def f1():
+        return random.randint(0,100)
+    >>> listaderandom=functools.partial(listadecosas,
+            (f1))
+    >>> listaderandom(10)
+    [68, 92, 83, 55, 89, 2, 9, 74, 9, 58]
+    
+
+Especialmente en un ejemplo real, donde ``f1`` se va a definir en el medio de
+un algoritmo cualquiera con el que no tiene nada que ver.
+
+Como el lector verá... me cuesta elegir. En general, trato de no usar lambda a
+menos que la alternativa sea farragosa y ensucie el entorno de código.
 
 ternarios vs ifs
 ~~~~~~~~~~~~~~~~
+
+El operador ternario en python es relativamente reciente, apareció en la versión
+2.5 y es el siguiente:
+
+.. code-block:: pycon
+
+    >>> "A" if True else "B"
+    'A'
+    >>> "A" if False else "B"
+    'B'
+
+Es una forma abreviada del ``if`` que funciona como expresión (se evalúa y
+devuelve un valor).
+
+La forma general es::
+
+    VALOR1 if CONDICION else VALOR2
+
+Si ``CONDICION`` es verdadera, entonces la expresión devuelve ``VALOR1``, si no,
+devuelve ``VALOR2``.
+
+¿Cuál es el problema del operador ternario?
+
+Sólo se puede usar cuando no te importe no ser compatible con python 2.4.
+Acordáte que hay (y va a haber hasta el 2013 por lo menos) versiones de Linux en amplio uso con python 2.4
+
+Si ignoramos eso, hay casos en los que simplifica mucho el código. Tomemos el
+ejemplo de un argumento por default a una función. Ésta es la versión clásica:
+
+.. code-block:: python
+
+    def f(self, arg = None):
+        if arg is None:
+            self.arg = 42
+        else:
+            self.arg = arg
+
+Y esta es la versión "moderna":
+
+.. code-block:: python
+
+    def f(self, arg = None):
+        self.arg = 42 if arg is None else arg
+
+¿La ventaja? ¡Se lee de corrido! "self.arg es 42 si arg es None, si no arg"
+
 
 Pedir perdón o pedir permiso
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
