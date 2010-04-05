@@ -239,15 +239,35 @@ diferencias:
   como una franja negra de censura de 5 líneas de alto cruzando mi editor. Es
   *molesto*.
 
-Singletons y Globales
-~~~~~~~~~~~~~~~~~~~~~
+Singletons
+~~~~~~~~~~
 
-Un singleton es una variable global disfrazada.
+    In a functional language one does not need design patterns because the
+    language is likely so high level, you end up programming in concepts that eliminate design patterns all together.
+
+    -- Slava Akhmechet
+
+Una de las preguntas más frecuentes de novicios en python, pero con experiencia
+en otros lenguajes es "¿cómo hago un singleton?". Un singleton es una clase que
+sólo puede instanciarse una vez. De esa manera, uno puede obtener esa única
+instancia simplemente reinstanciando la clase.
+
+Hay varias maneras de hacer un singleton en python, pero antes de eso, dejemos
+en claro **qué** es un singleton: un singleton es una variable global "lazy".
+No, no me discutan. Si alguien no está de acuerdo, por favor que me indique la diferencia entre un singleton y una variable global, excepto el momento de la instanciación, yo espero ;-)
+
+FALTA: recetas de singletons (módulo, clase)
 
 Loops y medios loops
 ~~~~~~~~~~~~~~~~~~~~
 
-while True: ... break etc.
+Hay una estructura de control que Knuth llama el "loop n y medio" (n-and-half
+loop). Es algo así:
+
+.. figure:: loop-n-y-medio.graph.pdf
+
+   ¡Se sale por el medio! Como siempre se pasa al menos por una parte del loop
+   (A), Knuth le puso "loop n y medio".
 
 Switches
 ~~~~~~~~
