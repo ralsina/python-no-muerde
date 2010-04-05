@@ -41,7 +41,7 @@ dónde se puede aprender más sobre ello. Por ejemplo:
 
 .. code-block:: python
 
-   # Creamos una lista con los cuadrados de los números impares
+   # Creamos una lista con los cuadrados de los números pares
    cuadrados = [ x**2 for x in numeros if x%2>0 ]
 
 .. admonition:: Referencia
