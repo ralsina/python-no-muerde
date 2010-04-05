@@ -495,7 +495,7 @@ template":
     def templatelistadecosas(tipo):
         def listadecosas(cantidad):
             return [tipo() for i in range(cantidad)]
-        return lista
+        return listadecosas
 
     >>> listadestr=templatelistadecosas(str)
     >>> listadeint=templatelistadecosas(int)
