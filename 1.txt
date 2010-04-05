@@ -30,6 +30,40 @@ varias. El resto es cuestión de gustos.
 Get/Set
 ~~~~~~~
 
+Una instancia de una clase contiene valores. ¿Cómo se accede a ellos? Hay dos
+maneras. Una es con "getters y setters", y estas son algunas de sus
+manifestaciones:
+
+.. code-block:: python
+
+   # Un getter te "toma" (get) un valor de adentro de un objeto y
+   # se puede ver así:
+   x1 = p.x()
+   x1 = p.get_x()
+   x1 = p.getX()
+
+   # Un setter "mete" un valor en un objeto y puede verse así:
+   p.set_x(x1)
+   p.setX(x1)   
+
+
+Otra manera es simplemente tomar el valor X:
+
+.. code-block:: python
+
+   x1 = p.x
+
+La ventaja de usar getters y setters es el "encapsulamiento". No dicta que la
+clase tenga un miembro ``x``, tal vez el valor que yo ingreso via ``setX`` es
+manipulado, o almacenado en una base de datos, o tatuado en el estómago de
+policías retirados con problemas neurológicos, lo único que importa es que luego cuando lo saco con el getter me dé lo que tenga que dar (que no quiere decir "me
+dé lo mismo que puse").
+
+Muchas veces, los getters/setters se toman como un hecho de la vida, uno está
+haciendo programación orientada a objetos ``=>`` hago getters/setters.
+
+Bueno, no.
+
 .. admonition:: Analogía rebuscada
 
     En un almacén, para tener un paquete de yerba, hay que pedírselo al
@@ -82,14 +116,13 @@ Listado 1
 Ésa es una implementación perfectamente respetable de un punto. Guarda X, guarda
 Y, permite volver a averiguar sus valores... el problema es que eso no es
 python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí
-no me engañan tan fácil, eso **es C++** reescrito para que parezca python.
+no me engañan tan fácil, *eso es C++ reescrito para que parezca python*.
 
 ¿Porqué eso no es python? Por el obvio abuso de los métodos de acceso
 (accessors, getter/setters), que son completamente innecesarios.
 
 Si la clase punto es simplemente esto, y nada más que esto, y no tiene otra
 funcionalidad, entonces prefiero esta:
-
 
 ----------------
 
