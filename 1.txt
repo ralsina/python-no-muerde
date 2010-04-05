@@ -261,6 +261,10 @@ FALTA: recetas de singletons (módulo, clase)
 Loops y medios loops
 ~~~~~~~~~~~~~~~~~~~~
 
+    Duplication is evil
+
+    -- Anonymous
+
 Hay una estructura de control que Knuth llama el "loop n y medio" (n-and-half
 loop). Es algo así:
 

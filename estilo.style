@@ -21,6 +21,13 @@
     }
   },  
   "styles" : [
+    [ "blockquote", {
+        "alignment": "right",
+        "fontName": "stdItalic"
+      }],
+    [ "attribution", {
+        "fontName": "stdBold"
+      }],
     [ "code" , {
         "borderWidth": 0,
         "borderPadding": 0,
