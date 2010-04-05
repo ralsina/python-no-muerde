@@ -9,6 +9,15 @@ O: aprenda a programar en 3217 días
 :Autor: Roberto Alsina <ralsina@netmanagers.com.ar>
 :Versión: $Revision$
 
+.. header::
+
+   ###Section###
+
+.. footer::
+
+    ###Page###
+
+
 .. contents::
 
 Introducción
