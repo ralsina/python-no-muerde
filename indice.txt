@@ -79,7 +79,7 @@ Los fragmentos de código fuente se va a mostrar así:
 .. code-block:: python
 
    # Creamos una lista con los cuadrados de los números impares
-   cuadrados = [ x**2 for x in numeros if x%2>0 ]
+   cuadrados = [ x**2 for x in numeros if x%2 > 0 ]
 
 Los listados extensos o programas completos se incluirán sin cajas, mostrarán
 números de líneas e indicarán el nombre del mismo:
@@ -94,7 +94,7 @@ cuadrados.py
    :linenos:
 
    # Creamos una lista con los cuadrados de los números impares
-   cuadrados = [ x**2 for x in numeros if x%2==0 ]
+   cuadrados = [ x**2 for x in numeros if x%2 > 0 ]
 
 
 Lenguaje
