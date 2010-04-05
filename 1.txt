@@ -224,8 +224,8 @@ Listado 5
    class PuntoDerecho(object):
        '''Un punto que solo puede estar a la derecha del eje Y'''
 
-       def get_x(self, x):
-           return self._X
+       def get_x(self):
+           return self._x
 
        def set_x(self, x):
            self._x = abs(x)
