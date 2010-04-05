@@ -42,7 +42,7 @@ dónde se puede aprender más sobre ello. Por ejemplo:
 .. code-block:: python
 
    # Creamos una lista con los cuadrados de los números pares
-   cuadrados = [ x**2 for x in numeros if x%2>0 ]
+   cuadrados = [ x**2 for x in numeros if x%2 == 0 ]
 
 .. admonition:: Referencia
 
@@ -74,17 +74,15 @@ Convenciones
 Las variables, funciones y palabras reservadas de python se mostrarán en el
 texto con letra monoespaciada. Por ejemplo, ``for`` es una palabra reservada.
 
-Los fragmentos de código fuente se va a mostrar en cajas:
+Los fragmentos de código fuente se va a mostrar así:
 
 .. code-block:: python
 
    # Creamos una lista con los cuadrados de los números impares
    cuadrados = [ x**2 for x in numeros if x%2>0 ]
 
-Los listados extensos o programas completos se incluirán sin cajas, separados
-del texto con líneas, mostrarán número de línea e indicarán el nombre del mismo:
-
-----------------
+Los listados extensos o programas completos se incluirán sin cajas, mostrarán
+números de líneas e indicarán el nombre del mismo:
 
 .. class:: titulo-listado
 
@@ -98,8 +96,6 @@ cuadrados.py
    # Creamos una lista con los cuadrados de los números impares
    cuadrados = [ x**2 for x in numeros if x%2==0 ]
 
-
-----------------
 
 Lenguaje
 ~~~~~~~~

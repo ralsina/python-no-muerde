@@ -83,8 +83,6 @@ Bueno, no.
 Imaginemos que estamos escribiendo un programa que trabaja con "puntos" o sea
 coordenadas (X,Y), y que queremos implementarlos con una clase. Por ejemplo: 
 
-----------------
-
 .. class:: titulo-listado
 
 Listado 1
@@ -111,8 +109,6 @@ Listado 1
        def set_y(self,y):
            self._y=y
 
-----------------
-
 Ésa es una implementación perfectamente respetable de un punto. Guarda X, guarda
 Y, permite volver a averiguar sus valores... el problema es que eso no es
 python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí
@@ -123,8 +119,6 @@ no me engañan tan fácil, *eso es C++ reescrito para que parezca python*.
 
 Si la clase punto es simplemente esto, y nada más que esto, y no tiene otra
 funcionalidad, entonces prefiero esta:
-
-----------------
 
 .. class:: titulo-listado
 
@@ -140,8 +134,6 @@ Listado 2
            self.x=x
            self.y=y
 
-----------------
-
 No sólo es más corta, sino que su funcionalidad es completamente equivalente, es
 más fácil de leer porque es completamente obvia (se puede leer de un vistazo), y
 hasta es más eficiente.
@@ -154,8 +146,6 @@ Es más, si la clase punto fuera solamente ésto, podría ni siquiera ser una
 clase, sino una ``namedtuple``:
 
 
-----------------
-
 .. class:: titulo-listado
 
 Listado 3
@@ -166,8 +156,6 @@ Listado 3
    :linenos:
 
    Punto = namedtuple('Punto', 'x y')
-
-----------------
 
 Y el comportamiento es *exactamente el del listado 2* excepto que es aún más
 eficiente.
@@ -206,8 +194,6 @@ positivos en x, y que los valores negativos deban ser multiplicados por -1.
 
 En la clase del listado 1, es trivial:
 
-----------------
-
 .. class:: titulo-listado
 
 Listado 4
@@ -223,12 +209,8 @@ Listado 4
         def set_x(self, x):
             self._x = abs(x)
 
-----------------
-
 Pero... también es trivial en el listado 2, *sin cambiar la interfaz que se
 presenta al usuario*:
-
-----------------
 
 .. class:: titulo-listado
 
@@ -249,8 +231,6 @@ Listado 5
            self._x = abs(x)
 
        x = property(get_x, set_x)
-
-----------------
 
 Obviamente esto es casi lo mismo que si partimos del listado 1, pero con algunas
 diferencias:
