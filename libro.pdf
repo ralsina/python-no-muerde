@@ -565,10 +565,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  34.34646
- 346.3559
+ 322.3559
  0 ]
  /Rect [ 54.34646
  164.6119
@@ -583,10 +583,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  34.34646
- 346.3559
+ 322.3559
  0 ]
  /Rect [ 377.7024
  164.6119
@@ -601,10 +601,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  34.34646
- 319.9559
+ 295.9559
  0 ]
  /Rect [ 54.34646
  146.6119
@@ -619,10 +619,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  34.34646
- 319.9559
+ 295.9559
  0 ]
  /Rect [ 377.7024
  146.6119
@@ -637,10 +637,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  34.34646
- 293.5559
+ 269.5559
  0 ]
  /Rect [ 54.34646
  128.6119
@@ -655,10 +655,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  34.34646
- 293.5559
+ 269.5559
  0 ]
  /Rect [ 377.7024
  128.6119
@@ -727,10 +727,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  40.34646
- 145.0261
+ 121.0261
  0 ]
  /Rect [ 146.2064
  490.8119
@@ -781,10 +781,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 82 0 R
  /XYZ
  40.34646
- 112.0261
+ 88.02608
  0 ]
  /Rect [ 307.2128
  232.6119
@@ -799,10 +799,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 83 0 R
+ /Dest [ 89 0 R
  /XYZ
  40.34646
- 79.02608
+ 550.0119
  0 ]
  /Rect [ 261.4316
  190.6119
@@ -1071,7 +1071,7 @@ endobj
  /Dest [ 89 0 R
  /XYZ
  40.34646
- 550.0119
+ 535.0119
  0 ]
  /Rect [ 141.7839
  415.2119
@@ -1089,7 +1089,7 @@ endobj
  /Dest [ 89 0 R
  /XYZ
  40.34646
- 535.0119
+ 520.0119
  0 ]
  /Rect [ 209.1065
  403.2119
@@ -1149,7 +1149,7 @@ endobj
  /Dest [ 89 0 R
  /XYZ
  40.34646
- 514.0119
+ 499.0119
  0 ]
  /Rect [ 219.3104
  87.11899
@@ -1323,7 +1323,7 @@ endobj
  /Dest [ 89 0 R
  /XYZ
  40.34646
- 487.0119
+ 472.0119
  0 ]
  /Rect [ 287.8192
  267.4119
@@ -1371,11 +1371,11 @@ endobj
  /Dest [ 89 0 R
  /XYZ
  40.34646
- 460.0119
+ 445.0119
  0 ]
- /Rect [ 54.86393
+ /Rect [ 54.84035
  426.0119
- 59.9374
+ 59.89024
  438.0119 ]
  /Subtype /Link
  /Type /Annot >>
@@ -1413,9 +1413,9 @@ endobj
  503.8119
  0 ]
  /Rect [ 40.34646
- 132.0261
+ 108.0261
  44.79446
- 144.0261 ]
+ 120.0261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1431,36 +1431,17 @@ endobj
  245.6119
  0 ]
  /Rect [ 40.34646
- 99.02608
+ 75.02608
  44.79446
- 111.0261 ]
- /Subtype /Link
- /Type /Annot >>
-endobj
-% 'Annot.NUMBER49': class LinkAnnotation 
-82 0 obj
-<< /Border [ 0
- 0
- 0 ]
- /Contents ()
- /Dest [ 48 0 R
- /XYZ
- 253.5305
- 203.6119
- 0 ]
- /Rect [ 40.34646
- 66.02608
- 44.79446
- 78.02608 ]
+ 87.02608 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
 % 'Page17': class PDFPage 
-83 0 obj
+82 0 obj
 % Page dictionary
 << /Annots [ 80 0 R
- 81 0 R
- 82 0 R ]
+ 81 0 R ]
  /Contents 127 0 R
  /MediaBox [ 0
  0
@@ -1478,6 +1459,24 @@ endobj
  /Trans <<  >>
  /Type /Page >>
 endobj
+% 'Annot.NUMBER49': class LinkAnnotation 
+83 0 obj
+<< /Border [ 0
+ 0
+ 0 ]
+ /Contents ()
+ /Dest [ 48 0 R
+ /XYZ
+ 253.5305
+ 203.6119
+ 0 ]
+ /Rect [ 40.34646
+ 537.0119
+ 44.79446
+ 549.0119 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
 % 'Annot.NUMBER50': class LinkAnnotation 
 84 0 obj
 << /Border [ 0
@@ -1490,9 +1489,9 @@ endobj
  428.2119
  0 ]
  /Rect [ 40.34646
- 537.0119
+ 522.0119
  44.79446
- 549.0119 ]
+ 534.0119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1508,9 +1507,9 @@ endobj
  416.2119
  0 ]
  /Rect [ 40.34646
- 522.0119
+ 507.0119
  44.79446
- 534.0119 ]
+ 519.0119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1526,9 +1525,9 @@ endobj
  100.119
  0 ]
  /Rect [ 40.34646
- 501.0119
+ 486.0119
  44.79446
- 513.0119 ]
+ 498.0119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1544,9 +1543,9 @@ endobj
  280.4119
  0 ]
  /Rect [ 40.34646
- 474.0119
+ 459.0119
  44.79446
- 486.0119 ]
+ 471.0119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1562,16 +1561,17 @@ endobj
  439.0119
  0 ]
  /Rect [ 40.34646
- 447.0119
+ 432.0119
  44.79446
- 459.0119 ]
+ 444.0119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
 % 'Page18': class PDFPage 
 89 0 obj
 % Page dictionary
-<< /Annots [ 84 0 R
+<< /Annots [ 83 0 R
+ 84 0 R
  85 0 R
  86 0 R
  87 0 R
@@ -1604,7 +1604,7 @@ endobj
 % 'R91': class PDFInfo 
 91 0 obj
 << /Author (Roberto Alsina <ralsina@netmanagers.com.ar>)
- /CreationDate (D:20100405082730+03'00')
+ /CreationDate (D:20100405083400+03'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
@@ -1788,10 +1788,10 @@ endobj
 endobj
 % 'Outline.19.7': class OutlineEntryObject 
 107 0 obj
-<< /Dest [ 83 0 R
+<< /Dest [ 82 0 R
  /XYZ
  34.34646
- 346.3559
+ 322.3559
  0 ]
  /Next 108 0 R
  /Parent 99 0 R
@@ -1800,10 +1800,10 @@ endobj
 endobj
 % 'Outline.19.8': class OutlineEntryObject 
 108 0 obj
-<< /Dest [ 83 0 R
+<< /Dest [ 82 0 R
  /XYZ
  34.34646
- 319.9559
+ 295.9559
  0 ]
  /Next 109 0 R
  /Parent 99 0 R
@@ -1812,10 +1812,10 @@ endobj
 endobj
 % 'Outline.19.9': class OutlineEntryObject 
 109 0 obj
-<< /Dest [ 83 0 R
+<< /Dest [ 82 0 R
  /XYZ
  34.34646
- 293.5559
+ 269.5559
  0 ]
  /Parent 99 0 R
  /Prev 108 0 R
@@ -1841,7 +1841,7 @@ endobj
  74 0 R
  77 0 R
  79 0 R
- 83 0 R
+ 82 0 R
  89 0 R ]
  /Type /Pages >>
 endobj
@@ -4087,7 +4087,7 @@ endobj
 % 'R125': class PDFStream 
 125 0 obj
 % page stream
-<< /Length 3823 >>
+<< /Length 3802 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -4132,7 +4132,7 @@ Q
 q
 1 0 0 1 16 34 cm
 q
-BT 1 0 0 1 0 30.256 Tm .434398 Tw 12 TL /F1 8 Tf 0 0 0 rg (La ventaja de utilizar ) Tj /F5 8 Tf (lambda ) Tj /F1 8 Tf (es que, si no se necesita utilizarla en otra parte, mantiene) Tj T* 0 Tw .755248 Tw (la definici\363n de esta funci\363n en el lugar donde se usa para evitar tener que buscarlo en) Tj T* 0 Tw (otra parte al leer el c\363digo.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm 1.056798 Tw 12 TL /F1 8 Tf 0 0 0 rg (La ventaja de utilizar ) Tj /F5 8 Tf (lambda ) Tj /F1 8 Tf (es que, si no se necesita reusar la funci\363n, mantiene la) Tj T* 0 Tw 1.339057 Tw (definici\363n en el lugar donde se usa y evita tener que buscarlo en otra parte al leer el) Tj T* 0 Tw (c\363digo.) Tj T* ET
 Q
 Q
 q
@@ -4173,7 +4173,7 @@ q
 1 0 0 1 20 18 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .063248 Tw (Depurar es dos veces m\341s dif\355cil que programar. Por lo tanto, si escrib\355s el c\363digo m\341s astuto) Tj T* 0 Tw (posible, por definici\363n, no sos lo suficientemente inteligente para depurarlo.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL 1.036248 Tw (Depurar es dos veces m\341s dif\355cil que programar. Por lo tanto, si escrib\355s el c\363digo lo m\341s) Tj T* 0 Tw (astuto posible, por definici\363n, no sos lo suficientemente inteligente para depurarlo.) Tj T* ET
 Q
 Q
 q
@@ -4252,7 +4252,7 @@ endobj
 % 'R126': class PDFStream 
 126 0 obj
 % page stream
-<< /Length 5186 >>
+<< /Length 4943 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -4276,7 +4276,7 @@ Q
 q
 1 0 0 1 34.34646 408.7559 cm
 q
-BT 1 0 0 1 0 30.256 Tm .383075 Tw 12 TL /F1 8 Tf 0 0 0 rg (Consideremos la tercera cosa que aprende todo programador: iteraci\363n. En python, se itera sobre) Tj T* 0 Tw .069472 Tw (listas ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (8 ) Tj /F1 8 Tf 0 0 0 rg 0 Ts (por lo que no sabemos, a priori, la posici\363n del item que estamos examinando, y a veces es) Tj T* 0 Tw (necesaria.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm .383075 Tw 12 TL /F1 8 Tf 0 0 0 rg (Consideremos la tercera cosa que aprende todo programador: iteraci\363n. En python, se itera sobre) Tj T* 0 Tw .045893 Tw (listas ) Tj /F1 6 Tf 0 0 .501961 rg 4 Ts (8 ) Tj /F1 8 Tf 0 0 0 rg 0 Ts (por lo que no sabemos, a priori, la posici\363n del \355tem que estamos examinando, y a veces es) Tj T* 0 Tw (necesaria.) Tj T* ET
 Q
 Q
 q
@@ -4335,7 +4335,7 @@ q
 1 0 0 1 34.34646 214.3559 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Mejor \(\277pero tal vez demasiado astuto?\):) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Mejor si te gustan las comprensiones de lista:) Tj T* ET
 Q
 Q
 q
@@ -4384,22 +4384,15 @@ Q
 Q
 Q
 q
-1 0 0 1 34.34646 109.9559 cm
+1 0 0 1 34.34646 97.95591 cm
 q
-BT 1 0 0 1 0 18.256 Tm .163141 Tw 12 TL /F1 8 Tf 0 0 0 rg (\277Porqu\351 demasiado? Porque ) Tj /F2 8 Tf (yo ) Tj /F1 8 Tf (no entiendo que hace a un golpe de vista, necesito \223) Tj (desanidarlo) Tj (\224) Tj (,) Tj T* 0 Tw (leer el lambda, darme cuenta de qu\351 filtra, ver a qu\351 se aplica.) Tj T* ET
+BT 1 0 0 1 0 30.256 Tm .163141 Tw 12 TL /F1 8 Tf 0 0 0 rg (\277Porqu\351 demasiado? Porque ) Tj /F2 8 Tf (yo ) Tj /F1 8 Tf (no entiendo que hace a un golpe de vista, necesito \223) Tj (desanidarlo) Tj (\224) Tj (,) Tj T* 0 Tw .449645 Tw (leer el lambda, desenredar el operador ternario, darme cuenta de qu\351 filtra, ver a qu\351 se aplica el) Tj T* 0 Tw (filtro.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 79.95591 cm
+1 0 0 1 34.34646 67.95591 cm
 q
 BT 1 0 0 1 0 18.256 Tm 3.11969 Tw 12 TL /F1 8 Tf 0 0 0 rg (Seguramente otros, mejores programadores s\355 se dan cuenta. En cuyo caso el l\355mite de) Tj T* 0 Tw (\223) Tj (demasiado corto) Tj (\224 para ellos estar\341 m\341s lejos.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 34.34646 49.95591 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .004198 Tw (Sin embargo, el c\363digo no se escribe para uno \(o al menos no se escribe s\363lo para uno\), si no para) Tj T* 0 Tw (que lo lean otros. Y no es bueno hacerles la vida dif\355cil al divino bot\363n.) Tj T* ET
 Q
 Q
  
@@ -4409,14 +4402,21 @@ endobj
 % 'R127': class PDFStream 
 127 0 obj
 % page stream
-<< /Length 4001 >>
+<< /Length 3888 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 534.7559 cm
+1 0 0 1 34.34646 522.7559 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 18.256 Tm /F1 8 Tf 12 TL .004198 Tw (Sin embargo, el c\363digo no se escribe para uno \(o al menos no se escribe s\363lo para uno\), si no para) Tj T* 0 Tw (que lo lean otros. Y no es bueno hacerles la vida dif\355cil al divino bot\363n, o para ahorrar media l\355nea.) Tj T* ET
+Q
 Q
 q
-1 0 0 1 34.34646 364.3559 cm
+1 0 0 1 34.34646 510.7559 cm
+Q
+q
+1 0 0 1 34.34646 340.3559 cm
 .960784 .960784 .862745 rg
 n 0 170.4 352.252 -170.4 re f*
 0 0 0 rg
@@ -4493,46 +4493,46 @@ n 352.252 0 m 352.252 170.4 l S
 Q
 Q
 q
-1 0 0 1 34.34646 358.3559 cm
+1 0 0 1 34.34646 334.3559 cm
 Q
 q
-1 0 0 1 34.34646 331.9559 cm
+1 0 0 1 34.34646 307.9559 cm
 q
 BT 1 0 0 1 0 5.784 Tm 14.4 TL /F2 12 Tf 0 0 0 rg (Lambdas vs funciones) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 305.5559 cm
+1 0 0 1 34.34646 281.5559 cm
 q
 BT 1 0 0 1 0 5.784 Tm 14.4 TL /F2 12 Tf 0 0 0 rg (ternarios vs ifs) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 279.1559 cm
+1 0 0 1 34.34646 255.1559 cm
 q
 BT 1 0 0 1 0 5.784 Tm 14.4 TL /F2 12 Tf 0 0 0 rg (Pedir perd\363n o pedir permiso) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 244.8094 cm
+1 0 0 1 34.34646 220.8094 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 226.8094 cm
+1 0 0 1 34.34646 202.8094 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Faltan subsecciones? Se pueden agregar si la idea surge viendo los otros cap\355tulos.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 170.1165 cm
+1 0 0 1 34.34646 146.1165 cm
 Q
 q
-1 0 0 1 34.34646 141.7701 cm
+1 0 0 1 34.34646 117.7701 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 126.7701 cm
+1 0 0 1 34.34646 102.7701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4556,7 +4556,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 75.77008 cm
+1 0 0 1 34.34646 51.77008 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4579,8 +4579,18 @@ q
 n 28.34646 0 m 28.34646 51 l S
 Q
 Q
+ 
+endstream
+
+endobj
+% 'R128': class PDFStream 
+128 0 obj
+% page stream
+<< /Length 2752 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 60.77008 cm
+1 0 0 1 34.34646 531.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4603,18 +4613,8 @@ q
 n 28.34646 0 m 28.34646 15 l S
 Q
 Q
- 
-endstream
-
-endobj
-% 'R128': class PDFStream 
-128 0 obj
-% page stream
-<< /Length 2281 >>
-stream
-1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 531.7559 cm
+1 0 0 1 34.34646 516.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4638,7 +4638,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 516.7559 cm
+1 0 0 1 34.34646 501.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4662,7 +4662,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 489.7559 cm
+1 0 0 1 34.34646 474.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4686,7 +4686,7 @@ n 28.34646 0 m 28.34646 27 l S
 Q
 Q
 q
-1 0 0 1 34.34646 462.7559 cm
+1 0 0 1 34.34646 447.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4698,7 +4698,7 @@ Q
 q
 1 0 0 1 34.34646 0 cm
 q
-BT 1 0 0 1 0 18.256 Tm .166594 Tw 12 TL /F1 8 Tf 0 0 0 rg (Esta peculiar perversi\363n se llama \223) Tj (code golfing) Tj (\224) Tj (. Y es muy divertida, si no es un modo de) Tj T* 0 Tw (vida.) Tj T* ET
+BT 1 0 0 1 0 18.256 Tm .089167 Tw 12 TL /F1 8 Tf 0 0 0 rg (Esta peculiar perversi\363n se llama \223) Tj (code golfing) Tj (\224) Tj (. Y es muy divertida, si no se convierte en) Tj T* 0 Tw (un modo de vida.) Tj T* ET
 Q
 Q
 q
@@ -4710,7 +4710,7 @@ n 28.34646 0 m 28.34646 27 l S
 Q
 Q
 q
-1 0 0 1 34.34646 435.7559 cm
+1 0 0 1 34.34646 420.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4966,83 +4966,83 @@ xref
 0000029596 00000 n
 0000029772 00000 n
 0000030127 00000 n
-0000030354 00000 n
-0000030709 00000 n
-0000030952 00000 n
-0000031195 00000 n
-0000031423 00000 n
-0000031796 00000 n
-0000032039 00000 n
-0000032282 00000 n
-0000032524 00000 n
-0000032767 00000 n
-0000032995 00000 n
-0000033335 00000 n
-0000033496 00000 n
-0000033777 00000 n
-0000033903 00000 n
-0000034124 00000 n
-0000034298 00000 n
-0000034489 00000 n
-0000034675 00000 n
-0000034857 00000 n
-0000035034 00000 n
-0000035259 00000 n
-0000035432 00000 n
-0000035635 00000 n
-0000035837 00000 n
-0000036027 00000 n
-0000036222 00000 n
-0000036416 00000 n
-0000036614 00000 n
-0000036816 00000 n
-0000037014 00000 n
-0000037193 00000 n
-0000037457 00000 n
-0000043158 00000 n
-0000047925 00000 n
-0000052943 00000 n
-0000059459 00000 n
-0000060216 00000 n
-0000064611 00000 n
-0000068251 00000 n
-0000073100 00000 n
-0000077084 00000 n
-0000081226 00000 n
-0000085653 00000 n
-0000088905 00000 n
-0000093381 00000 n
-0000098072 00000 n
-0000101998 00000 n
-0000107287 00000 n
-0000111391 00000 n
-0000113779 00000 n
-0000114121 00000 n
-0000114200 00000 n
-0000114279 00000 n
-0000114358 00000 n
-0000114437 00000 n
-0000114516 00000 n
-0000114595 00000 n
-0000114674 00000 n
-0000114753 00000 n
-0000114832 00000 n
-0000114912 00000 n
-0000114992 00000 n
-0000115072 00000 n
-0000115152 00000 n
-0000115232 00000 n
-0000115312 00000 n
-0000115392 00000 n
-0000115472 00000 n
+0000030355 00000 n
+0000030710 00000 n
+0000030953 00000 n
+0000031181 00000 n
+0000031545 00000 n
+0000031788 00000 n
+0000032031 00000 n
+0000032274 00000 n
+0000032516 00000 n
+0000032759 00000 n
+0000032987 00000 n
+0000033336 00000 n
+0000033497 00000 n
+0000033778 00000 n
+0000033904 00000 n
+0000034125 00000 n
+0000034299 00000 n
+0000034490 00000 n
+0000034676 00000 n
+0000034858 00000 n
+0000035035 00000 n
+0000035260 00000 n
+0000035433 00000 n
+0000035636 00000 n
+0000035838 00000 n
+0000036028 00000 n
+0000036223 00000 n
+0000036417 00000 n
+0000036615 00000 n
+0000036817 00000 n
+0000037015 00000 n
+0000037194 00000 n
+0000037458 00000 n
+0000043159 00000 n
+0000047926 00000 n
+0000052944 00000 n
+0000059460 00000 n
+0000060217 00000 n
+0000064612 00000 n
+0000068252 00000 n
+0000073101 00000 n
+0000077085 00000 n
+0000081227 00000 n
+0000085654 00000 n
+0000088906 00000 n
+0000093382 00000 n
+0000098073 00000 n
+0000101978 00000 n
+0000107024 00000 n
+0000111015 00000 n
+0000113874 00000 n
+0000114216 00000 n
+0000114295 00000 n
+0000114374 00000 n
+0000114453 00000 n
+0000114532 00000 n
+0000114611 00000 n
+0000114690 00000 n
+0000114769 00000 n
+0000114848 00000 n
+0000114927 00000 n
+0000115007 00000 n
+0000115087 00000 n
+0000115167 00000 n
+0000115247 00000 n
+0000115327 00000 n
+0000115407 00000 n
+0000115487 00000 n
+0000115567 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\370\364\345Cd!\234\216\277s"45'L\357) (\370\364\345Cd!\234\216\277s"45'L\357)] 
+ [(\230esf\252%D\322\342}\023\352\312\25218) (\230esf\252%D\322\342}\023\352\312\25218)] 
 
  /Info 91 0 R
  /Root 90 0 R
  /Size 148 >>
 startxref
-115521
+115616
 %%EOF

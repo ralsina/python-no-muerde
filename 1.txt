@@ -471,9 +471,9 @@ en python se llaman ``callables``.
             return random.randint(0,100)
         listaderandom=functools.partial(listadecosas, f)
 
-   La ventaja de utilizar ``lambda`` es que, si no se necesita utilizarla en
-   otra parte, mantiene la definición de esta función en el lugar donde se usa
-   para evitar tener que buscarlo en otra parte al leer el código.
+   La ventaja de utilizar ``lambda`` es que, si no se necesita reusar la
+   función, mantiene la definición en el lugar donde se usa y evita tener
+   que buscarlo en otra parte al leer el código.
 
    `Más información <>`_
 
@@ -481,7 +481,7 @@ Claro pero corto
 ~~~~~~~~~~~~~~~~
 
     Depurar es dos veces más difícil que programar. Por lo tanto, si
-    escribís el código más astuto posible, por definición, no sos lo
+    escribís el código lo más astuto posible, por definición, no sos lo
     suficientemente inteligente para depurarlo.
 
     --Brian W. Kernighan
@@ -490,7 +490,7 @@ Una de las tentaciones de todo programador es escribir código corto [#]_. Yo
 mismo soy débil ante esa tentación.
 
 .. [#] Esta peculiar perversión se llama "code golfing". Y es muy divertida, si
-       no es un modo de vida.
+       no se convierte en un modo de vida.
 
 .. admonition:: Código Corto
 
@@ -520,7 +520,7 @@ demasiado corto*. En python hay varias estructuras de control o de datos que
 ayudan en esa misión.
 
 Consideremos la tercera cosa que aprende todo programador: iteración. En python,
-se itera sobre listas [#]_ por lo que no sabemos, a priori, la posición del item
+se itera sobre listas [#]_ por lo que no sabemos, a priori, la posición del ítem
 que estamos examinando, y a veces es necesaria.
 
 .. [#] No exactamente, se itera sobre iterables, valga la redundancia, pero los
@@ -546,7 +546,7 @@ Mejor:
         if item.is_happy:
             happy_items.append(index)
 
-Mejor (¿pero tal vez demasiado astuto?):
+Mejor si te gustan las comprensiones de lista:
 
 .. code-block:: python
 
@@ -560,15 +560,15 @@ Tal vez demasiado:
     filter(lambda x: x[0] if x[1].is_happy else None, enumerate(lista))
 
 ¿Porqué demasiado? Porque **yo** no entiendo que hace a un golpe de vista,
-necesito "desanidarlo", leer el lambda, darme cuenta de qué filtra, ver a qué
-se aplica.
+necesito "desanidarlo", leer el lambda, desenredar el operador ternario,
+darme cuenta de qué filtra, ver a qué se aplica el filtro.
 
 Seguramente otros, mejores programadores sí se dan cuenta. En cuyo caso el
 límite de "demasiado corto" para ellos estará más lejos.
 
 Sin embargo, el código no se escribe para uno (o al menos no se escribe
 sólo para uno), si no para que lo lean otros. Y no es bueno hacerles la vida
-difícil al divino botón.
+difícil al divino botón, o para ahorrar media línea.
 
 .. admonition:: Nota
 
