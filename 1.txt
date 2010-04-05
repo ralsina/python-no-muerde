@@ -572,21 +572,7 @@ difícil al divino botón, o para ahorrar media línea.
 
 .. admonition:: Nota
 
-   Esto se llama una expresión ternaria:
-
-   .. code-block:: python
-
-       r = x[0] if x[1].is_happy else None
-
-   Y es el equivalente de:
-
-   .. code-block:: python
-
-       
-       if x[1].is_happy:
-           r = x[0]
-       else:
-           r = None
+   La expresión ternaria u operador ternario se explica en `Ternarios vs ifs`_
 
 Lambdas vs alternativas
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -667,7 +653,7 @@ un algoritmo cualquiera con el que no tiene nada que ver.
 Como el lector verá... me cuesta elegir. En general, trato de no usar lambda a
 menos que la alternativa sea farragosa y ensucie el entorno de código.
 
-ternarios vs ifs
+Ternarios vs ifs
 ~~~~~~~~~~~~~~~~
 
 El operador ternario en python es relativamente reciente, apareció en la versión
@@ -696,28 +682,69 @@ Sólo se puede usar cuando no te importe no ser compatible con python 2.4.
 Acordáte que hay (y va a haber hasta el 2013 por lo menos) versiones de Linux en amplio uso con python 2.4
 
 Si ignoramos eso, hay casos en los que simplifica mucho el código. Tomemos el
-ejemplo de un argumento por default a una función. Ésta es la versión clásica:
+ejemplo de un argumento por default, de un tipo modificable a una función.
+Ésta es la versión clásica:
 
 .. code-block:: python
 
-    def f(self, arg = None):
-        if arg is None:
-            self.arg = 42
-        else:
-            self.arg = arg
+    class c:
+        def f(self, arg = None):
+            if arg is None:
+                self.arg = []
+            else:
+                self.arg = arg
 
 Y esta es la versión "moderna":
 
 .. code-block:: python
 
-    def f(self, arg = None):
-        self.arg = 42 if arg is None else arg
+    class c:
+        def f(self, arg = None):
+            self.arg = [] if arg is None else arg
 
 ¿La ventaja? ¡Se lee de corrido! "self.arg es 42 si arg es None, si no arg"
+
+.. admonition:: Nota
+
+   La versión realmente obvia:
+
+   .. code-block:: pycon
+
+        >>> class c:
+        ...     def f(self, arg=[]):
+        ...         self.arg=arg
+
+   Tiene el problema de que... no funciona. Al ser ``[]`` modificable,
+   cada vez que se llame a ``instancia.f()`` sin argumentos se va a
+   asignar **la misma lista** a ``instancia.arg``. Si luego se modifica su
+   contenido en alguna instancia... ¡Se modifica en **todas las
+   instancias!** Ejemplo:
+
+   .. code-block:: pycon
+
+        >>> c1=c()
+        >>> c1.f()
+        >>> c2=c()
+        >>> c2.f()
+        >>> c1.arg.append('x')
+        >>> c2.arg
+        ['x']
+
+   Sí, es raro. Pero tiene sentido si se lo piensa un poco. En python la
+   asignación es únicamente decir "este nombre apunta a este objeto".
+
+   El ``[]`` de la declaración es un objeto único. Estamos haciendo que
+   ``self.arg`` apunte a **ese** objeto cada vez que llamamos a ``c.f``.
+
+   Con un tipo inmutable (como un string) esto no es problema.
+   
+
 
 
 Pedir perdón o pedir permiso
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Falta
 
 -------------------------
 
