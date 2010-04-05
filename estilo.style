@@ -31,6 +31,12 @@
     [ "listado" , {
         "parent": "code"
       }],
+    [ "cctable" , {
+        "parent": "bodytext",
+        "commands": [
+            ["VALIGN", [0,0], [-1,-1], "middle"]
+            ]
+      }],
     ["endnote", {
         "parent": "bodytext",
         "commands": [
