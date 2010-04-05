@@ -559,6 +559,17 @@ Tal vez demasiado:
 
     filter(lambda x: x[0] if x[1].is_happy else None, enumerate(lista))
 
+¿Porqué demasiado? Porque **yo** no entiendo que hace a un golpe de vista,
+necesito "desanidarlo", leer el lambda, darme cuenta de qué filtra, ver a qué
+se aplica.
+
+Seguramente otros, mejores programadores sí se dan cuenta. En cuyo caso el
+límite de "demasiado corto" para ellos estará más lejos.
+
+Sin embargo, el código no se escribe para uno (o al menos no se escribe
+sólo para uno), si no para que lo lean otros. Y no es bueno hacerles la vida
+difícil al divino botón.
+
 .. admonition:: Nota
 
    Esto se llama una expresión ternaria:
@@ -578,10 +589,14 @@ Tal vez demasiado:
            r = None
 
 Lambdas vs funciones
+~~~~~~~~~~~~~~~~~~~~
+
 
 ternarios vs ifs
+~~~~~~~~~~~~~~~~
 
-¿otros?
+Pedir perdón o pedir permiso
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -------------------------
 

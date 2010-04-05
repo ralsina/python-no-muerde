@@ -591,12 +591,12 @@ endobj
  31 0 R
  32 0 R
  33 0 R ]
- /Contents 101 0 R
+ /Contents 102 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -613,10 +613,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 81 0 R
  /XYZ
  40.34646
- 418.6261
+ 232.2261
  0 ]
  /Rect [ 146.2064
  490.8119
@@ -667,10 +667,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 81 0 R
  /XYZ
  40.34646
- 385.6261
+ 199.2261
  0 ]
  /Rect [ 307.2128
  232.6119
@@ -685,10 +685,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 81 0 R
  /XYZ
  40.34646
- 352.6261
+ 166.2261
  0 ]
  /Rect [ 261.4316
  190.6119
@@ -703,12 +703,12 @@ endobj
 << /Annots [ 35 0 R
  40 0 R
  41 0 R ]
- /Contents 102 0 R
+ /Contents 103 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -723,12 +723,12 @@ endobj
 % 'Page3': class PDFPage 
 43 0 obj
 % Page dictionary
-<< /Contents 103 0 R
+<< /Contents 104 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -759,12 +759,12 @@ endobj
 45 0 obj
 % Page dictionary
 << /Annots [ 44 0 R ]
- /Contents 104 0 R
+ /Contents 105 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -916,12 +916,12 @@ endobj
 % 'Page5': class PDFPage 
 54 0 obj
 % Page dictionary
-<< /Contents 105 0 R
+<< /Contents 106 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -954,10 +954,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 81 0 R
  /XYZ
  40.34646
- 337.6261
+ 151.2261
  0 ]
  /Rect [ 141.7839
  415.2119
@@ -972,10 +972,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 81 0 R
  /XYZ
  40.34646
- 322.6261
+ 136.2261
  0 ]
  /Rect [ 209.1065
  403.2119
@@ -990,12 +990,12 @@ endobj
 << /Annots [ 55 0 R
  56 0 R
  57 0 R ]
- /Contents 106 0 R
+ /Contents 107 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -1009,12 +1009,12 @@ endobj
 % 'Page7': class PDFPage 
 59 0 obj
 % Page dictionary
-<< /Contents 107 0 R
+<< /Contents 108 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1032,10 +1032,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 81 0 R
  /XYZ
  40.34646
- 301.6261
+ 115.2261
  0 ]
  /Rect [ 219.3104
  87.11899
@@ -1048,12 +1048,12 @@ endobj
 61 0 obj
 % Page dictionary
 << /Annots [ 60 0 R ]
- /Contents 108 0 R
+ /Contents 109 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1068,12 +1068,12 @@ endobj
 % 'Page9': class PDFPage 
 62 0 obj
 % Page dictionary
-<< /Contents 109 0 R
+<< /Contents 110 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1088,12 +1088,12 @@ endobj
 % 'Page10': class PDFPage 
 63 0 obj
 % Page dictionary
-<< /Contents 110 0 R
+<< /Contents 111 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1124,12 +1124,12 @@ endobj
 65 0 obj
 % Page dictionary
 << /Annots [ 64 0 R ]
- /Contents 111 0 R
+ /Contents 112 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1144,12 +1144,12 @@ endobj
 % 'Page12': class PDFPage 
 66 0 obj
 % Page dictionary
-<< /Contents 112 0 R
+<< /Contents 113 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -1163,12 +1163,12 @@ endobj
 % 'Page13': class PDFPage 
 67 0 obj
 % Page dictionary
-<< /Contents 113 0 R
+<< /Contents 114 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1183,12 +1183,12 @@ endobj
 % 'Page14': class PDFPage 
 68 0 obj
 % Page dictionary
-<< /Contents 114 0 R
+<< /Contents 115 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1206,10 +1206,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 81 0 R
  /XYZ
  40.34646
- 274.6261
+ 88.22608
  0 ]
  /Rect [ 287.8192
  267.4119
@@ -1231,12 +1231,12 @@ endobj
 71 0 obj
 % Page dictionary
 << /Annots [ 69 0 R ]
- /Contents 115 0 R
+ /Contents 116 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1254,10 +1254,10 @@ endobj
  0
  0 ]
  /Contents ()
- /Dest [ 82 0 R
+ /Dest [ 83 0 R
  /XYZ
  40.34646
- 247.6261
+ 544.0119
  0 ]
  /Rect [ 54.86393
  426.0119
@@ -1270,12 +1270,12 @@ endobj
 73 0 obj
 % Page dictionary
 << /Annots [ 72 0 R ]
- /Contents 116 0 R
+ /Contents 117 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /ExtGState << /GS0 << /ca 0 >> >>
  /Font 1 0 R
  /ProcSet [ /PDF
@@ -1299,9 +1299,9 @@ endobj
  503.8119
  0 ]
  /Rect [ 40.34646
- 405.6261
+ 219.2261
  44.79446
- 417.6261 ]
+ 231.2261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1317,9 +1317,9 @@ endobj
  245.6119
  0 ]
  /Rect [ 40.34646
- 372.6261
+ 186.2261
  44.79446
- 384.6261 ]
+ 198.2261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1335,9 +1335,9 @@ endobj
  203.6119
  0 ]
  /Rect [ 40.34646
- 339.6261
+ 153.2261
  44.79446
- 351.6261 ]
+ 165.2261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1353,9 +1353,9 @@ endobj
  428.2119
  0 ]
  /Rect [ 40.34646
- 324.6261
+ 138.2261
  44.79446
- 336.6261 ]
+ 150.2261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1371,9 +1371,9 @@ endobj
  416.2119
  0 ]
  /Rect [ 40.34646
- 309.6261
+ 123.2261
  44.79446
- 321.6261 ]
+ 135.2261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1389,9 +1389,9 @@ endobj
  100.119
  0 ]
  /Rect [ 40.34646
- 288.6261
+ 102.2261
  44.79446
- 300.6261 ]
+ 114.2261 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
@@ -1407,14 +1407,41 @@ endobj
  280.4119
  0 ]
  /Rect [ 40.34646
- 261.6261
+ 75.22608
  44.79446
- 273.6261 ]
+ 87.22608 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
-% 'Annot.NUMBER48': class LinkAnnotation 
+% 'Page17': class PDFPage 
 81 0 obj
+% Page dictionary
+<< /Annots [ 74 0 R
+ 75 0 R
+ 76 0 R
+ 77 0 R
+ 78 0 R
+ 79 0 R
+ 80 0 R ]
+ /Contents 118 0 R
+ /MediaBox [ 0
+ 0
+ 420.9449
+ 595.2756 ]
+ /Parent 101 0 R
+ /Resources << /ExtGState << /GS0 << /ca 0 >> >>
+ /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Annot.NUMBER48': class LinkAnnotation 
+82 0 obj
 << /Border [ 0
  0
  0 ]
@@ -1425,29 +1452,22 @@ endobj
  439.0119
  0 ]
  /Rect [ 40.34646
- 234.6261
+ 531.0119
  44.79446
- 246.6261 ]
+ 543.0119 ]
  /Subtype /Link
  /Type /Annot >>
 endobj
-% 'Page17': class PDFPage 
-82 0 obj
+% 'Page18': class PDFPage 
+83 0 obj
 % Page dictionary
-<< /Annots [ 74 0 R
- 75 0 R
- 76 0 R
- 77 0 R
- 78 0 R
- 79 0 R
- 80 0 R
- 81 0 R ]
- /Contents 117 0 R
+<< /Annots [ 82 0 R ]
+ /Contents 119 0 R
  /MediaBox [ 0
  0
  420.9449
  595.2756 ]
- /Parent 100 0 R
+ /Parent 101 0 R
  /Resources << /Font 1 0 R
  /ProcSet [ /PDF
  /Text
@@ -1458,203 +1478,203 @@ endobj
  /Trans <<  >>
  /Type /Page >>
 endobj
-% 'R83': class PDFCatalog 
-83 0 obj
+% 'R84': class PDFCatalog 
+84 0 obj
 % Document Root
-<< /Outlines 85 0 R
- /PageLabels 118 0 R
+<< /Outlines 86 0 R
+ /PageLabels 120 0 R
  /PageMode /UseNone
- /Pages 100 0 R
+ /Pages 101 0 R
  /Type /Catalog >>
 endobj
-% 'R84': class PDFInfo 
-84 0 obj
+% 'R85': class PDFInfo 
+85 0 obj
 << /Author (Roberto Alsina <ralsina@netmanagers.com.ar>)
- /CreationDate (D:20100325153936+03'00')
+ /CreationDate (D:20100325175436+03'00')
  /Keywords ()
  /Producer (ReportLab http://www.reportlab.com)
  /Subject (\(unspecified\))
  /Title (Python no muerde, yo s\355) >>
 endobj
-% 'R85': class PDFOutlines 
-85 0 obj
+% 'R86': class PDFOutlines 
+86 0 obj
 << /Count 16
- /First 86 0 R
- /Last 92 0 R
+ /First 87 0 R
+ /Last 93 0 R
  /Type /Outlines >>
 endobj
 % 'Outline.0': class OutlineEntryObject 
-86 0 obj
+87 0 obj
 << /Count 5
  /Dest [ 42 0 R
  /XYZ
  34.34646
  546.7559
  0 ]
- /First 87 0 R
- /Last 91 0 R
- /Next 92 0 R
- /Parent 85 0 R
+ /First 88 0 R
+ /Last 92 0 R
+ /Next 93 0 R
+ /Parent 86 0 R
  /Title (Introducci\363n) >>
 endobj
 % 'Outline.15.0': class OutlineEntryObject 
-87 0 obj
+88 0 obj
 << /Dest [ 42 0 R
  /XYZ
  34.34646
  517.9559
  0 ]
- /Next 88 0 R
- /Parent 86 0 R
+ /Next 89 0 R
+ /Parent 87 0 R
  /Title (Requisitos) >>
 endobj
 % 'Outline.15.1': class OutlineEntryObject 
-88 0 obj
+89 0 obj
 << /Dest [ 42 0 R
  /XYZ
  34.34646
  161.3559
  0 ]
- /Next 89 0 R
- /Parent 86 0 R
- /Prev 87 0 R
+ /Next 90 0 R
+ /Parent 87 0 R
+ /Prev 88 0 R
  /Title (Convenciones) >>
 endobj
 % 'Outline.15.2': class OutlineEntryObject 
-89 0 obj
+90 0 obj
 << /Dest [ 43 0 R
  /XYZ
  34.34646
  401.863
  0 ]
- /Next 90 0 R
- /Parent 86 0 R
- /Prev 88 0 R
+ /Next 91 0 R
+ /Parent 87 0 R
+ /Prev 89 0 R
  /Title (Lenguaje) >>
 endobj
 % 'Outline.15.3': class OutlineEntryObject 
-90 0 obj
+91 0 obj
 << /Dest [ 43 0 R
  /XYZ
  34.34646
  279.463
  0 ]
- /Next 91 0 R
- /Parent 86 0 R
- /Prev 89 0 R
+ /Next 92 0 R
+ /Parent 87 0 R
+ /Prev 90 0 R
  /Title (Mapa) >>
 endobj
 % 'Outline.15.4': class OutlineEntryObject 
-91 0 obj
+92 0 obj
 << /Dest [ 54 0 R
  /XYZ
  34.34646
  159.4237
  0 ]
- /Parent 86 0 R
- /Prev 90 0 R
+ /Parent 87 0 R
+ /Prev 91 0 R
  /Title (Acerca del Autor) >>
 endobj
 % 'Outline.1': class OutlineEntryObject 
-92 0 obj
+93 0 obj
 << /Count 7
  /Dest [ 58 0 R
  /XYZ
  34.34646
  546.7559
  0 ]
- /First 93 0 R
- /Last 99 0 R
- /Parent 85 0 R
- /Prev 86 0 R
+ /First 94 0 R
+ /Last 100 0 R
+ /Parent 86 0 R
+ /Prev 87 0 R
  /Title (Pensar en Python) >>
 endobj
 % 'Outline.16.0': class OutlineEntryObject 
-93 0 obj
+94 0 obj
 << /Dest [ 58 0 R
  /XYZ
  34.34646
  331.9559
  0 ]
- /Next 94 0 R
- /Parent 92 0 R
+ /Next 95 0 R
+ /Parent 93 0 R
  /Title (Get/Set) >>
 endobj
 % 'Outline.16.1': class OutlineEntryObject 
-94 0 obj
+95 0 obj
 << /Dest [ 63 0 R
  /XYZ
  34.34646
  414.7559
  0 ]
- /Next 95 0 R
- /Parent 92 0 R
- /Prev 93 0 R
+ /Next 96 0 R
+ /Parent 93 0 R
+ /Prev 94 0 R
  /Title (Singletons y Globales) >>
 endobj
 % 'Outline.16.2': class OutlineEntryObject 
-95 0 obj
+96 0 obj
 << /Dest [ 63 0 R
  /XYZ
  34.34646
  370.3559
  0 ]
- /Next 96 0 R
- /Parent 92 0 R
- /Prev 94 0 R
+ /Next 97 0 R
+ /Parent 93 0 R
+ /Prev 95 0 R
  /Title (Loops y medios loops) >>
 endobj
 % 'Outline.16.3': class OutlineEntryObject 
-96 0 obj
+97 0 obj
 << /Dest [ 63 0 R
  /XYZ
  34.34646
  325.9559
  0 ]
- /Next 97 0 R
- /Parent 92 0 R
- /Prev 95 0 R
+ /Next 98 0 R
+ /Parent 93 0 R
+ /Prev 96 0 R
  /Title (Switches) >>
 endobj
 % 'Outline.16.4': class OutlineEntryObject 
-97 0 obj
+98 0 obj
 << /Dest [ 63 0 R
  /XYZ
  34.34646
  281.5559
  0 ]
- /Next 98 0 R
- /Parent 92 0 R
- /Prev 96 0 R
+ /Next 99 0 R
+ /Parent 93 0 R
+ /Prev 97 0 R
  /Title (Patos y Tipos) >>
 endobj
 % 'Outline.16.5': class OutlineEntryObject 
-98 0 obj
+99 0 obj
 << /Dest [ 66 0 R
  /XYZ
  34.34646
  282.7559
  0 ]
- /Next 99 0 R
- /Parent 92 0 R
- /Prev 97 0 R
+ /Next 100 0 R
+ /Parent 93 0 R
+ /Prev 98 0 R
  /Title (Gen\351ricos) >>
 endobj
 % 'Outline.16.6': class OutlineEntryObject 
-99 0 obj
+100 0 obj
 << /Dest [ 71 0 R
  /XYZ
  34.34646
  348.5559
  0 ]
- /Parent 92 0 R
- /Prev 98 0 R
+ /Parent 93 0 R
+ /Prev 99 0 R
  /Title (Claro pero corto) >>
 endobj
-% 'R100': class PDFPages 
-100 0 obj
+% 'R101': class PDFPages 
+101 0 obj
 % page tree
-<< /Count 17
+<< /Count 18
  /Kids [ 34 0 R
  42 0 R
  43 0 R
@@ -1671,11 +1691,12 @@ endobj
  68 0 R
  71 0 R
  73 0 R
- 82 0 R ]
+ 81 0 R
+ 83 0 R ]
  /Type /Pages >>
 endobj
-% 'R101': class PDFStream 
-101 0 obj
+% 'R102': class PDFStream 
+102 0 obj
 % page stream
 << /Length 4806 >>
 stream
@@ -1949,8 +1970,8 @@ Q
 endstream
 
 endobj
-% 'R102': class PDFStream 
-102 0 obj
+% 'R103': class PDFStream 
+103 0 obj
 % page stream
 << /Length 4664 >>
 stream
@@ -2103,8 +2124,8 @@ Q
 endstream
 
 endobj
-% 'R103': class PDFStream 
-103 0 obj
+% 'R104': class PDFStream 
+104 0 obj
 % page stream
 << /Length 4915 >>
 stream
@@ -2312,8 +2333,8 @@ Q
 endstream
 
 endobj
-% 'R104': class PDFStream 
-104 0 obj
+% 'R105': class PDFStream 
+105 0 obj
 % page stream
 << /Length 6413 >>
 stream
@@ -2666,8 +2687,8 @@ Q
 endstream
 
 endobj
-% 'R105': class PDFStream 
-105 0 obj
+% 'R106': class PDFStream 
+106 0 obj
 % page stream
 << /Length 655 >>
 stream
@@ -2710,8 +2731,8 @@ Q
 endstream
 
 endobj
-% 'R106': class PDFStream 
-106 0 obj
+% 'R107': class PDFStream 
+107 0 obj
 % page stream
 << /Length 4430 >>
 stream
@@ -2840,8 +2861,8 @@ Q
 endstream
 
 endobj
-% 'R107': class PDFStream 
-107 0 obj
+% 'R108': class PDFStream 
+108 0 obj
 % page stream
 << /Length 3398 >>
 stream
@@ -2927,8 +2948,8 @@ Q
 endstream
 
 endobj
-% 'R108': class PDFStream 
-108 0 obj
+% 'R109': class PDFStream 
+109 0 obj
 % page stream
 << /Length 4746 >>
 stream
@@ -3059,8 +3080,8 @@ Q
 endstream
 
 endobj
-% 'R109': class PDFStream 
-109 0 obj
+% 'R110': class PDFStream 
+110 0 obj
 % page stream
 << /Length 3881 >>
 stream
@@ -3203,8 +3224,8 @@ Q
 endstream
 
 endobj
-% 'R110': class PDFStream 
-110 0 obj
+% 'R111': class PDFStream 
+111 0 obj
 % page stream
 << /Length 4039 >>
 stream
@@ -3386,8 +3407,8 @@ Q
 endstream
 
 endobj
-% 'R111': class PDFStream 
-111 0 obj
+% 'R112': class PDFStream 
+112 0 obj
 % page stream
 << /Length 4324 >>
 stream
@@ -3526,8 +3547,8 @@ Q
 endstream
 
 endobj
-% 'R112': class PDFStream 
-112 0 obj
+% 'R113': class PDFStream 
+113 0 obj
 % page stream
 << /Length 3149 >>
 stream
@@ -3597,8 +3618,8 @@ Q
 endstream
 
 endobj
-% 'R113': class PDFStream 
-113 0 obj
+% 'R114': class PDFStream 
+114 0 obj
 % page stream
 << /Length 4373 >>
 stream
@@ -3756,8 +3777,8 @@ Q
 endstream
 
 endobj
-% 'R114': class PDFStream 
-114 0 obj
+% 'R115': class PDFStream 
+115 0 obj
 % page stream
 << /Length 4588 >>
 stream
@@ -3869,8 +3890,8 @@ Q
 endstream
 
 endobj
-% 'R115': class PDFStream 
-115 0 obj
+% 'R116': class PDFStream 
+116 0 obj
 % page stream
 << /Length 3823 >>
 stream
@@ -4034,10 +4055,10 @@ Q
 endstream
 
 endobj
-% 'R116': class PDFStream 
-116 0 obj
+% 'R117': class PDFStream 
+117 0 obj
 % page stream
-<< /Length 4661 >>
+<< /Length 4790 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
@@ -4146,11 +4167,11 @@ q
 1 0 0 1 34.34646 162.1559 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Probablemente demasiado \(y no es m\341s corto\):) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Tal vez demasiado:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 129.9559 cm
+1 0 0 1 34.34646 141.9559 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -4159,66 +4180,167 @@ q
 q
 0 0 0 rg
 /GS0 gs
-n 0 0 352.052 24 re f*
+n 0 0 352.052 12 re f*
 Q
 q
-BT 1 0 0 1 0 18.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (happy_items) Tj (=) Tj ([) Tj (x) Tj ([) Tj (0) Tj (]) Tj ( ) Tj /F6 8 Tf (for) Tj /F5 8 Tf ( ) Tj (x) Tj ( ) Tj /F6 8 Tf (in) Tj /F5 8 Tf ( ) Tj (filter) Tj (\() Tj /F6 8 Tf (lambda) Tj /F5 8 Tf ( ) Tj (x) Tj (:) Tj ( ) Tj (x) Tj ([) Tj (0) Tj (]) Tj (.) Tj (is_happy) Tj (,) Tj ( \\) Tj T* (    ) Tj (enumerate) Tj (\() Tj (lista) Tj (\)\)]) Tj T* ET
+BT 1 0 0 1 0 6.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (filter) Tj (\() Tj /F6 8 Tf (lambda) Tj /F5 8 Tf ( ) Tj (x) Tj (:) Tj ( ) Tj (x) Tj ([) Tj (0) Tj (]) Tj ( ) Tj /F6 8 Tf (if) Tj /F5 8 Tf ( ) Tj (x) Tj ([) Tj (1) Tj (]) Tj (.) Tj (is_happy) Tj ( ) Tj /F6 8 Tf (else) Tj /F5 8 Tf ( ) Tj (None) Tj (,) Tj ( ) Tj (enumerate) Tj (\() Tj (lista) Tj (\)\)) Tj T* ET
 Q
 Q
 Q
 Q
 Q
 q
-1 0 0 1 34.34646 109.9559 cm
+1 0 0 1 34.34646 121.9559 cm
+Q
+q
+1 0 0 1 34.34646 53.95591 cm
+.960784 .960784 .862745 rg
+n 0 68 352.252 -68 re f*
+0 0 0 rg
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 6 42 Tm  T* ET
+q
+1 0 0 1 16 40 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Lambdas vs funciones) Tj T* ET
+BT 1 0 0 1 0 4.82 Tm /F7 10 Tf 12 TL (Nota) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 91.95591 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (ternarios vs ifs) Tj T* ET
-Q
-Q
-q
-1 0 0 1 34.34646 73.95591 cm
+1 0 0 1 16 16 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (\277otros?) Tj T* ET
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Esto se llama una expresi\363n ternaria:) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.662745 .662745 .662745 RG
+.5 w
+n 0 68 m 352.252 68 l S
+n 0 0 m 352.252 0 l S
+n 0 0 m 0 68 l S
+n 352.252 0 m 352.252 68 l S
 Q
 Q
  
 endstream
 
 endobj
-% 'R117': class PDFStream 
-117 0 obj
+% 'R118': class PDFStream 
+118 0 obj
 % page stream
-<< /Length 4317 >>
+<< /Length 5483 >>
 stream
 1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 518.4094 cm
+1 0 0 1 34.34646 420.3559 cm
+.960784 .960784 .862745 rg
+n 0 126.4 352.252 -126.4 re f*
+0 0 0 rg
+BT /F3 10 Tf 12 TL ET
+BT 1 0 0 1 6 100.4 Tm  T* ET
+q
+1 0 0 1 16 98.2 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 .1 .1 cm
+q
+0 0 0 rg
+/GS0 gs
+n 0 0 320.052 12 re f*
+Q
+q
+BT 1 0 0 1 0 6.968 Tm 12 TL /F5 8 Tf 0 0 0 rg (r) Tj ( ) Tj (=) Tj ( ) Tj (x) Tj ([) Tj (0) Tj (]) Tj ( ) Tj /F6 8 Tf (if) Tj /F5 8 Tf ( ) Tj (x) Tj ([) Tj (1) Tj (]) Tj (.) Tj (is_happy) Tj ( ) Tj /F6 8 Tf (else) Tj /F5 8 Tf ( ) Tj (None) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 16 72.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Y es el equivalente de:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 16 16 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 .1 .1 cm
+q
+0 0 0 rg
+/GS0 gs
+n 0 0 320.052 48 re f*
+Q
+q
+BT 1 0 0 1 0 42.968 Tm 12 TL /F6 8 Tf 0 0 0 rg (if) Tj /F5 8 Tf ( ) Tj (x) Tj ([) Tj (1) Tj (]) Tj (.) Tj (is_happy) Tj (:) Tj  T* (    ) Tj (r) Tj ( ) Tj (=) Tj ( ) Tj (x) Tj ([) Tj (0) Tj (]) Tj  T* /F6 8 Tf (else) Tj /F5 8 Tf (:) Tj  T* (    ) Tj (r) Tj ( ) Tj (=) Tj ( ) Tj (None) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 J
+1 j
+.662745 .662745 .662745 RG
+.5 w
+n 0 126.4 m 352.252 126.4 l S
+n 0 0 m 352.252 0 l S
+n 0 0 m 0 126.4 l S
+n 352.252 0 m 352.252 126.4 l S
+Q
+Q
+q
+1 0 0 1 34.34646 414.3559 cm
+Q
+q
+1 0 0 1 34.34646 396.3559 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Lambdas vs funciones) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34.34646 378.3559 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (ternarios vs ifs) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34.34646 360.3559 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (\277otros?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 34.34646 332.0094 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 500.4094 cm
+1 0 0 1 34.34646 314.0094 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6.256 Tm /F1 8 Tf 12 TL (Faltan subsecciones? Se pueden agregar si la idea surge viendo los otros cap\355tulos.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 34.34646 443.7165 cm
+1 0 0 1 34.34646 257.3165 cm
 Q
 q
-1 0 0 1 34.34646 415.3701 cm
+1 0 0 1 34.34646 228.9701 cm
 n 0 14.17323 m 352.252 14.17323 l S
 Q
 q
-1 0 0 1 34.34646 400.3701 cm
+1 0 0 1 34.34646 213.9701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4242,7 +4364,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 349.3701 cm
+1 0 0 1 34.34646 162.9701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4266,7 +4388,7 @@ n 28.34646 0 m 28.34646 51 l S
 Q
 Q
 q
-1 0 0 1 34.34646 334.3701 cm
+1 0 0 1 34.34646 147.9701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4290,7 +4412,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 319.3701 cm
+1 0 0 1 34.34646 132.9701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4314,7 +4436,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 304.3701 cm
+1 0 0 1 34.34646 117.9701 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4338,7 +4460,7 @@ n 28.34646 0 m 28.34646 15 l S
 Q
 Q
 q
-1 0 0 1 34.34646 277.3701 cm
+1 0 0 1 34.34646 90.97008 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4362,7 +4484,7 @@ n 28.34646 0 m 28.34646 27 l S
 Q
 Q
 q
-1 0 0 1 34.34646 250.3701 cm
+1 0 0 1 34.34646 63.97008 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4385,8 +4507,18 @@ q
 n 28.34646 0 m 28.34646 27 l S
 Q
 Q
+ 
+endstream
+
+endobj
+% 'R119': class PDFStream 
+119 0 obj
+% page stream
+<< /Length 506 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
 q
-1 0 0 1 34.34646 223.3701 cm
+1 0 0 1 34.34646 519.7559 cm
 0 0 0 rg
 BT /F3 10 Tf 12 TL ET
 q
@@ -4413,148 +4545,156 @@ Q
 endstream
 
 endobj
-% 'R118': class PDFPageLabels 
-118 0 obj
+% 'R120': class PDFPageLabels 
+120 0 obj
 % Document Root
 << /Nums [ 0
- 119 0 R
- 1
- 120 0 R
- 2
  121 0 R
- 3
+ 1
  122 0 R
- 4
+ 2
  123 0 R
- 5
+ 3
  124 0 R
- 6
+ 4
  125 0 R
- 7
+ 5
  126 0 R
- 8
+ 6
  127 0 R
- 9
+ 7
  128 0 R
- 10
+ 8
  129 0 R
- 11
+ 9
  130 0 R
- 12
+ 10
  131 0 R
- 13
+ 11
  132 0 R
- 14
+ 12
  133 0 R
- 15
+ 13
  134 0 R
+ 14
+ 135 0 R
+ 15
+ 136 0 R
  16
- 135 0 R ] >>
-endobj
-% 'R119': class PDFPageLabel 
-119 0 obj
-% None
-<< /S /D
- /St 1 >>
-endobj
-% 'R120': class PDFPageLabel 
-120 0 obj
-% None
-<< /S /D
- /St 2 >>
+ 137 0 R
+ 17
+ 138 0 R ] >>
 endobj
 % 'R121': class PDFPageLabel 
 121 0 obj
 % None
 << /S /D
- /St 3 >>
+ /St 1 >>
 endobj
 % 'R122': class PDFPageLabel 
 122 0 obj
 % None
 << /S /D
- /St 4 >>
+ /St 2 >>
 endobj
 % 'R123': class PDFPageLabel 
 123 0 obj
 % None
 << /S /D
- /St 5 >>
+ /St 3 >>
 endobj
 % 'R124': class PDFPageLabel 
 124 0 obj
 % None
 << /S /D
- /St 6 >>
+ /St 4 >>
 endobj
 % 'R125': class PDFPageLabel 
 125 0 obj
 % None
 << /S /D
- /St 7 >>
+ /St 5 >>
 endobj
 % 'R126': class PDFPageLabel 
 126 0 obj
 % None
 << /S /D
- /St 8 >>
+ /St 6 >>
 endobj
 % 'R127': class PDFPageLabel 
 127 0 obj
 % None
 << /S /D
- /St 9 >>
+ /St 7 >>
 endobj
 % 'R128': class PDFPageLabel 
 128 0 obj
 % None
 << /S /D
- /St 10 >>
+ /St 8 >>
 endobj
 % 'R129': class PDFPageLabel 
 129 0 obj
 % None
 << /S /D
- /St 11 >>
+ /St 9 >>
 endobj
 % 'R130': class PDFPageLabel 
 130 0 obj
 % None
 << /S /D
- /St 12 >>
+ /St 10 >>
 endobj
 % 'R131': class PDFPageLabel 
 131 0 obj
 % None
 << /S /D
- /St 13 >>
+ /St 11 >>
 endobj
 % 'R132': class PDFPageLabel 
 132 0 obj
 % None
 << /S /D
- /St 14 >>
+ /St 12 >>
 endobj
 % 'R133': class PDFPageLabel 
 133 0 obj
 % None
 << /S /D
- /St 15 >>
+ /St 13 >>
 endobj
 % 'R134': class PDFPageLabel 
 134 0 obj
 % None
 << /S /D
- /St 16 >>
+ /St 14 >>
 endobj
 % 'R135': class PDFPageLabel 
 135 0 obj
 % None
 << /S /D
+ /St 15 >>
+endobj
+% 'R136': class PDFPageLabel 
+136 0 obj
+% None
+<< /S /D
+ /St 16 >>
+endobj
+% 'R137': class PDFPageLabel 
+137 0 obj
+% None
+<< /S /D
  /St 17 >>
 endobj
+% 'R138': class PDFPageLabel 
+138 0 obj
+% None
+<< /S /D
+ /St 18 >>
+endobj
 xref
-0 136
+0 139
 0000000000 65535 f
 0000000113 00000 n
 0000000311 00000 n
@@ -4636,69 +4776,72 @@ xref
 0000030169 00000 n
 0000030412 00000 n
 0000030654 00000 n
-0000030897 00000 n
-0000031125 00000 n
-0000031492 00000 n
-0000031653 00000 n
-0000031934 00000 n
-0000032060 00000 n
-0000032281 00000 n
-0000032455 00000 n
-0000032646 00000 n
-0000032832 00000 n
-0000033014 00000 n
-0000033191 00000 n
-0000033413 00000 n
-0000033584 00000 n
-0000033784 00000 n
-0000033983 00000 n
-0000034170 00000 n
-0000034362 00000 n
-0000034553 00000 n
-0000034715 00000 n
-0000034970 00000 n
-0000039879 00000 n
-0000044646 00000 n
-0000049664 00000 n
-0000056180 00000 n
-0000056937 00000 n
-0000061470 00000 n
-0000064971 00000 n
-0000069820 00000 n
-0000073804 00000 n
-0000077946 00000 n
-0000082373 00000 n
-0000085625 00000 n
-0000090101 00000 n
-0000094792 00000 n
-0000098718 00000 n
-0000103482 00000 n
-0000107906 00000 n
-0000108233 00000 n
-0000108312 00000 n
-0000108391 00000 n
-0000108470 00000 n
-0000108549 00000 n
-0000108628 00000 n
-0000108707 00000 n
-0000108786 00000 n
-0000108865 00000 n
-0000108944 00000 n
-0000109024 00000 n
-0000109104 00000 n
-0000109184 00000 n
-0000109264 00000 n
-0000109344 00000 n
-0000109424 00000 n
-0000109504 00000 n
+0000030882 00000 n
+0000031291 00000 n
+0000031519 00000 n
+0000031823 00000 n
+0000031984 00000 n
+0000032265 00000 n
+0000032391 00000 n
+0000032612 00000 n
+0000032786 00000 n
+0000032977 00000 n
+0000033163 00000 n
+0000033345 00000 n
+0000033522 00000 n
+0000033745 00000 n
+0000033916 00000 n
+0000034116 00000 n
+0000034315 00000 n
+0000034502 00000 n
+0000034694 00000 n
+0000034886 00000 n
+0000035049 00000 n
+0000035313 00000 n
+0000040222 00000 n
+0000044989 00000 n
+0000050007 00000 n
+0000056523 00000 n
+0000057280 00000 n
+0000061813 00000 n
+0000065314 00000 n
+0000070163 00000 n
+0000074147 00000 n
+0000078289 00000 n
+0000082716 00000 n
+0000085968 00000 n
+0000090444 00000 n
+0000095135 00000 n
+0000099061 00000 n
+0000103954 00000 n
+0000109540 00000 n
+0000110152 00000 n
+0000110494 00000 n
+0000110573 00000 n
+0000110652 00000 n
+0000110731 00000 n
+0000110810 00000 n
+0000110889 00000 n
+0000110968 00000 n
+0000111047 00000 n
+0000111126 00000 n
+0000111205 00000 n
+0000111285 00000 n
+0000111365 00000 n
+0000111445 00000 n
+0000111525 00000 n
+0000111605 00000 n
+0000111685 00000 n
+0000111765 00000 n
+0000111845 00000 n
 trailer
 << /ID 
  % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
- [(\017\235M\015M\331\2527F\312\356\3002[\361\234) (\017\235M\015M\331\2527F\312\356\3002[\361\234)] 
+ [(\310\334,\200\250#\033\205\206{d\274\0107\017@) (\310\334,\200\250#\033\205\206{d\274\0107\017@)] 
 
- /Info 84 0 R
- /Root 83 0 R
- /Size 136 >>
+ /Info 85 0 R
+ /Root 84 0 R
+ /Size 139 >>
 startxref
-109553
+111894
 %%EOF
