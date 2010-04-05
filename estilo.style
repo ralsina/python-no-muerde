@@ -1,5 +1,6 @@
 {
   "pageSetup": {
+    "firstTemplate": "coverPage",
     "size": "A5",
     "margin-top": "1cm",
     "margin-bottom": "1cm",
@@ -8,8 +9,18 @@
     "margin-gutter": "0cm",
     "spacing-header": "5mm",
     "spacing-footer": "5mm"
-    },
-    "styles" : [
+  },
+  "pageTemplates" : {
+    "coverPage": {
+        "frames": [
+            ["0cm", "0cm", "100%", "100%"]
+          ],
+        "background" : "cover.pdf",
+        "showHeader" : false,
+        "showFooter" : false
+    }
+  },  
+  "styles" : [
     [ "code" , {
         "borderWidth": 0,
         "borderPadding": 0,
