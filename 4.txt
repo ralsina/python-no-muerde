@@ -1,2 +1,136 @@
 Documentación y Testing
 -----------------------
+
+    Si no está en el manual está equivocado. Si está en el manual es redundante.
+
+    -- Califa Omar, Alejandría, Año 634.
+
+¿Pero cómo sabemos si el programa hace *exactamente* lo que dice el manual?
+
+Bueno, pues *para eso* (entre otras cosas) están los tests [#]_. Los tests son
+la rama militante de la documentación. La parte activa que se encarga de que ese manual no sea letra muerta e ignorada por perder contacto con la realidad,
+si no un texto que refleja lo que realmente existe.
+
+.. [#] También están para la gente mala que no documenta.
+
+Si la realidad (el funcionamiento del programa) se aparta del ideal (el manual),
+es el trabajo del test chiflar y avisar que está pasando. Para que esto sea
+efectivo tenemos que cumplir varios requisitos:
+
+* Los tests tienen que poder detectar todos los errores. (cobertura)
+
+* Los tests tienen que ser ejecutados ante cada cambio, y las
+  diferencias de resultado explicadas. (integración)
+
+* El programador y el documentador y el tester (o sea uno) tiene que
+  aceptar que hacer tests es necesario. Si se lo ve como una carga, no vale
+  la pena: vas a aprender a ignorar las fallas, a hacer "pasar" los tests, a
+  no hacer tests de las cosas que sabés que son difíciles. (ganas)
+
+Por suerte en Python hay muchas herramientas que hacen que testear sea, si no divertido, por lo menos tolerable.
+
+
+Doctest: tus comentarios están vivos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Un comentario mentiroso es peor que ningún comentario. Y los comentarios se
+suelen volver mentira porque el código cambia y nadie edita los comentarios. Es
+el problema de repetirse, uno ya dijo lo que quería en el código, y tiene que
+volver a explicarlo en un comentario, a la larga pasa que las copias divergen,
+y siempre el que está equivocado es el comentario.
+
+Un doctest permite **asegurar** que el comentario es cierto, porque el
+comentario tiene código de su lado.
+
+Tomemos un ejemplo zonzo: una función para traducir al rosarino [#]_.
+
+.. [#] Este ejemplo surgió de una discusión de PyAr. El código que contiene es
+   tal vez un poco denso. No te asustes, lo importante no es el código, si no
+   lo que hay alrededor.
+
+.. admonition:: Lenguaje Rosarino
+
+   Inventado (o popularizado) por Alberto Olmedo, el rosarino es un lenguaje en
+   el cual la vocal acentuada X se reemplaza por XgasX con el acento al final
+   (á por agasá, e por egasé, etc).
+
+   Algunos ejemplos:
+
+   rosarino => rosarigasino
+   
+   té => té (no se expanden monosílabos)
+   
+   brújula => brugasújula
+
+   queso => quegaseso
+
+
+Aquí tenemos una primera versión, que funciona sólo en palabras con acento ortográfico:
+
+.. class:: titulo-listado
+
+gaso1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: gaso1.py
+
+
+Y acá viene la primera cosa importante de testing. Uno quiere testear todos los
+comportamientos deseados del código.
+
+Si el código se supone que ya hace algo bien, aunque sea algo muy chiquitito, es
+el momento ideal para empezar a hacer testing. Si vas a esperar a que la función
+sea "interesante", ya va a ser muy tarde. Vas a tener un déficit de tests, vas
+a tener que ponerte un día sólo a escribir tests, y es aburrido.
+
+¿Como sé yo que esa regexp hace lo que yo quiero? ¡Porque la probé! Como no soy
+el mago de las expresiones regulares que las saca de la galera, hice esto en el
+intérprete interactivo (reemplazo la funcion ``gas`` con una versión boba):
+
+.. code-block:: pycon
+
+    >>> import re
+    >>> palabra=u'cámara'
+    >>> print re.sub(u'([\xe1\xe9\xed\xf3\xfa])',
+    ...     lambda x: x.group(0)+'gas'+x.group(0),palabra,1)
+    
+    cágasámara
+
+¿Y como sé que la función ``gas`` hace lo que quiero? Porque hice esto:
+
+.. code-block:: pycon
+
+    >>> import unicodedata
+    >>> def gas(letra):
+    ...     return u'%sgas%s'%(unicodedata.normalize('NFKD',
+    ...         letra).encode('ASCII', 'ignore'), letra)
+    >>> print gas(u'á')
+    agasá
+    >>> print gas(u'a')
+    agasa
+
+
+Si no hubiera hecho ese test manual no tendría la más mínima confianza en este
+código, y creo que casi todos hacemos esta clase de cosas, ¿o no?.
+
+El problema con este testing manual ad-hoc es que lo hacemos una vez, la función
+hace lo que se supone debe hacer, y nos olvidamos.
+
+Por suerte *no tiene porqué ser así*, gracias a los doctests.
+
+De hecho, el doctest es poco más que cortar y pegar esos tests informales quegaseso mostré arriba. Veamos la versión con doctests:
+
+.. class:: titulo-listado
+
+gaso2.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: gaso2.py
+
+
