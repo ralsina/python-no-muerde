@@ -1,3 +1,5 @@
+Agradecimientos
+---------------
 Sin las siguientes personas este libro no sería lo que es (¡así que a llorar al ziggurat! En ningún orden:
 
 * Pablo Ziliani
@@ -7,4 +9,6 @@ Sin las siguientes personas este libro no sería lo que es (¡así que a llorar 
 * Darío Graña
 * Sebastián Bassi
 * Leonardo Vidarte
+* Daniel Moisset
+* Ernesto Savoretti
 * El que me olvidé. ¡Sí, ése!

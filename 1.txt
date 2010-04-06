@@ -47,17 +47,19 @@ manifestaciones:
    p.setX(x1)   
 
 
-Otra manera es simplemente tomar el valor X:
+Otra manera es simplemente usar un miembro ``x`` de la clase:
 
 .. code-block:: python
 
+   p.x = x1
    x1 = p.x
 
 La ventaja de usar getters y setters es el "encapsulamiento". No dicta que la
 clase tenga un miembro ``x``, tal vez el valor que yo ingreso via ``setX`` es
-manipulado, o almacenado en una base de datos, o tatuado en el estómago de
-policías retirados con problemas neurológicos, lo único que importa es que luego cuando lo saco con el getter me dé lo que tenga que dar (que no quiere decir "me
-dé lo mismo que puse").
+manipulado, validado, almacenado en una base de datos, o tatuado en el estómago
+de policías retirados con problemas neurológicos, lo único que importa es que
+luego cuando lo saco con el getter me dé lo que tenga que dar (que no quiere
+decir "me dé lo mismo que puse").
 
 Muchas veces, los getters/setters se toman como un hecho de la vida, uno está
 haciendo programación orientada a objetos ``=>`` hago getters/setters.
@@ -313,7 +315,7 @@ Es más propensa a errores. Antes, podía ser que ``frob(gargle)`` no fuera lo
 correcto. Ahora no solo puede ser incorrecto, sino que puede ser incorrecto o inconsistente, si cambio solo una de las dos veces que se usa.
 
 Claro, en un ejemplo de juguete esa repetición no molesta. En la vida real, tal
-vez haya 40 líneas entre una y otra y no sea obvio que sea un loop de este tipo.
+vez haya 40 líneas entre una y otra y no sea obvio que esa línea se repite.
 
 Switches
 ~~~~~~~~
@@ -323,15 +325,15 @@ cadena de ifs vs alternativas
 Patos y Tipos
 ~~~~~~~~~~~~~
 
-    "You are in a maze of twisty little passages, all alike."
+    "Estás en un laberinto de pasajes retorcidos, todos iguales."
 
-    -- Will Crowther in "Adventure"
+    -- Will Crowther en "Adventure"
 
 ..
 
-    "You are in a maze of twisty little passages, all different."
+    "Estás en un laberinto de pasajes retorcidos, todos distintos."
 
-    -- Don Woods in "Adventure"
+    -- Don Woods en "Adventure"
 
 
 Observemos este fragmento de código:
