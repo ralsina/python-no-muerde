@@ -49,8 +49,19 @@ nuevo de este proyecto? y decidir si empezarlo:
 * ¿Me voy a divertir haciéndolo?
 
 Las más importantes son probablemente la última y la primera. La primera porque
-de algo hay que vivir, y la última porque es suficiente.
+de algo hay que vivir, y la última porque es suficiente. Si uno decide que sí,
+que va a encarar un proyecto, hay que tratar de programar lo menos posible.
 
-Entonces, en este capítulo lo que vamos a hacer es aprender a no reinventar la
-rueda. Vamos a elegir un objetivo y vamos a lograrlo usando el mayor porcentaje
-posible de cosas ajenas.
+Sí, lo menos posible. Cuando para poder hacer A, uno descubre que necesita B,
+para B necesita C. Cuando llegás a E... estás afeitando yaks: es una
+actividad inútil en sí misma, que uno espera le dé beneficios más adelante.
+
+Si necesitás B para lograr A, entonces, buscá una B en algún lado, y **usála**.
+¡Si realmente no existe nada parecido, entonces ahora tenés dos proyectos!
+
+En este capítulo lo que vamos a hacer es aprender a no reinventar la rueda.
+Vamos a elegir un objetivo y vamos a lograrlo sin afeitar ningún yak. Vas
+a ver como creamos un programa útil con casi nada de código.
+
+No sirve de nada ser el tipo más jodido de la cuadra, es mejor ser el tipo
+más vivo del barrio.
