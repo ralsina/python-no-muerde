@@ -1,2 +1,56 @@
 La vida es Corta
 ----------------
+
+    Hasta que cumple veinticinco, todo hombre piensa cada tanto que, dadas las
+    circunstancias correctas podría ser el más jodido del mundo. Si me mudara
+    a un monasterio de artes marciales en China y estudiara duro por diez años.
+    Si mi familia fuera masacrada por traficantes colombianos y jurara venganza.
+    Si tuviera una enfermedad fatal, me quedara un año de vida y lo dedicara a
+    acabar con el crimen. Si tan sólo abandonara todo y dedicara mi vida a ser
+    jodido.
+
+    -- Neal Stephenson (Snow Crash)
+
+A los veinticinco, sin embargo, uno se da cuenta que realmente no vale la pena
+pasarse diez años estudiando en un monasterio, porque prefiere jugar al
+FarmVille y no hay una cantidad ilimitada de años como para hacerse el Kung Fu.
+
+De la misma forma, cuando uno empieza a programar cree que cada cosa que
+encuentra podría rehacerse mejor. Ese framework web es demasiado grande y
+complejo. Esa herramienta de blog no tiene exactamente los features que yo
+quiero. Y la reacción es "¡Yo puedo hacerlo mejor!" y ponerse a programar
+furiosamente para demostrarlo.
+
+Eso es bueno y es malo.
+
+Es bueno porque a veces de ahí salen cosas que son, efectivamente, mucho mejores
+que las existentes. Si nadie hiciera esto, el software en general sería una
+porquería.
+
+Es malo porque la gran gran mayoria de las veces, tratando de implementar el
+framework web número 9856, que es un 0.01% mejor que los existentes, se pasa
+un año y no se hace algo original que realmente puede hacer una diferencia.
+
+Por eso digo que "la vida es corta". No es que sea corta, es que es demasiado
+corta para perder tiempo haciendo lo que ya está hecho o buscándole la quinta
+pata al gato. Antes de empezar un proyecto hay que preguntarse, ¿Qué es lo
+nuevo de este proyecto? y decidir si empezarlo:
+
+* ¿Me va a dejar plata?
+
+* ¿Tengo alguna idea de implementación que nadie tuvo?
+
+* ¿Tengo alguna idea de interface original?
+
+* ¿Porqué alguien va a querer usar eso?
+
+* ¿Tengo tiempo y ganas de encarar este proyecto?
+
+* ¿Me voy a divertir haciéndolo?
+
+Las más importantes son probablemente la última y la primera. La primera porque
+de algo hay que vivir, y la última porque es suficiente.
+
+Entonces, en este capítulo lo que vamos a hacer es aprender a no reinventar la
+rueda. Vamos a elegir un objetivo y vamos a lograrlo usando el mayor porcentaje
+posible de cosas ajenas.

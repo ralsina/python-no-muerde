@@ -185,7 +185,7 @@ una herramienta cuyo único objetivo es hacer que testear sea más fácil.
     
 
 Lo que hizo nose es "descubrimiento de tests" (test discovery). Toma la carpeta
-actual o el archivo que indiquemos (en este caso ``gaso2.py``, encuentra las
+actual o el archivo que indiquemos (en este caso ``gaso2.py``), encuentra las
 cosas que parecen tests y las usa. El parámetro ``--with-doctest`` es para que reconozca doctests (por default los ignora), y el ``-v`` es para que muestre
 cada cosa que prueba.
 
