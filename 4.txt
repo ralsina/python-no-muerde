@@ -1,7 +1,8 @@
 Documentación y Testing
 -----------------------
 
-    Si no está en el manual está equivocado. Si está en el manual es redundante.
+    "Si no está en el manual está equivocado. Si está en el manual
+    es redundante."
 
     -- Califa Omar, Alejandría, Año 634.
 
@@ -30,13 +31,18 @@ efectivo tenemos que cumplir varios requisitos:
 Por suerte en Python hay muchas herramientas que hacen que testear sea, si no divertido, por lo menos tolerable.
 
 
-Doctest: tus comentarios están vivos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Doctests
+~~~~~~~~
+
+    "Los comentarios mienten. El código no."
+
+    -- Ron Jeffries
+
 
 Un comentario mentiroso es peor que ningún comentario. Y los comentarios se
-suelen volver mentira porque el código cambia y nadie edita los comentarios. Es
+vuelven mentira porque el código cambia y nadie edita los comentarios. Es
 el problema de repetirse, uno ya dijo lo que quería en el código, y tiene que
-volver a explicarlo en un comentario, a la larga pasa que las copias divergen,
+volver a explicarlo en un comentario, a la larga las copias divergen,
 y siempre el que está equivocado es el comentario.
 
 Un doctest permite **asegurar** que el comentario es cierto, porque el
