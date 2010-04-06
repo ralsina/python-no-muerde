@@ -30,23 +30,8 @@ efectivo tenemos que cumplir varios requisitos:
 
 Por suerte en Python hay muchas herramientas que hacen que testear sea, si no divertido, por lo menos tolerable.
 
-
-Doctests
-~~~~~~~~
-
-    "Los comentarios mienten. El código no."
-
-    -- Ron Jeffries
-
-
-Un comentario mentiroso es peor que ningún comentario. Y los comentarios se
-vuelven mentira porque el código cambia y nadie edita los comentarios. Es
-el problema de repetirse, uno ya dijo lo que quería en el código, y tiene que
-volver a explicarlo en un comentario, a la larga las copias divergen,
-y siempre el que está equivocado es el comentario.
-
-Un doctest permite **asegurar** que el comentario es cierto, porque el
-comentario tiene código de su lado.
+Docstrings
+~~~~~~~~~~
 
 Tomemos un ejemplo zonzo: una función para traducir al rosarino [#]_.
 
@@ -83,18 +68,60 @@ gaso1.py
    :linenos:
    :include: gaso1.py
 
+Esas cadenas debajo de cada ``def`` se llaman docstrings y *siempre* hay que
+usarlas. ¿Porqué?
 
-Y acá viene la primera cosa importante de testing. Uno quiere testear todos los
-comportamientos deseados del código.
+* Es el lugar "oficial" para explicar qué hace cada función
+
+* Sirven como ayuda interactiva!
+
+  .. code-block:: pycon
+
+    >>> import gaso1
+    >>> help(gas)
+
+  Help on function gas in module gaso1:
+
+  gas(letra)
+      Dada una letra X devuelve XgasX excepto si X es una vocal acentuada,
+      en cuyo caso devuelve la primera X sin acento.
+
+      El uso de normalize lo saqué de google.
+
+* Usando una herramienta como `epydoc <http://epydoc.sourceforge.net/>`_ se
+  pueden usar para generar una guía de referencia de tu módulo (¡manual gratis!)
+
+* Son el hogar de los doctests.
+
+Doctests
+~~~~~~~~
+
+    "Los comentarios mienten. El código no."
+
+    -- Ron Jeffries
+
+
+Un comentario mentiroso es peor que ningún comentario. Y los comentarios se
+vuelven mentira porque el código cambia y nadie edita los comentarios. Es
+el problema de repetirse, uno ya dijo lo que quería en el código, y tiene que
+volver a explicarlo en un comentario, a la larga las copias divergen,
+y siempre el que está equivocado es el comentario.
+
+Un doctest permite **asegurar** que el comentario es cierto, porque el
+comentario tiene código de su lado, no es sólo palabras.
+
+Y acá viene la primera cosa importante de testing: Uno quiere testear **todos**
+los comportamientos intencionales del código.
 
 Si el código se supone que ya hace algo bien, aunque sea algo muy chiquitito, es
 el momento ideal para empezar a hacer testing. Si vas a esperar a que la función
 sea "interesante", ya va a ser muy tarde. Vas a tener un déficit de tests, vas
-a tener que ponerte un día sólo a escribir tests, y es aburrido.
+a tener que ponerte un día sólo a escribir tests, y vas a decir que testear es aburrido.
 
-¿Como sé yo que esa regexp hace lo que yo quiero? ¡Porque la probé! Como no soy
-el mago de las expresiones regulares que las saca de la galera, hice esto en el
-intérprete interactivo (reemplazo la funcion ``gas`` con una versión boba):
+¿Como sé yo que esa regexp en ``gaso1.py`` hace lo que yo quiero? ¡Porque la
+probé! Como no soy el mago de las expresiones regulares que las saca de la
+galera y le andan a la primera, hice esto en el intérprete interactivo
+(reemplacé la funcion ``gas`` con una versión boba):
 
 .. code-block:: pycon
 
@@ -123,7 +150,7 @@ Si no hubiera hecho ese test manual no tendría la más mínima confianza en est
 código, y creo que casi todos hacemos esta clase de cosas, ¿o no?.
 
 El problema con este testing manual ad-hoc es que lo hacemos una vez, la función
-hace lo que se supone debe hacer, y nos olvidamos.
+hace lo que se supone debe hacer (al menos por el momento), y nos olvidamos.
 
 Por suerte *no tiene porqué ser así*, gracias a los doctests.
 
@@ -142,8 +169,8 @@ gaso2.py
 
 Eso es todo lo que se necesita para implementar doctests. ¡En serio!. ¿Y cómo
 hago para saber si los tests pasan o fallan? Hay muchas maneras. Tal vez la
-que más me gusta es usar `Nose <http://somethingaboutorange.com/mrl/projects/nose/>`_ 
-una herramienta cuyo único objetivo es hacer que testear sea fácil.
+que más me gusta es usar `Nose <http://somethingaboutorange.com/mrl/projects/nose/>`_, 
+una herramienta cuyo único objetivo es hacer que testear sea más fácil.
 
 ::
 
@@ -159,15 +186,15 @@ una herramienta cuyo único objetivo es hacer que testear sea fácil.
 
 Lo que hizo nose es "descubrimiento de tests" (test discovery). Toma la carpeta
 actual o el archivo que indiquemos (en este caso ``gaso2.py``, encuentra las
-cosas que parecen tests y las usa. El parámetro ``--with-doctest`` es para que reconozca doctests (por default los ignora), y el ``-v``
-es para que muestre cada cosa que prueba.
+cosas que parecen tests y las usa. El parámetro ``--with-doctest`` es para que reconozca doctests (por default los ignora), y el ``-v`` es para que muestre
+cada cosa que prueba.
 
 De ahora en más, cada vez que el programa se modifique, volvemos a correr el test suite (eso significa "un conjunto de tests"). Si falla alguno que antes andaba,
 es una regresión, paramos de romper y la arreglamos. Si pasa alguno que antes
 fallaba, es un avance, nos felicitamos y nos damos un caramelo.
 
-Dentro del limitado alcance de nuestro programa actual, lo que hace,
-lo hace bien. Obviamente hay muchas cosas que hace mal:
+Dentro del limitado alcance de nuestro programa actual, lo que hace, lo hace
+bien. Obviamente hay muchas cosas que hace mal:
 
 .. code-block:: pycon
 
@@ -186,8 +213,12 @@ en general, si sabemos que hay un bug, seguimos este proceso:
 * Verificamos que no rompimos otra cosa usando el test suite.
 
 Un test que falla es **bueno** porque nos marca qué hay que corregir. Si los
-tests son buenos, y cada uno prueba una sola cosa, entonces hasta nos va a
+tests son piolas, y cada uno prueba una sola cosa [#]_ , entonces hasta nos va a
 indicar qué parte del código es la que está rota.
+
+.. [#] Un test que prueba muchas cosas juntas no es un buen test, porque al
+       fallar no sabés porqué. Eso se llama granularidad de los tests y es muy
+       importante.
 
 Entonces, el problema de ``gaso2.py`` es que no funciona cuando no hay acentos
 ortográficos. ¿Solución? Una función que diga donde está el acento prosódico en
@@ -233,4 +264,61 @@ nada que no estuviera funcionando exclusivamente por casualidad.
 Por ejemplo, ``gaso1.py`` pasaría el test de la palabra 'la' y ``gaso2.py``
 fallaría, pero no porque ``gaso1.py`` estuviera haciendo algo bien, si no
 porque respondía de forma afortunada.
+
+Cobertura
+~~~~~~~~~
+
+Es importante que nuestros tests "cubran" el código. Es decir que cada parte sea
+usada por lo menos una vez. Si hay un fragmento de código que ningún test
+utiliza nos faltan tests (o nos sobra código [#]_)
+
+.. [#] El código muerto en una aplicación es un problema serio, molesta cuando
+       se intenta depurar porque está metido en el medio de las partes que sí
+       se usan y distrae.
+
+La forma de saber qué partes de nuestro código están cubiertas es con una
+herramienta de cobertura ("coverage tool"). Veamos una en acción::
+
+    [ralsina@hp python-no-muerde]$ nosetests --with-coverage --with-doctest \
+        -v gaso3.py buscaacento1.py
+        
+    Doctest: gaso3.gas ... ok
+    Doctest: gaso3.gasear ... ok
+    Doctest: buscaacento1.busca_acento ... ok
+
+    Name              Stmts   Exec  Cover   Missing
+    -----------------------------------------------
+    buscaacento1          6      6   100%
+    encodings.ascii      19      0     0%   9-42
+    gaso3                10     10   100%
+    -----------------------------------------------
+    TOTAL                35     16    45%
+    ----------------------------------------------------------------------
+    Ran 3 tests in 0.018s
+
+    OK
+
+Al usar la opción ``--with-coverage``, nose usa el módulo ``coverage.py`` para
+ver qué líneas de código se usan y cuales no. Lamentablemente el reporte
+incluye un módulo de sistema, ``encodings.ascii`` lo que hace que los
+porcentajes no sean correctos.
+
+Una manera de tener un reporte más preciso es correr ``coverage report`` luego
+de correr nosetests::
+
+    [ralsina@hp python-no-muerde]$ coverage report
+    Name           Stmts   Exec  Cover
+    ----------------------------------
+    buscaacento1       6      6   100%
+    gaso3             10     10   100%
+    ----------------------------------
+    TOTAL             16     16   100%
+
+
+Ignorando ``encodings.ascii`` (que no es nuestro), tenemos 100% de cobertura.
+Eso es el ideal. Cuando ese porcentaje baje, deberíamos tratar de ver qué parte
+del código nos estamos olvidando de testear.
+
+Coverage también puede crear reportes HTML mostrando cuales líneas se usan y
+cuales no.
 
