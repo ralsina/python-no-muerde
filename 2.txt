@@ -53,8 +53,12 @@ de algo hay que vivir, y la última porque es suficiente. Si uno decide que sí,
 que va a encarar un proyecto, hay que tratar de programar lo menos posible.
 
 Sí, lo menos posible. Cuando para poder hacer A, uno descubre que necesita B,
-para B necesita C. Cuando llegás a E... estás afeitando yaks: es una
+para B necesita C. Cuando llegás a E... estás afeitando yaks [#]_: es una
 actividad inútil en sí misma, que uno espera le dé beneficios más adelante.
+
+.. [#] Frase inventada por `Carlin Vieri <http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html>`_ a veces uno quiere hacer un programa
+para jugar al ta-te-ti y termina escribiendo un framework web para poder hacer
+el servidor con el que se conecta el cliente que juega al ta-te-ti.
 
 Si necesitás B para lograr A, entonces, buscá una B en algún lado, y **usála**.
 ¡Si realmente no existe nada parecido, entonces ahora tenés dos proyectos!
