@@ -78,7 +78,7 @@ usarlas. ¿Porqué?
   .. code-block:: pycon
 
     >>> import gaso1
-    >>> help(gas)
+    >>> help(gaso1.gas)
 
   Help on function gas in module gaso1:
 
@@ -261,7 +261,7 @@ anda o no.
 Por otro lado te da la tranquilidad de "no estoy rompiendo nada". Por lo menos
 nada que no estuviera funcionando exclusivamente por casualidad.
 
-Por ejemplo, ``gaso1.py`` pasaría el test de la palabra 'la' y ``gaso2.py``
+Por ejemplo, ``gaso1.py`` pasaría el test de la palabra "la" y ``gaso2.py``
 fallaría, pero no porque ``gaso1.py`` estuviera haciendo algo bien, si no
 porque respondía de forma afortunada.
 
