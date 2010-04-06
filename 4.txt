@@ -121,7 +121,8 @@ hace lo que se supone debe hacer, y nos olvidamos.
 
 Por suerte *no tiene porqué ser así*, gracias a los doctests.
 
-De hecho, el doctest es poco más que cortar y pegar esos tests informales quegaseso mostré arriba. Veamos la versión con doctests:
+De hecho, el doctest es poco más que cortar y pegar esos tests informales que
+mostré arriba. Veamos la versión con doctests:
 
 .. class:: titulo-listado
 
