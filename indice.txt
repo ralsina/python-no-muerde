@@ -206,3 +206,5 @@ Habrá que pedirle a alguien que ponga algo no demasiado insultante.
 .. include:: 12.txt
 
 .. include:: licencia.txt
+
+.. include:: gracias.txt
