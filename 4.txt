@@ -134,4 +134,97 @@ gaso2.py
    :linenos:
    :include: gaso2.py
 
+Eso es todo lo que se necesita para implementar doctests. ¡En serio!. ¿Y cómo
+hago para saber si los tests pasan o fallan? Hay muchas maneras. Tal vez la
+que más me gusta es usar `Nose <http://somethingaboutorange.com/mrl/projects/nose/>`_ 
+una herramienta cuyo único objetivo es hacer que testear sea fácil.
+
+::
+
+    [ralsina@hp python-no-muerde]$ nosetests --with-doctest -v gaso2.py
+    Doctest: gaso2.gas ... ok
+    Doctest: gaso2.gasear ... ok
+
+    ----------------------------------------------------------------------
+    Ran 2 tests in 0.035s
+
+    OK
+    
+
+Lo que hizo nose es "descubrimiento de tests" (test discovery). Toma la carpeta
+actual o el archivo que indiquemos (en este caso ``gaso2.py``, encuentra las
+cosas que parecen tests y las usa. El parámetro ``--with-doctest`` es para que reconozca doctests (por default los ignora), y el ``-v``
+es para que muestre cada cosa que prueba.
+
+De ahora en más, cada vez que el programa se modifique, volvemos a correr el test suite (eso significa "un conjunto de tests"). Si falla alguno que antes andaba,
+es una regresión, paramos de romper y la arreglamos. Si pasa alguno que antes
+fallaba, es un avance, nos felicitamos y nos damos un caramelo.
+
+Dentro del limitado alcance de nuestro programa actual, lo que hace,
+lo hace bien. Obviamente hay muchas cosas que hace mal:
+
+.. code-block:: pycon
+
+    >>> import gaso2
+    >>> gaso2.gasear('rosarino')
+    'rosarino'
+    >>> print 'OH NO!'
+    'OH NO!'
+
+¿Qué hacemos entonces? ¡Agregamos un test que falla! Bienvenido al mundo del TDD
+o "Desarrollo impulsado por tests" (Test Driven Development). La idea es que,
+en general, si sabemos que hay un bug, seguimos este proceso:
+
+* Creamos un test que falla.
+* Arreglamos el código para que no falle el test.
+* Verificamos que no rompimos otra cosa usando el test suite.
+
+Un test que falla es **bueno** porque nos marca qué hay que corregir. Si los
+tests son buenos, y cada uno prueba una sola cosa, entonces hasta nos va a
+indicar qué parte del código es la que está rota.
+
+Entonces, el problema de ``gaso2.py`` es que no funciona cuando no hay acentos
+ortográficos. ¿Solución? Una función que diga donde está el acento prosódico en
+una palabra [#]_
+
+.. [#] Y en este momento agradezcan que esto es castellano, que es un idioma
+       casi obsesivo compulsivo en su regularidad.
+
+Modificamos ``gasear`` así:
+
+.. class:: titulo-listado
+
+gaso3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: gaso3.py
+   :start-at: def gasear(palabra):
+
+Y esta es la funcion nueva:
+
+.. class:: titulo-listado
+
+buscaacento1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: buscaacento1.py
+
+¿Notaste que agregar tests de esta forma no se siente como una carga?
+
+Es parte natural de escribir el código, pienso, "uy, esto no debe andar", meto
+el test como creo que debería ser en el docstring, y de ahora en más sé si eso
+anda o no.
+
+Por otro lado te da la tranquilidad de "no estoy rompiendo nada". Por lo menos
+nada que no estuviera funcionando exclusivamente por casualidad.
+
+Por ejemplo, ``gaso1.py`` pasaría el test de la palabra 'la' y ``gaso2.py``
+fallaría, pero no porque ``gaso1.py`` estuviera haciendo algo bien, si no
+porque respondía de forma afortunada.
 
