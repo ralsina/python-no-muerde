@@ -100,10 +100,10 @@ Listado 1
            self.set_y(y)
 
        def x(self):
-           return _x
+           return self._x
 
        def y(self):
-           return _y
+           return self._y
 
        def set_x(self,x):
            self._x=x

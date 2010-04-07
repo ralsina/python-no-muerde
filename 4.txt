@@ -237,6 +237,7 @@ gaso3.py
 
 .. code-block:: python
    :linenos:
+   :linenos_offset:
    :include: gaso3.py
    :start-at: def gasear(palabra):
 
@@ -309,4 +310,51 @@ del código nos estamos olvidando de testear.
 
 Coverage también puede crear reportes HTML mostrando cuales líneas se usan y
 cuales no.
+
+Mocking
+~~~~~~~
+
+    La única manera de reconocer al maestró del disfraz es su risa. Se ríe
+    "jo jo jo".
+
+    -- Inspector Austin, Backyardigans
+
+A veces para probar algo, se necesita un objeto, y no es práctico usar el objeto
+real por diversos motivos, entre otros:
+
+* Puede ser un objeto "caro": una base de datos.
+
+* Puede ser un objeto "inestable": un sensor de temperatura.
+
+* Puede ser un objeto "malo": por ejemplo un componente que aún no está
+  implementado.
+
+* Simplemente quiero "separar" los tests, quiero que los errores de un
+  componente no se propaguen a otro.
+
+* Estamos haciendo doctests de un método de una clase: la clase no está
+  instanciada al ejecutar el doctest.
+
+Para resolver este problema se usa mocking. ¿Qué es eso? Es una manera de crear
+objetos falsos que hacen lo que uno quiere y podemos usar en lugar del real.
+
+Una herramienta sencilla de mocking para usar en doctests es
+`minimock <http://pypi.python.org/pypi/MiniMock>`_
+
+Apartándonos de nuestro ejemplo por un momento, ya que no se presta a usar
+mocking sin inventar nada ridículo, pero aún así sabiendo que estamos
+persiguiendo hormigas con aplanadoras...
+
+.. class:: titulo-listado
+
+mock1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: mock1.py
+   :start-at: def largo_de_pagina
+
 

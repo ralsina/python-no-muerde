@@ -47,7 +47,7 @@
     ["endnote", {
         "parent": "bodytext",
         "commands": [
-            ["VALIGN", [ 0, 0 ], [ -1, -1 ], "MIDDLE" ],
+            ["VALIGN", [ 0, 0 ], [ -1, -1 ], "TOP" ],
             ["BOTTOMPADDING", [ 0, 0 ], [ -1, -1 ], 0 ],
             ["RIGHTPADDING", [ 0, 0 ], [ 1, -1 ], 0 ],
             ["LINEAFTER", [0,0],[0,-1], 1. , "#C0C0C0"]
