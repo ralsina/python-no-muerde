@@ -1,9 +1,10 @@
 digraph G {
   {node[shape=box, rank=min] "Inicio Loop"}
-  {node[shape=box] A B}
+  {node[shape=box] A }
+  {node[shape=box] B}
   {node[shape=box] "Resto del programa"}
   "Inicio Loop" -> A -> Condición
-  B -> "Inicio Loop":e
-  Condición -> "Resto del programa":e [label=Falso]
-  Condición -> B [label=Verdadero]
+  B:e -> "Inicio Loop":e
+  Condición:e -> B:n [label=Verdadero,labelfloat=True]
+  Condición:w -> "Resto del programa":n [label=Falso,labelfloat=True]
 }
