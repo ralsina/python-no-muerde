@@ -60,15 +60,15 @@ que va a encarar un proyecto, hay que tratar de programar lo menos posible.
 Una de las tentaciones del programador es afeitar yaks [#]_: es una
 actividad inútil en sí misma, que uno espera le dé beneficios más adelante.
 
-. [#] Frase inventada por `Carlin Vieri <http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html>`_
+.. [#] Frase inventada por `Carlin Vieri <http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html>`_
 
-      Yo estoy escribiendo este libro que tiene links a URLs. Yo quiero que
-      esas URLs sean válidas para siempre. Entonces necesito poder editarlas
-      **después** de que se imprima el libro y me gustaría un "acortador" de
-      URLs donde se puedan editar. Como no lo encuentro lo escribo.
+       Yo estoy escribiendo este libro que tiene links a URLs. Yo quiero que
+       esas URLs sean válidas para siempre. Entonces necesito poder editarlas
+       **después** de que se imprima el libro y me gustaría un "acortador" de
+       URLs donde se puedan editar. Como no lo encuentro lo escribo.
 
-      Si siguiera con "y para eso necesito hacer un framework web, y un
-      módulo para almacenar los datos"... estoy afeitando yaks.
+       Si siguiera con "y para eso necesito hacer un framework web, y un
+       módulo para almacenar los datos"... estoy afeitando yaks.
 
 Para poder hacer A, uno descubre que necesita B, para B necesita C. Cuando llegás a D... estás afeitando yaks.
 
