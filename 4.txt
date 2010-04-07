@@ -306,10 +306,11 @@ de correr nosetests::
 
 Ignorando ``encodings.ascii`` (que no es nuestro), tenemos 100% de cobertura.
 Eso es el ideal. Cuando ese porcentaje baje, deberíamos tratar de ver qué parte
-del código nos estamos olvidando de testear.
+del código nos estamos olvidando de testear, pero es casi imposible tener 100%
+de cobertura en casi cualquier programa no trivial.
 
 Coverage también puede crear reportes HTML mostrando cuales líneas se usan y
-cuales no.
+cuales no, para ayudar a diseñar tests que las ejerciten.
 
 Mocking
 ~~~~~~~
@@ -330,10 +331,14 @@ real por diversos motivos, entre otros:
   implementado.
 
 * Simplemente quiero "separar" los tests, quiero que los errores de un
-  componente no se propaguen a otro.
+  componente no se propaguen a otro. [#]_
 
 * Estamos haciendo doctests de un método de una clase: la clase no está
   instanciada al ejecutar el doctest.
+
+
+.. _[#] Esta separación de los elementos funcionales es lo que hace que esto sea
+        "unit testing": probamos cada unidad funcional del código.
 
 Para resolver este problema se usa mocking. ¿Qué es eso? Es una manera de crear
 objetos falsos que hacen lo que uno quiere y podemos usar en lugar del real.
