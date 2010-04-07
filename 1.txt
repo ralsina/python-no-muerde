@@ -678,7 +678,7 @@ combinado con filter:
 .. code-block:: python
 
     # Devuelve los items mayores que 0 de una lista
-    filter (lambda x: max(x,0), lista)
+    filter (lambda x: x > 0 , lista)
 
 Pero yo probablemente haría esto:
 
