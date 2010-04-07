@@ -337,7 +337,7 @@ real por diversos motivos, entre otros:
   instanciada al ejecutar el doctest.
 
 
-.. _[#] Esta separación de los elementos funcionales es lo que hace que esto sea
+.. [#] Esta separación de los elementos funcionales es lo que hace que esto sea
         "unit testing": probamos cada unidad funcional del código.
 
 Para resolver este problema se usa mocking. ¿Qué es eso? Es una manera de crear
