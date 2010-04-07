@@ -50,9 +50,6 @@ def gasear(palabra):
     pos = busca_acento(palabra)
     return palabra[:pos]+gas(palabra[pos])+palabra[pos+1:]
 
-# -*- coding: utf-8 -*-
-import re
-
 def busca_acento(palabra):
     '''Dada una palabra (sin acento ortográfico),
     devuelve la posición de la vocal acentuada.
