@@ -165,8 +165,8 @@ eficiente.
 .. admonition:: Nota
 
    Es fundamental conocer las estructuras de datos que te da el lenguaje. En
-   Python eso significa conocer las estructuras del lenguaje, como diccionarios,
-   tuplas y listas y el módulo collections de la biblioteca standard.
+   Python eso significa conocer diccionarios, tuplas y listas y el módulo 
+   collections de la biblioteca standard.
 
 Por supuesto que siempre está la posibilidad de que la clase Punto evolucione, y
 haga otras cosas, como por ejemplo calcular la distancia al origen de un punto.
