@@ -137,11 +137,11 @@ Listado 2
            self.y=y
 
 No sólo es más corta, sino que su funcionalidad es completamente equivalente, es
-más fácil de leer porque es completamente obvia (se puede leer de un vistazo), y
-hasta es más eficiente.
+más fácil de leer porque es obvia (se puede leer de un vistazo), y hasta es más 
+eficiente.
 
 La única diferencia es que lo que antes era ``p.x()`` ahora es ``p.x`` y que
-``p.set_x(14)`` es ``p.x=14``, que no es un cambio importante, pero es una
+``p.set_x(14)`` es ``p.x=14``, que no es un cambio importante, y es una
 mejora en legibilidad.
 
 Es más, si la clase punto fuera solamente ésto, podría ni siquiera ser una
