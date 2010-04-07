@@ -4,8 +4,7 @@ FIGURAS=dependencias.graph.pdf loop-n-y-medio.graph.pdf
 CAPITULOS=1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt
 LISTADOS=gaso1.py\
          gaso2.py\
-         gaso3.py\
-         buscaacento1.py
+         gaso3.py
 
 %.graph.pdf: %.dot
 	dot -Tpdf $< > $@

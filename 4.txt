@@ -240,18 +240,6 @@ gaso3.py
    :include: gaso3.py
    :start-at: def gasear(palabra):
 
-Y esta es la funcion nueva:
-
-.. class:: titulo-listado
-
-buscaacento1.py
-
-.. class:: listado
-
-.. code-block:: python
-   :linenos:
-   :include: buscaacento1.py
-
 ¿Notaste que agregar tests de esta forma no se siente como una carga?
 
 Es parte natural de escribir el código, pienso, "uy, esto no debe andar", meto
