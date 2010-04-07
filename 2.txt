@@ -1,7 +1,7 @@
 La vida es Corta
 ----------------
 
-    Hasta que cumple veinticinco, todo hombre piensa cada tanto que, dadas las
+    Hasta que cumple veinticinco, todo hombre piensa cada tanto que dadas las
     circunstancias correctas podría ser el más jodido del mundo. Si me mudara
     a un monasterio de artes marciales en China y estudiara duro por diez años.
     Si mi familia fuera masacrada por traficantes colombianos y jurara venganza.
@@ -12,8 +12,8 @@ La vida es Corta
     -- Neal Stephenson (Snow Crash)
 
 A los veinticinco, sin embargo, uno se da cuenta que realmente no vale la pena
-pasarse diez años estudiando en un monasterio, porque prefiere jugar al
-FarmVille y no hay una cantidad ilimitada de años como para hacerse el Kung Fu.
+pasarse diez años estudiando en un monasterio, porqueno hay WiFi y no hay una
+cantidad ilimitada de años como para hacerse el Kung Fu.
 
 De la misma forma, cuando uno empieza a programar cree que cada cosa que
 encuentra podría rehacerse mejor. Ese framework web es demasiado grande y
@@ -33,10 +33,15 @@ un año y no se hace algo original que realmente puede hacer una diferencia.
 
 Por eso digo que "la vida es corta". No es que sea corta, es que es demasiado
 corta para perder tiempo haciendo lo que ya está hecho o buscándole la quinta
-pata al gato. Antes de empezar un proyecto hay que preguntarse, ¿Qué es lo
-nuevo de este proyecto? y decidir si empezarlo:
+pata al gato. Hay que sobreponerse a la tristeza de que nunca vamos a usar 100%
+programas hechos por nosotros y nuestros amigos, y aplicar la fuerza en los
+puntos críticos, crear las cosas que no existen, no las que ya están.
+
+Antes de decidirse a empezar un proyecto hay que preguntarse muchas cosas:
 
 * ¿Me va a dejar plata?
+
+* ¿Qué es lo nuevo de este proyecto?
 
 * ¿Tengo alguna idea de implementación que nadie tuvo?
 
@@ -52,17 +57,24 @@ Las más importantes son probablemente la última y la primera. La primera porqu
 de algo hay que vivir, y la última porque es suficiente. Si uno decide que sí,
 que va a encarar un proyecto, hay que tratar de programar lo menos posible.
 
-Sí, lo menos posible. Cuando para poder hacer A, uno descubre que necesita B,
-para B necesita C. Cuando llegás a E... estás afeitando yaks [#]_: es una
+Una de las tentaciones del programador es afeitar yaks [#]_: es una
 actividad inútil en sí misma, que uno espera le dé beneficios más adelante.
 
-.. [#] Frase inventada por `Carlin Vieri <http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html>`_
-       a veces uno quiere hacer un programa para jugar al ta-te-ti y termina
-       escribiendo un framework web para poder hacer el servidor con el que se
-       conecta el cliente que juega al ta-te-ti.
+. [#] Frase inventada por `Carlin Vieri <http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html>`_
+
+      Yo estoy escribiendo este libro que tiene links a URLs. Yo quiero que
+      esas URLs sean válidas para siempre. Entonces necesito poder editarlas
+      **después** de que se imprima el libro y me gustaría un "acortador" de
+      URLs donde se puedan editar. Como no lo encuentro lo escribo.
+
+      Si siguiera con "y para eso necesito hacer un framework web, y un
+      módulo para almacenar los datos"... estoy afeitando yaks.
+
+Para poder hacer A, uno descubre que necesita B, para B necesita C. Cuando llegás a D... estás afeitando yaks.
 
 Si necesitás B para lograr A, entonces, buscá una B en algún lado, y **usála**.
-¡Si realmente no existe nada parecido, entonces ahora tenés dos proyectos!
+Si realmente no existe nada parecido, entonces ahora tenés dos proyectos. Pensá
+si te interesa más A o B, y si podés llevar los dos adelante. Es un problema.
 
 En este capítulo lo que vamos a hacer es aprender a no reinventar la rueda.
 Vamos a elegir un objetivo y vamos a lograrlo sin afeitar ningún yak. Vas
