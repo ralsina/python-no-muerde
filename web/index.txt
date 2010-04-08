@@ -26,6 +26,8 @@ que lo escribo.
   + `Capítulo 10 <10.html>`_
   + `Capítulo 11 <11.html>`_
   + `Capítulo 12 <12.html>`_
+  + `Agradecimientos <gracias.html>`_
+  + `Licencia <licencia.html>`_
 
 * `PDF (A4) <python_no_muerde.pdf>`_
 
