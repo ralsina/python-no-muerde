@@ -11,7 +11,7 @@
 from storm.locals import *
 
 # Usamos bottle para hacer el sitio
-from bottle import route, run, request, response, send_file, abort, view, debug, redirect
+from bottle import route, run, request, response, send_file, abort, view, debug, redirect, static_file
 
 # Caracteres válidos en un atajo de URL
 from string import letters, digits
@@ -88,13 +88,17 @@ class Atajo(object):
         '''Exigimos la URL, lo demás es opcional.'''
         self.url = url
     
+#Estático
+@route('/css/:filename')
+def static_file(filename):
+    send_file(filename, root='./static/css/')
 
 # Alta de URL
 @route('/')
 @view('add')
 def alta():
     resp = {
-        'baseurl':'http://pyurl.com.ar/',
+        'baseurl':'http://127.0.0.1:8080/',
         'url':'',
         'short':'',
         }
@@ -108,6 +112,7 @@ def alta():
         store.commit()
     return resp
 
+
 #Redirigir
 @route('/:slug')
 def redir(slug):
@@ -116,6 +121,8 @@ def redir(slug):
         redirect(atajo.url)
     else:
         redirect('/')
+
+
 
 if __name__=='__main__':
     # Correr server de prueba
