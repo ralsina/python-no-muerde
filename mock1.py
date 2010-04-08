@@ -32,7 +32,7 @@ def largo_de_pagina(url):
     
     >>> _file.read = Mock('read', returns = '<h1>Hola mundo!</h1>')
     
-    >>> contar_tags ('http://www.netmanagers.com.ar')
+    >>> largo_de_pagina ('http://www.netmanagers.com.ar')
     Called urllib.URLopener()
     Called open('http://www.netmanagers.com.ar')
     Called read()
