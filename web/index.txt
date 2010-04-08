@@ -10,6 +10,14 @@ disponible bajo una licencia `Creative Commons <http://creativecommons.org/licen
 Lo podés leer aquí mismo o descargarlo, se actualiza automáticamente a medida
 que lo escribo.
 
+.. raw:: html
+
+   <div style="float: right; width: 200px;">
+   <small>
+   <script src="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode"></a><br/>Powered by FeedBurner</p> </noscript>
+   </small>
+   </div>
+
 * Verlo como `una página <indice.html>`_
 * Verlo por capítulos
 
@@ -29,10 +37,11 @@ que lo escribo.
   + `Agradecimientos <gracias.html>`_
   + `Licencia <licencia.html>`_
 
-* `PDF (A4) <python_no_muerde.pdf>`_
+* `PDF (A5) <python_no_muerde.pdf>`_
 
 Este libro está escrito usando `reStructured Text <http://docutils.sf.net>`_, el PDF
 se genera vía `rst2pdf <http://rst2pdf.googlecode.com>`_ y el sitio web usando
 `rest2web <http://www.voidspace.org.uk/python/rest2web/>`_.
 
 Más información: `Python no Muerde en GoogleCode <http://python-no-muerde.googlecode.com>`_
+
