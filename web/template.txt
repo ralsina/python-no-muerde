@@ -12,6 +12,7 @@
     <div id="nav">
         <ul>
             <# print_crumbs(breadcrumbs) #>
+            <li>&nbsp;|&nbsp; <a href="<% mercurial_link %>">Historial</a></li>
         </ul>
     </div>
     <div id="main>
