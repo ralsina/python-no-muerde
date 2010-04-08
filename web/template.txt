@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type"
         content="text/html; charset=<% final_encoding %>" />
     <link rel="stylesheet"
-        href="<% path_to_root %>stylesheets/rest.css"
+        href="<% path_to_root %>code.css"
         type="text/css" />
     <link rel="stylesheet"
         href="<% path_to_root %>stylesheets/test.css"
