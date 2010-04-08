@@ -23,8 +23,13 @@ sitio: .phony ${FIGURAS_WEB}
 	python r2w.py rst2web.ini
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 
-commit:
+commit: sitio
 	touch indice.txt ; make python_no_muerde.pdf
+	hg commit
+	hg push
+        rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
+
+commit-web: sitio
 	hg commit
 	hg push
         rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
