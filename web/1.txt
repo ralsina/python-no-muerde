@@ -1,7 +1,5 @@
 restindex
 encoding: utf8
-uservalues
-	mercurial_link: http://code.google.com/p/python-no-muerde/source/browse/1.txt
-/uservalues
 /restindex
+
 .. include:: ../1.txt

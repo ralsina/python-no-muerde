@@ -12,7 +12,8 @@
     <div id="nav">
         <ul>
             <# print_crumbs(breadcrumbs) #>
-            <li>&nbsp;|&nbsp; <a href="<% mercurial_link %>">Historial</a></li>
+
+            <li>&nbsp;|&nbsp; <a href="<# print "http://code.google.com/p/python-no-muerde/source/browse/"+(source_file.split('/')[-1]) #>">Historial</a></li>
         </ul>
     </div>
     <div id="main>
