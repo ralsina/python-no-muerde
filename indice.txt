@@ -46,9 +46,9 @@ dónde se puede aprender más sobre ello. Por ejemplo:
 
 .. admonition:: Referencia
 
-   Eso es una `comprensión de lista <>`_
+   Eso es una `comprensión de lista <http://docs.python.org.ar/tutorial/datastructures.html#listas-por-comprensi-n>`_
 
-En general esas referencias van a llevarte al `Tutorial de Python <>`_
+En general esas referencias van a llevarte al `Tutorial de Python <http://docs.python.org.ar/tutorial/>`_
 en castellano. En general, ese libro contiene toda la información
 acerca del lenguaje que se necesita para poder seguir éste.
 
