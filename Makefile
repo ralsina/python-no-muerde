@@ -32,6 +32,7 @@ commit: sitio
 commit-web: sitio
 	hg commit
 	hg push
-        rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
+	rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
+
 .phony:
 	true
