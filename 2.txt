@@ -78,7 +78,17 @@ si te interesa más A o B, y si podés llevar los dos adelante. Es un problema.
 
 En este capítulo lo que vamos a hacer es aprender a no reinventar la rueda.
 Vamos a elegir un objetivo y vamos a lograrlo sin afeitar ningún yak. Vas
-a ver como creamos un programa útil con casi nada de código.
+a ver como creamos un programa útil con casi nada de código propio.
 
-No sirve de nada ser el tipo más jodido de la cuadra, es mejor ser el tipo
-más vivo del barrio.
+El Problema
+~~~~~~~~~~~
+
+Bottle
+~~~~~~
+
+Storm
+~~~~~
+
+15 Líneas
+~~~~~~~~~
+
