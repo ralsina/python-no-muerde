@@ -14,7 +14,7 @@ python idiomático" en esa cita. Nunca nadie va a poder hacer un pythonómetro q
 te mida cuán idiomático es un fragmento de código, pero es posible desarrollar
 un instinto, una "nariz" para sentir el "olor a python", así como un enófilo
 [#]_ aprende a distinguir el aroma a clavos de hierro-níquel número 7
-ligeramente oxidados en un cabernet sauvignon. [#]_
+ligeramente oxidados en un Cabernet Sauvignon. [#]_
 
 .. [#] En mi barrio los llamábamos curdas
 
@@ -61,8 +61,8 @@ de policías retirados con problemas neurológicos, lo único que importa es que
 luego cuando lo saco con el getter me dé lo que tenga que dar (que no quiere
 decir "me dé lo mismo que puse").
 
-Muchas veces, los getters/setters se toman como un hecho de la vida, uno está
-haciendo programación orientada a objetos ``=>`` hago getters/setters.
+Muchas veces, los getters/setters se toman como un hecho de la vida, hago 
+programación orientada a objetos ``=>`` hago getters/setters.
 
 Bueno, no.
 
@@ -111,7 +111,7 @@ Listado 1
        def set_y(self,y):
            self._y=y
 
-Ésa es una implementación perfectamente respetable de un punto. Guarda X, guarda
+Esa es una implementación perfectamente respetable de un punto. Guarda X, guarda
 Y, permite volver a averiguar sus valores... el problema es que eso no es
 python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí
 no me engañan tan fácil, *eso es C++ reescrito para que parezca python*.
@@ -360,7 +360,7 @@ Observemos este fragmento de código:
 
    Ver también: `Sets en la biblioteca standard <http://docs.python.org/library/stdtypes.html#set-types-set-frozenset>`_
 
-Es obvio como funciona con, por ejemplo una lista:
+Es obvio como funciona con, por ejemplo, una lista:
 
 .. code-block:: pycon
 
@@ -402,7 +402,7 @@ resulta que son lo bastante parecidas como para que en nuestra función
 Un programa escrito sin pensar en "¿De qué clase es este objeto?" sino en "¿Qué
 puede hacer este objeto?", es un programa muy diferente.
 
-Para empezar suele ser un programa más "informal" en el sentido de que
+Para empezar, suele ser un programa más "informal" en el sentido de que
 simplemente asumimos que nos van a dar un objeto que nos sirva. Si no nos sirve,
 bueno, habrá una excepción.
 
