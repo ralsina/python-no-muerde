@@ -18,6 +18,10 @@
         "background" : "cover.pdf",
         "showHeader" : false,
         "showFooter" : false
+    },
+    "oneColumn": {
+        "defaultHeader": "###Section###",
+        "defaultFooter": "###Page###"
     }
   },  
   "styles" : [

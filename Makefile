@@ -1,4 +1,4 @@
-DOC=libro.pdf
+DOC=python_no_muerde.pdf
 
 FIGURAS=dependencias.graph.pdf loop-n-y-medio.graph.pdf
 FIGURAS_WEB=dependencias.graph.png loop-n-y-medio.graph.png
@@ -14,17 +14,17 @@ LISTADOS=gaso1.py\
 %.graph.png: %.dot
 	dot -Tpng $< > $@
 
-libro.pdf: cover.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS}
-	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo indice.txt -o libro.pdf --custom-cover=cover.tmpl
+python_no_muerde.pdf: cover.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS}
+	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo indice.txt -o python_no_muerde.pdf --custom-cover=cover.tmpl
 
 sitio: .phony ${FIGURAS_WEB}
 	(cd web ; ln -sf ../*py .)
-	(cd sitio ; ln -sf ../*.graph.png .)
+	(cd sitio ; ln -sf ../*.graph.png ../python_no_muerde.pdf .)
 	python r2w.py rst2web.ini
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 
 commit:
-	touch indice.txt ; make libro.pdf
+	touch indice.txt ; make python_no_muerde.pdf
 	hg commit
 	hg push
 

@@ -79,6 +79,7 @@ h1.title {
   color: #003a6b;
   font-size: 250%;
   margin-bottom: 0em;
+  padding-top: 1em;
 }
 
 h2.subtitle {
@@ -217,4 +218,28 @@ p.sidebar-subtitle {
   margin-top: 0em;
   font-style: italic;
   color: #003a6b;
+}
+
+
+/* Crumbs */
+
+#nav ul {
+    margin: 0em;
+    padding: 0em;
+    list-style: none;
+    font-size: 1.0em;
+}
+
+#nav li {
+    float: left;
+    white-space: nowrap;
+    padding: 3pt;
+    color: #c0c0c0;
+    font-size: 80%;
+}
+
+#nav li a {
+    display: block;
+    text-decoration: none;
+    color: #c0c0c0;
 }

@@ -5,3 +5,25 @@ Python No Muerde
 ================
 
 Este es el sitio de mi futuro libro "Python No Muerde".
+
+Lo podes leer, se actualiza automáticamente a medida que lo escribo.
+
+* Verlo como `una página <indice.html>`_
+* Verlo por capítulos
+
+  + `Capítulo 1 <1.html>`_
+  + `Capítulo 2 <2.html>`_
+  + `Capítulo 3 <3.html>`_
+  + `Capítulo 4 <4.html>`_
+  + `Capítulo 5 <5.html>`_
+  + `Capítulo 6 <6.html>`_
+  + `Capítulo 7 <7.html>`_
+  + `Capítulo 8 <8.html>`_
+  + `Capítulo 9 <9.html>`_
+  + `Capítulo 10 <10.html>`_
+  + `Capítulo 11 <11.html>`_
+  + `Capítulo 12 <12.html>`_
+
+* `PDF (A4) <python_no_muerde.pdf>`_
+
+Más información: `Python no Muerde en GoogleCode <http://python-no-muerde.googlecode.com>`_

@@ -12,7 +12,7 @@
         href="<% path_to_root %>code.css"
         type="text/css" />
 </head>
-<body>
+<body style="width: 768px; margin: auto auto auto auto;">
     <div id="nav">
         <ul>
             <# print_crumbs(breadcrumbs) #>
@@ -25,9 +25,8 @@
         <% body %>
 
         <div id="end">
-            <p><a href="#startcontent">Return to Top</a><br />
             <small>
-                Page last modified <strong><% modtime %></strong>.
+                Último cambio: <strong><% modtime %></strong>.
             </small>
             </p>
         </div>
