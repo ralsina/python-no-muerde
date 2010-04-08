@@ -27,6 +27,6 @@ commit:
 	touch indice.txt ; make python_no_muerde.pdf
 	hg commit
 	hg push
-        rsync -rav --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
+        rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
 .phony:
 	true

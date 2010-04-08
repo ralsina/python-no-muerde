@@ -9,29 +9,23 @@
     <link rel="stylesheet" href="<% path_to_root %>code.css" type="text/css" />
 </head>
 <body style="width: 768px; margin: auto auto auto auto;">
-    <table border=0>
-    <tr>
-    <td colspan=2>
     <div id="nav">
         <ul>
             <# print_crumbs(breadcrumbs) #>
         </ul>
     </div>
-    <tr>
-    <td>
     <div id="main>
         <a name="startcontent" id="startcontent"></a>
 
         <% body %>
 
         <div id="end">
+        
             <small>
                 Último cambio: <strong><% modtime %></strong>.
             </small>
             </p>
-        </div>
-    </div>
-    <td valign="top" width="200">
+<div style="border:1px solid black; padding:5px; text-align: center; margin-bottom: 8px; margin-top: 8px;">
     <script type="text/javascript"><!--
 google_ad_client = "pub-6610363565672416";
 /* 728x15, created 4/8/10 */
@@ -43,7 +37,37 @@ google_ad_height = 15;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</tr>
-</table>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread]
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://nomuerde.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=nomuerde">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+    var links = document.getElementsByTagName('a');
+    var query = '?';
+    for(var i = 0; i < links.length; i++) {
+    if(links[i].href.indexOf('#disqus_thread') >= 0) {
+        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    }
+    }
+    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/nomuerde/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+</script>
 </body>
 </html>

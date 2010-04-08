@@ -4,13 +4,16 @@ restindex
 Python No Muerde
 ================
 
-Este es el sitio de mi libro en desarrollo "Python No Muerde".
+Este es el sitio de mi libro en desarrollo "Python No Muerde", que está
+disponible bajo una licencia `Creative Commons <http://creativecommons.org/licenses/by-nc-sa/2.5/ar/>`_
 
-Lo podes leer, se actualiza automáticamente a medida que lo escribo.
+Lo podés leer aquí mismo o descargarlo, se actualiza automáticamente a medida
+que lo escribo.
 
 * Verlo como `una página <indice.html>`_
 * Verlo por capítulos
 
+  + `Introducción <intro.html>`_
   + `Capítulo 1 <1.html>`_
   + `Capítulo 2 <2.html>`_
   + `Capítulo 3 <3.html>`_
@@ -25,5 +28,9 @@ Lo podes leer, se actualiza automáticamente a medida que lo escribo.
   + `Capítulo 12 <12.html>`_
 
 * `PDF (A4) <python_no_muerde.pdf>`_
+
+Este libro está escrito usando `reStructured Text <http://docutils.sf.net>`_, el PDF
+se genera vía `rst2pdf <http://rst2pdf.googlecode.com>`_ y el sitio web usando
+`rest2web <http://www.voidspace.org.uk/python/rest2web/>`_.
 
 Más información: `Python no Muerde en GoogleCode <http://python-no-muerde.googlecode.com>`_
