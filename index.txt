@@ -7,3 +7,8 @@ restindex
         It can be more than one line long.
     /description
 /restindex
+
+Python No Muerde
+================
+
+Este es el sitio de mi futuro libro "Python No Muerde".
