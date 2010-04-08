@@ -10,7 +10,7 @@ Documentación y Testing
 
 Bueno, pues *para eso* (entre otras cosas) están los tests [#]_. Los tests son
 la rama militante de la documentación. La parte activa que se encarga de que ese manual no sea letra muerta e ignorada por perder contacto con la realidad,
-si no un texto que refleja lo que realmente existe.
+sino un texto que refleja lo que realmente existe.
 
 .. [#] También están para la gente mala que no documenta.
 

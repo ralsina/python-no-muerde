@@ -639,7 +639,7 @@ Seguramente otros, mejores programadores sí se dan cuenta. En cuyo caso el
 límite de "demasiado corto" para ellos estará más lejos.
 
 Sin embargo, el código no se escribe para uno (o al menos no se escribe
-sólo para uno), si no para que lo lean otros. Y no es bueno hacerles la vida
+sólo para uno), sino para que lo lean otros. Y no es bueno hacerles la vida
 difícil al divino botón, o para ahorrar media línea.
 
 .. admonition:: Nota
@@ -774,7 +774,7 @@ Y esta es la versión "moderna":
         def f(self, arg = None):
             self.arg = [] if arg is None else arg
 
-¿La ventaja? ¡Se lee de corrido! "self.arg es 42 si arg es None, si no arg"
+¿La ventaja? ¡Se lee de corrido! "self.arg es 42 si arg es None, si no, es arg"
 
 .. admonition:: Nota
 
