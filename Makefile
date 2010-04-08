@@ -12,7 +12,13 @@ LISTADOS=gaso1.py\
 libro.pdf: cover.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS}
 	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo indice.txt -o libro.pdf --custom-cover=cover.tmpl
 
+sitio: .phony
+	r2w.py rst2web.ini
+
 commit:
 	touch indice.txt ; make libro.pdf
 	hg commit
 	hg push
+
+.phony:
+	true

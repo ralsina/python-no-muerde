@@ -65,8 +65,8 @@ explicar en detalle, excepto cuando involucre un concepto nuevo.
 Por ejemplo, no voy a explicar el significado de ``setEnabled`` [3]_ pero sí el
 concepto de signals y slots cuando haga falta.
 
-.. [3] PyQt tiene una excelente `documentación de referencia <>`_ para esas
-       cosas.
+.. [3] PyQt tiene una excelente `documentación de referencia <http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/html/classes.html>`_
+       para esas cosas.
 
 Convenciones
 ~~~~~~~~~~~~

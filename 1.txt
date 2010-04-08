@@ -358,8 +358,7 @@ Observemos este fragmento de código:
    También soporta las típicas operaciones de conjuntos, como intersección,
    unión y diferencia.
 
-   `Más información
-   <http://docs.python.org/library/stdtypes.html#set-types-set-frozenset>`_
+   Ver también: `Sets en la biblioteca standard <http://docs.python.org/library/stdtypes.html#set-types-set-frozenset>`_
 
 Es obvio como funciona con, por ejemplo una lista:
 
@@ -447,7 +446,7 @@ objetos, todos del mismo tipo, inicializados al mismo valor.
 
    No conviene utilizarlo si la expresión es demasiado complicada.
 
-   `Mas información <>`_
+   Ver también: `Listas por comprensión en el tutorial de Python  <http://docs.python.org.ar/tutorial/datastructures.html#listas-por-comprensi-n>`_
 
 Un enfoque ingenuo podría ser este:
 
@@ -548,7 +547,7 @@ en python se llaman ``callables``.
    función, mantiene la definición en el lugar donde se usa y evita tener
    que buscarlo en otra parte al leer el código.
 
-   `Más información <>`_
+   `Más información <http://docs.python.org.ar/tutorial/controlflow.html#formas-con-lambda>`_
 
 Claro pero corto
 ~~~~~~~~~~~~~~~~

@@ -1,0 +1,7 @@
+restindex
+/restindex
+
+Python No Muerde
+================
+
+Este es el sitio de mi futuro libro "Python No Muerde".
