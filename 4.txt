@@ -330,6 +330,8 @@ real por diversos motivos, entre otros:
 * Puede ser un objeto "malo": por ejemplo un componente que aún no está
   implementado.
 
+* Puede ser un objeto "no disponible": una página web, un recurso de red
+
 * Simplemente quiero "separar" los tests, quiero que los errores de un
   componente no se propaguen a otro. [#]_
 
@@ -344,7 +346,7 @@ Para resolver este problema se usa mocking. ¿Qué es eso? Es una manera de crea
 objetos falsos que hacen lo que uno quiere y podemos usar en lugar del real.
 
 Una herramienta sencilla de mocking para usar en doctests es
-`minimock <http://pypi.python.org/pypi/MiniMock>`_
+`minimock <http://pypi.python.org/pypi/MiniMock>`_.
 
 Apartándonos de nuestro ejemplo por un momento, ya que no se presta a usar
 mocking sin inventar nada ridículo, pero aún así sabiendo que estamos
