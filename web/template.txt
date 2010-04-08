@@ -12,8 +12,6 @@
     <div id="nav">
         <ul>
             <# print_crumbs(breadcrumbs) #>
-
-            <li>&nbsp;|&nbsp; <a href="<# print "http://code.google.com/p/python-no-muerde/source/browse/"+(source_file.split('/')[-1]) #>">Historial</a></li>
         </ul>
     </div>
     <div id="main>
@@ -25,6 +23,7 @@
         
             <small>
                 Último cambio: <strong><% modtime %></strong>.
+            	&nbsp;|&nbsp; <a href="<# print "http://code.google.com/p/python-no-muerde/source/browse/"+(source_file.split('/')[-1]) #>">Historial</a></li>
             </small>
             </p>
 <div style="border:1px solid black; padding:5px; text-align: center; margin-bottom: 8px; margin-top: 8px;">
