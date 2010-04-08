@@ -6,10 +6,10 @@
     <meta http-equiv="Content-Type"
         content="text/html; charset=<% final_encoding %>" />
     <link rel="stylesheet"
-        href="<% path_to_root %>code.css"
+        href="<% path_to_root %>lsr.css"
         type="text/css" />
     <link rel="stylesheet"
-        href="<% path_to_root %>stylesheets/test.css"
+        href="<% path_to_root %>code.css"
         type="text/css" />
 </head>
 <body>
