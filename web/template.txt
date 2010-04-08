@@ -3,22 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <title><% title %></title>
-    <meta http-equiv="Content-Type"
-        content="text/html; charset=<% final_encoding %>" />
-    <link rel="stylesheet"
-        href="<% path_to_root %>lsr.css"
-        type="text/css" />
-    <link rel="stylesheet"
-        href="<% path_to_root %>code.css"
-        type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=<% final_encoding %>" />
+    <link rel="alternate" type="application/rss+xml" title="Updates"  href="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode">
+    <link rel="stylesheet" href="<% path_to_root %>lsr.css" type="text/css" />
+    <link rel="stylesheet" href="<% path_to_root %>code.css" type="text/css" />
 </head>
 <body style="width: 768px; margin: auto auto auto auto;">
+    <table border=0>
+    <tr>
+    <td colspan=2>
     <div id="nav">
         <ul>
             <# print_crumbs(breadcrumbs) #>
         </ul>
     </div>
-
+    <tr>
+    <td>
     <div id="main>
         <a name="startcontent" id="startcontent"></a>
 
@@ -31,6 +31,19 @@
             </p>
         </div>
     </div>
-
+    <td valign="top" width="200">
+    <script type="text/javascript"><!--
+google_ad_client = "pub-6610363565672416";
+/* 728x15, created 4/8/10 */
+google_ad_slot = "7821168390";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</tr>
+</table>
 </body>
 </html>

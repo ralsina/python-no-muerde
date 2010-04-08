@@ -4,7 +4,7 @@ restindex
 Python No Muerde
 ================
 
-Este es el sitio de mi futuro libro "Python No Muerde".
+Este es el sitio de mi libro en desarrollo "Python No Muerde".
 
 Lo podes leer, se actualiza automáticamente a medida que lo escribo.
 
