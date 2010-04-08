@@ -16,7 +16,7 @@ un instinto, una "nariz" para sentir el "olor a python", así como un enófilo
 [#]_ aprende a distinguir el aroma a clavos de hierro-níquel número 7
 ligeramente oxidados en un Cabernet Sauvignon. [#]_
 
-.. [#] En mi barrio los llamábamos curdas
+.. [#] En mi barrio los llamábamos curdas.
 
 .. [#] Con la esperanza de ser un poco menos pretencioso y/o chanta, si Zeus
        quiere.
