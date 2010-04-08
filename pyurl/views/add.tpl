@@ -9,13 +9,13 @@
 </head>
 <body style="text-align: center; width: 768px; margin: auto auto auto auto;">
 <h1 class="thin">PyURL - Acorta URLs</h1>
+<hr>
 %if url:
 <p class="success">
 La URL <a href="{{url}}">{{url}}</a> se convirtió en:
 <a href="{{baseurl}}{{short}}">{{baseurl}}{{short}}</a>
 </p>
 %end
-<hr>
 <form>
 URL a acortar:&nbsp;
 <input type="text" name="url">
