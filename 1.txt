@@ -116,7 +116,7 @@ Y, permite volver a averiguar sus valores... el problema es que eso no es
 python. Eso es C++. Claro, un compilador C++ se negaría a procesarlo, pero a mí
 no me engañan tan fácil, *eso es C++ reescrito para que parezca python*.
 
-¿Porqué eso no es python? Por el obvio abuso de los métodos de acceso
+¿Por qué eso no es python? Por el obvio abuso de los métodos de acceso
 (accessors, getter/setters), que son completamente innecesarios.
 
 Si la clase punto es simplemente esto, y nada más que esto, y no tiene otra
@@ -374,7 +374,7 @@ Es obvio como funciona con, por ejemplo, una lista:
     >>> diferencia("batman","murciélago")
     set(['b', 't', 'n'])
 
-¿Porqué funciona? ¿Es que las cadenas están implementadas como una subclase de
+¿Por qué funciona? ¿Es que las cadenas están implementadas como una subclase de
 ``list``? No, la implementación de las clases ``str`` o ``unicode`` es
 completamente independiente. Pero son *parecidos*. Tienen muchas cosas en común.
 
@@ -631,7 +631,7 @@ Tal vez demasiado:
 
     filter(lambda x: x[0] if x[1].is_happy else None, enumerate(lista))
 
-¿Porqué demasiado? Porque **yo** no entiendo que hace a un golpe de vista,
+¿Por qué demasiado? Porque **yo** no entiendo que hace a un golpe de vista,
 necesito "desanidarlo", leer el lambda, desenredar el operador ternario,
 darme cuenta de qué filtra, ver a qué se aplica el filtro.
 
