@@ -1,0 +1,4 @@
+restindex
+encoding: utf8
+/restindex
+.. include:: ../10.txt
