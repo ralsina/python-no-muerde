@@ -66,7 +66,7 @@ gaso1.py
 
 .. code-block:: python
    :linenos:
-   :include: gaso1.py
+   :include: codigo/4/gaso1.py
 
 Esas cadenas debajo de cada ``def`` se llaman docstrings y *siempre* hay que
 usarlas. ¿Porqué?
@@ -165,7 +165,7 @@ gaso2.py
 
 .. code-block:: python
    :linenos:
-   :include: gaso2.py
+   :include: codigo/4/gaso2.py
 
 Eso es todo lo que se necesita para implementar doctests. ¡En serio!. ¿Y cómo
 hago para saber si los tests pasan o fallan? Hay muchas maneras. Tal vez la
@@ -238,7 +238,7 @@ gaso3.py
 .. code-block:: python
    :linenos:
    :linenos_offset:
-   :include: gaso3.py
+   :include: codigo/4/gaso3.py
    :start-at: def gasear(palabra):
 
 ¿Notaste que agregar tests de esta forma no se siente como una carga?
@@ -361,7 +361,7 @@ mock1.py
 .. code-block:: python
    :linenos:
    :linenos_offset:
-   :include: mock1.py
+   :include: codigo/4/mock1.py
    :start-at: def largo_de_pagina
 
 

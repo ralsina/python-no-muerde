@@ -4,9 +4,10 @@ FIGURAS=dependencias.graph.pdf loop-n-y-medio.graph.pdf
 FIGURAS_WEB=dependencias.graph.png loop-n-y-medio.graph.png
 
 CAPITULOS=1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt
-LISTADOS=gaso1.py\
-         gaso2.py\
-         gaso3.py
+CAPITULOS_PDF=1.pdf 2.pdf 3.pdf 4.pdf 5.pdf 6.pdf 7.pdf 8.pdf 9.pdf 10.pdf 11.pdf 12.pdf licencia.pdf
+LISTADOS=codigo/4/gaso1.py\
+         codigo/4/gaso2.py\
+         codigo/4/gaso3.py
 
 %.graph.pdf: %.dot
 	dot -Tpdf $< > $@
@@ -14,12 +15,15 @@ LISTADOS=gaso1.py\
 %.graph.png: %.dot
 	dot -Tpng $< > $@
 
-python_no_muerde.pdf: cover.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS}
-	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo indice.txt -o python_no_muerde.pdf --custom-cover=cover.tmpl
+%.pdf: %.txt
+	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa.tmpl
 
-sitio: .phony ${FIGURAS_WEB}
-	(cd web ; ln -sf ../*py .)
-	(cd sitio ; ln -sf ../*.graph.png ../python_no_muerde.pdf .)
+python_no_muerde.pdf: cover.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS}
+	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo indice.txt -o python_no_muerde.pdf --custom-cover=tapa.tmpl
+
+sitio: .phony ${FIGURAS_WEB} 
+	(cd web ; ln -sf ../codigo .)
+	(cd sitio ; ln -sf ../*.graph.png ../*.pdf .)
 	python r2w.py rst2web.ini
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 
@@ -29,7 +33,7 @@ commit: sitio
 	hg push
         rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
 
-commit-web: sitio
+commit-web: sitio ${CAPITULOS_PDF}
 	hg commit
 	hg push
 	rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
