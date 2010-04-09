@@ -5,6 +5,7 @@
     <title><% title %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=<% final_encoding %>" />
     <link rel="alternate" type="application/rss+xml" title="Updates"  href="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode">
+    <link rel="stylesheet" href="<% path_to_root %>html4css1.css" type="text/css" />
     <link rel="stylesheet" href="<% path_to_root %>lsr.css" type="text/css" />
     <link rel="stylesheet" href="<% path_to_root %>code.css" type="text/css" />
 </head>

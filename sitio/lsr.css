@@ -243,3 +243,16 @@ p.sidebar-subtitle {
     text-decoration: none;
     color: #c0c0c0;
 }
+
+/* Footnotes */
+
+td.label {
+    width: 4em;
+    text-align: right;
+    padding-right: 6px;
+    border-right: 2px solid #a0a0a0;
+    }
+
+table.footnote {
+    border: 0px;
+    }
