@@ -69,11 +69,11 @@ gaso1.py
    :include: codigo/4/gaso1.py
 
 Esas cadenas debajo de cada ``def`` se llaman docstrings y *siempre* hay que
-usarlas. ¿Porqué?
+usarlas. ¿Por qué?
 
 * Es el lugar "oficial" para explicar qué hace cada función
 
-* Sirven como ayuda interactiva!
+* ¡Sirven como ayuda interactiva!
 
   .. code-block:: pycon
 
@@ -103,8 +103,8 @@ Doctests
 
 Un comentario mentiroso es peor que ningún comentario. Y los comentarios se
 vuelven mentira porque el código cambia y nadie edita los comentarios. Es
-el problema de repetirse, uno ya dijo lo que quería en el código, y tiene que
-volver a explicarlo en un comentario, a la larga las copias divergen,
+el problema de repetirse: uno ya dijo lo que quería en el código, y tiene que
+volver a explicarlo en un comentario; a la larga las copias divergen,
 y siempre el que está equivocado es el comentario.
 
 Un doctest permite **asegurar** que el comentario es cierto, porque el
@@ -118,7 +118,7 @@ el momento ideal para empezar a hacer testing. Si vas a esperar a que la funció
 sea "interesante", ya va a ser muy tarde. Vas a tener un déficit de tests, vas
 a tener que ponerte un día sólo a escribir tests, y vas a decir que testear es aburrido.
 
-¿Como sé yo que esa regexp en ``gaso1.py`` hace lo que yo quiero? ¡Porque la
+¿Cómo sé yo que esa regexp en ``gaso1.py`` hace lo que yo quiero? ¡Porque la
 probé! Como no soy el mago de las expresiones regulares que las saca de la
 galera y le andan a la primera, hice esto en el intérprete interactivo
 (reemplacé la funcion ``gas`` con una versión boba):
@@ -149,10 +149,10 @@ galera y le andan a la primera, hice esto en el intérprete interactivo
 Si no hubiera hecho ese test manual no tendría la más mínima confianza en este
 código, y creo que casi todos hacemos esta clase de cosas, ¿o no?.
 
-El problema con este testing manual ad-hoc es que lo hacemos una vez, la función
+El problema con este testing manual ad hoc es que lo hacemos una vez, la función
 hace lo que se supone debe hacer (al menos por el momento), y nos olvidamos.
 
-Por suerte *no tiene porqué ser así*, gracias a los doctests.
+Por suerte *no tiene Por qué ser así*, gracias a los doctests.
 
 De hecho, el doctest es poco más que cortar y pegar esos tests informales que
 mostré arriba. Veamos la versión con doctests:
@@ -202,7 +202,7 @@ bien. Obviamente hay muchas cosas que hace mal:
     >>> gaso2.gasear('rosarino')
     'rosarino'
     >>> print 'OH NO!'
-    'OH NO!'
+    OH NO!
 
 ¿Qué hacemos entonces? ¡Agregamos un test que falla! Bienvenido al mundo del TDD
 o "Desarrollo impulsado por tests" (Test Driven Development). La idea es que,
@@ -217,12 +217,12 @@ tests son piolas, y cada uno prueba una sola cosa [#]_ , entonces hasta nos va a
 indicar qué parte del código es la que está rota.
 
 .. [#] Un test que prueba muchas cosas juntas no es un buen test, porque al
-       fallar no sabés porqué. Eso se llama granularidad de los tests y es muy
+       fallar no sabés Por qué. Eso se llama granularidad de los tests y es muy
        importante.
 
 Entonces, el problema de ``gaso2.py`` es que no funciona cuando no hay acentos
 ortográficos. ¿Solución? Una función que diga donde está el acento prosódico en
-una palabra [#]_
+una palabra [#]_.
 
 .. [#] Y en este momento agradezcan que esto es castellano, que es un idioma
        casi obsesivo compulsivo en su regularidad.
@@ -251,7 +251,7 @@ Por otro lado te da la tranquilidad de "no estoy rompiendo nada". Por lo menos
 nada que no estuviera funcionando exclusivamente por casualidad.
 
 Por ejemplo, ``gaso1.py`` pasaría el test de la palabra "la" y ``gaso2.py``
-fallaría, pero no porque ``gaso1.py`` estuviera haciendo algo bien, si no
+fallaría, pero no porque ``gaso1.py`` estuviera haciendo algo bien, sino
 porque respondía de forma afortunada.
 
 Cobertura
@@ -288,7 +288,7 @@ herramienta de cobertura ("coverage tool"). Veamos una en acción::
     OK
 
 Al usar la opción ``--with-coverage``, nose usa el módulo ``coverage.py`` para
-ver qué líneas de código se usan y cuales no. Lamentablemente el reporte
+ver cuáles líneas de código se usan y cuales no. Lamentablemente el reporte
 incluye un módulo de sistema, ``encodings.ascii`` lo que hace que los
 porcentajes no sean correctos.
 
@@ -305,7 +305,7 @@ de correr nosetests::
 
 
 Ignorando ``encodings.ascii`` (que no es nuestro), tenemos 100% de cobertura.
-Eso es el ideal. Cuando ese porcentaje baje, deberíamos tratar de ver qué parte
+Ese es el ideal. Cuando ese porcentaje baje, deberíamos tratar de ver qué parte
 del código nos estamos olvidando de testear, pero es casi imposible tener 100%
 de cobertura en casi cualquier programa no trivial.
 
