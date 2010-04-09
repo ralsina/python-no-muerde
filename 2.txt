@@ -194,3 +194,31 @@ un framework de CSS:
 
 Dado que no pienso diseñar mucho, ¡gracias BluTrip!
 
+Autenticación
+~~~~~~~~~~~~~
+
+Bottle es un framework `WSGI <http://wsgi.org/>`_. WSGI es un standard para crear
+aplicaciones web. Permite conectarlas entre sí, y hacer muchas cosas interesantes.
+
+En particular, tiene el concepto de "middleware". ¿Qué es el middleware? Es una
+aplicación intermediaria. El pedido del cliente va al middleware, este lo
+procesa y luego se lo pasa a tu aplicación original.
+
+En nuestro caso, queremos que ciertas partes de la aplicación estén autenticadas.
+Bueno, la manera práctica es usar un middleware de autenticación que se encargue
+de todo y a nosotros simplemente nos interesa saber qué usuario es.
+
+Vamos a usar `AuthKit <http://authkit.org/>`_ con OpenID. De esa manera vamos
+a evitar una de las cosas más molestas de las aplicaciones web, la proliferación
+de cuentas de usuario.
+
+Al usar OpenID, no vamos a tener ningún concepto de usuario propio, simplemente
+vamos a confiar en que OpenID haga su trabajo y nos diga "este acceso lo está
+haciendo el usuario X".
+
+¿Cómo se autentica el usuario?
+
+* Si tiene una cuenta de Yahoo: ingresa ``yahoo.com``
+* Si tiene una cuenta de Google: ingresa ``https://www.google.com/accounts/o8/id``
+
+O se les crean botones "Entrar con tu cuenta de google", etc.
