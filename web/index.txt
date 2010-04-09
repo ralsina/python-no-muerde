@@ -22,26 +22,44 @@ disponible bajo una licencia `Creative Commons <http://creativecommons.org/licen
 Lo podés leer aquí mismo o descargarlo, se actualiza automáticamente a medida
 que lo escribo.
 
-* Verlo como `una página <indice.html>`_
+.. |pdficon| image:: pdf.png
+
+* Verlo como `una página <indice.html>`_ |pdficon|__
 * Verlo por capítulos
 
-  + `Introducción <intro.html>`_
-  + `Capítulo 1 <1.html>`_
-  + `Capítulo 2 <2.html>`_
-  + `Capítulo 3 <3.html>`_
-  + `Capítulo 4 <4.html>`_
-  + `Capítulo 5 <5.html>`_
-  + `Capítulo 6 <6.html>`_
-  + `Capítulo 7 <7.html>`_
-  + `Capítulo 8 <8.html>`_
-  + `Capítulo 9 <9.html>`_
-  + `Capítulo 10 <10.html>`_
-  + `Capítulo 11 <11.html>`_
-  + `Capítulo 12 <12.html>`_
-  + `Agradecimientos <gracias.html>`_
-  + `Licencia <licencia.html>`_
+  + `Introducción <intro.html>`_ |pdficon|__
+  + `Capítulo 1 <1.html>`_ |pdficon|__
+  + `Capítulo 2 <2.html>`_ |pdficon|__
+  + `Capítulo 3 <3.html>`_ |pdficon|__
+  + `Capítulo 4 <4.html>`_ |pdficon|__
+  + `Capítulo 5 <5.html>`_ |pdficon|__
+  + `Capítulo 6 <6.html>`_ |pdficon|__
+  + `Capítulo 7 <7.html>`_ |pdficon|__
+  + `Capítulo 8 <8.html>`_ |pdficon|__
+  + `Capítulo 9 <9.html>`_ |pdficon|__
+  + `Capítulo 10 <10.html>`_ |pdficon|__
+  + `Capítulo 11 <11.html>`_ |pdficon|__
+  + `Capítulo 12 <12.html>`_ |pdficon|__
+  + `Agradecimientos <gracias.html>`_ |pdficon|__
+  + `Licencia <licencia.html>`_ |pdficon|__
 
-* `PDF (A5) <python_no_muerde.pdf>`_
+__ python_no_muerde.pdf
+__ intro.pdf
+__ 1.pdf
+__ 2.pdf
+__ 3.pdf
+__ 4.pdf
+__ 5.pdf
+__ 6.pdf
+__ 7.pdf
+__ 8.pdf
+__ 9.pdf
+__ 10.pdf
+__ 11.pdf
+__ 12.pdf
+__ gracias.pdf
+__ licencia.pdf
+
 
 Este libro está escrito usando `reStructured Text <http://docutils.sf.net>`_, el PDF
 se genera vía `rst2pdf <http://rst2pdf.googlecode.com>`_ y el sitio web usando

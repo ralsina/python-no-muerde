@@ -3,8 +3,8 @@ DOC=python_no_muerde.pdf
 FIGURAS=dependencias.graph.pdf loop-n-y-medio.graph.pdf
 FIGURAS_WEB=dependencias.graph.png loop-n-y-medio.graph.png
 
-CAPITULOS=1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt
-CAPITULOS_PDF=1.pdf 2.pdf 3.pdf 4.pdf 5.pdf 6.pdf 7.pdf 8.pdf 9.pdf 10.pdf 11.pdf 12.pdf licencia.pdf
+CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt
+CAPITULOS_PDF=intro.pdf 1.pdf 2.pdf 3.pdf 4.pdf 5.pdf 6.pdf 7.pdf 8.pdf 9.pdf 10.pdf 11.pdf 12.pdf licencia.pdf gracias.pdf
 LISTADOS=codigo/4/gaso1.py\
          codigo/4/gaso2.py\
          codigo/4/gaso3.py
