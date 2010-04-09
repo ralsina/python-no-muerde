@@ -217,7 +217,7 @@ tests son piolas, y cada uno prueba una sola cosa [#]_ , entonces hasta nos va a
 indicar qué parte del código es la que está rota.
 
 .. [#] Un test que prueba muchas cosas juntas no es un buen test, porque al
-       fallar no sabés Por qué. Eso se llama granularidad de los tests y es muy
+       fallar no sabés por qué. Eso se llama granularidad de los tests y es muy
        importante.
 
 Entonces, el problema de ``gaso2.py`` es que no funciona cuando no hay acentos
