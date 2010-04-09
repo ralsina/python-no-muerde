@@ -83,12 +83,114 @@ a ver como creamos un programa útil con casi nada de código propio.
 El Problema
 ~~~~~~~~~~~
 
+Lo describe Tarek Ziadé en `URLs in Books <http://tarekziade.wordpress.com/2009/04/19/urls-in-books/>`_:
+
+    Recibí algunas quejas acerca de que algunos links en mis libros no funcionaban cuando fueron publicados.
+
+    Para el próximo libro que estoy escribiendo, le propuse a mi editor crear un
+    sitio para registrar las referencias mencionadas.
+
+    Usando referencias ascii cortas y únicas a lo largo del libro, es facil
+    proveer un servicio sencillo de redirección a la URL de destino, y arreglarlo
+    cuando cambie (simplemente creando un alerta de email si la redirección da
+    error 404).
+
+Ya que no tengo editor, lo voy a tener que hacer yo mismo. Me parece una buena
+idea, va a ser útil para este proyecto, no encuentro nada hecho similar, es un
+buen ejemplo del objetivo de este capítulo... ¡vendido!
+
+Una vez decidido a encarar este proyecto, establezcamos las metas:
+
+* Un redirector estilo tinyURL, bit.ly, etc.
+
+* Que use URLs cortas y memotécnicas.
+
+* Que el usuario editar las redirecciones en cualquier momento.
+
+* Que notifique cuando la URL no sirva para poder corregirla.
+
+Además, como metas "ideológicas":
+
+* Un mínimo de afeitado de yaks.
+
+* Que sea un programa relativamente breve.
+
+* Código lo más simple posible: no hay que hacerse el piola, porque no quiero
+  mantener algo complejo.
+
+* Cada vez que haya que hacer algo: buscar si ya está hecho (excepto el programa
+  en sí, sino el capítulo termina dentro de dos renglones).
+
+Separemos la tarea en componentes:
+
+* Una función que dada una URL genera un slug[#]_
+* Un componente para almacenar las relaciones slug => URL
+* Un sitio web que haga la redirección
+* Un mecanismo de edición de las relaciones
+
+.. [#] Slug es un término que vi en Django: un identificador único formado con letras
+       y números. En este caso, es la parte única de la URL.
+
+Veamos los componentes elegidos para este desarrollo.
+
 Bottle
 ~~~~~~
+
+Esto va a ser una aplicación web. Hay docenas de frameworks para crearlas usando Python. Voy a elegir casi al azar uno que se llama `Bottle <http://bottle.paws.de>`_
+porque es sencillo, sirve para lo que necesitamos, y es un único archivo.
+Literalmente se puede aprender a usar en una hora.
+
+¿Qué Páginas tiene nuestra aplicación web?
+
+* ``/`` donde el usuario se puede autenticar o ver un listado de sus
+  redirecciones existentes.
+
+* ``/edit/SLUG`` donde se edita una redirección.
+
+* ``/del/SLUG`` eliminar redirección.
+
+* ``/SLUG`` redirige al sitio deseado.
 
 Storm
 ~~~~~
 
-15 Líneas
-~~~~~~~~~
+Es obviamente necesario guardar las relaciones usuario/slug/URL en alguna parte.
+Lo obvio es usar una base de datos. Lo inteligente es usar un ORM.
+
+A favor de usar un ORM:
+
+No se usa SQL directo, lo que permite hacer todo (o casi) en Python. El
+programa queda más "limpio" al no tener que cambiar de contexto todo el
+tiempo.
+
+En contra de usar un ORM:
+
+Es una dependencia extra, te ata a un producto que tal vez mañana "desaparezca".
+Puede tener una pérdida de performance con respecto a usar la base de datos
+en forma directa.
+
+No me parece grave: Si tenemos cuidado y aislamos el ORM del resto de la
+aplicación, es posible reemplazarlo con otro más adelante (o eliminarlo
+y "bajar" a SQL o a NoSQL).
+
+Por lo tanto, en el espíritu de "no inventes, usá", vamos a usar un ORM. En
+particular vamos a usar `Storm <https://storm.canonical.com/>`_ un ORM
+creado por Canonical, que me gusta [#]_
+
+.. [#] Me gusta más `Elixir <http://elixir.ematia.de/trac/wiki>`_ pero es
+       bastante más complicado para algunas cosas.
+
+HTML
+~~~~
+
+Soy un cero a la izquierda en cuanto a diseño gráfico, HTML, estética, etc. En
+consecuencia, para CSS y demás simplemente busqué algo fácil de usar y lo usé.
+Todo el "look" del sitio va a estar basado en `BlueTrip <http://bluetrip.org/>`_
+un framework de CSS:
+
+    BlueTrip te da un conjunto razonable de estilos y una forma común de
+    construir un sitio web para que puedas saltear la parte aburrida y
+    ponerte a diseñar.
+
+Dado que no pienso diseñar mucho, ¡gracias BluTrip!
 
