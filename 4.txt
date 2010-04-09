@@ -330,7 +330,7 @@ real por diversos motivos, entre otros:
 * Puede ser un objeto "malo": por ejemplo un componente que aún no está
   implementado.
 
-* Puede ser un objeto "no disponible": una página web, un recurso de red
+* Puede ser un objeto "no disponible": una página web, un recurso de red.
 
 * Simplemente quiero "separar" los tests, quiero que los errores de un
   componente no se propaguen a otro. [#]_
