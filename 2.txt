@@ -47,7 +47,7 @@ Antes de decidirse a empezar un proyecto hay que preguntarse muchas cosas:
 
 * ¿Tengo alguna idea de interface original?
 
-* ¿Porqué alguien va a querer usar eso?
+* ¿Por qué alguien va a querer usar eso?
 
 * ¿Tengo tiempo y ganas de encarar este proyecto?
 
@@ -72,7 +72,7 @@ actividad inútil en sí misma, que uno espera le dé beneficios más adelante.
 
 Para poder hacer A, uno descubre que necesita B, para B necesita C. Cuando llegás a D... estás afeitando yaks.
 
-Si necesitás B para lograr A, entonces, buscá una B en algún lado, y **usála**.
+Si necesitás B para lograr A, entonces, buscá una B en algún lado, y **usala**.
 Si realmente no existe nada parecido, entonces ahora tenés dos proyectos. Pensá
 si te interesa más A o B, y si podés llevar los dos adelante. Es un problema.
 
