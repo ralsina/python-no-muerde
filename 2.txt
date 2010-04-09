@@ -70,7 +70,8 @@ actividad inútil en sí misma, que uno espera le dé beneficios más adelante.
        Si siguiera con "y para eso necesito hacer un framework web, y un
        módulo para almacenar los datos"... estoy afeitando yaks.
 
-Para poder hacer A, uno descubre que necesita B, para B necesita C. Cuando llegás a D... estás afeitando yaks.
+Para poder hacer A, uno descubre que necesita B, para B necesita C.
+Cuando llegás a D... estás afeitando yaks.
 
 Si necesitás B para lograr A, entonces, buscá una B en algún lado, y **usala**.
 Si realmente no existe nada parecido, entonces ahora tenés dos proyectos. Pensá
@@ -85,7 +86,8 @@ El Problema
 
 Lo describe Tarek Ziadé en `URLs in Books <http://tarekziade.wordpress.com/2009/04/19/urls-in-books/>`_:
 
-    Recibí algunas quejas acerca de que algunos links en mis libros no funcionaban cuando fueron publicados.
+    Recibí algunas quejas acerca de que algunos links en mis libros no funcionaban
+    cuando fueron publicados.
 
     Para el próximo libro que estoy escribiendo, le propuse a mi editor crear un
     sitio para registrar las referencias mencionadas.
@@ -128,17 +130,19 @@ Separemos la tarea en componentes:
 * Un sitio web que haga la redirección
 * Un mecanismo de edición de las relaciones
 
-.. [#] Slug es un término que vi en Django: un identificador único formado con letras
-       y números. En este caso, es la parte única de la URL.
+.. [#] Slug es un término que ví en Django: un identificador único formado
+       con letras y números. En este caso, es la parte única de la URL.
 
 Veamos los componentes elegidos para este desarrollo.
 
 Bottle
 ~~~~~~
 
-Esto va a ser una aplicación web. Hay docenas de frameworks para crearlas usando Python. Voy a elegir casi al azar uno que se llama `Bottle <http://bottle.paws.de>`_
-porque es sencillo, sirve para lo que necesitamos, y es un único archivo.
-Literalmente se puede aprender a usar en una hora.
+Esto va a ser una aplicación web. Hay docenas de frameworks para crearlas
+usando Python. Voy a elegir casi al azar uno que se llama
+`Bottle <http://bottle.paws.de>`_ porque es sencillo, sirve para lo que
+necesitamos, y es un único archivo. Literalmente se puede aprender a usar
+en una hora.
 
 ¿Qué Páginas tiene nuestra aplicación web?
 
@@ -187,51 +191,6 @@ la URL correcta y hace lo que tiene que hacer:
 
 .. image:: pyurl1-1.print.png
 
-    
-
-Storm
-~~~~~
-
-Es obviamente necesario guardar las relaciones usuario/slug/URL en alguna parte.
-Lo obvio es usar una base de datos. Lo inteligente es usar un ORM.
-
-A favor de usar un ORM:
-
-No se usa SQL directo, lo que permite hacer todo (o casi) en Python. El
-programa queda más "limpio" al no tener que cambiar de contexto todo el
-tiempo.
-
-En contra de usar un ORM:
-
-Es una dependencia extra, te ata a un producto que tal vez mañana "desaparezca".
-Puede tener una pérdida de performance con respecto a usar la base de datos
-en forma directa.
-
-No me parece grave: Si tenemos cuidado y aislamos el ORM del resto de la
-aplicación, es posible reemplazarlo con otro más adelante (o eliminarlo
-y "bajar" a SQL o a NoSQL).
-
-Por lo tanto, en el espíritu de "no inventes, usá", vamos a usar un ORM. En
-particular vamos a usar `Storm <https://storm.canonical.com/>`_ un ORM
-creado por Canonical, que me gusta [#]_
-
-.. [#] Me gusta más `Elixir <http://elixir.ematia.de/trac/wiki>`_ pero es
-       bastante más complicado para algunas cosas.
-
-HTML
-~~~~
-
-Soy un cero a la izquierda en cuanto a diseño gráfico, HTML, estética, etc. En
-consecuencia, para CSS y demás simplemente busqué algo fácil de usar y lo usé.
-Todo el "look" del sitio va a estar basado en `BlueTrip <http://bluetrip.org/>`_
-un framework de CSS:
-
-    BlueTrip te da un conjunto razonable de estilos y una forma común de
-    construir un sitio web para que puedas saltear la parte aburrida y
-    ponerte a diseñar.
-
-Dado que no pienso diseñar mucho, ¡gracias BluTrip!
-
 Autenticación
 ~~~~~~~~~~~~~
 
@@ -260,3 +219,103 @@ haciendo el usuario X".
 * Si tiene una cuenta de Google: ingresa ``https://www.google.com/accounts/o8/id``
 
 O se les crean botones "Entrar con tu cuenta de google", etc.
+
+Hagamos entonces que nuestra aplicación de prueba soporte OpenID.
+
+Necesitamos importar varios módulos nuevos
+
+.. class:: titulo-listado
+
+pyurl1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl2.py
+   :start-at: # Middlewares
+   :end-before: @bottle.route
+
+En cada función que queremos sólo esté disponible para usuarios autenticados
+se verifica si el usuario lo está. De no ser así, se da un error 401:
+
+.. class:: titulo-listado
+
+pyurl1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl2.py
+   :start-at: @bottle.route('/')
+   :end-before: @bottle.route('/:slug/edit')
+    
+
+Por último, se "envuelve" la aplicación con el middleware de autenticación:
+
+.. class:: titulo-listado
+
+pyurl1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl2.py
+   :start-at: if __name__=='__main__':
+
+¿Funciona?
+
+.. image:: pyurl2-1.print.png
+
+.. image:: pyurl2-2.print.png
+
+.. image:: pyurl2-3.print.png
+
+.. image:: pyurl2-4.print.png
+
+Storm
+~~~~~
+
+Es obviamente necesario guardar las relaciones usuario/slug/URL en alguna parte.
+Lo obvio es usar una base de datos. Lo inteligente es usar un ORM.
+
+A favor de usar un ORM:
+    No se usa SQL directo, lo que permite hacer todo (o casi) en Python. El
+    programa queda más "limpio" al no tener que cambiar de contexto todo el
+    tiempo.
+
+En contra de usar un ORM:
+    Es una dependencia extra, te ata a un producto que tal vez mañana
+    "desaparezca". Puede tener una pérdida de performance con respecto a usar
+    la base de datos en forma directa.
+
+No me parece grave: Si tenemos cuidado y aislamos el ORM del resto de la
+aplicación, es posible reemplazarlo con otro más adelante (o eliminarlo
+y "bajar" a SQL o a NoSQL).
+
+Por lo tanto, en el espíritu de "no inventes, usá", vamos a usar un ORM. En
+particular vamos a usar `Storm <https://storm.canonical.com/>`_, un ORM
+creado por Canonical, que me gusta [#]_.
+
+.. [#] Me gusta más `Elixir <http://elixir.ematia.de/trac/wiki>`_ pero es
+       bastante más complicado para algunas cosas.
+
+HTML
+~~~~
+
+Soy un cero a la izquierda en cuanto a diseño gráfico, HTML, estética, etc. En
+consecuencia, para CSS y demás simplemente busqué algo fácil de usar y lo usé.
+Todo el "look" del sitio va a estar basado en `BlueTrip <http://bluetrip.org/>`_
+un framework de CSS:
+
+    BlueTrip te da un conjunto razonable de estilos y una forma común de
+    construir un sitio web para que puedas saltear la parte aburrida y
+    ponerte a diseñar.
+
+Dado que no pienso diseñar mucho, ¡gracias BluTrip!
+
