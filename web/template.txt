@@ -14,7 +14,7 @@
             <# print_crumbs(breadcrumbs) #>
         </ul>
     </div>
-    <div id="main>
+    <div id="main" style="float:left;">
         <a name="startcontent" id="startcontent"></a>
 
         <% body %>
