@@ -11,7 +11,7 @@
 from storm.locals import *
 
 # Usamos bottle para hacer el sitio
-from bottle import route, run, request, response, send_file, abort, view, debug, redirect, static_file
+from bottle import route, run, request, response, send_file, abort, view, debug, redirect, static_file, default_app
 
 # Caracteres válidos en un atajo de URL
 from string import letters, digits
@@ -102,19 +102,27 @@ def alta():
         'url':'',
         'short':'',
         }
-    if 'url' in request.GET:
-        u=request.GET['url']
-        resp['url']=u
-        atajo=Atajo(unicode(u))
-        store.add(atajo)
-        store.flush()
-        resp['short']=id_to_slug(atajo.id)
-        store.commit()
+    if 'REMOTE_USER' in request.environ:
+        if 'url' in request.GET:
+            u=request.GET['url']
+            resp['url']=u
+            atajo=Atajo(unicode(u))
+            store.add(atajo)
+            store.flush()
+            resp['short']=id_to_slug(atajo.id)
+            store.commit()
+    else:
+        abort(401, "Sorry, access denied.")
     return resp
 
+@route('/logout')
+def logout():
+    request.environ['paste.auth_tkt.logout_user']()
+    del request.environ['REMOTE_USER']
+    redirect('/')
 
 #Redirigir
-@route('/:slug')
+@route('/r:slug')
 def redir(slug):
     atajo=store.find(Atajo, id=slug_to_id(slug)).one()
     if atajo:
@@ -123,8 +131,30 @@ def redir(slug):
         redirect('/')
 
 
+import authkit.authenticate
+import authkit.authorize
+from authkit.permissions import RemoteUser
+import beaker.middleware
+import os
+from beaker.middleware import SessionMiddleware
+from paste.auth.auth_tkt import AuthTKTMiddleware
+from authkit.authenticate import middleware, sample_app
+from paste.httpserver import serve
 
 if __name__=='__main__':
     # Correr server de prueba
     debug(True)
-    run(reloader=False, host='127.0.0.1', port=8080)
+    app = default_app()
+    #app = sample_app
+    app.catchall = False
+
+    app = middleware(app,
+                 enable=True,
+                 setup_method='openid',
+                 openid_store_type='file',
+                 openid_store_config=os.getcwd(),
+                 openid_path_signedin='/private')
+
+    app = AuthTKTMiddleware(SessionMiddleware(app),
+                        'some auth ticket secret');
+    run(app)
