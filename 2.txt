@@ -189,7 +189,9 @@ Para probarlo, alcanza con ``python pyurl1.py`` y sale esto en la consola::
 Apuntando un navegador a esa URL podemos verificar que cada función responde en
 la URL correcta y hace lo que tiene que hacer:
 
-.. image:: pyurl1-1.print.png
+.. figure:: pyurl1-1.print.png
+
+   La aplicación de prueba funcionando.
 
 Autenticación
 ~~~~~~~~~~~~~
@@ -270,13 +272,21 @@ pyurl1.py
 
 ¿Funciona?
 
-.. image:: pyurl2-1.print.png
+.. figure:: pyurl2-1.print.png
 
-.. image:: pyurl2-2.print.png
+   El sitio muestra una pantalla de login
 
-.. image:: pyurl2-3.print.png
+.. figure:: pyurl2-2.print.png
 
-.. image:: pyurl2-4.print.png
+   Tal vez, el proveedor de OpenID pide usuario/password
+
+.. figure:: pyurl2-3.print.png
+
+   Por una única vez se pide autorizar al otro sitio. 
+
+.. figure:: pyurl2-4.print.png
+
+   Estamos autenticados y nuestra aplicación de prueba funciona como antes.
 
 Storm
 ~~~~~
