@@ -24,7 +24,12 @@
         
             <small>
                 Último cambio: <strong><% modtime %></strong>.
-            	&nbsp;|&nbsp; <a href="<# print "http://code.google.com/p/python-no-muerde/source/browse/"+(source_file.split('/')[-1]) #>">Historial</a></li>
+<#
+if 'index' not in source_file:
+    fname=source_file.split('/')[-1]
+    print '''&nbsp;|&nbsp; <a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Historial</a></li>'''%fname
+    print '''&nbsp;|&nbsp; <a href="%s"><img src="pdf.png"></a>'''%fname.replace('.txt','.pdf')
+#>
             </small>
             </p>
 <div style="border:1px solid black; padding:5px; text-align: center; margin-bottom: 8px; margin-top: 8px;">
