@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <title><% title %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=<% final_encoding %>" />
-    <link rel="alternate" type="application/rss+xml" title="Updates"  href="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode">
+    <link rel="alternate" type="application/rss+xml" title="Updates"  href="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode" />
     <link rel="stylesheet" href="<% path_to_root %>html4css1.css" type="text/css" />
     <link rel="stylesheet" href="<% path_to_root %>lsr.css" type="text/css" />
     <link rel="stylesheet" href="<% path_to_root %>code.css" type="text/css" />
@@ -27,11 +28,11 @@
 <#
 if 'index' not in source_file:
     fname=source_file.split('/')[-1]
-    print '''&nbsp;|&nbsp; <a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Historial</a></li>'''%fname
-    print '''&nbsp;|&nbsp; <a href="%s"><img src="pdf.png"></a>'''%fname.replace('.txt','.pdf')
+    print '''&nbsp;|&nbsp; <a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Historial</a>'''%fname
+    print '''&nbsp;|&nbsp; <a href="%s"><img src="pdf.png" alt="PDF" /></a>'''%fname.replace('.txt','.pdf')
 #>
             </small>
-            </p>
+            <p/>
 <div style="border:1px solid black; padding:5px; text-align: center; margin-bottom: 8px; margin-top: 8px;">
     <script type="text/javascript"><!--
 google_ad_client = "pub-6610363565672416";
@@ -88,7 +89,7 @@ class="statcounter"><a title="website statistics"
 href="http://www.statcounter.com/free_web_stats.html"
 target="_blank"><img class="statcounter"
 src="http://c.statcounter.com/5758340/0/ee0fbd1c/1/"
-alt="website statistics" ></a></div></noscript>
+alt="website statistics" /></a></div></noscript>
 <!-- End of StatCounter Code -->
 </body>
 </html>
