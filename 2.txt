@@ -145,11 +145,49 @@ Literalmente se puede aprender a usar en una hora.
 * ``/`` donde el usuario se puede autenticar o ver un listado de sus
   redirecciones existentes.
 
-* ``/edit/SLUG`` donde se edita una redirección.
+* ``/SLUG/edit/`` donde se edita una redirección (solo para el dueño del slug).
 
-* ``/del/SLUG`` eliminar redirección.
+* ``/SLUG/del/`` eliminar redirección (solo para el dueño del slug).
 
 * ``/SLUG`` redirige al sitio deseado.
+
+* ``/static/archivo`` devuelve ese archivo (para CSS, imágenes, etc)
+
+Empecemos con un "stub", una aplicación mínima bottle que controle esas URLs.
+El concepto básico en bottle es:
+
+* Creás una función que toma argumentos y devuelve una página web
+* Usás el decorador ``@bottle.route`` para que un PATH de URL determinado
+  llame a esa función.
+* Si querés que una parte de la URL sea un argumento de la función, usás
+  ``:nombrearg`` y la tomás como argumento (ver en el listado, función borrar)
+
+Después hay mas cosas, pero esto es suficiente por ahora:
+
+.. class:: titulo-listado
+
+pyurl1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: codigo/2/pyurl1.py
+
+
+Para probarlo, alcanza con ``python pyurl1.py`` y sale esto en la consola::
+
+    $ python pyurl1.py
+    Bottle server starting up (using WSGIRefServer())...
+    Listening on http://127.0.0.1:8080/
+    Use Ctrl-C to quit.
+
+Apuntando un navegador a esa URL podemos verificar que cada función responde en
+la URL correcta y hace lo que tiene que hacer:
+
+.. image:: pyurl1-1.print.png
+
+    
 
 Storm
 ~~~~~
