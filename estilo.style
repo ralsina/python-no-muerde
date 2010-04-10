@@ -16,7 +16,6 @@
      "headingFont": "DejaVu Sans Light"
   },
   "pageSetup": {
-    "firstTemplate": "coverPage",
     "size": "A5",
     "margin-top": "1cm",
     "margin-bottom": "1cm",
