@@ -1,4 +1,19 @@
 {
+  "fontsAlias": {
+     "stdBold":  "DejaVu Sans-Bold",
+     "stdBoldItalic":  "DejaVu Sans-BoldOblique",
+     "stdFont":  "DejaVu Sans",
+     "stdItalic":  "DejaVu Sans-Oblique",
+     "stdMono":  "DejaVu Sans Mono",
+     "stdMonoBold":  "DejaVu Sans Mono-Bold",
+     "stdMonoBoldItalic":  "DejaVu Sans Mono-BoldOblique",
+     "stdMonoItalic":  "DejaVu Sans Mono-Oblique",
+     "stdSans":  "DejaVu Sans",
+     "stdSansBold":  "DejaVu Sans-Bold",
+     "stdSansBoldItalic":  "DejaVu Sans-BoldOblique",
+     "stdSansItalic":  "DejaVu Sans-Oblique",
+     "stdSerif": "DejaVu Serif"
+  },
   "pageSetup": {
     "firstTemplate": "coverPage",
     "size": "A5",
@@ -25,9 +40,13 @@
     }
   },  
   "styles" : [
+    [ "base", {
+        "fontName": "stdSerif"
+      }],
     [ "blockquote", {
-        "alignment": "right",
-        "fontName": "stdItalic"
+        "alignment": "left",
+        "fontName": "stdItalic",
+        "width": "70%"
       }],
     [ "attribution", {
         "fontName": "stdBold"
