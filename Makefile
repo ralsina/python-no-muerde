@@ -38,6 +38,7 @@ sitio: .phony ${FIGURAS_WEB}
 
 commit: sitio
 	touch indice.txt ; make python_no_muerde.pdf
+	hg commit python_no_muerde.pdf -m "PDF actualizado"
 	hg commit
 	hg push
         rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
