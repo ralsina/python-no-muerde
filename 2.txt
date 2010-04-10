@@ -349,6 +349,63 @@ creado por `Canonical <http://www.canonical.com>`_, que me gusta [#]_.
 .. [#] Me gusta más `Elixir <http://elixir.ematia.de/trac/wiki>`_ pero es
        bastante más complicado para algunas cosas.
 
+En esta aplicación los requerimientos de base de datos son mínimos. Necesito
+poder guardar algo como ``(url,usuario,slug,test)`` y poder después recuperarlo
+sea por slug, sea por usuario.
+
+Necesito que el slug sea único. Todos los otros campos no necesitan ser únicos.
+[#]_
+
+.. [#] Sería bueno que la combinación usuario+url lo fuera pero lo veremos más
+       adelante.
+
+Veamos código. Primero, definimos lo que Storm requiere.
+
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-at: # Usamos storm para
+   :end-before:     def __init__
+
+Veamos ahora el ``__init__`` de esta clase. Como "truco", se guarda
+automáticamente en la base de datos al crearse:
+
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-at:     def __init__
+   :end-before:    @classmethod
+
+¿Y de dónde sale self.store? De un método de inicialización que hay que llamar
+antes de poder crear una instancia de ``Atajo``:
+
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-after:        self.store.commit()
+   :end-before:    # Caracteres
+
 El código "original", es decir, convertir URLs a slugs y viceversa es bastante
 tonto:
 
@@ -362,8 +419,43 @@ pyurl3.py
    :linenos:
    :linenos_offset:
    :include: codigo/2/pyurl3.py
-   :start-at: class Atajo(object):
+   :start-at: # Caracteres válidos en un atajo de URL
    :end-before: # Usamos bottle para hacer el sitio
+
+¡Veámoslo en acción!
+
+.. code-block:: pycon
+
+    >>> from pyurl3 import Atajo
+    >>> Atajo.initDB()
+    >>> a1 = Atajo(u'http://nomuerde.netmanagers.com.ar',u'unnombredeusuario')
+    >>> a1.slug()
+    'b'
+    >>> a1 = Atajo(u'http://www.python.org',u'unnombredeusuario')
+    >>> a1.slug()
+    'c'
+    >>> Atajo.get(slug='b').url
+    u'http://nomuerde.netmanagers.com.ar'
+    >>> [x.url for x in Atajo.get(user=u'unnombredeusuario')]
+    [u'http://nomuerde.netmanagers.com.ar', u'http://www.python.org']
+    
+
+Y desde ya que todo está en la base de datos:
+
+.. code-block:: sql
+
+    sqlite> .dump
+    PRAGMA foreign_keys=OFF;
+    BEGIN TRANSACTION;
+    CREATE TABLE atajo (
+                        id INTEGER PRIMARY KEY,
+                        url VARCHAR,
+                        test VARCHAR,
+                        user VARCHAR
+                    );
+    INSERT INTO "atajo" VALUES(1,'http://nomuerde.netmanagers.com.ar',NULL,'unnombredeusuario');
+    INSERT INTO "atajo" VALUES(2,'http://www.python.org',NULL,'unnombredeusuario');
+    COMMIT;
 
 
 HTML
