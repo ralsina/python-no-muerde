@@ -23,7 +23,7 @@ LISTADOS=codigo/4/gaso1.py\
 %.print.png: %.screen.png
 	convert -resize 1200 $< $@
 
-%.pdf: %.txt
+%.pdf: %.txt estilo.style
 	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa.tmpl
 
 python_no_muerde.pdf: tapa.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS} ${SCREENSHOTS}
