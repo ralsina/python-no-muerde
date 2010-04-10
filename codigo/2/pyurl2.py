@@ -53,7 +53,7 @@ def redir(slug):
 @bottle.route('/static/:filename')
 def static_file(filename):
     """Archivos estáticos (CSS etc)"""
-    send_file(filename, root='./static/')
+    bottle.send_file(filename, root='./static/')
 
 
 
