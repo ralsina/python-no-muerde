@@ -28,7 +28,7 @@ Bienvenido a PyURL! - <a href="/logout">Cerrar sesión</a>
 
 <ul>
 % for atajo in atajos:
-    <li><a href="{{atajo.url}}">{{atajo.slug()}}</a><a href="/{{atajo.slug())}}/edit">Editar</a></li>
+    <li><a href="{{atajo.url}}">{{atajo.slug()}}</a><a href="/{{atajo.slug()}}/edit">Editar</a></li>
 %end
 </ul>
 
