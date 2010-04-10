@@ -463,14 +463,16 @@ Y desde ya que todo está en la base de datos:
 HTML
 ~~~~
 
+    BlueTrip te da un conjunto razonable de estilos y una forma común de
+    construir un sitio web para que puedas saltear la parte aburrida y
+    ponerte a diseñar.
+
+    -- http://bluetrip.org
+    
 Soy un cero a la izquierda en cuanto a diseño gráfico, HTML, estética, etc. En
 consecuencia, para CSS y demás simplemente busqué algo fácil de usar y lo usé.
 Todo el "look" del sitio va a estar basado en `BlueTrip <http://bluetrip.org/>`_
 un framework de CSS:
-
-    BlueTrip te da un conjunto razonable de estilos y una forma común de
-    construir un sitio web para que puedas saltear la parte aburrida y
-    ponerte a diseñar.
 
 Dado que no pienso diseñar mucho, ¡gracias BluTrip!
 
