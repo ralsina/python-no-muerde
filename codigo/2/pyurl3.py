@@ -69,13 +69,6 @@ class Atajo(object):
     # Caracteres válidos en un atajo de URL
     validos = string.letters + string.digits
 
-    @classmethod
-    def slug_to_id(cls, slug):
-        i = 0
-        for p,l in enumerate(slug):
-            i += 62 ** p * cls.validos.index(l)
-        return i
-
     def slug(self):
         '''Devuelve el slug correspondiente al
         ID de este atajo
@@ -91,11 +84,26 @@ class Atajo(object):
 
         '''
         s = ''
-        n = self._id
+        n = self.id
         while n:
             s += self.validos[n%62]
             n = n // 62
         return s
+
+    @classmethod
+    def get(cls, slug = None, user = None):
+        ''' Dado un slug, devuelve el atajo correspondiente.
+        Dado un usuario, devuelve la lista de sus atajos
+        '''
+        
+        if slug is not None:
+            i = 0
+            for p,l in enumerate(slug):
+                i += 62 ** p * cls.validos.index(l)
+            return cls.store.find(cls, id = i).one()
+            
+        if user is not None:
+            return cls.store.find(cls, user = user)
 
 
 # Usamos bottle para hacer el sitio
