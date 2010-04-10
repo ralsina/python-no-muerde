@@ -12,7 +12,8 @@
      "stdSansBold":  "DejaVu Sans-Bold",
      "stdSansBoldItalic":  "DejaVu Sans-BoldOblique",
      "stdSansItalic":  "DejaVu Sans-Oblique",
-     "stdSerif": "DejaVu Serif"
+     "stdSerif": "DejaVu Serif",
+     "headingFont": "DejaVu Sans Light"
   },
   "pageSetup": {
     "firstTemplate": "coverPage",
@@ -43,10 +44,30 @@
     [ "base", {
         "fontName": "stdSerif"
       }],
+    [ "heading", {
+        "fontName": "headingFont"
+      }],
+    [ "heading1", {
+        "fontName": "headingFont"
+      }],
+    [ "heading2", {
+        "fontName": "headingFont"
+      }],
+    [ "heading3", {
+        "fontName": "headingFont"
+      }],
+    [ "heading4", {
+        "fontName": "headingFont"
+      }],
+    [ "heading5", {
+        "fontName": "headingFont"
+      }],
+    [ "heading6", {
+        "fontName": "headingFont"
+      }],
     [ "blockquote", {
-        "alignment": "left",
         "fontName": "stdItalic",
-        "width": "70%"
+        "leftIndent": "80"
       }],
     [ "attribution", {
         "fontName": "stdBold"
