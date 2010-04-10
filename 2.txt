@@ -237,6 +237,7 @@ Necesitamos importar varios módulos nuevos [#]_:
 .. [#] Hasta donde sé, necesitamos instalar:
 
        * AuthKit
+       * Beaker
        * PasteDeploy
        * PasteScript
        * WebOb
@@ -255,9 +256,9 @@ pyurl1.py
    :start-at: # Middlewares
    :end-before: @bottle.route
 
-En cada función que queremos sólo esté disponible para usuarios autenticados
-se verifica si el usuario lo está. De no ser así, se da un error 401. El
-middleware intercepta esos errores y muestra la pantalla de login.
+Si queremos que una función sólo esté disponible para usuarios autenticados,
+lo verificamos. De no ser así, se da un error 401. El middleware intercepta
+esos errores y muestra la pantalla de login.
 
 .. class:: titulo-listado
 
