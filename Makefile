@@ -23,11 +23,11 @@ LISTADOS=codigo/4/gaso1.py\
 %.print.png: %.screen.png
 	convert -resize 1200 $< $@
 
-%.pdf: %.txt estilo.style
-	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa.tmpl
+%.pdf: %.txt estilo.style Makefile tapa-capitulo.tmpl
+	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl
 
 python_no_muerde.pdf: tapa.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS} ${SCREENSHOTS}
-	rst2pdf -e dotted_toc -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo indice.txt -o python_no_muerde.pdf --custom-cover=tapa.tmpl
+	rst2pdf -e dotted_toc -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo,tapa indice.txt -o python_no_muerde.pdf --custom-cover=tapa.tmpl
 
 sitio: .phony ${FIGURAS_WEB} 
 	(cd web ; ln -sf ../codigo .)
