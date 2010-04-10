@@ -12,7 +12,7 @@ La vida es Corta
     -- Neal Stephenson (Snow Crash)
 
 A los veinticinco, sin embargo, uno se da cuenta que realmente no vale la pena
-pasarse diez años estudiando en un monasterio, porqueno hay WiFi y no hay una
+pasarse diez años estudiando en un monasterio, porque no hay WiFi y no hay una
 cantidad ilimitada de años como para hacerse el Kung Fu.
 
 De la misma forma, cuando uno empieza a programar cree que cada cosa que
@@ -86,16 +86,16 @@ El Problema
 
 Lo describe Tarek Ziadé en `URLs in Books <http://tarekziade.wordpress.com/2009/04/19/urls-in-books/>`_:
 
-    Recibí algunas quejas acerca de que algunos links en mis libros no funcionaban
-    cuando fueron publicados.
+    Recibí algunas quejas acerca de que algunos links en mis libros no
+    funcionaban cuando fueron publicados.
 
     Para el próximo libro que estoy escribiendo, le propuse a mi editor crear un
     sitio para registrar las referencias mencionadas.
 
     Usando referencias ascii cortas y únicas a lo largo del libro, es facil
-    proveer un servicio sencillo de redirección a la URL de destino, y arreglarlo
-    cuando cambie (simplemente creando un alerta de email si la redirección da
-    error 404).
+    proveer un servicio sencillo de redirección a la URL de destino, y
+    arreglarlo cuando cambie (simplemente creando un alerta de email si la
+    redirección da error 404).
 
 Ya que no tengo editor, lo voy a tener que hacer yo mismo. Me parece una buena
 idea, va a ser útil para este proyecto, no encuentro nada hecho similar, es un
@@ -107,9 +107,9 @@ Una vez decidido a encarar este proyecto, establezcamos las metas:
 
 * Que use URLs cortas y memotécnicas.
 
-* Que el usuario editar las redirecciones en cualquier momento.
+* Que el usuario pueda editar las redirecciones en cualquier momento.
 
-* Que notifique cuando la URL no sirva para poder corregirla.
+* Que notifique cuando la URL no sirva, para poder corregirla.
 
 Además, como metas "ideológicas":
 
@@ -151,22 +151,26 @@ en una hora.
 
 * ``/SLUG/edit/`` donde se edita una redirección (solo para el dueño del slug).
 
-* ``/SLUG/del/`` eliminar redirección (solo para el dueño del slug).
+* ``/SLUG/del/`` para eliminar una redirección (solo para el dueño del slug).
 
 * ``/SLUG`` redirige al sitio deseado.
 
-* ``/static/archivo`` devuelve ese archivo (para CSS, imágenes, etc)
+* ``/static/archivo`` devuelve un archivo (para CSS, imágenes, etc)
 
-Empecemos con un "stub", una aplicación mínima bottle que controle esas URLs.
+* ``/logout`` cierra la sesión del usuario.
+
+
+Empecemos con un "stub", una aplicación bottle mínima que controle esas URLs.
 El concepto básico en bottle es:
 
 * Creás una función que toma argumentos y devuelve una página web
 * Usás el decorador ``@bottle.route`` para que un PATH de URL determinado
   llame a esa función.
 * Si querés que una parte de la URL sea un argumento de la función, usás
-  ``:nombrearg`` y la tomás como argumento (ver en el listado, función borrar)
+  ``:nombrearg`` y la tomás como argumento (ej: ver en el listado, función
+  borrar)
 
-Después hay mas cosas, pero esto es suficiente por ahora:
+Después hay más cosas, pero esto es suficiente por ahora:
 
 .. class:: titulo-listado
 
@@ -218,13 +222,25 @@ haciendo el usuario X".
 ¿Cómo se autentica el usuario?
 
 * Si tiene una cuenta de Yahoo: ingresa ``yahoo.com``
-* Si tiene una cuenta de Google: ingresa ``https://www.google.com/accounts/o8/id``
+* Si tiene una cuenta de Google: ingresa
+  ``https://www.google.com/accounts/o8/id`` [#]_
 
-O se les crean botones "Entrar con tu cuenta de google", etc.
+.. [#] O se crean botones "Entrar con tu cuenta de google", etc.
+
+Luego OpenID se encarga de autenticarlo via Yahoo/Google/etc. y darnos el
+usuario autenticado como parte de la sesión.
 
 Hagamos entonces que nuestra aplicación de prueba soporte OpenID.
 
-Necesitamos importar varios módulos nuevos
+Necesitamos importar varios módulos nuevos [#]_:
+
+.. [#] Hasta donde sé, necesitamos instalar:
+
+       * AuthKit
+       * PasteDeploy
+       * PasteScript
+       * WebOb
+       * Decorator
 
 .. class:: titulo-listado
 
@@ -240,7 +256,8 @@ pyurl1.py
    :end-before: @bottle.route
 
 En cada función que queremos sólo esté disponible para usuarios autenticados
-se verifica si el usuario lo está. De no ser así, se da un error 401:
+se verifica si el usuario lo está. De no ser así, se da un error 401. El
+middleware intercepta esos errores y muestra la pantalla de login.
 
 .. class:: titulo-listado
 
@@ -255,6 +272,21 @@ pyurl1.py
    :start-at: @bottle.route('/')
    :end-before: @bottle.route('/:slug/edit')
     
+
+Implementamos logout:
+
+.. class:: titulo-listado
+
+pyurl1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl2.py
+   :start-at: @bottle.route('/logout')
+   :end-before: @bottle.route('/')
 
 Por último, se "envuelve" la aplicación con el middleware de autenticación:
 
@@ -274,7 +306,8 @@ pyurl1.py
 
 .. figure:: pyurl2-1.print.png
 
-   El sitio muestra una pantalla de login
+   El sitio muestra una pantalla de login (Es fea porque es la que
+   viene por default)
 
 .. figure:: pyurl2-2.print.png
 
