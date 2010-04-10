@@ -344,7 +344,7 @@ y "bajar" a SQL o a NoSQL).
 
 Por lo tanto, en el espíritu de "no inventes, usá", vamos a usar un ORM. En
 particular vamos a usar `Storm <https://storm.canonical.com/>`_, un ORM
-creado por Canonical, que me gusta [#]_.
+creado por `Canonical <http://www.canonical.com>`_, que me gusta [#]_.
 
 .. [#] Me gusta más `Elixir <http://elixir.ematia.de/trac/wiki>`_ pero es
        bastante más complicado para algunas cosas.
