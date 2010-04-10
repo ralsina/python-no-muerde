@@ -476,3 +476,31 @@ un framework de CSS:
 
 Dado que no pienso diseñar mucho, ¡gracias BluTrip!
 
+Necesitamos 3 páginas en HTML:
+
+* Bienvenida (invitado):
+
+  + Ofrece login.
+  + Explica el servicio.
+  
+* Bienvenida (usuario):
+
+  + Ofrece crear nuevo atajo
+  + Muestra atajos existentes (ofrece edición/eliminar/status)
+  + Ofrece logout
+
+* Edición de atajo:
+
+  + Cambiar donde apunta (URL).
+  + Cambiar test.
+  + Probar test.
+  + Eliminar.
+
+No voy a mostrar el detalle de cada página, mi HTML es básico, sólo veamos
+algunas capturas de las páginas:
+
+
+Como las páginas son en realidad generadas con el lenguaje de templates
+de bottle, hay que pensar qué parámetros se pasan, y usarlos en el
+template.
+
