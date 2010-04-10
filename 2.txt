@@ -84,8 +84,6 @@ a ver como creamos un programa útil con casi nada de código propio.
 El Problema
 ~~~~~~~~~~~
 
-Lo describe Tarek Ziadé en `URLs in Books <http://tarekziade.wordpress.com/2009/04/19/urls-in-books/>`_:
-
     Recibí algunas quejas acerca de que algunos links en mis libros no
     funcionaban cuando fueron publicados.
 
@@ -96,6 +94,8 @@ Lo describe Tarek Ziadé en `URLs in Books <http://tarekziade.wordpress.com/2009
     proveer un servicio sencillo de redirección a la URL de destino, y
     arreglarlo cuando cambie (simplemente creando un alerta de email si la
     redirección da error 404).
+
+    -- Tarek Ziadé en `URLs in Books <http://tarekziade.wordpress.com/2009/04/19/urls-in-books/>`_
 
 Ya que no tengo editor, lo voy a tener que hacer yo mismo. Me parece una buena
 idea, va a ser útil para este proyecto, no encuentro nada hecho similar, es un
