@@ -453,8 +453,10 @@ Y desde ya que todo está en la base de datos:
                         test VARCHAR,
                         user VARCHAR
                     );
-    INSERT INTO "atajo" VALUES(1,'http://nomuerde.netmanagers.com.ar',NULL,'unnombredeusuario');
-    INSERT INTO "atajo" VALUES(2,'http://www.python.org',NULL,'unnombredeusuario');
+    INSERT INTO "atajo" VALUES(1,'http://nomuerde.netmanagers.com.ar',
+    NULL,'unnombredeusuario');
+    INSERT INTO "atajo" VALUES(2,'http://www.python.org',NULL,
+    'unnombredeusuario');
     COMMIT;
 
 
