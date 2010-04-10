@@ -349,6 +349,23 @@ creado por `Canonical <http://www.canonical.com>`_, que me gusta [#]_.
 .. [#] Me gusta más `Elixir <http://elixir.ematia.de/trac/wiki>`_ pero es
        bastante más complicado para algunas cosas.
 
+El código "original", es decir, convertir URLs a slugs y viceversa es bastante
+tonto:
+
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-at: class Atajo(object):
+   :end-before: # Usamos bottle para hacer el sitio
+
+
 HTML
 ~~~~
 
