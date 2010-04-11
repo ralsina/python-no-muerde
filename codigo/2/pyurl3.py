@@ -195,7 +195,7 @@ def alta():
         data['short']=None
         data['mensaje']=None
 
-    # Lista de atajos, usuario.
+    # Lista de atajos del usuario.
     data ['atajos'] = Atajo.get (user = usuario)
 
     # Crear la página con esos datos.
@@ -243,12 +243,13 @@ if __name__=='__main__':
     app.catchall = False
 
     app = middleware(app,
-                 enable=True,
-                 setup_method='openid',
-                 openid_store_type='file',
-                 openid_template_file=os.path.join(os.getcwd(),'views','invitado.tpl'),
-                 openid_store_config=os.getcwd(),
-                 openid_path_signedin='/')
+        enable=True,
+        setup_method='openid',
+        openid_store_type='file',
+        openid_template_file=os.path.join(os.getcwd(),
+        'views','invitado.tpl'),
+        openid_store_config=os.getcwd(),
+        openid_path_signedin='/')
 
     app = AuthTKTMiddleware(SessionMiddleware(app),
                         'some auth ticket secret');
