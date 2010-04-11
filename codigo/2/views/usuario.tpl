@@ -7,7 +7,7 @@
     <![endif]-->
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
 </head>
-<body style="width: 768px; margin: auto auto auto auto;">
+<body style="width: 768px; margin: auto auto auto auto; font-size: 10pt;">
 <div>
 Bienvenido a PyURL! - <a href="/logout">Cerrar sesión</a>
 </div>
@@ -17,7 +17,6 @@ Bienvenido a PyURL! - <a href="/logout">Cerrar sesión</a>
 
 %if mensaje:
     <p class="{{clasemensaje}}">
-    <!-- Que no escape los <> del mensaje -->
     {{!mensaje}}
     </p>
 %end
@@ -34,8 +33,8 @@ Bienvenido a PyURL! - <a href="/logout">Cerrar sesión</a>
 % for atajo in atajos:
     <tr>
     <td><a href="{{atajo.url}}">{{atajo.slug()}}</a>
-    <td><a href="/{{atajo.slug()}}/edit">Editar</a>
-        <a href="/{{atajo.slug()}}/del">Eliminar</a>
+    <td><a href="/{{atajo.slug()}}/edit">Editar</a>&nbsp;/&nbsp;
+        <a href="/{{atajo.slug()}}/del">Eliminar</a>&nbsp;/&nbsp;
         <a href="/{{atajo.slug()}}/test">Probar</a>
 %end
 </table>
