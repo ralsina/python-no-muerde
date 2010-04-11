@@ -21,7 +21,7 @@ LISTADOS=codigo/4/gaso1.py\
 	dot -Tpng $< > $@
 
 %.print.png: %.screen.png
-	convert -resize 1200 $< $@
+	convert -resize 1500 $< $@
 
 %.pdf: %.txt estilo.style Makefile tapa-capitulo.tmpl
 	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl
