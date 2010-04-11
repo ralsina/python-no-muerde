@@ -502,5 +502,5 @@ algunas capturas de las páginas:
 
 Como las páginas son en realidad generadas con el lenguaje de templates
 de bottle, hay que pensar qué parámetros se pasan, y usarlos en el
-template.
+template. Luego, se le dice a bottle que template usar.
 
