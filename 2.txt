@@ -506,7 +506,8 @@ de bottle, hay que pensar qué parámetros se pasan, y usarlos en el
 template. Luego, se le dice a bottle que template usar.
 
 Tomemos como ejemplo la página ``usuario.tpl``, que es lo que vé el usuario
-registrado en el sitio. Explicación breve de la sintaxis de los templates [#]_:
+registrado en el sitio y es la más complicada. Explicación breve de la
+sintaxis de los templates [#]_:
 
 .. [#] Si no te gusta, es trivial reemplazarlo con otro motor de templates.
 
@@ -537,3 +538,44 @@ usuario.tpl
    :include: codigo/2/views/usuario.tpl   
    :start-at: %if mensaje:
    :end-at: </table>
+
+Entonces, vemos que al template hay que pasarle:
+
+* Un ``mensaje`` (opcional) con un ``clasemensaje`` que define el estilo.
+* Una lista ``atajos`` conteniendo los atajos de este usuario.
+
+También vemos que el formulario de acortar URLs apunta a esta misma
+página con lo que la función deberá:
+
+* Ver si el usuario está autenticado (o dar error 401)
+* Si recibe un parámetro ``url``, acortarlo y dar un ``mensaje`` al respecto.
+* Pasar al template la variable ``atajos`` con los datos necesarios.
+
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-at: @bottle.route('/')
+   :end-at: return data
+
+Las demás páginas no aportan nada interesante:
+
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-after: return data
+   :end-before:     bottle.send_file(filename, root='./static/')
+
