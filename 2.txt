@@ -194,6 +194,7 @@ Apuntando un navegador a esa URL podemos verificar que cada función responde en
 la URL correcta y hace lo que tiene que hacer:
 
 .. figure:: pyurl1-1.print.png
+   :width: 57%
 
    La aplicación de prueba funcionando.
 
@@ -306,19 +307,23 @@ pyurl1.py
 ¿Funciona?
 
 .. figure:: pyurl2-1.print.png
+   :width: 44%
 
    El sitio muestra una pantalla de login (Es fea porque es la que
    viene por default)
 
 .. figure:: pyurl2-2.print.png
+   :width: 100%
 
    Tal vez, el proveedor de OpenID pide usuario/password
 
 .. figure:: pyurl2-3.print.png
+   :width: 100%
 
    Por una única vez se pide autorizar al otro sitio. 
 
 .. figure:: pyurl2-4.print.png
+   :width: 43%
 
    Estamos autenticados y nuestra aplicación de prueba funciona como antes.
 
