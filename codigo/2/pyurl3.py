@@ -166,10 +166,13 @@ def alta():
     # Data va a contener todo lo que el template
     # requiere para hacer la página
     data ={}
-    data ['baseurl'] = 'http://localhost:8080/'
+
+    # Esto probablemente debería obtenerse de una
+    # configuración
+    data['baseurl'] = 'http://localhost:8080/'
 
     # Si tenemos un parámetro URL, estamos en esta
-    # funcion porque el usuario envió una URL.
+    # funcion porque el usuario envió una URL a acortar.
     
     if 'url' in bottle.request.GET:
         # La acortamos
@@ -194,7 +197,6 @@ def alta():
 
     # Lista de atajos, usuario.
     data ['atajos'] = Atajo.get (user = usuario)
-    data ['usuario'] = usuario,
 
     # Crear la página con esos datos.
     return data
@@ -205,7 +207,7 @@ def editar(slug):
     """Edita un slug"""
     if not 'REMOTE_USER' in bottle.request.environ:
         bottle.abort(401, "Sorry, access denied.")
-    return "Borrar el slug=%s"%slug
+    return "Editar el slug=%s"%slug
 
 @bottle.route('/:slug/del')
 def borrar(slug):
