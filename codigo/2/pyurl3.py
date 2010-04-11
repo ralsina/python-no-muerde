@@ -44,14 +44,14 @@ class Atajo(object):
         _id es automático.'''
 
         # Hace falta crear esto?
-
         r = self.store.find(Atajo, user = user, url = url) 
         self.url = url
         self.user = user
         self.activo = True
         if r.count():
+            # FIXME: esto creo que es una race condition
             # Existe la misma URL para el mismo usuario,
-            # reciclamos el id y el test.
+            # reciclamos el id y el test, pero activa.
             viejo = r.one()
             Atajo.store.remove(viejo)
             self.id = viejo.id
@@ -86,7 +86,6 @@ class Atajo(object):
         else:
             cls.database = create_database("sqlite:///pyurl.sqlite")
             cls.store = Store (cls.database)
-
 
     # Caracteres válidos en un atajo de URL
     validos = string.letters + string.digits

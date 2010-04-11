@@ -403,7 +403,7 @@ pyurl3.py
    :linenos:
    :linenos_offset:
    :include: codigo/2/pyurl3.py
-   :start-after:        self.store.commit()
+   :start-after:        Atajo.store.commit()
    :end-before:    # Caracteres
 
 El código "original", es decir, convertir URLs a slugs y viceversa es bastante
