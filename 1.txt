@@ -171,7 +171,7 @@ eficiente.
 Por supuesto que siempre está la posibilidad de que la clase Punto evolucione, y
 haga otras cosas, como por ejemplo calcular la distancia al origen de un punto.
 
-Si bien sería trivial hacer una función que tome una ``namedtuple`` y calcule
+Si bien sería fácil hacer una función que tome una ``namedtuple`` y calcule
 ese valor, es mejor mantener todo el código que manipula los datos de Punto
 dentro de la clase en vez de crear una colección de funciones ad-hoc. Una
 ``namedtuple`` es un reemplazo para las clases sin métodos o los ``struct`` de
@@ -180,7 +180,7 @@ C/C++.
 Pero... hay que considerar el programa como una criatura en evolución. Tal vez
 al comenzar con una ``namedtuple`` *era suficiente*. No valía la pena demorar lo
 demás mientras se diseñaba la clase Punto. Y pasar de una ``namedtuple`` a la
-clase Punto del listado 2 es trivial, ya que la interfaz que presentan es
+clase Punto del listado 2 es sencillo, ya que la interfaz que presentan es
 idéntica.
 
 La crítica que un programador que conoce OOP [#]_ haría (con justa razón) es que
@@ -194,7 +194,7 @@ o hacer operaciones sobre los mismos, etc.
 Muy bien, supongamos que queremos que el usuario pueda poner sólo valores
 positivos en x, y que los valores negativos deban ser multiplicados por -1.
 
-En la clase del listado 1, es trivial:
+En la clase del listado 1:
 
 .. class:: titulo-listado
 
@@ -211,8 +211,8 @@ Listado 4
         def set_x(self, x):
             self._x = abs(x)
 
-Pero... también es trivial en el listado 2, *sin cambiar la interfaz que se
-presenta al usuario*:
+Pero... también es fácil de hacer en el listado 2, *sin cambiar la interfaz
+que se presenta al usuario*:
 
 .. class:: titulo-listado
 
@@ -242,10 +242,10 @@ diferencias:
 
 * No se hicieron los métodos para ``y`` por ser innecesarios.
 
-  Esto es importante: de ser necesarios esos métodos en el futuro es trivial
+  Esto es importante: de ser necesarios esos métodos en el futuro es fácil
   agregarlos. Si nunca lo son, entonces el listado 1 tiene dos funciones inútiles.
 
-  Sí, son dos funciones triviales, que seguramente no crean bugs pero tienen
+  Sí, son dos funciones cortas, que seguramente no crean bugs pero tienen
   implicaciones de performance, y tienen un efecto que a mí personalmente me
   molesta: separan el código que hace algo metiendo en el medio código que no hace
   nada.

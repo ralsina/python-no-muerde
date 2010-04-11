@@ -514,7 +514,7 @@ Tomemos como ejemplo la página ``usuario.tpl``, que es lo que vé el usuario
 registrado en el sitio y es la más complicada. Explicación breve de la
 sintaxis de los templates [#]_:
 
-.. [#] Si no te gusta, es trivial reemplazarlo con otro motor de templates.
+.. [#] Si no te gusta, es fácil reemplazarlo con otro motor de templates.
 
 * ``{{variable}}`` se reemplaza con el valor de ``variable``.
 * ``{{funcion()}}`` se reemplaza con el resultado de ``funcion()``
