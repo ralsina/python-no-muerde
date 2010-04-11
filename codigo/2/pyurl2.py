@@ -70,7 +70,7 @@ if __name__=='__main__':
                  setup_method='openid',
                  openid_store_type='file',
                  openid_store_config=os.getcwd(),
-                 openid_path_signedin='/private')
+                 openid_path_signedin='/')
 
     app = AuthTKTMiddleware(SessionMiddleware(app),
                         'some auth ticket secret');
