@@ -7,17 +7,18 @@
     <![endif]-->
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
 </head>
-<body style="text-align: center; width: 768px; margin: auto auto auto auto;">
+<body style="width: 768px; margin: auto auto auto auto;">
 <div>
 Bienvenido a PyURL! - <a href="/logout">Cerrar sesión</a>
 </div>
+<div style="text-align: center;">
 <h1 class="thin">PyURL - Acorta URLs</h1>
 <hr>
 
-%if url:
-    <p class="success">
-    La URL <a href="{{url}}">{{url}}</a> se convirtió en:
-    <a href="{{baseurl}}{{short}}">{{baseurl}}{{short}}</a>
+%if mensaje:
+    <p class="{{clasemensaje}}">
+    <!-- Que no escape los <> del mensaje -->
+    {{!mensaje}}
     </p>
 %end
 <form>
@@ -25,12 +26,19 @@ Bienvenido a PyURL! - <a href="/logout">Cerrar sesión</a>
     <input type="text" name="url">
     <input type="submit" class="button positive">
 </form>
-
-<ul>
+</div>
+<table>
+    <th>Atajo
+    <th>Acciones
+    </th>
 % for atajo in atajos:
-    <li><a href="{{atajo.url}}">{{atajo.slug()}}</a><a href="/{{atajo.slug()}}/edit">Editar</a></li>
+    <tr>
+    <td><a href="{{atajo.url}}">{{atajo.slug()}}</a>
+    <td><a href="/{{atajo.slug()}}/edit">Editar</a>
+        <a href="/{{atajo.slug()}}/del">Eliminar</a>
+        <a href="/{{atajo.slug()}}/test">Probar</a>
 %end
-</ul>
+</table>
 
 </body>
 </html>
