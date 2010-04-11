@@ -499,8 +499,26 @@ Necesitamos 3 páginas en HTML:
 No voy a mostrar el detalle de cada página, mi HTML es básico, sólo veamos
 algunas capturas de las páginas:
 
+**FIXME: Insertar capturas**
 
 Como las páginas son en realidad generadas con el lenguaje de templates
 de bottle, hay que pensar qué parámetros se pasan, y usarlos en el
 template. Luego, se le dice a bottle que template usar.
 
+Tomemos como ejemplo la página ``usuario.tpl``, que es lo que vé el usuario
+registrado en el sitio.
+
+Ignorando HTML aburrido, es algo así:
+
+.. class:: titulo-listado
+
+usuario.tpl
+
+.. class:: listado
+
+.. code-block:: html
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/views/usuario.tpl   
+   :start-at: %if mensaje:
+   :end-at: </table>
