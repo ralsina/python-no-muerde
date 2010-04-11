@@ -234,7 +234,6 @@ def static_file(filename):
     bottle.send_file(filename, root='./static/')
 
 
-
 if __name__=='__main__':
     """Ejecutar con el server de debug de bottle"""
     bottle.debug(True)
@@ -247,8 +246,9 @@ if __name__=='__main__':
                  enable=True,
                  setup_method='openid',
                  openid_store_type='file',
+                 openid_template_file=os.path.join(os.getcwd(),'views','invitado.tpl'),
                  openid_store_config=os.getcwd(),
-                 openid_path_signedin='/private')
+                 openid_path_signedin='/')
 
     app = AuthTKTMiddleware(SessionMiddleware(app),
                         'some auth ticket secret');
