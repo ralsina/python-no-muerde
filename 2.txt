@@ -506,7 +506,22 @@ de bottle, hay que pensar qué parámetros se pasan, y usarlos en el
 template. Luego, se le dice a bottle que template usar.
 
 Tomemos como ejemplo la página ``usuario.tpl``, que es lo que vé el usuario
-registrado en el sitio.
+registrado en el sitio. Explicación breve de la sintaxis de los templates [#]_:
+
+.. [#] Si no te gusta, es trivial reemplazarlo con otro motor de templates.
+
+* {{variable}} se reemplaza con el valor.
+* {{funcion()}} se reemplaza con el resultado de la función
+* {{!cosa}} es un reemplazo *inseguro*. En los otros, se reemplaza
+  < con &lt; etc. para prevenir problemas de seguridad.
+* Las líneas que empiezan con % son python. Pero....
+
+  Hay que cerrar cada bloque con %end (porque no podemos
+  confiar en la indentación). Ejemplo::
+  
+    %for x in range(10):
+        <li>{{x}}
+    %end
 
 Ignorando HTML aburrido, es algo así:
 
