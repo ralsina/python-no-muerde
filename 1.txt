@@ -257,8 +257,9 @@ diferencias:
 Singletons
 ~~~~~~~~~~
 
-    In a functional language one does not need design patterns because the
-    language is likely so high level, you end up programming in concepts that eliminate design patterns all together.
+    En un lenguaje funcional, uno no necesita patrones de diseño porque el
+    lenguaje es de tan alto nivel que terminás programando en conceptos que
+    eliminan los patrones de diseño por completo.
 
     -- Slava Akhmechet
 
