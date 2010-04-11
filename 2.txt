@@ -460,8 +460,8 @@ Y desde ya que todo está en la base de datos:
     COMMIT;
 
 
-HTML
-~~~~
+HTML / Templates
+~~~~~~~~~~~~~~~~
 
     BlueTrip te da un conjunto razonable de estilos y una forma común de
     construir un sitio web para que puedas saltear la parte aburrida y
@@ -471,8 +471,8 @@ HTML
     
 Soy un cero a la izquierda en cuanto a diseño gráfico, HTML, estética, etc. En
 consecuencia, para CSS y demás simplemente busqué algo fácil de usar y lo usé.
-Todo el "look" del sitio va a estar basado en `BlueTrip <http://bluetrip.org/>`_
-un framework de CSS:
+Todo el "look" del sitio va a estar basado en `BlueTrip <http://bluetrip.org/>`_,
+un framework de CSS.
 
 Dado que no pienso diseñar mucho, ¡gracias BluTrip!
 
@@ -539,9 +539,30 @@ usuario.tpl
    :start-at: %if mensaje:
    :end-at: </table>
 
-Entonces, vemos que al template hay que pasarle:
+La pantalla para usuario no autenticado es un caso particular: la
+genera AuthKit, no Bottle, por lo que hay que pasar el contenido
+como parámetro de creación del middleware:
 
-* Un ``mensaje`` (opcional) con un ``clasemensaje`` que define el estilo.
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-after:     app.catchall = False
+   :end-at:                  openid_path_signedin='/')
+
+
+Backend
+~~~~~~~
+
+Vimos recién que al template ``usuario.tmpl`` hay que pasarle:
+
+* Un ``mensaje`` (opcional) con una ``clasemensaje`` que define el estilo.
 * Una lista ``atajos`` conteniendo los atajos de este usuario.
 
 También vemos que el formulario de acortar URLs apunta a esta misma
