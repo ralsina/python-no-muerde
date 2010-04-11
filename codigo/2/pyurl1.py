@@ -18,7 +18,7 @@ def alta():
 @bottle.route('/:slug/edit')
 def editar(slug):
     """Edita un slug"""
-    return "Borrar el slug=%s"%slug
+    return "Editar el slug=%s"%slug
 
 @bottle.route('/:slug/del')
 def borrar(slug):

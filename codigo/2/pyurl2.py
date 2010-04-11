@@ -36,7 +36,7 @@ def editar(slug):
     """Edita un slug"""
     if not 'REMOTE_USER' in bottle.request.environ:
         bottle.abort(401, "Sorry, access denied.")
-    return "Borrar el slug=%s"%slug
+    return "Editar el slug=%s"%slug
 
 @bottle.route('/:slug/del')
 def borrar(slug):
