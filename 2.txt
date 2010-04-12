@@ -98,8 +98,10 @@ El Problema
     -- Tarek Ziadé en `URLs in Books <http://tarekziade.wordpress.com/2009/04/19/urls-in-books/>`_
 
 Ya que no tengo editor, lo voy a tener que hacer yo mismo. Me parece una buena
-idea, va a ser útil para este proyecto, no encuentro nada hecho similar, es un
+idea, va a ser útil para este proyecto, no encuentro nada hecho similar [#]_, es un
 buen ejemplo del objetivo de este capítulo... ¡vendido!
+
+.. [#] Con el capítulo ya escrito, me han hecho notar http://a.gd 
 
 Una vez decidido a encarar este proyecto, establezcamos las metas:
 
@@ -226,9 +228,11 @@ en una hora.
 * ``/`` donde el usuario se puede autenticar o ver un listado de sus
   redirecciones existentes.
 
-* ``/SLUG/edit/`` donde se edita una redirección (solo para el dueño del slug).
+* ``/SLUG/edit`` donde se edita una redirección (solo para el dueño del slug).
 
-* ``/SLUG/del/`` para eliminar una redirección (solo para el dueño del slug).
+* ``/SLUG/del`` para eliminar una redirección (solo para el dueño del slug).
+
+* ``/SLUG/test`` para eliminar una redirección (solo para el dueño del slug).
 
 * ``/SLUG`` redirige al sitio deseado.
 
