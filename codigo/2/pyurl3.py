@@ -292,7 +292,12 @@ def borrar(slug):
 @bottle.route('/:slug')
 def redir(slug):
     """Redirigir un slug"""
-    return "Redirigir con slug=%s"%slug
+
+    # Buscamos el atajo correspondiente
+    a = Atajo.get(slug=slug)
+    if not a:
+        bottle.abort(404, 'El atajo no existe')
+    bottle.redirect(a.url)
 
 @bottle.route('/static/:filename')
 def static_file(filename):
