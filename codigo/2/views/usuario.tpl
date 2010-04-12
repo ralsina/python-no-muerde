@@ -18,20 +18,28 @@
     %end
 </div>
 
-<div style="float: left; text-align: right; width: 350px;">
+<div style="float: right; text-align: left; width: 350px;">
     <form>
-        URL a acortar:&nbsp;
-        <input type="text" name="url">
-        <input type="submit" class="button positive">
+    <fieldset>
+        <legend>Crear nuevo atajo:</legend>
+        <div>
+        <label for="url">URL a acortar:</label>
+        <input type="text" name="url" id="url"></div>
+        <button class="button positive">Crear</button>
+    </fieldset>
     </form>
-    <a href="/logout">Cerrar sesión</a>
 </div>
 
-<div style="float:right;text-align: left; width: 350px;">
-    <table>
-        <th>Atajo
-        <th>Acciones
+<div style="float:left;text-align: right; width: 350px;">
+    <table style="width:100%;">
+        <caption>Atajos Existentes</caption>
+        <thead>
+        <tr>
+        <th>Atajo</th>
+        <th>Acciones</th>
+        </tr>
         </th>
+        </thead>
         % for atajo in atajos:
             <tr>
             <td><a href="{{atajo.url}}">{{atajo.slug()}}</a>
@@ -40,6 +48,9 @@
                 <a href="/{{atajo.slug()}}/test">Probar</a>
         %end
     </table>
+</div>
+<div style="clear: both;text-align: center;"">
+    <a href="/logout">Cerrar sesión</a>
 </div>
 </body>
 </html>
