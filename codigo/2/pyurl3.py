@@ -165,6 +165,7 @@ class Atajo(object):
         if slug is not None:
             i = 0
             for p,l in enumerate(slug):
+                print p,l
                 i += 62 ** p * cls.validos.index(l)
             return cls.store.find(cls, id = i, activo = True).one()
             
@@ -289,7 +290,8 @@ def borrar(slug):
     # FIXME: pasar un mensaje en la sesión
     bottle.redirect('/')
 
-@bottle.route('/:slug')
+# Un slug está formado sólo por estos caracteres
+@bottle.route('/(?P<slug>[a-zA-Z0-9]+)')
 def redir(slug):
     """Redirigir un slug"""
 
@@ -299,6 +301,8 @@ def redir(slug):
         bottle.abort(404, 'El atajo no existe')
     bottle.redirect(a.url)
 
+# Lo de /:filename es para favicon.ico :-)
+@bottle.route('/:filename')
 @bottle.route('/static/:filename')
 def static_file(filename):
     """Archivos estáticos (CSS etc)"""

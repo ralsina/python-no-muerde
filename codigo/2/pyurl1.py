@@ -25,7 +25,8 @@ def borrar(slug):
     """Elimina un slug"""
     return "Borrar el slug=%s"%slug
 
-@bottle.route('/:slug')
+# Un slug está formado sólo por estos caracteres
+@bottle.route('/(?P<slug>[a-zA-Z0-9]+)')
 def redir(slug):
     """Redirigir un slug"""
     return "Redirigir con slug=%s"%slug
