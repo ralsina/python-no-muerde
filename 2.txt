@@ -591,15 +591,15 @@ Necesitamos 3 páginas en HTML:
 No voy a mostrar el detalle de cada página, mi HTML es básico, sólo veamos
 algunas capturas de las páginas:
 
-.. figure:: pyul3-1.print.png
+.. figure:: pyurl3-1.print.png
 
    Pantalla de invitado.
   
-.. figure:: pyul3-2.print.png
+.. figure:: pyurl3-2.print.png
 
    Pantalla de usuario.
 
-.. figure:: pyul3-3.print.png
+.. figure:: pyurl3-3.print.png
 
    Usuario editando un atajo.
 
