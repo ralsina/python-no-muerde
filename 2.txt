@@ -208,9 +208,14 @@ En particular, tiene el concepto de "middleware". ¿Qué es el middleware? Es un
 aplicación intermediaria. El pedido del cliente va al middleware, este lo
 procesa y luego se lo pasa a tu aplicación original.
 
-En nuestro caso, queremos que ciertas partes de la aplicación estén autenticadas.
-Bueno, la manera práctica es usar un middleware de autenticación que se encargue
-de todo y a nosotros simplemente nos interesa saber qué usuario es.
+Un caso particular es el middleware de autenticación, que permite que la
+aplicación web sepa si el usuario está autenticado o no. En nuestro caso,
+ciertas áreas de la aplicación sólo deben ser accesibles a ciertos usuario. Por ejemplo, un atajo sólo puede ser editado por el usuario que lo creó.
+
+Todo lo que esta aplicación requiere del esquema de autenticación es saber:
+
+1. Si el usuario está autenticado o no.
+2. Cuál usuario es.
 
 Vamos a usar `AuthKit <http://authkit.org/>`_ con OpenID. De esa manera vamos
 a evitar una de las cosas más molestas de las aplicaciones web, la proliferación
@@ -218,7 +223,7 @@ de cuentas de usuario.
 
 Al usar OpenID, no vamos a tener ningún concepto de usuario propio, simplemente
 vamos a confiar en que OpenID haga su trabajo y nos diga "este acceso lo está
-haciendo el usuario X".
+haciendo el usuario X" o "este acceso es de un usuario sin autenticar".
 
 ¿Cómo se autentica el usuario?
 
