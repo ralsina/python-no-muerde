@@ -18,11 +18,11 @@
     %end
     <h2>Propiedades del atajo {{atajo.slug()}}</h2>
 
-<form>
+<form method="POST">
 <fieldset style="width:650px; text-align:left;">
     <div>
         <label for="url">URL:</label><br/>
-        <input type="text" id="url" name="url" size=80>
+        <input type="text" id="url" name="url" size=80 value="{{atajo.url}}">
     </div>
     <div>
         <label for="activo">Activo:</label><br/>
