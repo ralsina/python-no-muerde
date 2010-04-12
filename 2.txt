@@ -210,7 +210,8 @@ procesa y luego se lo pasa a tu aplicación original.
 
 Un caso particular es el middleware de autenticación, que permite que la
 aplicación web sepa si el usuario está autenticado o no. En nuestro caso,
-ciertas áreas de la aplicación sólo deben ser accesibles a ciertos usuario. Por ejemplo, un atajo sólo puede ser editado por el usuario que lo creó.
+ciertas áreas de la aplicación sólo deben ser accesibles a ciertos usuarios.
+Por ejemplo, un atajo sólo puede ser editado por el usuario que lo creó.
 
 Todo lo que esta aplicación requiere del esquema de autenticación es saber:
 
