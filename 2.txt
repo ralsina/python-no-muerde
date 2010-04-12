@@ -232,7 +232,8 @@ en una hora.
 
 * ``/SLUG/del`` para eliminar una redirección (solo para el dueño del slug).
 
-* ``/SLUG/test`` para eliminar una redirección (solo para el dueño del slug).
+* ``/SLUG/test`` para correr el test de una redirección (solo para el
+  dueño del slug).
 
 * ``/SLUG`` redirige al sitio deseado.
 
