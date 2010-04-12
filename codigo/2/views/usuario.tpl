@@ -34,18 +34,15 @@
     <table style="width:100%;">
         <caption>Atajos Existentes</caption>
         <thead>
-        <tr>
-        <th>Atajo</th>
-        <th>Acciones</th>
-        </tr>
-        </th>
+            <tr> <th>Atajo</th> <th>Acciones</th> </tr>
         </thead>
         % for atajo in atajos:
-            <tr>
+        <tr>
             <td><a href="{{atajo.url}}">{{atajo.slug()}}</a>
             <td><a href="/{{atajo.slug()}}/edit">Editar</a>&nbsp;/&nbsp;
                 <a href="/{{atajo.slug()}}/del">Eliminar</a>&nbsp;/&nbsp;
                 <a href="/{{atajo.slug()}}/test">Probar</a>
+        </tr>
         %end
     </table>
 </div>
