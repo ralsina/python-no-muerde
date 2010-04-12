@@ -272,6 +272,7 @@ def editar(slug):
         a.activo = 'activo' in bottle.request.GET
         a.test = bottle.request.GET['test'].decode('utf-8')
         a.save()
+        bottle.redirect('/')
         
     return {'atajo':a,
             'mensaje':'',
@@ -286,7 +287,7 @@ def borrar(slug):
     
     # Solo el dueño de un atajo puede borrarlo
     a = Atajo.get(slug)
-    if a.user == usuario:
+    if a and a.user == usuario:
         a.delete()
     # FIXME: pasar un mensaje en la sesión
     bottle.redirect('/')
