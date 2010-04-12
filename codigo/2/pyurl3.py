@@ -29,6 +29,8 @@ class Atajo(object):
     activo = Si este atajo está activo o no.
              Nunca hay que borrarlos, sino el ID puede volver
              atrás y se "recicla" una URL. ¡Malo, malo, malo!
+    status = Resultado del último test (bien/mal)
+    ultimo = Fecha/hora del último test
     '''
 
     # Hacer que los datos se guarden via Storm
@@ -38,6 +40,8 @@ class Atajo(object):
     test   = Unicode()
     user   = Unicode()
     activo = Bool()
+    status = Bool()
+    ultimo = DateTime()
 
     def __init__(self, url, user):
         '''Exigimos la URL y el usuario, test es opcional,
@@ -72,6 +76,7 @@ class Atajo(object):
             cls.database = create_database("sqlite:///pyurl.sqlite")
             cls.store = Store (cls.database)
             try:
+                print 'CREO'
                 # Creamos la tabla
                 cls.store.execute ('''
                 CREATE TABLE atajo (
@@ -79,8 +84,12 @@ class Atajo(object):
                     url VARCHAR,
                     test VARCHAR,
                     user VARCHAR,
-                    activo TINYINT
+                    activo TINYINT,
+                    status TINYINT,
+                    ultimo TIMESTAMP
                 ) ''' )
+                cls.store.flush()
+                cls.store.commit()
             except:
                 pass
         else:
@@ -222,10 +231,9 @@ def editar(slug):
         a.test = bottle.request.GET['test'].decode('utf-8')
         a.save()
         
-        return {'atajo':a,
-                'mensaje':'',
-                }
-    bottle.redirect('/')
+    return {'atajo':a,
+            'mensaje':'',
+            }
 
 @bottle.route('/:slug/del')
 def borrar(slug):
