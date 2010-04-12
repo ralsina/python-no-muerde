@@ -11,6 +11,25 @@ import os
 
 import string
 
+from twill.commands import go, code, find, notfind, title
+def minitwill(url, script):
+    '''Dada una URL y un script en una versión limitada
+    de twill, ejecuta ese script.
+    Apenas una línea falla, devuelve False.
+
+    Si todas tienen éxito, devuelve True.
+    '''
+    go (url)
+    for line in script.splitlines():
+        cmd,arg = line.split(' ',1)
+        try:
+            if cmd in ['code','find','notfind','title']:
+                r = globals()[cmd](arg)
+        except:
+            return False
+    return True
+
+
 # Usamos storm para almacenar los datos
 from storm.locals import *
 
