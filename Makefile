@@ -23,7 +23,8 @@ LISTADOS=codigo/4/gaso1.py\
 
 fuentes.zip:
 	find codigo -name "*~" -exec rm {} \;
-	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*" "codigo/2/*sqlite" "*pyc" "*~"
+	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*"\
+	 "codigo/2/*sqlite" "*pyc" "*~" "temp"
 
 %.graph.pdf: %.dot
 	dot -Tpdf $< > $@
