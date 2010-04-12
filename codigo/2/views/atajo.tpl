@@ -26,7 +26,11 @@
     </div>
     <div>
         <label for="activo">Activo:</label><br/>
-        <input type="checkbox" id="activo" name="activo" value="{{atajo.activo}}">
+        % if atajo.activo:
+            <input type="checkbox" id="activo" name="activo" checked>
+        % else:
+            <input type="checkbox" id="activo" name="activo">
+        % end
     </div>
     <div>
         <label for="test">Test:</label><br/>
@@ -34,7 +38,18 @@
 {{atajo.test}}
         </textarea>
     </div>
-        <button class="button positive">Guardar</button>
+    <div>
+        <label>Status:</label>
+        % if atajo.status:
+            <img src="/weather-clear.png" alt="Success" align="MIDDLE"/>
+        % else:
+            <img src="/weather-storm.png" alt="Failure" align="MIDDLE"/>
+        % end
+    </div>
+    <div>
+        <label>Último test:</label> {{atajo.ultimo}}
+    </div>
+        <button class="button positive" style="float:right;">Guardar</button>
 </fieldset>
 </form>
 <div style="clear: both; text-align: center;">
