@@ -591,7 +591,17 @@ Necesitamos 3 páginas en HTML:
 No voy a mostrar el detalle de cada página, mi HTML es básico, sólo veamos
 algunas capturas de las páginas:
 
-**FIXME: Insertar capturas**
+.. image:: pyul3-1.print.png
+
+   Pantalla de invitado.
+  
+.. image:: pyul3-2.print.png
+
+   Pantalla de usuario.
+
+.. image:: pyul3-3.print.png
+
+   Usuario editando un atajo.
 
 Como las páginas son en realidad generadas con el lenguaje de templates
 de bottle, hay que pensar qué parámetros se pasan, y usarlos en el
