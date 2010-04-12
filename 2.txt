@@ -141,7 +141,7 @@ Twill
 ~~~~~
 
 Una de las cosas interesantes de este proyecto me parece hacer que el sistema
-testee automaticamente las URLs de un usuario.
+testee automáticamente las URLs de un usuario.
 
 Una herramienta muy cómoda para estas cosas es `Twill <http://twill.idyll.org>`_
 que podría definirse como un lenguaje de testing de sitios web.
