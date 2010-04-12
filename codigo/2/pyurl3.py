@@ -207,7 +207,25 @@ def editar(slug):
     """Edita un slug"""
     if not 'REMOTE_USER' in bottle.request.environ:
         bottle.abort(401, "Sorry, access denied.")
-    return "Editar el slug=%s"%slug
+    usuario = bottle.request.environ['REMOTE_USER'].decode('utf8')
+
+    # Solo el dueño de un atajo puede editarlo
+    a = Atajo.get(slug)
+    # Atajo no existe o no sos el dueño
+    if not a or a.user != usuario:
+        bottle.abort(404, 'El atajo no existe')
+
+    if 'url' in bottle.request.GET:
+        # El usuario mandó el form
+        a.url = bottle.request.GET['url'].decode('utf-8')
+        a.activo = 'activo' in bottle.request.GET
+        a.test = bottle.request.GET['test'].decode('utf-8')
+        a.save()
+        
+        return {'atajo':a,
+                'mensaje':'',
+                }
+    bottle.redirect('/')
 
 @bottle.route('/:slug/del')
 def borrar(slug):
