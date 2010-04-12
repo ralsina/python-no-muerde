@@ -3,9 +3,9 @@
     <link rel="stylesheet" href="/static/screen.css" type="text/css" media="screen, projection">
     <link rel="stylesheet" href="/static/print.css" type="text/css" media="print">
     <!--[if IE]>
-        <link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/static/ie.css" type="text/css" media="screen, projection">
     <![endif]-->
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/static/style.css" type="text/css" media="screen, projection">
 </head>
 <body style="width: 768px; margin: auto auto auto auto; font-size: 10pt;">
 
