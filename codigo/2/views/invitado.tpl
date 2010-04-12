@@ -25,14 +25,15 @@ acortador, pero con algunas diferencias:</p>
 abrir una cuenta, utilice cualquier proveedor OpenID.</p>
 
 <div class="$css_class">$message</div>
-
+<div>
     <form action="$action" method="post">
-    <fieldset>
+    <fieldset style="border: 0px;">
         Su URL de identificaci&oacute;n OpenID:
         <input type="text" name="openid" value="$value">
-      <button type="button positive" style="float right;">Ingresar</button>
+      <button type="button positive">Ingresar</button>
     </fieldset>
     </form>
+</div>
 <!-- Falta agregar botones para yahoo/google -->
 </body>
 </html>
