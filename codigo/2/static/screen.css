@@ -29,7 +29,7 @@ blockquote *:first-child:before { content: "\201C"; }
 blockquote *:first-child:after { content: "\201D"; }
 
 /*** FORMS ***/
-fieldset { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
+fieldset { padding:1.4em; margin: 0 0 1.5em 0; }
 legend { font-weight: bold; font-size:1.2em; }
 label { font-weight: bold; }
 textarea, input[type='text'], input[type='password'], select { border: 1px solid #ccc; background: #fff; }
@@ -286,7 +286,6 @@ a[href^="http://127.0.0.1:8080"] { background:none; padding:0; margin:0; }
 /*** STYLES FOR BUTTONS ***/
 a.button, button {
   display: inline-block;
-  float: left;
   margin:0 0.583em 0.667em 0;
   padding:5px 10px 5px 7px;   /*** Links ***/
   border:1px solid #dedede;
