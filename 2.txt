@@ -135,6 +135,83 @@ Separemos la tarea en componentes:
 
 Veamos los componentes elegidos para este desarrollo.
 
+Twill
+~~~~~
+
+Una de las cosas interesantes de este proyecto me parece hacer que el sistema
+testee automaticamente las URLs de un usuario.
+
+Una herramienta muy cómoda para estas cosas es `Twill <http://twill.idyll.org>`_
+que podría definirse como un lenguaje de testing de sitios web.
+
+Por ejemplo, si todo lo que quiero es saber si el sitio www.google.com funciona
+es tan sencillo como::
+
+    go http://www.google.com
+    code 200
+
+Y así funciona::
+
+    $ twill-sh twilltest.script
+    >> EXECUTING FILE twilltest.script
+    AT LINE: twilltest.script:0
+    ==> at http://www.google.com.ar/
+    AT LINE: twilltest.script:1
+    --
+    1 of 1 files SUCCEEDED.
+
+Ahora bien, twill es demasiado para nosotros. Permite almacenar cookies [#]_, llenar
+formularios, y mucho más. Yo tan solo quiero lo siguiente:
+
+.. [#] Como problema adicional, almacena cookies en el archivo que le digas.
+       Serio problema de seguridad para una aplicación web.
+
+1. Ir al sitio indicado.
+2. Testear el código (para asegurarse que la página existe).
+3. Verificar que un texto se encuentra en la página (para asegurarse
+   que ahora no es un sitio acerca de un tema distinto).
+
+O sea, solo necesito los comandos twill ``code`` y ``find``. Así porque soy buen
+tipo, podríamos habilitar ``notfind`` y ``title``.
+
+Todos esos comandos son de la forma ``comando argumento`` con lo que un parser de
+un lenguaje "minitwill" es muy fácil de hacer:
+
+.. class:: titulo-listado
+
+pyurl3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/2/pyurl3.py
+   :start-at: from twill.commands
+   :end-before: # Usamos storm para almacenar los datos
+
+Veamos minitwill en acción:
+
+.. code-block:: pycon
+
+    >>> minitwill('http://www.google.com','code 200')
+    ==> at http://www.google.com.ar/
+    True
+    >>> minitwill('http://www.google.com','code 404')
+    ==> at http://www.google.com.ar/
+    False
+    >>> minitwill('http://www.google.com','find bing')
+    ==> at http://www.google.com.ar/
+    False
+    >>> minitwill('http://www.google.com','title google')
+    ==> at http://www.google.com.ar/
+    title is 'Google'.
+    False
+    >>> minitwill('http://www.google.com','title Google')
+    ==> at http://www.google.com.ar/
+    title is 'Google'.
+    True
+
 Bottle
 ~~~~~~
 
