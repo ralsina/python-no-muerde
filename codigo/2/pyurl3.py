@@ -292,6 +292,20 @@ def borrar(slug):
     # FIXME: pasar un mensaje en la sesión
     bottle.redirect('/')
 
+@bottle.route('/:slug/test')
+def run_test(slug):
+    """Corre el test correspondiente a un atajo"""
+    if not 'REMOTE_USER' in bottle.request.environ:
+        bottle.abort(401, "Sorry, access denied.")
+    usuario = bottle.request.environ['REMOTE_USER'].decode('utf8')
+
+    # Solo el dueño de un atajo puede probarlo
+    a = Atajo.get(slug)
+    if a and a.user == usuario:
+        a.run_test()
+    # FIXME: pasar un mensaje en la sesión
+    bottle.redirect('/')
+
 # Un slug está formado sólo por estos caracteres
 @bottle.route('/(?P<slug>[a-zA-Z0-9]+)')
 def redir(slug):
