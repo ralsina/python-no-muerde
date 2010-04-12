@@ -38,7 +38,13 @@
         </thead>
         % for atajo in atajos:
         <tr>
-            <td><a href="{{atajo.url}}">{{atajo.slug()}}</a>
+        % if atajo.status:
+            <td><img src="weather-clear.png" alt="Success" align="MIDDLE"/>
+            <a href="{{atajo.url}}">{{atajo.slug()}}</a>
+        % else:
+            <td><img src="weather-storm.png" alt="Failure" align="MIDDLE"/>
+            <a href="{{atajo.url}}">{{atajo.slug()}}</a>
+        % end
             <td><a href="/{{atajo.slug()}}/edit">Editar</a>&nbsp;/&nbsp;
                 <a href="/{{atajo.slug()}}/del">Eliminar</a>&nbsp;/&nbsp;
                 <a href="/{{atajo.slug()}}/test">Probar</a>
