@@ -21,6 +21,10 @@ LISTADOS=codigo/4/gaso1.py\
 	 codigo/2/pyurl3.py\
 	 codigo/2/views/usuario.tpl
 
+fuentes.zip:
+	find codigo -name "*~" -exec rm {} \;
+	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*" "codigo/2/*sqlite" "*pyc" "*~"
+
 %.graph.pdf: %.dot
 	dot -Tpdf $< > $@
 
@@ -36,9 +40,9 @@ LISTADOS=codigo/4/gaso1.py\
 python_no_muerde.pdf: tapa.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS} ${SCREENSHOTS}
 	rst2pdf -e dotted_toc -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo,tapa indice.txt -o python_no_muerde.pdf --custom-cover=tapa.tmpl
 
-sitio: .phony ${FIGURAS_WEB} 
+sitio: .phony ${FIGURAS_WEB} fuentes.zip
 	(cd web ; ln -sf ../codigo .)
-	(cd sitio ; ln -sf ../*.graph.png ../*.pdf ../*screen.png .)
+	(cd sitio ; ln -sf ../*.graph.png ../*.pdf ../*screen.png ../fuentes.zip .)
 	python r2w.py rst2web.ini
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 	(cd sitio; sed --in-place 's/print\.png/screen\.png/g' *html)
