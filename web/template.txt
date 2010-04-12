@@ -30,8 +30,8 @@ if 'index' not in source_file:
     fname=source_file.split('/')[-1]
     print '''&nbsp;|&nbsp; <a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Historial</a>'''%fname
     print '''&nbsp;|&nbsp; <a href="%s"><img src="pdf.png" alt="PDF" /></a>'''%fname.replace('.txt','.pdf')
-    print '''&nbsp;|&nbsp; <a href="fuentes.zip">Código fuente de los ejemplos</a>'''
 #>
+    print '''&nbsp;|&nbsp; <a href="fuentes.zip">Código fuente de los ejemplos</a>'''
             </small>
             <p/>
 <div style="border:1px solid black; padding:5px; text-align: center; margin-bottom: 8px; margin-top: 8px;">
