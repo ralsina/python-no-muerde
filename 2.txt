@@ -171,7 +171,7 @@ formularios, y mucho más. Yo tan solo quiero lo siguiente:
 3. Verificar que un texto se encuentra en la página (para asegurarse
    que ahora no es un sitio acerca de un tema distinto).
 
-O sea, solo necesito los comandos twill ``code`` y ``find``. Así porque soy buen
+O sea, solo necesito los comandos twill ``code`` y ``find``. Porque soy buen
 tipo, podríamos habilitar ``notfind`` y ``title``.
 
 Todos esos comandos son de la forma ``comando argumento`` con lo que un parser de
