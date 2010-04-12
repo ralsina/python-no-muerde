@@ -84,7 +84,7 @@ class Atajo(object):
         self.user = user
         self.activo = True
         # Test por default, verifica que la página exista.
-        self.test = 'code 200'
+        self.test = u'code 200'
         if r.count():
             # FIXME: esto creo que es una race condition
             # Existe la misma URL para el mismo usuario,
@@ -109,7 +109,6 @@ class Atajo(object):
             cls.database = create_database("sqlite:///pyurl.sqlite")
             cls.store = Store (cls.database)
             try:
-                print 'CREO'
                 # Creamos la tabla
                 cls.store.execute ('''
                 CREATE TABLE atajo (
@@ -165,7 +164,6 @@ class Atajo(object):
         if slug is not None:
             i = 0
             for p,l in enumerate(slug):
-                print p,l
                 i += 62 ** p * cls.validos.index(l)
             return cls.store.find(cls, id = i, activo = True).one()
             
@@ -231,6 +229,9 @@ def alta():
         data['short'] = a.slug()
         data['url'] = url
 
+        # La probamos
+        a.run_test()
+        
         # Mensaje para el usuario de que el acortamiento
         # tuvo éxito.
         data['mensaje'] = u'''La URL <a href="%(url)s">%(url)s</a>
