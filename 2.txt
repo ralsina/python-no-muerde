@@ -688,3 +688,32 @@ pyurl3.py
    :start-after: return data
    :end-before:     bottle.send_file(filename, root='./static/')
 
+Conclusiones
+~~~~~~~~~~~~
+
+En este capítulo se ve una aplicación web, completa, útil y (semi)original.
+El código que hizo falta escribir fue... unas 250 líneas de python.
+
+Obviamente esta aplicación no está lista para ponerse en producción. Algunos
+de los problemas obvios:
+
+* Necesita un robots.txt para no pasarse la vida respondiendo a robots
+* Se puede optimizar mucho
+* Necesita protección contra DOS (ejemplo, limitar la frecuencia de
+  corrida de los tests)
+
+Y hay muchos features posibles:
+
+* Opcionalmente redirigir en un IFrame y permitir cosas como
+  comentarios acerca de la página de destino.
+* Estadísticas de uso de los links.
+* Una página pública "Los links de Juan Perez" (y convertirlo en http://del.icio.us ).
+* Soportar cosas que no sean links sino texto (y convertirlo en un pastebin).
+* Soportar imágenes (y ser un image hosting).
+* Correr tests periódicamente.
+* Notificar fallas de test por email.
+
+Todas esas cosas son posibles... y quien quiera hacerlas, puede ayudar!
+
+Este programa es open source, y tiene un proyecto en googlecode:
+http://py-corta.googlecode.com . Visiten y ayuden!
