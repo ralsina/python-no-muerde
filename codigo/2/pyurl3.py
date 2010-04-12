@@ -8,8 +8,8 @@
 '''
 
 import os
-
 import string
+import datetime
 
 from twill.commands import go, code, find, notfind, title
 def minitwill(url, script):
@@ -18,6 +18,18 @@ def minitwill(url, script):
     Apenas una línea falla, devuelve False.
 
     Si todas tienen éxito, devuelve True.
+
+    Ejemplos:
+
+    >>> minitwill('http://google.com','code 200')
+    ==> at http://www.google.com.ar/
+    True
+    
+    >>> minitwill('http://google.com','title bing')
+    ==> at http://www.google.com.ar/
+    title is 'Google'.
+    False
+    
     '''
     go (url)
     for line in script.splitlines():
@@ -62,7 +74,7 @@ class Atajo(object):
     status = Bool()
     ultimo = DateTime()
 
-    def __init__(self, url, user):
+    def __init__(self, url, user, test=''):
         '''Exigimos la URL y el usuario, test es opcional,
         _id es automático.'''
 
@@ -71,6 +83,8 @@ class Atajo(object):
         self.url = url
         self.user = user
         self.activo = True
+        # Test por default, verifica que la página exista.
+        self.test = 'code 200'
         if r.count():
             # FIXME: esto creo que es una race condition
             # Existe la misma URL para el mismo usuario,
@@ -126,10 +140,10 @@ class Atajo(object):
         a-zA-Z0-9 como "dígitos", y dado vuelta (más significativo
         a la derecha.
 
-        >>> Atajo.slug(100000)
-        '4aA'
-        >>> Atajo.slug(100001)
-        '5aA'
+        Ejemplo:
+
+        100000 => '4aA'
+        100001 => '5aA'
 
         '''
         s = ''
@@ -164,6 +178,13 @@ class Atajo(object):
     def delete(self):
         '''Eliminar este objeto de la base de datos'''
         self.activo=False
+        self.save()
+
+    def run_test(self):
+        '''Correr el test con minitwill y almacenar
+        el resultado'''
+        self.status = minitwill(self.url, self.test)
+        self.ultimo = datetime.datetime.now()
         self.save()
 
 # Usamos bottle para hacer el sitio
