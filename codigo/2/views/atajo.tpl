@@ -18,7 +18,7 @@
     %end
     <h2>Propiedades del atajo {{atajo.slug()}}</h2>
 
-<form method="POST">
+<form>
 <fieldset style="width:650px; text-align:left;">
     <div>
         <label for="url">URL:</label><br/>
