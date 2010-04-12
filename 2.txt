@@ -123,7 +123,7 @@ Además, como metas "ideológicas":
   mantener algo complejo.
 
 * Cada vez que haya que hacer algo: buscar si ya está hecho (excepto el programa
-  en sí, sino el capítulo termina dentro de dos renglones).
+  en sí; si no, el capítulo termina dentro de dos renglones).
 
 Separemos la tarea en componentes:
 
@@ -445,7 +445,7 @@ En esta aplicación los requerimientos de base de datos son mínimos. Necesito
 poder guardar algo como ``(url,usuario,slug,test)`` y poder después recuperarlo
 sea por slug, sea por usuario.
 
-Necesito que el slug sea único. Todos los otros campos no necesitan ser únicos.
+Necesito que el slug sea único. Todos los demás campos pueden repetirse.
 [#]_
 
 .. [#] Sería bueno que la combinación usuario+url lo fuera pero lo veremos más
@@ -712,7 +712,7 @@ Y hay muchos features posibles:
   comentarios acerca de la página de destino.
 * Estadísticas de uso de los links.
 * Una página pública "Los links de Juan Perez" (y convertirlo en http://del.icio.us ).
-* Soportar cosas que no sean links sino texto (y convertirlo en un pastebin).
+* Soportar cosas que no sean links si no texto (y convertirlo en un pastebin).
 * Soportar imágenes (y ser un image hosting).
 * Correr tests periódicamente.
 * Notificar fallas de test por email.
