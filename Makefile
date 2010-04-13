@@ -21,11 +21,6 @@ LISTADOS=codigo/4/gaso1.py\
 	 codigo/2/pyurl3.py\
 	 codigo/2/views/usuario.tpl
 
-%.graph.pdf: %.dot
-	dot -Tpdf $< > $@
-
-%.graph.png: %.dot
-	dot -Tpng $< > $@
 
 %.print.png: %.screen.png
 	convert -resize 1500 $< $@
@@ -60,6 +55,18 @@ fuentes.zip:
 	find codigo -name "*~" -exec rm {} \;
 	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*"\
 	 "codigo/2/*sqlite" "*pyc" "*~" "temp"
+
+dependencias.graph.pdf: dependencias.dot
+	neato -Tpdf $< > $@
+
+dependencias.graph.png: dependencias.dot
+	neato -Tpng $< > $@
+
+%.graph.pdf: %.dot
+	dot -Tpdf $< > $@
+
+%.graph.png: %.dot
+	dot -Tpng $< > $@
 
 .phony:
 	true
