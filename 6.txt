@@ -1,2 +1,8 @@
 Diseño de Interfaz Gráfica
 --------------------------
+
+    ¿Cómo se hace una estatua de un elefante? Empezás con un bloque de mármol
+    y sacás todo lo que no parece un elefante.
+
+    -- Anónimo.
+
