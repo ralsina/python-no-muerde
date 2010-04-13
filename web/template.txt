@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="<% path_to_root %>html4css1.css" type="text/css" />
     <link rel="stylesheet" href="<% path_to_root %>lsr.css" type="text/css" />
     <link rel="stylesheet" href="<% path_to_root %>code.css" type="text/css" />
+    <script type="text/javascript" src="http://use.typekit.com/wch2upy.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body style="width: 768px; margin: auto auto auto auto;">
     <div id="nav">
