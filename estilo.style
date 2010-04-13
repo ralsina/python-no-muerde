@@ -17,13 +17,13 @@
   },
   "pageSetup": {
     "size": "A5",
-    "margin-top": "1cm",
-    "margin-bottom": "1cm",
-    "margin-left": "1cm",
-    "margin-right": "1cm",
-    "margin-gutter": "0cm",
-    "spacing-header": "5mm",
-    "spacing-footer": "5mm"
+    "margin-top": ".5in",
+    "margin-bottom": ".5in",
+    "margin-left": ".5in",
+    "margin-right": ".5in",
+    "margin-gutter": ".125in",
+    "spacing-header": "3mm",
+    "spacing-footer": "3mm"
   },
   "pageTemplates" : {
     "coverPage": {
