@@ -21,11 +21,6 @@ LISTADOS=codigo/4/gaso1.py\
 	 codigo/2/pyurl3.py\
 	 codigo/2/views/usuario.tpl
 
-fuentes.zip:
-	find codigo -name "*~" -exec rm {} \;
-	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*"\
-	 "codigo/2/*sqlite" "*pyc" "*~" "temp"
-
 %.graph.pdf: %.dot
 	dot -Tpdf $< > $@
 
@@ -60,6 +55,11 @@ commit-web: sitio ${CAPITULOS_PDF}
 	hg commit
 	hg push
 	rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
+
+fuentes.zip:
+	find codigo -name "*~" -exec rm {} \;
+	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*"\
+	 "codigo/2/*sqlite" "*pyc" "*~" "temp"
 
 .phony:
 	true
