@@ -1,2 +1,50 @@
 Las Capas de una Aplicación
 ---------------------------
+
+    "Que tu mano izquierda no sepa lo que hace tu mano derecha"
+
+    -- Anónimo
+
+En el capítulo anterior cuando estaba mostrando el uso del ORM puse
+
+    Si tenemos cuidado y aislamos el ORM del resto de la
+    aplicación, es posible reemplazarlo con otro más adelante (o eliminarlo
+    y "bajar" a SQL o a NoSQL).
+
+¿Qué significa, en ese contexto, "tener cuidado"? Bueno, estoy hablando
+básicamente de lo que en inglés se llama `multi-tier architecture
+<http://en.wikipedia.org/wiki/Multitier_architecture>`_.
+
+Sin entrar en detalles formales, la idea general es decidir un esquema de
+separación en capas dentro de tu aplicación.
+
+Siguiendo con el ejemplo del ORM: si todo el acceso al ORM está concentrado en
+una sola clase, entonces para migrar el sistema a NoSQL alcanza con
+reimplementar esa clase y mantener la misma semántica.
+
+Algunos de los "puntos" clásicos en los que partir la aplicación son:
+Model/View/Controller y Interface/Lógica/Datos.
+
+Yo no creo en definiciones estrictas, y no me voy a poner a decidir si un
+método específico pertenece a una capa u otra, normalmente uno puede ser
+flexible siempre que siga al pie de la letra tres reglas:
+
+Una vez definida que tu arquitectura es en capas "A"/"B"/"C"/"D" (exagerando,
+normalmente dos o tres capas son suficiente):
+
+
+* Las capas son una lista ordenada, se usa hacia abajo.
+
+  Si estás en la capa "B" usás "C", no "A".
+
+* Nunca dejes que un componente se saltee una capa.
+
+  Si estás en la capa "A" entonces podés usar las cosas de la capa "B". "B" usa
+  "C". "C" usa "D". Y así. Nunca "A" usa "C". Eso es joda.
+
+* Tenés que saber en qué capa estás en todo momento.
+
+  Apenas dudes "¿estoy en B o en C?" la respuesta correcta es "estás en el
+  horno."
+
+
