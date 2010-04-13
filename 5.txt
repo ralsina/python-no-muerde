@@ -1,2 +1,46 @@
 La GUI es la Parte Fácil
 ------------------------
+
+
+Empezar a crear la interfaz gráfica de una aplicación es como empezar a escribir
+un libro. Tenés un espacio en blanco, esperando que hagas algo, y si no sabés
+qué es lo que querés poner ahí, la infinitud de los caminos que se te abren
+es paralizante.
+
+Este capítulo no te va a ayudar en absoluto con ese problema, si no que vamos
+a tratar de resolver su opuesto: sabiendo qué querés hacer, cómo se hace?
+
+Vamos a aprender a hacer programas sencillos usando PyQt, un toolkit de
+interfaz gráfica potente, multiplataforma, y relativamente sencillo de usar.
+
+Programación con Eventos
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Signals / Slots
+~~~~~~~~~~~~~~~
+
+Ventanas / Diálogos
+~~~~~~~~~~~~~~~~~~~
+
+Acciones
+~~~~~~~~
+
+Proyecto
+~~~~~~~~
+
+Vamos a hacer una aplicación completa. Como esto es un libro de Python y no
+específicamente de PyQt, no va a ser *tan* complicada. Veamos un escenario para
+entender de dónde viene este proyecto.
+
+Supongamos que estás usando tu computadora y querés escuchar música. Supongamos
+también que te gusta escuchar radios online.
+
+Hoy en día hay varias maneras de hacerlo:
+
+* Ir al sitio de la radio.
+* Utilizar un reproductor de medios (Amarok, Banshee, Media Player o similar)
+* Usar `RadioTray <http://radiotray.sf.net>`_
+
+Resulta que mi favorita es la tercera opción por varios motivos que no vienen al
+caso. Nuestro proyecto es crear una aplicación similar, minimalista y fácil de
+entender.
