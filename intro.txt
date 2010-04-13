@@ -160,9 +160,9 @@ Con suerte será un `grafo acíclico <http://es.wikipedia.org/wiki/Grafo_acícli
 La línea de puntos significa 'no es realmente necesario, pero...'
 
 .. figure:: dependencias.graph.pdf
-   :width: 100%
+   :height: 8cm
 
-   Este libro se lee siguiendo las flechas
+   Este libro se lee siguiendo las flechas.
 
 
 Acerca del Autor
