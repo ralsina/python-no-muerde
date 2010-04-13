@@ -54,6 +54,9 @@ Proyecto
 Vamos a hacer un programa dividido en tres capas, interfaz/lógica/datos. Vamos a
 implementar dos interfaces y dos capas de datos [#]_
 
+.. [#] No se me ocurre ningún motivo lógico para implementar dos veces la lógica
+       de negocios del programa ;-)
+       
 ¿Cómo sabemos en qué capa estamos? Con las siguientes reglas:
 
 1) Si usamos el ORM estamos en la capa datos.
@@ -67,6 +70,3 @@ El Problema
 -----------
 
 
-
-.. [#] No se me ocurre ningún motivo lógico para implementar dos veces la lógica
-       de negocios del programa ;-)
