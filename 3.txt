@@ -48,3 +48,25 @@ normalmente dos o tres capas son suficiente):
   horno."
 
 
+Proyecto
+--------
+
+Vamos a hacer un programa dividido en tres capas, interfaz/lógica/datos. Vamos a
+implementar dos interfaces y dos capas de datos [#]_
+
+¿Cómo sabemos en qué capa estamos? Con las siguientes reglas:
+
+1) Si usamos el ORM estamos en la capa datos.
+2) Si el método en el que estamos es accesible por el usuario, estamos en la
+   capa de interface.
+3) Si ``not 1 and not 2`` estamos en la capa de lógica.
+
+No es exactamente un ejemplo de formalismo, pero este libro tampoco lo es.
+
+El Problema
+-----------
+
+
+
+.. [#] No se me ocurre ningún motivo lógico para implementar dos veces la lógica
+       de negocios del programa ;-)
