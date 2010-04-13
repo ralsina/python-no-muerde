@@ -1,2 +1,29 @@
 Un Programa Útil
 ----------------
+
+Este es el temido "capítulo integrador" en el que vamos a tomar todo lo que
+vimos hasta ahora y tratar de crear algo interesante. Repasemos qué se supone
+que tenemos en nuestra caja de herramientas...
+
+* Una colección enorme de software que podemos aprovechar en vez de
+  escribirlo nosotros.
+
+* Capacidad de separar nuestra aplicación en capas, para que los componentes
+  sean reemplazables.
+
+* La convicción de que testear y documentar el código es importante.
+
+* Sabemos hacer interfaces gráficas y/o web.
+
+* Sabemos usar un ORM.
+
+* Diversas cosas menores que nos cruzamos por el camino.
+
+Proyecto
+~~~~~~~~
+
+Vamos a hacer un sistema de integración continua al estilo `Hudson
+<https://hudson.dev.java.net/>`_ para proyectos python.
+
+Tal vez no tenga tantos features, pero va a ser suficiente para la mayoría de
+los casos.
