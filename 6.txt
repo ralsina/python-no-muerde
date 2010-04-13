@@ -6,3 +6,44 @@ Diseño de Interfaz Gráfica
 
     -- Anónimo.
 
+¿Siendo un programador, qué sabe uno de diseños de interfaces? La respuesta,
+al menos en mi caso es poco y nada. Sin embargo, hay unos cuantos principios
+que ayudan a que uno no cree interfaces *demasiado* horribles, o a veces hasta agradables.
+
+* Aprender de otros.
+
+  Estamos rodeados de ejemplos de buenas y malas interfaces. Copiar es bueno.
+
+* Contenerse.
+
+  Tenemos una tendencia natural a crear cabinas de Concord. No te digo que no
+  está buena la cabina de un Concord, lo que te digo es que para hacer tostadas
+  es demasiado.
+
+  En general, dado que uno no tiene la habilidad (en principio) de crear
+  asombrosas interfaces, lo mejor es crear lo menos posible. ¡Lo que no está
+  ahí no puede estar *tan* mal!
+
+* Pensar mucho *antes*.
+
+  Siempre es más fácil agregar y mantener un feature bien pensado, con una
+  interfaz limitada, que tratar de hacer que funcione una pila de cosas a medio
+  definir.
+
+  Si no sabés *exactamente* cómo funciona tu aplicación, no estás listo para
+  hacer una interfaz usable para ella. Sí podés hacer una de prueba.
+
+* Tirá una.
+
+  Hacé una interfaz mientras estás empezando. Después tirála. Si hiciste una
+  clara separación de capas eso debería ser posible.
+
+* Pedí ayuda.
+
+  Si tenés la posibilidad de que te de una mano un experto en usabilidad, usála.
+  Sí, ya sé que vos podés crear una interfaz que funcione, eso es lo *fácil*, lo
+  difícil es crear una interfaz que alguien quiera usar.
+
+Más allá de esos criterios, en este capítulo vamos a tomar la interfaz creada en el
+capítulo anterior y la vamos a rehacer, pero bien. Porque esa era la de
+desarrollo, y la vamos a tirar.
