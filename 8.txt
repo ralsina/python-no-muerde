@@ -1,2 +1,10 @@
 Instalación, Deployment y Otras Yerbas
 --------------------------------------
+
+En este momento (primera mitad del 2010) la situación de los mecanismos de
+deployment disponibles para python es bastante caótica. Hay media docena
+de maneras de acercarse al tema.
+
+* Podés usar distutils (viene en la stdlib)
+* Podés usar setuptools
+* Podés usar distribute (reemplaza a setuptools)
