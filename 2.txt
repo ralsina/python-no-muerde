@@ -593,14 +593,17 @@ No voy a mostrar el detalle de cada página, mi HTML es básico, sólo veamos
 algunas capturas de las páginas:
 
 .. figure:: pyurl3-1.print.png
+   :width: 100%
 
    Pantalla de invitado.
   
 .. figure:: pyurl3-2.print.png
+   :width: 100%
 
    Pantalla de usuario.
 
 .. figure:: pyurl3-3.print.png
+   :width: 100%
 
    Usuario editando un atajo.
 
