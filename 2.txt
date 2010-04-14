@@ -334,7 +334,7 @@ Necesitamos importar varios módulos nuevos [#]_:
 
 .. class:: titulo-listado
 
-pyurl1.py
+pyurl2.py
 
 .. class:: listado
 
@@ -351,7 +351,7 @@ esos errores y muestra la pantalla de login.
 
 .. class:: titulo-listado
 
-pyurl1.py
+pyurl2.py
 
 .. class:: listado
 
@@ -367,7 +367,7 @@ Implementamos logout:
 
 .. class:: titulo-listado
 
-pyurl1.py
+pyurl2.py
 
 .. class:: listado
 
@@ -382,7 +382,7 @@ Por último, se "envuelve" la aplicación con el middleware de autenticación:
 
 .. class:: titulo-listado
 
-pyurl1.py
+pyurl2.py
 
 .. class:: listado
 
