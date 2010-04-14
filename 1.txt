@@ -290,6 +290,7 @@ Hay una estructura de control que Knuth llama el "loop n y medio" (n-and-half
 loop). Es algo así:
 
 .. figure:: loop-n-y-medio.graph.pdf
+   :height: 7cm
 
    ¡Se sale por el medio! Como siempre se pasa al menos por una parte del loop
    (A), Knuth le puso "loop n y medio".
