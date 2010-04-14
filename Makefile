@@ -39,7 +39,7 @@ sitio: .phony ${FIGURAS_WEB} fuentes.zip ${CAPITULOS}
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 	(cd sitio; sed --in-place 's/print\.png/screen\.png/g' *html)
 
-commit: sitio
+commit:
 	touch indice.txt ; make python_no_muerde.pdf
 	hg commit python_no_muerde.pdf -m "PDF actualizado"
 	hg commit
