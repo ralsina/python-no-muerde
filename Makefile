@@ -46,6 +46,9 @@ LISTADOS=codigo/4/gaso1.py\
 %.svg.pdf: %.svg
 	inkscape $< --export-pdf=$@ 
 
+%.svg.png: %.svg
+	inkscape $< --export-png=$@ 
+
 %.pdf: %.txt estilo.style Makefile tapa-capitulo.tmpl
 	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl
 
