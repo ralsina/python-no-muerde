@@ -17,8 +17,8 @@
   },
   "pageSetup": {
     "size": "A5",
-    "margin-top": ".5in",
-    "margin-bottom": ".5in",
+    "margin-top": ".4in",
+    "margin-bottom": ".4in",
     "margin-left": ".5in",
     "margin-right": ".5in",
     "margin-gutter": ".125in",
