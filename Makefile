@@ -1,7 +1,25 @@
 DOC=python_no_muerde.pdf
 
-FIGURAS=dependencias.graph.pdf loop-n-y-medio.graph.pdf
-FIGURAS_WEB=dependencias.graph.png loop-n-y-medio.graph.png
+FIGURAS=dependencias.graph.pdf\
+	 loop-n-y-medio.graph.pdf\
+	 by.svg.pdf\
+         cc.svg.pdf\
+         cover.svg.pdf\
+         nc.svg.pdf\
+         remix.svg.pdf\
+         sa.svg.pdf\
+         share.svg.pdf
+
+FIGURAS_WEB=dependencias.graph.png\
+            loop-n-y-medio.graph.png\
+	    by.svg.png\
+            cc.svg.png\
+            cover.svg.png\
+            nc.svg.png\
+            remix.svg.png\
+            sa.svg.png\
+            share.svg.png
+
 SCREENSHOTS=pyurl1-1.print.png\
 	 pyurl2-1.print.png\
 	 pyurl2-2.print.png\
@@ -24,6 +42,9 @@ LISTADOS=codigo/4/gaso1.py\
 
 %.print.png: %.screen.png
 	convert -resize 1500 $< $@
+
+%.svg.pdf: %.svg
+	inkscape $< --export-pdf=$@ 
 
 %.pdf: %.txt estilo.style Makefile tapa-capitulo.tmpl
 	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl
