@@ -41,7 +41,7 @@ LISTADOS=codigo/4/gaso1.py\
 
 
 %.print.png: %.screen.png
-	convert -resize 1500 $< $@
+	convert -resize 1600 $< $@
 
 %.svg.pdf: %.svg
 	inkscape $< --export-pdf=$@ 
