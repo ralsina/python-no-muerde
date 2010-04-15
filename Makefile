@@ -33,8 +33,8 @@ SCREENSHOTS=pyurl1-1.print.png\
 	 pyurl3-2.print.png\
 	 pyurl3-3.print.png
 
-CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt
-CAPITULOS_PDF=intro.pdf 1.pdf 2.pdf 3.pdf 4.pdf 5.pdf 6.pdf 7.pdf 8.pdf 9.pdf 10.pdf 11.pdf 12.pdf licencia.pdf gracias.pdf
+CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt metalibro.txt
+CAPITULOS_PDF=intro.pdf 1.pdf 2.pdf 3.pdf 4.pdf 5.pdf 6.pdf 7.pdf 8.pdf 9.pdf 10.pdf 11.pdf 12.pdf licencia.pdf gracias.pdf metalibro.pdf
 LISTADOS=codigo/4/gaso1.py\
          codigo/4/gaso2.py\
          codigo/4/gaso3.py\
@@ -54,10 +54,10 @@ LISTADOS=codigo/4/gaso1.py\
 	inkscape $< --export-png=$@ 
 
 %.pdf: %.txt estilo.style Makefile tapa-capitulo.tmpl
-	rst2pdf -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl
+	rst2pdf -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl
 
 python_no_muerde.pdf: tapa.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS} ${SCREENSHOTS}
-	rst2pdf -e dotted_toc -e inkscape -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo,tapa indice.txt -o python_no_muerde.pdf --custom-cover=tapa.tmpl
+	rst2pdf -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo,tapa indice.txt -o python_no_muerde.pdf --custom-cover=tapa.tmpl
 
 sitio: .phony ${FIGURAS_WEB} fuentes.zip ${CAPITULOS}
 	(cd web ; ln -sf ../codigo .)
