@@ -50,6 +50,12 @@ Código
     directiva ``code-block`` pero no es parte del restructured text standard.
     En consecuencia, tuve que emparchar rest2web para que la use [#]_
 
+    .. code-block:: Makefile
+
+        %.graph.pdf: %.dot
+                dot -Tpdf $< > $@ -Efontname="DejaVu Sans" \
+                    -Nfontname="DejaVu Sans"
+
 Gráficos
     Hay algunos diagramas. Los genero con la excelente herramienta Graphviz.
 
@@ -67,12 +73,6 @@ Build
     pero hace lo que hace.
 
     Por ejemplo, así se reconstruye el PDF de un gráfico:
-
-    .. code-block:: Makefile
-
-        %.graph.pdf: %.dot
-                dot -Tpdf $< > $@ -Efontname="DejaVu Sans" \
-                    -Nfontname="DejaVu Sans"
 
 Feedback
     Como toda la idea es tener respuesta, hay que tener como dejarla.
