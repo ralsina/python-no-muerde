@@ -410,7 +410,7 @@ en el diagrama):
        :end-before: @bottle.route('/:slug/edit')
 
 5. Si ``app`` recibe un error 401, en vez de devolverlo al usuario, le dice a
-   AuthKit: "hacéte cargo". Ahí Authkit muestra el login, llama a yahoo o quien
+   AuthKit: "hacete cargo". Ahí Authkit muestra el login, llama a yahoo o quien
    sea, verifica las credenciales, y una vez que está todo listo...
    
 6. Vuelve a llamar a ``pyurl2.alta`` pero esta vez, además de el request
