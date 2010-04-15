@@ -23,7 +23,11 @@ una sola clase, entonces para migrar el sistema a NoSQL alcanza con
 reimplementar esa clase y mantener la misma semántica.
 
 Algunos de los "puntos" clásicos en los que partir la aplicación son:
-Model/View/Controller y Interface/Lógica/Datos.
+Interface/Lógica/Datos y Frontend/Backend.
+
+Por supuesto que esto es un formalismo: Por ejemplo, para una aplicación
+puede ser que todo twitter.com sea el backend, pero para los que lo crean,
+twitter.com a su vez está dividido en capas.
 
 Yo no creo en definiciones estrictas, y no me voy a poner a decidir si un
 método específico pertenece a una capa u otra, normalmente uno puede ser
