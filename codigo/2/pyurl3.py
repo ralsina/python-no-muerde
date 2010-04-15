@@ -36,6 +36,8 @@ def minitwill(url, script):
         cmd,arg = line.split(' ',1)
         try:
             if cmd in ['code','find','notfind','title']:
+                # Si line es "code 200", esto es el equivalente
+                # de code(200)
                 r = globals()[cmd](arg)
         except:
             return False
