@@ -64,11 +64,36 @@ No es exactamente un ejemplo de formalismo, pero este libro tampoco lo es.
 Proyecto
 --------
 
-Vamos a hacer un programa dividido en tres capas, interfaz/lógica/datos. Vamos a
+Vamos a hacer un programa dividido en dos capas, interfaz/lógica/datos. Vamos a
 implementar dos veces cada capa.
 
 
 El Problema
 -----------
 
+Pensemos en juegos de tablero multijugador. ¿Cómo definirías el juego de damas de forma
+muy genérica?
 
+* Hay un tablero de NxN
+* Hay X cantidad de fichas de cada color.
+* Las fichas comienzan el juego en cierta posición.
+* Hay dos jugadores
+* Cada jugador tiene un turno en el que puede mover ciertas fichas
+  según reglas específicas.
+* Luego de una movida, tal vez alguna ficha se saque del tablero.
+* Luego de una movida, tal vez alguna ficha sea reemplazada por otra.
+
+Ok, ahora pensemos en ajedrez. O en go. O en ta-te-ti...
+
+¡Resulta que todos esos juegos se pueden describir de exactamente la misma manera!
+
+Entonces dividamos esta teórica aplicación en capas:
+
+* Interface: muestra el tablero y las fichas. Acepta las movidas.
+* Lógica: procesa las movidas que manda la interface, las valida y acepta
+  o rechaza.
+* Datos: Luego de que una movida es validada, guarda un historial de las
+  mismas, y el estado del tablero y las fichas.
+
+
+  
