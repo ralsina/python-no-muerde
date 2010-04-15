@@ -83,6 +83,7 @@
       }],
     [ "cctable" , {
         "parent": "bodytext",
+        "colWidths": ["48pt", null],
         "commands": [
             ["VALIGN", [0,0], [-1,-1], "middle"]
             ]
