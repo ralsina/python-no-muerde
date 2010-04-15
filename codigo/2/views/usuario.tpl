@@ -31,26 +31,28 @@
 </div>
 
 <div style="float:left;text-align: right; width: 350px;">
-    <table style="width:100%;">
-        <caption>Atajos Existentes</caption>
-        <thead>
-            <tr> <th>Atajo</th> <th>Acciones</th> </tr>
-        </thead>
-        % for atajo in atajos:
-        <tr>
-        % if atajo.status:
-            <td><img src="weather-clear.png" alt="Success" align="MIDDLE"/>
-            <a href="{{atajo.url}}">{{atajo.slug()}}</a>
-        % else:
-            <td><img src="weather-storm.png" alt="Failure" align="MIDDLE"/>
-            <a href="{{atajo.url}}">{{atajo.slug()}}</a>
-        % end
-            <td><a href="/{{atajo.slug()}}/edit">Editar</a>&nbsp;/&nbsp;
-                <a href="/{{atajo.slug()}}/del">Eliminar</a>&nbsp;/&nbsp;
-                <a href="/{{atajo.slug()}}/test">Probar</a>
-        </tr>
-        %end
-    </table>
+ <table style="width:100%;">
+  <caption>Atajos Existentes</caption>
+   <thead>
+    <tr> <th>Atajo</th> <th>Acciones</th> </tr>
+   </thead>
+   % for atajo in atajos:
+    <tr>
+     % if atajo.status:
+      <td><img src="weather-clear.png" alt="Success"
+        align="MIDDLE"/>
+      <a href="{{atajo.url}}">{{atajo.slug()}}</a>
+     % else:
+      <td><img src="weather-storm.png" alt="Failure"
+        align="MIDDLE"/>
+      <a href="{{atajo.url}}">{{atajo.slug()}}</a>
+     % end
+     <td><a href="/{{atajo.slug()}}/edit">Editar</a>&nbsp;/&nbsp;
+     <a href="/{{atajo.slug()}}/del">Eliminar</a>&nbsp;/&nbsp;
+     <a href="/{{atajo.slug()}}/test">Probar</a>
+    </tr>
+   %end
+ </table>
 </div>
 <div style="clear: both;text-align: center;"">
     <a href="/logout">Cerrar sesión</a>

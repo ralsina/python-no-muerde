@@ -578,16 +578,19 @@ pyurl3.py
 
     >>> from pyurl3 import Atajo
     >>> Atajo.initDB()
-    >>> a1 = Atajo(u'http://nomuerde.netmanagers.com.ar',u'unnombredeusuario')
+    >>> a1 = Atajo(u'http://nomuerde.netmanagers.com.ar',
+        u'unnombredeusuario')
     >>> a1.slug()
     'b'
-    >>> a1 = Atajo(u'http://www.python.org',u'unnombredeusuario')
+    >>> a1 = Atajo(u'http://www.python.org',
+        u'unnombredeusuario')
     >>> a1.slug()
     'c'
     >>> Atajo.get(slug='b').url
     u'http://nomuerde.netmanagers.com.ar'
     >>> [x.url for x in Atajo.get(user=u'unnombredeusuario')]
-    [u'http://nomuerde.netmanagers.com.ar', u'http://www.python.org']
+    [u'http://nomuerde.netmanagers.com.ar',
+    u'http://www.python.org']
     
 
 Y desde ya que todo está en la base de datos:

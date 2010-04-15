@@ -106,7 +106,8 @@ class Atajo(object):
     def init_db(cls):
         # Creamos una base SQLite
         if not os.path.exists('pyurl.sqlite'):
-            cls.database = create_database("sqlite:///pyurl.sqlite")
+            cls.database = create_database(
+                "sqlite:///pyurl.sqlite")
             cls.store = Store (cls.database)
             try:
                 # Creamos la tabla
@@ -125,7 +126,8 @@ class Atajo(object):
             except:
                 pass
         else:
-            cls.database = create_database("sqlite:///pyurl.sqlite")
+            cls.database = create_database(
+                "sqlite:///pyurl.sqlite")
             cls.store = Store (cls.database)
 
     # Caracteres válidos en un atajo de URL
@@ -135,9 +137,11 @@ class Atajo(object):
         '''Devuelve el slug correspondiente al
         ID de este atajo
 
-        Básicamente un slug es un número en base 62, representado usando
-        a-zA-Z0-9 como "dígitos", y dado vuelta (más significativo
-        a la derecha.
+        Básicamente un slug es un número en base 62,
+        representado usando a-zA-Z0-9 como "dígitos",
+        y dado vuelta:
+
+        Más significativo a la derecha.
 
         Ejemplo:
 
@@ -165,11 +169,13 @@ class Atajo(object):
             i = 0
             for p,l in enumerate(slug):
                 i += 62 ** p * cls.validos.index(l)
-            return cls.store.find(cls, id = i, activo = True).one()
+            return cls.store.find(cls, id = i,
+                activo = True).one()
             
         if user is not None:
             if url is None:
-                return cls.store.find(cls, user = user, activo = True)
+                return cls.store.find(cls, user = user,
+                    activo = True)
             else:
                 return cls.store.find(cls, user = user,
                     url = url, activo = True).one()
@@ -209,11 +215,11 @@ def alta():
     # Requerimos que el usuario esté autenticado.
     if not 'REMOTE_USER' in bottle.request.environ:
         bottle.abort(401, "Sorry, access denied.")
-    usuario = bottle.request.environ['REMOTE_USER'].decode('utf8')
+    usuario=bottle.request.environ['REMOTE_USER'].decode('utf8')
 
     # Data va a contener todo lo que el template
     # requiere para hacer la página
-    data ={}
+    data={}
 
     # Esto probablemente debería obtenerse de una
     # configuración
@@ -234,9 +240,10 @@ def alta():
         
         # Mensaje para el usuario de que el acortamiento
         # tuvo éxito.
-        data['mensaje'] = u'''La URL <a href="%(url)s">%(url)s</a>
-        se convirtió en:
-        <a href="%(baseurl)s%(short)s">%(baseurl)s%(short)s</a>'''%data
+        data['mensaje'] = u'''La URL
+        <a href="%(url)s">%(url)s</a> se convirtió en:
+        <a href="%(baseurl)s%(short)s">
+        %(baseurl)s%(short)s</a>'''%data
 
         # Clase CSS que muestra las cosas como buenas
         data['clasemensaje']='success'
@@ -258,7 +265,7 @@ def editar(slug):
     """Edita un slug"""
     if not 'REMOTE_USER' in bottle.request.environ:
         bottle.abort(401, "Sorry, access denied.")
-    usuario = bottle.request.environ['REMOTE_USER'].decode('utf8')
+    usuario=bottle.request.environ['REMOTE_USER'].decode('utf8')
 
     # Solo el dueño de un atajo puede editarlo
     a = Atajo.get(slug)
@@ -283,7 +290,7 @@ def borrar(slug):
     """Elimina un slug"""
     if not 'REMOTE_USER' in bottle.request.environ:
         bottle.abort(401, "Sorry, access denied.")
-    usuario = bottle.request.environ['REMOTE_USER'].decode('utf8')
+    usuario=bottle.request.environ['REMOTE_USER'].decode('utf8')
     
     # Solo el dueño de un atajo puede borrarlo
     a = Atajo.get(slug)
@@ -297,7 +304,7 @@ def run_test(slug):
     """Corre el test correspondiente a un atajo"""
     if not 'REMOTE_USER' in bottle.request.environ:
         bottle.abort(401, "Sorry, access denied.")
-    usuario = bottle.request.environ['REMOTE_USER'].decode('utf8')
+    usuario=bottle.request.environ['REMOTE_USER'].decode('utf8')
 
     # Solo el dueño de un atajo puede probarlo
     a = Atajo.get(slug)

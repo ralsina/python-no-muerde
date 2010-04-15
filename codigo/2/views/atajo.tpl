@@ -18,21 +18,21 @@
     %end
     <h2>Propiedades del atajo {{atajo.slug()}}</h2>
 
-<form>
-<fieldset style="width:650px; text-align:left;">
-    <div>
-        <label for="url">URL:</label><br/>
-        <input type="text" id="url" name="url" size=80 value="{{atajo.url}}">
-    </div>
-    <div>
-        <label for="activo">Activo:</label><br/>
-        % if atajo.activo:
-            <input type="checkbox" id="activo" name="activo" checked>
-        % else:
-            <input type="checkbox" id="activo" name="activo">
-        % end
-    </div>
-    <div>
+  <form>
+  <fieldset style="width:650px; text-align:left;">
+  <div>
+    <label for="url">URL:</label><br/>
+    <input type="text" name="url" size=80 value="{{atajo.url}}">
+  </div>
+  <div>
+    <label for="activo">Activo:</label><br/>
+    % if atajo.activo:
+      <input type="checkbox" name="activo" checked>
+    % else:
+      <input type="checkbox" name="activo">
+    % end
+  </div>
+<div>
         <label for="test">Test:</label><br/>
         <textarea name="test" rows=15 cols=80>
 {{atajo.test}}
