@@ -101,7 +101,8 @@ Ya que no tengo editor, lo voy a tener que hacer yo mismo. Me parece una buena
 idea, va a ser útil para este proyecto, no encuentro nada hecho similar [#]_, es un
 buen ejemplo del objetivo de este capítulo... ¡vendido!
 
-.. [#] Con el capítulo ya escrito, me han hecho notar http://a.gd 
+.. [#] El que me hizo ver esa cita de Tarek Ziadé fué Martín Gaitán.
+       Con el capítulo ya escrito, Juanjo Conti me han hecho notar http://a.gd 
 
 Una vez decidido a encarar este proyecto, establezcamos las metas:
 
