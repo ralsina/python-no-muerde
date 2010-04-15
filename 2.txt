@@ -321,7 +321,8 @@ usuario autenticado como parte de la sesión.
 
 Hagamos entonces que nuestra aplicación de prueba soporte OpenID.
 
-Necesitamos importar varios módulos nuevos [#]_:
+Para empezar, se "envuelve" la aplicación con el middleware de autenticación.
+Es necesario importar varios módulos nuevos [#]_.
 
 .. [#] Hasta donde sé, necesitamos instalar:
 
@@ -344,26 +345,86 @@ pyurl2.py
    :include: codigo/2/pyurl2.py
    :start-at: # Middlewares
    :end-before: @bottle.route
-
-Si queremos que una función sólo esté disponible para usuarios autenticados,
-lo verificamos. De no ser así, se da un error 401. El middleware intercepta
-esos errores y muestra la pantalla de login.
-
-.. class:: titulo-listado
-
-pyurl2.py
-
+   
 .. class:: listado
 
 .. code-block:: python
    :linenos:
    :linenos_offset:
    :include: codigo/2/pyurl2.py
-   :start-at: @bottle.route('/')
-   :end-before: @bottle.route('/:slug/edit')
-    
+   :start-at: if __name__=='__main__':
 
-Implementamos logout:
+Para entender esto, necesitamos ver como es el flujo de una conexión standard
+en Bottle (o en casi cualquier otro framework web). [#]_
+
+.. [#] Este diagrama es 90% mentira. Por ejemplo, en realidad ``route`` no
+       llama a ``pyurl2.alta`` sino que la devuelve a ``app`` que después la
+       ejecuta. Sin embargo, digamos que es metafóricamente cierto.
+
+.. figure:: middleware1.graph.pdf
+   :height: 6cm
+
+   Una conexión a la URL "/".
+
+1. El usuario hace un pedido via HTTP pidiendo la URL "/"
+2. La aplicación web recibe el pedido, ve el PATH y pasa el mismo
+   pedido a ``route``.
+3. La función registrada para ese PATH es ``pyurl2.alta``, y se la llama.
+4. ``pyurl2.alta`` devuelve datos, pasados a un mecanismo de templates -- o HTML
+   directo al cliente, pero eso no es lo habitual.
+5. De una manera u otra, se devuelve el HTML al cliente, que vé el resultado de su
+   pedido.
+
+Al "envolver" ``app`` con un middleware, es importante que recordemos que
+``app`` ya no es la misma de antes, tiene código nuevo, que proviene de
+AuthKit. [#]_ El nuevo "flujo" es algo así (lo nuevo está en linea de puntos
+en el diagrama):
+
+.. figure:: middleware2.graph.pdf
+   :height: 6cm
+
+   Una conexión a la URL "/" con AuthKit.
+
+1. El usuario hace un pedido via HTTP pidiendo la URL "/"
+2. La aplicación web recibe el pedido, ve el PATH y pasa el mismo
+   pedido a ``route``.
+3. La función registrada para ese PATH es ``pyurl2.alta``, y se la llama.
+4. Si ``pyurl2.alta`` decide que esta página no puede ser vista, sin estar
+   autenticado, entonces en vez de mandar datos al template, pasa una excepción
+   a ``app`` (Error 401).
+
+   .. class:: titulo-listado
+
+   pyurl2.py
+
+   .. class:: listado
+
+   .. code-block:: python
+       :linenos:
+       :linenos_offset:
+       :include: codigo/2/pyurl2.py
+       :start-at: @bottle.route('/')
+       :end-before: @bottle.route('/:slug/edit')
+
+5. Si ``app`` recibe un error 401, en vez de devolverlo al usuario, le dice a
+   AuthKit: "hacéte cargo". Ahí Authkit muestra el login, llama a yahoo o quien
+   sea, verifica las credenciales, y una vez que está todo listo...
+   
+6. Vuelve a llamar a ``pyurl2.alta`` pero esta vez, además de el request
+   original hay unas credenciales de usuario, indicando que hubo un login
+   exitoso.
+7. ``pyurl2.alta`` devuelve datos, pasados a un mecanismo de templates -- o HTML
+   directo al cliente, pero eso no es lo habitual.
+8. De una manera u otra, HTML se devuelve al cliente, que vé el resultado de su
+   pedido.
+
+.. [#] Nuevamente es muy mentiroso, estamos ignorando completamente el
+       middleware de sesión, y sin eso AuthKit no funciona. Como excusa: ¡Es con
+       fines educativos! todo lo que hacen las sesiones para nosotros es
+       que AuthKit tenga un lugar donde guardar las credenciales del usuario
+       para el paso 6.
+
+Para que el usuario pueda cerrar su sesión, implementamos logout:
 
 .. class:: titulo-listado
 
@@ -377,20 +438,6 @@ pyurl2.py
    :include: codigo/2/pyurl2.py
    :start-at: @bottle.route('/logout')
    :end-before: @bottle.route('/')
-
-Por último, se "envuelve" la aplicación con el middleware de autenticación:
-
-.. class:: titulo-listado
-
-pyurl2.py
-
-.. class:: listado
-
-.. code-block:: python
-   :linenos:
-   :linenos_offset:
-   :include: codigo/2/pyurl2.py
-   :start-at: if __name__=='__main__':
 
 ¿Funciona?
 

@@ -1,5 +1,6 @@
 digraph G {
-    Usuario -> "bottle.route" [label="GET /"]
+    Usuario -> "app" [label="GET /"]
+    app -> "bottle.route" [label="GET /"]
     "bottle.route" -> "pyurl2.alta" [label="request"]
     "pyurl2.alta" -> "bottle.template" [label=Datos]
     "bottle.template" -> Usuario [label=HTML]

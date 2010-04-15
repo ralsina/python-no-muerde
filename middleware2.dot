@@ -1,0 +1,10 @@
+digraph G {
+    Usuario -> app [label="GET /"]
+    app -> "bottle.route" [label="GET /"]
+    "bottle.route" -> "pyurl2.alta" [label="request"]
+    "pyurl2.alta" -> app  [label="Error 401",style=dashed]
+    app -> AuthKit [label="encargáte",style=dashed]
+    AuthKit -> "pyurl2.alta" [label="request+credenciales",style=dashed]
+    "pyurl2.alta" -> "bottle.template" [label=Datos]
+    "bottle.template" -> Usuario [label=HTML]
+}

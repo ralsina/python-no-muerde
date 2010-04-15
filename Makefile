@@ -2,6 +2,8 @@ DOC=python_no_muerde.pdf
 
 FIGURAS=dependencias.graph.pdf\
 	 loop-n-y-medio.graph.pdf\
+         middleware1.graph.pdf\
+         middleware2.graph.pdf\
 	 by.svg.pdf\
          cc.svg.pdf\
          cover.svg.pdf\
@@ -12,6 +14,8 @@ FIGURAS=dependencias.graph.pdf\
 
 FIGURAS_WEB=dependencias.graph.png\
             loop-n-y-medio.graph.png\
+            middleware1.graph.png\
+            middleware2.graph.png\
 	    by.svg.png\
             cc.svg.png\
             cover.svg.png\
@@ -81,16 +85,28 @@ fuentes.zip:
 	 "codigo/2/*sqlite" "*pyc" "*~" "temp"
 
 dependencias.graph.pdf: dependencias.dot
-	neato -Tpdf $< > $@
+	neato -Tpdf $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
 
 dependencias.graph.png: dependencias.dot
-	neato -Tpng $< > $@
+	neato -Tpng $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
+
+middleware1.graph.pdf: middleware1.dot
+	dot -Tpdf $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
+
+middleware1.graph.png: middleware1.dot
+	dot -Tpng $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
+
+middleware2.graph.pdf: middleware2.dot
+	dot -Tpdf $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
+
+middleware2.graph.png: middleware2.dot
+	dot -Tpng $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
 
 %.graph.pdf: %.dot
-	dot -Tpdf $< > $@
+	dot -Tpdf $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
 
 %.graph.png: %.dot
-	dot -Tpng $< > $@
+	dot -Tpng $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
 
 .phony:
 	true
