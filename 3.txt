@@ -51,16 +51,6 @@ normalmente dos o tres capas son suficiente):
   Apenas dudes "¿estoy en B o en C?" la respuesta correcta es "estás en el
   horno."
 
-
-Proyecto
---------
-
-Vamos a hacer un programa dividido en tres capas, interfaz/lógica/datos. Vamos a
-implementar dos interfaces y dos capas de datos [#]_
-
-.. [#] No se me ocurre ningún motivo lógico para implementar dos veces la lógica
-       de negocios del programa ;-)
-       
 ¿Cómo sabemos en qué capa estamos? Con las siguientes reglas:
 
 1) Si usamos el ORM estamos en la capa datos.
@@ -69,6 +59,14 @@ implementar dos interfaces y dos capas de datos [#]_
 3) Si ``not 1 and not 2`` estamos en la capa de lógica.
 
 No es exactamente un ejemplo de formalismo, pero este libro tampoco lo es.
+
+
+Proyecto
+--------
+
+Vamos a hacer un programa dividido en tres capas, interfaz/lógica/datos. Vamos a
+implementar dos veces cada capa.
+
 
 El Problema
 -----------
