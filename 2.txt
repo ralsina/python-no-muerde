@@ -310,9 +310,12 @@ haciendo el usuario X" o "este acceso es de un usuario sin autenticar".
 
 ¿Cómo se autentica el usuario?
 
-* Si tiene una cuenta de Yahoo: ingresa ``yahoo.com``
-* Si tiene una cuenta de Google: ingresa
-  ``https://www.google.com/accounts/o8/id`` [#]_
+Yahoo
+    Ingresa ``yahoo.com``
+Google
+    Ingresa ``https://www.google.com/accounts/o8/id`` [#]_
+Otro proveedor OpenID
+    Ingresa el dominio del proveedor o su URL de usuario.
 
 .. [#] O se crean botones "Entrar con tu cuenta de google", etc.
 
