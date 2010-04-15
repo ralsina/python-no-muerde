@@ -41,7 +41,7 @@ Para el sitio, la solución obvia era Sphinx, pero... me molestan algunas cosas
 ``class``), que hacen que un documento Sphinx sólo se pueda procesar con Sphinx.
 
 Entonces, buscando alternativas encontré rest2web de Michael Foord que es
-**muy** facil de usar y flexible.
+**muy** fácil de usar y flexible.
 
 Al ser este un libro de programación, tiene algunos requerimientos particulares.
 
