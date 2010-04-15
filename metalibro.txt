@@ -104,10 +104,10 @@ Server
 
        .. code-block:: python
 
-            import rst2pdf.pygments_code_block_directive
+            from rst2pdf import pygments_code_block_directive
             from docutils.parsers.rst import directives
             directives.register_directive('code-block', \
-                rst2pdf.pygments_code_block_directive.code_block_directive)
+                pygments_code_block_directive.code_block_directive)
 
 Versionado
     No hay mucho para discutir, cualquiera de los sitios de hosting libres para
