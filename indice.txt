@@ -29,3 +29,5 @@
 .. include:: licencia.txt
 
 .. include:: gracias.txt
+
+.. include:: metalibro.txt

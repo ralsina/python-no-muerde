@@ -43,6 +43,7 @@ que lo escribo.
   + `Capítulo 12 <12.html>`_ |pdficon|__
   + `Agradecimientos <gracias.html>`_ |pdficon|__
   + `Licencia <licencia.html>`_ |pdficon|__
+  + `Metalibro <metalibro.html>`_ |pdficon|__
 
 __ python_no_muerde.pdf
 __ intro.pdf
@@ -60,6 +61,7 @@ __ 11.pdf
 __ 12.pdf
 __ gracias.pdf
 __ licencia.pdf
+__ metalibro.pdf
 
 
 Este libro está escrito usando `reStructured Text <http://docutils.sf.net>`_, el PDF
