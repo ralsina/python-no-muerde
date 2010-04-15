@@ -325,7 +325,14 @@ usuario autenticado como parte de la sesión.
 Hagamos entonces que nuestra aplicación de prueba soporte OpenID.
 
 Para empezar, se "envuelve" la aplicación con el middleware de autenticación.
-Es necesario importar varios módulos nuevos [#]_.
+Es necesario importar varios módulos nuevos [#]_. Eso significa que todos los
+pedidos realizados ahora se hacen a la aplicación de middleware, no a la
+aplicación original de bottle.
+
+Esta aplicación de middleware puede decidir procesar el pedido ella misma (por
+ejemplo, una aplicación de autenticación va a querer procesar los errores 401,
+que significan "No autorizado"), o si no, va a pasar el pedido a la siguiente
+aplicación de la pila (en nuestro caso la aplicación bottle).
 
 .. [#] Hasta donde sé, necesitamos instalar:
 
