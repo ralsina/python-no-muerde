@@ -23,7 +23,7 @@ una sola clase, entonces para migrar el sistema a NoSQL alcanza con
 reimplementar esa clase y mantener la misma semántica.
 
 Algunos de los "puntos" clásicos en los que partir la aplicación son:
-Interface/Lógica/Datos y Frontend/Backend.
+Interfaz/Lógica/Datos y Frontend/Backend.
 
 Por supuesto que esto es un formalismo: Por ejemplo, para una aplicación
 puede ser que todo twitter.com sea el backend, pero para los que lo crean,
@@ -55,21 +55,21 @@ normalmente dos o tres capas son suficiente):
 
 1) Si usamos el ORM estamos en la capa datos.
 2) Si el método en el que estamos es accesible por el usuario, estamos en la
-   capa de interface.
+   capa de interfaz.
 3) Si ``not 1 and not 2`` estamos en la capa de lógica.
 
 No es exactamente un ejemplo de formalismo, pero este libro tampoco lo es.
 
 
 Proyecto
---------
+~~~~~~~~
 
-Vamos a hacer un programa dividido en dos capas, interfaz/lógica/datos. Vamos a
-implementar dos veces cada capa.
-
+Vamos a hacer un programa dividido en capas capas, interfaz/lógica/datos. Vamos a
+implementar dos veces cada capa, para demostrar que una separación clara
+independiza las implementaciones y mejora la claridad conceptual del código.
 
 El Problema
------------
+~~~~~~~~~~~
 
 Pensemos en juegos de tablero multijugador. ¿Cómo definirías el juego de damas de forma
 muy genérica?
@@ -89,11 +89,54 @@ Ok, ahora pensemos en ajedrez. O en go. O en ta-te-ti...
 
 Entonces dividamos esta teórica aplicación en capas:
 
-* Interface: muestra el tablero y las fichas. Acepta las movidas.
-* Lógica: procesa las movidas que manda la interface, las valida y acepta
+* Interfaz: muestra el tablero y las fichas. Acepta las movidas.
+* Lógica: procesa las movidas que manda la interfaz, las valida y acepta
   o rechaza.
 * Datos: Luego de que una movida es validada, guarda un historial de las
   mismas, y el estado del tablero y las fichas.
 
+Vamos a implementar esta aplicación de una manera... peculiar. Cada capa va
+a ser implementada dos veces, de maneras lo más distintas posible.
 
-  
+La manera más práctica de implementar estas cosas es de atrás para adelante:
+
+**FIXME** hacer diagrama
+
+Datos -> Lógica -> Interfaz
+
+Capa de Datos: Diseño
+~~~~~~~~~~~~~~~~~~~~~
+
+Necesitamos describir completamente y de forma genérica todos estos juegos.
+
+Qué tenemos en común:
+
+Fichas
+    Son objetos que tienen un tipo ("alfil negro", "cruz", "piedrita blanca"),
+    una posición en el tablero (o no), y un dueño.
+    
+Jugadores
+    Los dueños de las fichas. Juegan por turno. Aplican acciones a las fichas.
+    Tienen un nombre.
+
+Tablero
+    Donde se ponen las fichas. Tiene una cantidad de posiciones donde una
+    ficha puede ponerse. Esas posiciones se pueden representar en una
+    superficie.
+
+Creo que con esos elementos puedo representar cualquier juego de tablero
+común. [#]_
+
+El Tablero
+::::::::::
+
+Las Fichas
+::::::::::
+
+El Jugador
+::::::::::
+
+
+.. [#] La ventaja que tengo al ser el autor del libro es que si no es así
+       vengo, edito la lista, y parece que tengo todo clarísimo desde el
+       principio. No es el caso.
