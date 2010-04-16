@@ -127,6 +127,10 @@ Tablero
 Creo que con esos elementos puedo representar cualquier juego de tablero
 común. [#]_
 
+.. [#] La ventaja que tengo al ser el autor del libro es que si no es así
+       vengo, edito la lista, y parece que tengo todo clarísimo desde el
+       principio. No es el caso.
+       
 El Tablero
 ::::::::::
 
@@ -137,6 +141,3 @@ El Jugador
 ::::::::::
 
 
-.. [#] La ventaja que tengo al ser el autor del libro es que si no es así
-       vengo, edito la lista, y parece que tengo todo clarísimo desde el
-       principio. No es el caso.
