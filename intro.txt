@@ -15,11 +15,11 @@ Introducción
 Requisitos
 ~~~~~~~~~~
 
-Éste es un libro sobre Python [1]_. Es un libro que trata de explicar una manera
+Éste es un libro sobre Python [#]_. Es un libro que trata de explicar una manera
 posible de usarlo, una manera de tomar una idea de tu cabeza y convertirla en
 un programa, que puedas usar y compartir.
 
-.. [1] ¿Por qué Python? Porque es mi lenguaje favorito. ¿De qué otro lenguaje
+.. [#] ¿Por qué Python? Porque es mi lenguaje favorito. ¿De qué otro lenguaje
        podría escribir?
 
 ¿Qué necesitás saber para poder leer este libro?
@@ -41,20 +41,20 @@ En general esas referencias van a llevarte al `Tutorial de Python <http://docs.p
 en castellano. Ese libro contiene toda la información
 acerca del lenguaje que se necesita para poder seguir éste.
 
-Cuando una aplicación requiera una interfaz gráfica, vamos a utilizar PyQt [2]_.
+Cuando una aplicación requiera una interfaz gráfica, vamos a utilizar PyQt [#]_.
 No vamos a asumir ningún conocimiento previo de PyQt pero tampoco se va a
 explicar en detalle, excepto cuando involucre un concepto nuevo.
 
-.. [2] PyQt es software libre, es multiplataforma, y es muy potente y fácil de
+Por ejemplo, no voy a explicar el significado de ``setEnabled`` [#]_ pero sí el
+concepto de signals y slots cuando haga falta.
+
+.. [#] PyQt es software libre, es multiplataforma, y es muy potente y fácil de
        usar. Eso no quiere decir que las alternativas no tengan las mismas
        características, pero quiero enfocarme en programar, no en discutir, y
        **yo** prefiero PyQt. Si preferís una alternativa, este libro es libre:
        podés hacer una versión propia!
 
-Por ejemplo, no voy a explicar el significado de ``setEnabled`` [3]_ pero sí el
-concepto de signals y slots cuando haga falta.
-
-.. [3] PyQt tiene una excelente `documentación de referencia <http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/html/classes.html>`_
+.. [#] PyQt tiene una excelente `documentación de referencia <http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/html/classes.html>`_
        para esas cosas.
 
 Convenciones
