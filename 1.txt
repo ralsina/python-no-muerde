@@ -1050,7 +1050,51 @@ Y esta es la versión "moderna":
 Pedir perdón o pedir permiso
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Falta
+    "Puede fallar."
+
+    -- Tu Sam
+
+No hay que tener miedo a las excepciones. Las cosas pueden fallar, y cuando
+fallen, es esperable *y deseable* que den una excepción.
+
+Por ejemplo, esto no es buen python:
+
+.. class:: titulo-listado
+
+esnumero.py
+
+.. code-block:: python
+   :include: codigo/1/esnumero.py
+   :linenos:
+   :linenos_offset:
+
+Eso lo que muestra es miedo a que falle ``float()``. ¿Y sabés qué?
+``float`` está  mucho mejor hecha que mi ``es_numero``...
+
+Esto es mucho mejor Python:
+
+.. code-block:: python
+
+   s = raw_input()
+   try:
+       print "El doble es ",2 * float(s)
+   except ValueError:
+       print "No es un número"
+
+
+Esto está muy relacionado con el tema de "duck typing" que vimos antes.
+Si vamos a andarnos preocupando por como puede reaccionar cada uno
+de los elementos con los que trabajamos, vamos a programar de forma
+completamente burocrática y descerebrante.
+
+Lo que queremos es tratar de hacer las cosas, y manejar las excepciones
+como corresponda. ¿No se pudo calcular el doble? ¡Ok, avisamos y listo!
+
+No hay que programar a la defensiva, hay que ser cuidadoso, no miedoso.
+
+Si se produce una excepción que no te imaginaste, está **bien** que se
+propague. Por ejemplo, si antes en vez de un ``ValueError`` sucediera
+otra cosa, **queremos enterarnos**.
 
 -------------------------
 
