@@ -327,7 +327,54 @@ vez haya 40 líneas entre una y otra y no sea obvio que esa línea se repite.
 Switches
 ~~~~~~~~
 
-cadena de ifs vs alternativas
+Hay una cosa que muchas veces los que programan en Python envidian de
+otros lenguajes... ``switch`` (o ``case``).
+
+Sí, Python no tiene un "if multirama" ni un "goto computado" ni nada
+de eso. Pero ... hay maneras y maneras de sobrevivir a esa carencia.
+
+Esta es la peor:
+
+.. code-block:: python
+
+   if codigo == 'a':
+       return procesa_a()
+   if codigo == 'b':
+       return procesa_b()
+   :
+   :
+   etc.
+
+Esta es apenas un cachito mejor:
+
+.. code-block:: python
+
+   if codigo == 'a':
+       return procesa_a()
+   elif codigo == 'b':
+       return procesa_b()
+   :
+   :
+   etc.
+
+Esta es la "buena":
+
+.. code-block:: python
+
+   procesos = {
+       'a': procesa_a,
+       'b': procesa_b,
+       :
+       :
+       etc.
+   }
+
+   return procesos[codigo]()
+
+Al utilizar un diccionario para clasificar las funciones, es mucho
+más eficiente que una cadena de ``if``. Es además muchísimo más
+fácil de mantener (por ejemplo, podríamos poner ``procesos``
+en un módulo separado).
 
 Patos y Tipos
 ~~~~~~~~~~~~~
@@ -561,6 +608,8 @@ En un capítulo posterior vamos a ver fragmentos de código como este:
    :include: codigo/2/pyurl3.py
    :start-at: @bottle.route('/')
    :end-at: """Crea un nuevo slug"""
+   :linenos:
+   :linenos_offset: 
 
 Esos misteriosos ``@algo`` son decoradores. Un decorador es
 simplemente una cosa que se llama pasando la función "decorada" como
@@ -611,6 +660,8 @@ deco.py
 
 .. code-block:: python
    :include: codigo/1/deco.py
+   :linenos:
+   :linenos_offset:
 
 ¿Qué sucede cuando lo ejecutamos?
 
@@ -660,6 +711,8 @@ deco1.py
 
 .. code-block:: python
    :include: codigo/1/deco1.py
+   :linenos:
+   :linenos_offset:
 
 Al ejecutarlo hace algo así::
 
@@ -683,6 +736,8 @@ deco2.py
 
 .. code-block:: python
    :include: codigo/1/deco2.py
+   :linenos:
+   :linenos_offset:
 
 ¿Y qué hace?
 
