@@ -330,7 +330,7 @@ Switches
 Hay una cosa que muchas veces los que programan en Python envidian de
 otros lenguajes... ``switch`` (o ``case``).
 
-Sí, Python no tiene un "if multirama" ni un "goto computado" ni nada
+Sí, Python no tiene un "if multirrama" ni un "goto computado" ni nada
 de eso. Pero ... hay maneras y maneras de sobrevivir a esa carencia.
 
 Esta es la peor:
@@ -357,7 +357,7 @@ Esta es apenas un cachito mejor:
    :
    etc.
 
-Esta es la "buena":
+Esta es la buena:
 
 .. code-block:: python
 
@@ -674,7 +674,12 @@ deco.py
 
 Resulta que ahora no siempre se ejecuta ``factorial``. Por ejemplo,
 el segundo llamado a ``factorial(4)`` ni siquiera entró en
-``factorial``, y el ``factorial(5)`` entró una sola vez en vez de 4.
+``factorial``, y el ``factorial(5)`` entró una sola vez en vez de 4. [#]_
+
+.. [#] Usando un cache de esta forma, la versión recursiva puede ser
+       más eficiente que la versión iterativa, dependiendo de con
+       qué argumentos se las llame (e ignorando los problemas de
+       agotamiento de pila).
 
 Hay un par de cosas ahí que pueden sorprender un poquito.
 
