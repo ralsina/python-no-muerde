@@ -615,9 +615,9 @@ Esos misteriosos ``@algo`` son decoradores. Un decorador es
 simplemente una cosa que se llama pasando la función "decorada" como
 argumento. Lo que en matemática se llama "composición de funciones".
 
-En el ejemplo anterior, ``bottle-route('/')`` devuelve
-una función, ``bottle.view('usuario.tpl')`` devuelve otra, y
-el fragmento de código es exactamente equivalente a esto:
+Usados con cuidado, los decoradores mejoran mucho la legibilidad
+de forma casi mágica. ¿Querés un ejemplo? Así se vería ese código
+sin decoradores:
 
 .. code-block:: python
 
@@ -626,13 +626,8 @@ el fragmento de código es exactamente equivalente a esto:
         :
         :
 
+    # UGH
     alta = bottle.route('/')(bottle.view('usuario.tpl')(alta))
-
-Es obvio que la sintaxis de decoradores mejora ampliamente la
-legibilidad de ese fragmento. Los decoradores son para mí un gran
-ejemplo de una solución "pythónica" a un problema. Si se usan con
-criterio son casi mágicos, como pueden ver en el ejemplo de uso
-de Bottle en el capítulo "La vida es corta".
 
 ¿Cuándo usar decoradores? Cuando querés cambiar el comportamiento
 de una función, y el cambio es:
