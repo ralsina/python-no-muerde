@@ -391,6 +391,12 @@ Al "envolver" ``app`` con un middleware, es importante que recordemos que
 AuthKit. [#]_ El nuevo "flujo" es algo así (lo nuevo está en linea de puntos
 en el diagrama):
 
+.. [#] Nuevamente es muy mentiroso, estamos ignorando completamente el
+       middleware de sesión, y sin eso AuthKit no funciona. Como excusa: ¡Es con
+       fines educativos! todo lo que hacen las sesiones para nosotros es
+       que AuthKit tenga un lugar donde guardar las credenciales del usuario
+       para el paso 6.
+
 .. figure:: middleware2.graph.pdf
    :height: 6cm
 
@@ -429,11 +435,6 @@ en el diagrama):
 8. De una manera u otra, HTML se devuelve al cliente, que vé el resultado de su
    pedido.
 
-.. [#] Nuevamente es muy mentiroso, estamos ignorando completamente el
-       middleware de sesión, y sin eso AuthKit no funciona. Como excusa: ¡Es con
-       fines educativos! todo lo que hacen las sesiones para nosotros es
-       que AuthKit tenga un lugar donde guardar las credenciales del usuario
-       para el paso 6.
 
 Para que el usuario pueda cerrar su sesión, implementamos logout:
 
