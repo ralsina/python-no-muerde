@@ -270,9 +270,152 @@ instancia simplemente reinstanciando la clase.
 
 Hay varias maneras de hacer un singleton en python, pero antes de eso, dejemos
 en claro **qué** es un singleton: un singleton es una variable global "lazy".
-No, no me discutan. Si alguien no está de acuerdo, por favor que me indique la diferencia entre un singleton y una variable global, excepto el momento de la instanciación, yo espero ;-)
 
-FALTA: recetas de singletons (módulo, clase)
+En este contexto "lazy" quiere decir que hasta que la necesito no se instancia.
+Excepto por eso, no habría diferencias visibles con una variable global.
+
+El mecanismo "obvio" para hacer un singleton en python es un módulo, que son
+singletons porque así están implementados.
+
+Ejemplo:
+
+.. code-block:: pycon
+
+    >>> import os
+    >>> os.x=1
+    >>> os.x
+    1
+    >>> import os as os2
+    >>> os2.x
+    1
+    >>> os2.x=4
+    >>> os.x
+    4
+    >>>
+
+No importa cuantas veces importe ``os`` (o cualquier otro módulo),
+no importa con qué nombre lo haga, siempre es el mismo objeto.
+
+Por lo tanto, podríamos poner todos nuestros singletons en un módulo
+(o en varios) e instanciarlos con ``import`` y funciones dentro
+de ese módulo. Ejemplo:
+
+
+.. class:: titulo-listado
+
+singleton1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: codigo/1/singleton1.py
+
+.. code-block:: pycon
+
+    >>> import singleton1
+    >>> uno=singleton1.misingle()
+    >>> dos=singleton1.misingle()
+    >>> print uno
+    []
+    >>> uno.append('xx')
+    >>> print dos
+    ['xx']
+
+Como pueden ver, ``uno`` y ``dos`` son el mismo objeto.
+
+Una alternativa es no usar un singleton, sino lo que Alex Martelli
+llamó un `Borg <http://code.activestate.com/recipes/66531-singleton-we-dont-need-no-stinkin-singleton-the-bo/>`_:
+
+
+.. code-block:: python
+
+    class Borg:
+        __shared_state = {}
+        def __init__(self):
+            self.__dict__ = self.__shared_state
+
+¿Cómo funciona?
+
+.. code-block:: python
+
+    >>> class Borg:
+    ...     __shared_state = {}
+    ...     def __init__(self):
+    ...         self.__dict__ = self.__shared_state
+    ...
+    >>> a=Borg()
+    >>> b=Borg()
+    >>> a.x=1
+    >>> print b.x
+    1
+
+Si bien ``a`` y ``b`` *no son el mismo objeto* por lo que no son
+realmente singletons, el efecto final es el mismo.
+
+Por último, si andás con ganas de probar magia más potente, es posible
+hacer un singleton `usando metaclases <http://code.activestate.com/recipes/102187-singleton-as-a-metaclass/>`_,
+según esta receta de Andres Tuells:
+
+.. code-block:: python
+   :linenos:
+
+    ## {{{ http://code.activestate.com/recipes/102187/ (r1)
+    """
+    USAGE:
+    class A:
+        __metaclass__ = Singleton
+        def __init__(self):
+            self.a=1
+
+    a=A()
+    b=A()
+    a is b #true
+
+    You don't have access to the constructor,
+    you only can call a factory that returns always
+    the same instance.
+    """
+
+    _global_dict = {}
+
+    def Singleton(name, bases, namespace):
+        class Result:pass
+        Result.__name__ = name
+        Result.__bases__ = bases
+        Result.__dict__ = namespace
+        _global_dict[Result] = Result()
+        return Factory(Result)
+
+
+    class Factory:
+        def __init__(self, key):
+            self._key = key
+        def __call__(self):
+            return _global_dict[self._key]
+
+    def test():
+        class A:
+            __metaclass__ = Singleton
+            def __init__(self):
+                self.a=1
+        a=A()
+        a1=A()
+        print "a is a1", a is a1
+        a.a=12
+        a2=A()
+        print "a.a == a2.a == 12", a.a == a2.a == 12
+        class B:
+            __metaclass__ = Singleton
+        b=B()
+        a=A()
+        print "a is b",a==b
+    ## end of http://code.activestate.com/recipes/102187/ }}}
+
+Seguramente hay otras implementaciones posibles. Yo opino que ``Borg``
+al **no** ser un verdadero singleton, es la más interesante: hace lo
+mismo, son tres líneas de código fácil, *eso es python*.
+
 
 Loops y medios loops
 ~~~~~~~~~~~~~~~~~~~~
