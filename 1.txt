@@ -1147,7 +1147,7 @@ Y esta es la versión "moderna":
 
     class c:
         def f(self, arg = None):
-            self.arg = [] if arg is None else arg
+            self.arg = 42 if arg is None else arg
 
 ¿La ventaja? ¡Se lee de corrido! "self.arg es 42 si arg es None, si no, es arg"
 
