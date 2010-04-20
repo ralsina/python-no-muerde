@@ -551,6 +551,180 @@ en python se llaman ``callables``.
 
    `Más información <http://docs.python.org.ar/tutorial/controlflow.html#formas-con-lambda>`_
 
+
+Decoradores
+~~~~~~~~~~~
+
+En un capítulo posterior vamos a ver fragmentos de código como este:
+
+.. code-block:: python
+   :include: codigo/2/pyurl3.py
+   :start-at: @bottle.route('/')
+   :end-at: """Crea un nuevo slug"""
+
+Esos misteriosos ``@algo`` son decoradores. Un decorador es
+simplemente una cosa que se llama pasando la función "decorada" como
+argumento. Lo que en matemática se llama "composición de funciones".
+
+En el ejemplo anterior, ``bottle-route('/')`` devuelve
+una función, ``bottle.view('usuario.tpl')`` devuelve otra, y
+el fragmento de código es exactamente equivalente a esto:
+
+.. code-block:: python
+
+    def alta():
+        """Crea un nuevo slug"""
+        :
+        :
+
+    alta = bottle.route('/')(bottle.view('usuario.tpl')(alta))
+
+Es obvio que la sintaxis de decoradores mejora ampliamente la
+legibilidad de ese fragmento. Los decoradores son para mí un clásico
+ejemplo de una solución "pythónica" a un problema. Si se usan con
+criterio son casi mágicos, como pueden ver en el ejemplo de uso
+de Bottle en el capítulo "La vida es corta".
+
+¿Cuándo usar decoradores? Cuando querés cambiar el comportamiento
+de una función, y el cambio es:
+
+* Suficientemente genérico como para aplicarlo en más de un lugar.
+* Independiente de la función en sí.
+
+Los decoradores se podrían dividir en dos clases, los "con
+argumentos" y los "sin argumentos".
+
+Los decoradores sin argumentos son fáciles, el ejemplo clásico es
+un "memoizador" de funciones. Si una función es "pesada", no
+tiene efectos secundarios, y está garantizado que *siempre*
+devuelve el mismo resultado a partir de los mismos parámetros,
+puede valer la pena "cachear" el resultado. Ejemplo:
+
+.. class:: titulo-listado
+
+deco.py
+
+.. code-block:: python
+   :include: codigo/1/deco.py
+
+¿Qué sucede cuando lo ejecutamos?
+
+::
+
+    $ python codigo/1/deco.py
+    Calculando, n =  4
+    Calculando, n =  3
+    Calculando, n =  2
+    24
+    24
+    Calculando, n =  5
+    120
+    6
+
+Resulta que ahora no siempre se ejecuta ``factorial``. Por ejemplo,
+el segundo llamado a ``factorial(4)`` ni siquiera entró en
+``factorial``, y el ``factorial(5)`` entró una sola vez en vez de 4.
+
+Hay un par de cosas ahí que pueden sorprender un poquito.
+
+* ``memo`` toma una función ``f`` como argumento y devuelve otra
+  (``memof``). Eso ya lo vimos en genéricos_.
+
+* ``cache`` queda asociada a ``memof``, para cada función "memoizada" hay
+  un ``cache`` separado.
+
+  Eso es así porque es local a ``memo``. Al usar el decorador hacemos
+  ``factorial = memo(factorial)`` y como **esa** ``memof`` tiene una
+  referencia al ``cache`` que se creó localmente en esa llamada a
+  ``memo``, ese ``cache`` sigue existiendo mientras ``memof`` exista.
+
+  Si uso ``memo`` con otra función, es otra ``memof`` y otro ``cache``.
+
+Los decoradores con argumentos son... un poco más densos. Veamos un
+ejemplo en detalle.
+
+Consideremos este ejemplo "de juguete" de un programa cuyo flujo
+es impredecible [#]_
+
+.. [#] Sí, ya sé que realmente es un poco predecible porque no uso
+       bien ``random``. Es a propósito ;-)
+
+.. class:: titulo-listado
+
+deco1.py
+
+.. code-block:: python
+   :include: codigo/1/deco1.py
+
+Al ejecutarlo hace algo así::
+
+    $ python codigo/1/deco1.py
+    Hago varias cosas
+    Estoy haciendo algo no tan importante
+    Estoy haciendo algo importante
+    Estoy haciendo algo no tan importante
+    Estoy haciendo algo no tan importante
+
+Si no fuera tan obvio cuál función se ejecuta en cada momento, tal
+vez nos interesaría saberlo para poder depurar un error.
+
+Un tradicionalista te diría "andá a cada función y agregále logs".
+Bueno, pues es posible hacer eso sin tocar cada función (por lo menos
+no mucho) usando decoradores.
+
+.. class:: titulo-listado
+
+deco2.py
+
+.. code-block:: python
+   :include: codigo/1/deco2.py
+
+¿Y qué hace?
+
+::
+
+    $ python codigo/1/deco2.py
+    ===> Entrando a Master
+    Hago varias cosas
+    ===> Entrando a F1
+    Estoy haciendo algo importante
+    <=== Saliendo de F1
+    ===> Entrando a F1
+    Estoy haciendo algo importante
+    <=== Saliendo de F1
+    ===> Entrando a F2
+    Estoy haciendo algo no tan importante
+    <=== Saliendo de F2
+    ===> Entrando a F2
+    Estoy haciendo algo no tan importante
+    <=== Saliendo de F2
+    <=== Saliendo de Master
+
+Este decorador es un poco más complicado que ``memo``, porque tiene
+dos partes.
+
+Recordemos que un decorador tiene que tomar como argumento una función
+y devolver una función [#]_.
+
+.. [#] No es estrictamente cierto, podría devolver una clase, o
+       cualquier cosa ``x`` que soporte ``x(f)`` pero digamos que una
+       función.
+
+Entonces al usar ``logger`` en ``f1`` en realidad no voy a pasarle
+``f1`` a la función ``logger`` si no al **resultado** de ``logger('F1')``
+
+Eso es lo que hay que entender, así que lo repito: ¡No a ``logger``
+sino al resultado de ``logger('F1')``!
+
+En realidad ``logger`` no es el decorador, es una "fábrica" de decoradores.
+Si hago ``logger('F1')`` crea un decorador que imprime ``===> Entrando a F1``
+y ``<=== Saliendo de F1`` antes y después de llamar a la función decorada.
+
+Entonces ``wrapper`` es el decorador "de verdad", y es comparable con ``memo``
+y ``f2`` es el equivalente de ``memof``, y tenemos exactamente el
+caso anterior.
+
+
 Claro pero corto
 ~~~~~~~~~~~~~~~~
 
@@ -812,8 +986,6 @@ Y esta es la versión "moderna":
 
    Con un tipo inmutable (como un string) esto no es problema.
    
-
-
 
 Pedir perdón o pedir permiso
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
