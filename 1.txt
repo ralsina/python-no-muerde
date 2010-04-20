@@ -580,7 +580,7 @@ el fragmento de código es exactamente equivalente a esto:
     alta = bottle.route('/')(bottle.view('usuario.tpl')(alta))
 
 Es obvio que la sintaxis de decoradores mejora ampliamente la
-legibilidad de ese fragmento. Los decoradores son para mí un clásico
+legibilidad de ese fragmento. Los decoradores son para mí un gran
 ejemplo de una solución "pythónica" a un problema. Si se usan con
 criterio son casi mágicos, como pueden ver en el ejemplo de uso
 de Bottle en el capítulo "La vida es corta".
@@ -591,10 +591,15 @@ de una función, y el cambio es:
 * Suficientemente genérico como para aplicarlo en más de un lugar.
 * Independiente de la función en sí.
 
+Como decoradores no está cubierto en el
+`tutorial <http://docs.python.org.ar/tutorial/contenido.html>`_
+vamos a verlos con un poco de detalle, porque es una de las técnicas
+que más diferencia pueden hacer en tu código.
+
 Los decoradores se podrían dividir en dos clases, los "con
 argumentos" y los "sin argumentos".
 
-Los decoradores sin argumentos son fáciles, el ejemplo clásico es
+Los decoradores sin argumentos son más fáciles, el ejemplo clásico es
 un "memoizador" de funciones. Si una función es "pesada", no
 tiene efectos secundarios, y está garantizado que *siempre*
 devuelve el mismo resultado a partir de los mismos parámetros,
