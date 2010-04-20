@@ -115,3 +115,8 @@ middleware2.graph.png: middleware2.dot
        codigo/2/pyurl2.py codigo/2/pyurl3.py\
        codigo/2/views/atajo.tpl\
        codigo/2/views/usuario.tpl
+
+1.pdf: 1.txt estilo.style codigo/1/deco1.py\
+       codigo/1/deco2.py \
+       codigo/1/deco.py
+
