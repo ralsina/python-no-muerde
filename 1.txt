@@ -298,8 +298,9 @@ no importa con qué nombre lo haga, siempre es el mismo objeto.
 
 Por lo tanto, podríamos poner todos nuestros singletons en un módulo
 (o en varios) e instanciarlos con ``import`` y funciones dentro
-de ese módulo. Ejemplo:
+de ese módulo.
 
+Ejemplo:
 
 .. class:: titulo-listado
 
@@ -339,11 +340,6 @@ llamó un `Borg <http://code.activestate.com/recipes/66531-singleton-we-dont-nee
 
 .. code-block:: python
 
-    >>> class Borg:
-    ...     __shared_state = {}
-    ...     def __init__(self):
-    ...         self.__dict__ = self.__shared_state
-    ...
     >>> a=Borg()
     >>> b=Borg()
     >>> a.x=1
