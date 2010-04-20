@@ -785,8 +785,8 @@ y ``f2`` es el equivalente de ``memof``, y tenemos exactamente el
 caso anterior.
 
 
-Claro pero corto
-~~~~~~~~~~~~~~~~
+Claro pero corto pero claro
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Depurar es dos veces más difícil que programar. Por lo tanto, si
     escribís el código lo más astuto posible, por definición, no sos lo
