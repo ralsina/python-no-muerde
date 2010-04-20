@@ -1057,6 +1057,9 @@ Pedir perdón o pedir permiso
 No hay que tener miedo a las excepciones. Las cosas pueden fallar, y cuando
 fallen, es esperable *y deseable* que den una excepción.
 
+¿Cómo sabemos si un archivo se puede leer? ¿Con ``os.stat("archivo")``?
+¡No, con ``open("archivo","r")``!
+
 Por ejemplo, esto no es buen python:
 
 .. class:: titulo-listado
