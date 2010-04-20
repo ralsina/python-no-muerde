@@ -119,5 +119,6 @@ middleware2.graph.png: middleware2.dot
 1.pdf: 1.txt estilo.style codigo/1/deco1.py\
        codigo/1/deco2.py \
        codigo/1/deco.py \
-       codigo/1/esnumero.py
+       codigo/1/esnumero.py \
+       codigo/1/singleton1.py
 
