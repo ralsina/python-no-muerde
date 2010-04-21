@@ -751,8 +751,8 @@ En un capítulo posterior vamos a ver fragmentos de código como este:
    :linenos_offset: 
 
 Esos misteriosos ``@algo`` son decoradores. Un decorador es
-simplemente una cosa que se llama pasando la función "decorada" como
-argumento. Lo que en matemática se llama "composición de funciones".
+simplemente una cosa que se llama pasando la función a decorar como
+argumento. Lo que en matemática se denomina "composición de funciones".
 
 Usados con cuidado, los decoradores mejoran mucho la legibilidad
 de forma casi mágica. ¿Querés un ejemplo? Así se vería ese código
