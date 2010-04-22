@@ -56,6 +56,18 @@ Código
                 dot -Tpdf $< > $@ -Efontname="DejaVu Sans" \
                     -Nfontname="DejaVu Sans"
 
+.. [#] Por suerte la directiva es completamente genérica, funciona para HTML
+       igual que para PDF. Esto es lo que tuve que agregar al principio
+       de ``r2w.py``:
+
+       .. code-block:: python
+
+            from rst2pdf import pygments_code_block_directive
+            from docutils.parsers.rst import directives
+            directives.register_directive('code-block', \
+                pygments_code_block_directive.code_block_directive)
+
+
 Gráficos
     Hay algunos diagramas. Los genero con la excelente herramienta Graphviz.
 
@@ -97,17 +109,6 @@ Server
     No espero que tenga mucho tráfico. Y aún si lo tuviera no sería problema:
     *es un sitio en HTML estático* por lo que probablemente un pentium 3 pueda
     saturar 1Mbps. Lo puse directamente en el mismo VPS que tiene mi blog.
-
-.. [#] Por suerte la directiva es completamente genérica, funciona para HTML
-       igual que para PDF. Esto es lo que tuve que agregar al principio
-       de ``r2w.py``:
-
-       .. code-block:: python
-
-            from rst2pdf import pygments_code_block_directive
-            from docutils.parsers.rst import directives
-            directives.register_directive('code-block', \
-                pygments_code_block_directive.code_block_directive)
 
 Versionado
     No hay mucho para discutir, cualquiera de los sitios de hosting libres para
