@@ -417,7 +417,12 @@ tenemos exactamente la combinación misteriosa de versiones, carpetas,
 software, permisos, etc. que resuelve todo.
 
 Para evitar estas suposiciones implícitas en el código, lo mejor
-es tener un entorno repetible. O mejor aún: muchos.
+es tener un entorno **repetible** en el que correr los tests. O mejor
+aún: muchos.
+
+De esa forma uno sabe "este bug no se produce si tengo la versión X
+del paquete Y con python 2.6" y puede hacer el diagnóstico hasta
+encontrar el problema de fondo.
 
 Por ejemplo, para un programa mío llamado rst2pdf [#]_, que requiere un
 software llamado ReportLab, y (opcionalmente) otro llamado Wordaxe,
@@ -439,4 +444,141 @@ todos esos entornos no estoy contento con un *commit*.
 ¿Cómo se hace para mantener todos esos entornos de prueba en
 funcionamiento? Usando `virtualenv <http://pypi.python.org/pypi/virtualenv>`_.
 
+Virtualenv no se va a encargar de que puedas usar diferentes
+versiones de Python [#]_, pero sí de que sepas exactamente qué versiones
+de todos los módulos y paquetes estás usando.
 
+.. [#] Eso es cuestión de instalar varios Python en paralelo, y
+       depende (entre otras cosas) de qué sistema operativo estés
+       usando.
+
+Tomemos como ejemplo la versión final de la aplicación de reducción
+de URLs del capítulo `La vida es corta`_.
+
+Esa aplicación tiene montones de dependencias que no hice ningún
+intento de documentar o siquiera averiguar mientras la estaba
+desarrollando.
+
+Veamos como ``virtualenv`` nos ayuda con esto. Empezamos creando un
+entorno virtual vacío:
+
+::
+
+    [python-no-muerde]$ cd codigo/4/
+    [4]$ virtualenv virt --no-site-packages --distribute
+    New python executable in virt/bin/python
+    Installing distribute...................................done.
+
+
+La opción ``--no-site-packages`` hace que nada de lo que instalé
+en el Python "de sistema" afecte al entorno virtual. Lo único
+disponible es la biblioteca standard.
+
+La opción ``--distribute`` hace que utilice Distribute en lugar de
+setuptools. No importa demasiado por ahora, pero para más detalles
+podés leer el capítulo de deployment.
+
+    
+::
+
+    [4]$ . virt/bin/activate
+    (virt)[4]$4 which python
+    /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/virt/bin/python
+
+¡Fijáte que ahora python es un ejecutable dentro del entorno virtual!
+Eso es activarlo. Todo lo que haga ahora funciona con **ese** entorno,
+si instalo un programa con ``pip`` se instala ahí adentro, etc. El
+``(virt)`` en el prompt indica cuál es el entorno virtual activado.
+
+Probemos nuestro programa::
+
+    (virt)[4]$ python pyurl3.py
+    Traceback (most recent call last):
+        File "pyurl3.py", line 14, in <module>
+            from twill.commands import go, code, find, notfind, title
+    ImportError: No module named twill.commands
+
+Bueno, necesitamos ``twill``::
+
+    (virt)[4]$ pip install twill
+    Downloading/unpacking twill
+    Downloading twill-0.9.tar.gz (242Kb): 242Kb downloaded
+    Running setup.py egg_info for package twill
+    Installing collected packages: twill
+    Running setup.py install for twill
+        changing mode of build/scripts-2.6/twill-fork from 644 to 755
+        changing mode of /home/ralsina/Desktop/proyectos/
+        python-no-muerde/codigo/4/virt/bin/twill-fork to 755
+        Installing twill-sh script to /home/ralsina/Desktop/proyectos/
+        python-no-muerde/codigo/4/virt/bin
+    Successfully installed twill
+
+Si sigo intentando ejecutar ``pyurl3.py`` me dice que necesito
+``storm.locals`` (instalo storm), ``beaker.middleware`` (instalo
+beaker), ``authkit.authenticate`` (instalo authkit).
+
+Como ``authkit`` también trata de instalar ``beaker`` resulta que
+las únicas dependencias reales son twill, storm y authkit, lo
+demás son dependencias de dependencias.
+
+Con esta información tendríamos suficiente para crear un script
+de instalación, como veremos en el capítulo sobre deployment.
+
+De todas formas lo importante ahora es que tenemos una base estable
+sobre la cual diagnosticar problemas con el programa. Si alguien
+nos reporta un bug, solo necesitamos ver qué versiones tiene de:
+
+* Python: porque tal vez usamos algo que no funciona en su versión,
+  o porque la biblioteca standard cambió.
+
+* Los paquetes que instalamos en ``virtualenv``. Podemos ver cuales
+  son fácilmente::
+
+    (virt)[4]$ pip freeze
+    AuthKit==0.4.5
+    Beaker==1.5.3
+    Paste==1.7.3.1
+    PasteDeploy==1.3.3
+    PasteScript==1.7.3
+    WebOb==0.9.8
+    decorator==3.1.2
+    distribute==0.6.10
+    elementtree==1.2.7-20070827-preview
+    nose==0.11.3
+    python-openid==2.2.4
+    storm==0.16.0
+    twill==0.9
+    wsgiref==0.1.2
+
+
+De hecho, es posible usar la salida de ``pip freeze`` como un archivo
+de requerimientos, para reproducir *exactamente* este entorno. Si
+tenemos esa lista de requerimientos en un archivo ``req.txt``, entonces
+podemos comenzar con un entorno virtual vacío y "llenarlo" exactamente
+con eso en un solo paso::
+
+    [4]$ virtualenv virt2 --no-site-packages --distribute
+    New python executable in virt2/bin/python
+    Installing distribute..............................done.
+    [4]$ . virt2/bin/activate
+    (virt2)[4]$ pip install -r req.txt
+    Downloading/unpacking Beaker==1.5.3 (from -r req.txt (line 2))
+      Real name of requirement Beaker is Beaker
+      Downloading Beaker-1.5.3.tar.gz (46Kb): 46Kb downloaded
+    :
+    :
+    :
+    :
+
+Fijáte como pasamos de "no tengo idea de qué se necesita para que
+esta aplicación funcione" a "con este comando tenés exactamente el
+mismo entorno que yo para correr la aplicación".
+
+Y de la misma forma, si alguien te dice "no me autentica por OpenID"
+podés decirle: "dame las versiones que tenés instaladas de AuthKit,
+Beaker, python-openid, etc.", hacés un ``req.txt`` con las versiones del
+usuario, y podés reproducir el problema. ¡Tu máquina ya no es mágica!
+
+De ahora en más, si te interesa la compatibilidad con distintas
+versiones de otros módulos, podés tener una serie de entornos
+virtuales y testear contra cada uno.
