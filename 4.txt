@@ -398,3 +398,43 @@ mock1.py
    :start-at: def largo_de_pagina
 
 
+La Máquina Mágica
+~~~~~~~~~~~~~~~~~
+
+    Mucho se puede aprender por la repetición bajo diferentes
+    condiciones, aún si no se logra el resultado deseado.
+
+    -- Archer J. P. Martin
+
+Un síntoma de falta de testing es la máquina mágica. Es un equipo
+en particular en el que el programa funciona perfectamente. Nadie
+más puede usarlo, y el desarrollador nunca puede reproducir los
+errores de los usuarios.
+
+¿Por qué sucede esto? Porque si no funcionara en la máquina del
+desarrollador, él se habría dado cuenta. Por ese motivo, siempre
+tenemos exactamente la combinación misteriosa de versiones, carpetas,
+software, permisos, etc. que resuelve todo.
+
+Para evitar estas suposiciones implícitas en el código, lo mejor
+es tener un entorno repetible. O mejor aún: muchos.
+
+Por ejemplo, para un programa mío llamado rst2pdf [#]_, que requiere un
+software llamado ReportLab, y (opcionalmente) otro llamado Wordaxe,
+los tests se ejecutan en las siguientes condiciones:
+
+* Python 2.4 + Reportlab 2.4
+* Python 2.5 + Reportlab 2.4
+* Python 2.6 + Reportlab 2.4
+* Python 2.6 + Reportlab 2.3
+* Python 2.6 + Reportlab 2.4 + Wordaxe
+
+Hasta que no estoy contento con el resultado de *todas* esas corridas
+de prueba, no voy a hacer un release. De hecho, si no lo probé con
+todos esos entornos no estoy contento con un *commit*.
+
+¿Cómo se hace para mantener todos esos entornos de prueba en
+funcionamiento? Usando `virtualenv <http://pypi.python.org/pypi/virtualenv>`_.
+
+.. [#] Si estás leyendo este libro en PDF o impreso, probablemente
+       estás viendo el resultado de rst2pdf.
