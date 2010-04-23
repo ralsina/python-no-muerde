@@ -453,7 +453,7 @@ de todos los módulos y paquetes estás usando.
        usando.
 
 Tomemos como ejemplo la versión final de la aplicación de reducción
-de URLs del capítulo `La vida es corta`_.
+de URLs del capítulo La vida es corta.
 
 Esa aplicación tiene montones de dependencias que no hice ningún
 intento de documentar o siquiera averiguar mientras la estaba
