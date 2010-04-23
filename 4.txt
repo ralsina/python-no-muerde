@@ -423,6 +423,9 @@ Por ejemplo, para un programa mío llamado rst2pdf [#]_, que requiere un
 software llamado ReportLab, y (opcionalmente) otro llamado Wordaxe,
 los tests se ejecutan en las siguientes condiciones:
 
+.. [#] Si estás leyendo este libro en PDF o impreso, probablemente
+       estás viendo el resultado de rst2pdf.
+       
 * Python 2.4 + Reportlab 2.4
 * Python 2.5 + Reportlab 2.4
 * Python 2.6 + Reportlab 2.4
@@ -436,5 +439,4 @@ todos esos entornos no estoy contento con un *commit*.
 ¿Cómo se hace para mantener todos esos entornos de prueba en
 funcionamiento? Usando `virtualenv <http://pypi.python.org/pypi/virtualenv>`_.
 
-.. [#] Si estás leyendo este libro en PDF o impreso, probablemente
-       estás viendo el resultado de rst2pdf.
+
