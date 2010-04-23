@@ -570,6 +570,10 @@ con eso en un solo paso::
     :
     :
 
+    Successfully installed AuthKit Beaker decorator elementtree nose
+    Paste PasteDeploy PasteScript python-openid storm twill WebOb
+
+
 Fijáte como pasamos de "no tengo idea de qué se necesita para que
 esta aplicación funcione" a "con este comando tenés exactamente el
 mismo entorno que yo para correr la aplicación".
