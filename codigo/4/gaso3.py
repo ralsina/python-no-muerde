@@ -3,7 +3,7 @@ import re
 import unicodedata
 
 def gas(letra):
-    '''Dada una letra X devuelve XgasX excepto si X es una vocal acentuada,
+    u'''Dada una letra X devuelve XgasX excepto si X es una vocal acentuada,
     en cuyo caso devuelve la primera X sin acento.
 
     El uso de normalize lo saqué de google.
@@ -23,7 +23,7 @@ def gas(letra):
 
 
 def gasear(palabra):
-    '''Dada una palabra, la convierte al rosarino
+    u'''Dada una palabra, la convierte al rosarino
 
     \xe1 y \\xe1 son "a con tilde", los doctests son un poco
     quisquillosos con los acentos.
