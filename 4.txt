@@ -6,6 +6,15 @@ Documentación y Testing
 
     -- Califa Omar, Alejandría, Año 634.
 
+.. admonition:: FIXME
+
+    1. Tengo que buscar un mejor ejemplo, que pueda servir para todo
+       el capítulo.
+
+    2. Cambiar el orden de las subsecciones (probablemente)
+
+    3. ¿Poner este capítulo después del de deployment?
+
 ¿Pero cómo sabemos si el programa hace *exactamente* lo que dice el manual?
 
 Bueno, pues *para eso* (entre otras cosas) están los tests [#]_.
@@ -586,3 +595,59 @@ usuario, y podés reproducir el problema. ¡Tu máquina ya no es mágica!
 De ahora en más, si te interesa la compatibilidad con distintas
 versiones de otros módulos, podés tener una serie de entornos
 virtuales y testear contra cada uno.
+
+Documentos, por favor
+~~~~~~~~~~~~~~~~~~~~~
+
+Desde el principio de este capítulo estoy hablando de testing. Pero
+el título del capítulo es "Documentación y Testing"... ¿Dónde está
+la documentación? Bueno, la documentación está infiltrada, porque
+venimos usando doctests en docstrings, y resulta que es posible usar
+los doctests y docstrings para generar un bonito manual de referencia
+de un módulo o un API.
+
+Si estás documentando un programa, en general documentar el API
+interno sólo es útil en general para el desarrollo del mismo, por
+lo que es importante pero no de vida o muerte.
+
+Si estás documentando una biblioteca, en cambio, documentar el API
+**es** de vida o muerte. Si bien hay que añadir un documento
+"a vista de pájaro" que explique qué se supone que hace uno con ese
+bicho, los detalles son fundamentales.
+
+Consideremos nuestro ejemplo ``gaso3.py``.
+
+Podemos verlo como código con comentarios, y esos comentarios como
+explicaciones con tests intercalados, o... podemos verlo como un
+manual con código adentro.
+
+Ese enfoque es el de "Literate programming" y hay bastantes herramientas
+para eso en Python, por ejemplo:
+
+`PyLit <http://pylit.berlios.de/>`_
+   Es tal vez la más "tradicional": podés convertir código en manual
+   y manual en código.
+
+Ya no desde el lado del Literate programming, sino de un enfoque más
+habitual en Java o C++:
+   
+`epydoc <http://epydoc.sourceforge.net/>`_
+   Es una herramienta de "extracción de docstrings", los toma y genera
+   un sitio con referencias cruzadas, etc.
+
+`Sphinx <http://sphinx.pocoo.org/>`_
+   Es en realidad una herramienta para hacer manuales. Incluye una
+   extensión llamada autodoc que hace extracción de docstrings.
+
+Hasta hay un módulo en la biblioteca standard llamado ``pydoc``
+que hace algo parecido.
+
+A mí me parece que los manuales creados exclusivamente mediante
+extracción de docstrings son áridos, generalmente de tono desparejo
+y con una tendencia a carecer de cohesión narrativa, pero bueno, son
+exhaustivos y son "gratis" en lo que se refiere a esfuerzo, así que
+peor es nada.
+
+Combinando eso con que los doctests nos aseguran que los comentarios
+no estén completamente equivocados... ¿Cómo hacemos para generar un
+bonito manual de referencia a partir de nuestro código?
