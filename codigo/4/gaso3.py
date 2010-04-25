@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
 import unicodedata
-from buscaacento1 import busca_acento
 
 def gas(letra):
     '''Dada una letra X devuelve XgasX excepto si X es una vocal acentuada,
