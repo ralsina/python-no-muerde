@@ -10,7 +10,8 @@ FIGURAS=dependencias.graph.pdf\
          nc.svg.pdf\
          remix.svg.pdf\
          sa.svg.pdf\
-         share.svg.pdf
+         share.svg.pdf\
+         gaso3-api.pdf         
 
 FIGURAS_WEB=dependencias.graph.png\
             loop-n-y-medio.graph.png\
@@ -22,7 +23,8 @@ FIGURAS_WEB=dependencias.graph.png\
             nc.svg.png\
             remix.svg.png\
             sa.svg.png\
-            share.svg.png
+            share.svg.png\
+            gaso3-api.png
 
 SCREENSHOTS=pyurl1-1.print.png\
 	 pyurl2-1.print.png\
@@ -61,11 +63,12 @@ python_no_muerde.pdf: tapa.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile esti
 
 sitio: .phony ${FIGURAS_WEB} fuentes.zip ${CAPITULOS}
 	(cd web ; ln -sf ../codigo .)
-	(cd sitio ; ln -sf ../*.graph.png ../*.pdf ../*screen.png ../fuentes.zip .)
+	(cd sitio ; ln -sf ../*.graph.png ../*.pdf ../*screen.png ../fuentes.zip ../*api.png .)
 	(for C in ${CAPITULOS}; do touch -r $$C web/$$C ; done)
 	python r2w.py rst2web.ini
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 	(cd sitio; sed --in-place 's/print\.png/screen\.png/g' *html)
+	(cd sitio; sed --in-place 's/api\.pdf/api\.png/g' *html)
 
 commit:
 	touch indice.txt ; make python_no_muerde.pdf
