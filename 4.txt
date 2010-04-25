@@ -664,4 +664,12 @@ Produce este tipo de resultado:
 
 No recomendaría usar Sphinx a menos que lo uses como herramienta para
 escribir otra documentación. Usarlo sólo para extracción de docstrings
-me parece mucho esfuerzo para poca ganancia.
+me parece mucho esfuerzo para poca ganancia [#]_.
+
+.. [#] ¿Pero como herramienta para crear el manual y/o el sitio? ¡Es
+       buenísimo!
+
+Igual que con los tests, esperar para documentar tus funciones es una
+garantía de que vas a tener un déficit a remontar. Con un uso
+medianamente inteligente de las herramientas es posible mantener
+la documentación "siguiendo" al código, y actualizada.
