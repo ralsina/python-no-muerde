@@ -632,7 +632,7 @@ Ya no desde el lado del Literate programming, sino de un enfoque más
 habitual en Java o C++:
    
 `epydoc <http://epydoc.sourceforge.net/>`_
-   Es una herramienta de "extracción de docstrings", los toma y genera
+   Es una herramienta de extracción de docstrings, los toma y genera
    un sitio con referencias cruzadas, etc.
 
 `Sphinx <http://sphinx.pocoo.org/>`_
@@ -651,3 +651,17 @@ peor es nada.
 Combinando eso con que los doctests nos aseguran que los comentarios
 no estén completamente equivocados... ¿Cómo hacemos para generar un
 bonito manual de referencia a partir de nuestro código?
+
+Usando ``epydoc``, por ejemplo::
+
+    $ epydoc gaso3.py --pdf
+
+Produce este tipo de resultado:
+
+.. figure:: gaso3-api.pdf#page=2#viewrect=50,75,500,300
+
+   PDF producido por epydoc. También genera HTML.
+
+No recomendaría usar Sphinx a menos que lo uses como herramienta para
+escribir otra documentación. Usarlo sólo para extracción de docstrings
+me parece mucho esfuerzo para poca ganancia.
