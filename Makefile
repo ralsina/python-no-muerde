@@ -33,7 +33,16 @@ SCREENSHOTS=pyurl1-1.print.png\
 	 pyurl2-4.print.png\
 	 pyurl3-1.print.png\
 	 pyurl3-2.print.png\
-	 pyurl3-3.print.png
+	 pyurl3-3.print.png\
+         radio-1.print.png\
+         radio-2.print.png\
+         radio-3.print.png\
+         radio-4.print.png\
+         radio-5.print.png\
+         radio-6.print.png\
+         radio-7.print.png\
+         radio-8.print.png
+       
 
 CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt metalibro.txt
 CAPITULOS_PDF=intro.pdf 1.pdf 2.pdf 3.pdf 4.pdf 5.pdf 6.pdf 7.pdf 8.pdf 9.pdf 10.pdf 11.pdf 12.pdf licencia.pdf gracias.pdf metalibro.pdf
@@ -125,3 +134,12 @@ middleware2.graph.png: middleware2.dot
        codigo/1/esnumero.py \
        codigo/1/singleton1.py
 
+5.pdf: 5.txt\
+       radio-1.print.png\
+       radio-2.print.png\
+       radio-3.print.png\
+       radio-4.print.png\
+       radio-5.print.png\
+       radio-6.print.png\
+       radio-7.print.png\
+       radio-8.print.png

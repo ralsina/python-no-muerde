@@ -13,18 +13,6 @@ a tratar de resolver su opuesto: sabiendo qué querés hacer, cómo se hace?
 Vamos a aprender a hacer programas sencillos usando PyQt, un toolkit de
 interfaz gráfica potente, multiplataforma, y relativamente sencillo de usar.
 
-Programación con Eventos
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Signals / Slots
-~~~~~~~~~~~~~~~
-
-Ventanas / Diálogos
-~~~~~~~~~~~~~~~~~~~
-
-Acciones
-~~~~~~~~
-
 Proyecto
 ~~~~~~~~
 
@@ -44,3 +32,149 @@ Hoy en día hay varias maneras de hacerlo:
 Resulta que mi favorita es la tercera opción por varios motivos que no vienen al
 caso. Nuestro proyecto es crear una aplicación similar, minimalista y fácil de
 entender.
+
+Programación con Eventos
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Signals / Slots
+~~~~~~~~~~~~~~~
+
+Ventanas / Diálogos
+~~~~~~~~~~~~~~~~~~~
+
+Radiotray tiene exactamente dos ventanas [#]_:
+
+.. figure:: radio-1.print.png
+   :width: 63%
+
+   El diálogo de administración de radios y el de añadir radio.
+
+.. [#] Bueno, mentira, tienen también  una ventana "Acerca de"
+
+No creo en hacer ventanas a mano. Creo que acomodar los widgets en el
+lugar adonde van es un problema resuelto, y la solución es usar un
+diseñador de diálogos. [#]_
+
+.. [#] Sí, ya sé, "no tenés el mismo control". Tampoco tengo mucho
+       control sobre la creación de la pizzanesa a la española en La
+       Farola de San Isidro, pero si alguna vez la comiste sabés que
+       eso es lo de menos.
+
+En nuestro caso, como estamos usando PyQt, la herramienta es Qt
+Designer.
+
+.. figure:: radio-2.print.png
+   :width: 100%
+
+   Designer a punto de crear un diálogo vacío.
+
+El proceso de crear una interfaz en Designer tiene varios pasos.
+Sabiendo qué interfaz queremos [#]_, el primero es acomodar más o menos
+a ojo los objetos deseados.
+
+.. [#] En nuestro caso, como estamos robando, es muy sencillo. En la
+       vida real, este trabajo se basaría en wireframing, o algún
+       otro proceso de creación de interfaces.
+
+.. figure:: radio-3.print.png
+   :width: 43%
+
+   El primer borrador.
+
+   Literalmente, tomé unos botones y una lista y los tiré adentro de la
+   ventana más o menos en posición.
+
+El acomodarlos muy así nomás es intencional, porque el siguiente paso
+es usar *Layout Managers* para que los objetos queden bien acomodados.
+En una GUI moderna **no tiene sentido** acomodar las cosas en posiciones
+absolutas, porque no tenés idea de como va a ser la interfaz para el
+usuario final con tanto nivel de detalle. Por ejemplo:
+
+* Traducciones a otros idiomas hacen que los botones deban ser más
+  anchos o angostos.
+
+* Cambios en la tipografía del sistema pueden hacer que sean más altos
+  o bajos.
+
+* Cambios en el estilo de widgets, o en la plataforma usada pueden
+  cambiar la forma misma de un botón (¿más redondeado? ¿más plano?)
+
+Dadas todas esas variables, es nuestro trabajo hacer un layout que
+funcione con todas las combinaciones posibles, que sea flexible y
+responda a esos cambios con gracia.
+
+En nuestro caso, podríamos imponer las siguientes "restricciones" a
+las posiciones de los widgets:
+
+* El botón de "Cerrar" va abajo a la derecha.
+
+* Los otros botones van en una columna a la derecha de la lista,
+  en la parte de arriba de la ventana.
+
+* La lista va a la izquierda de los botones.
+
+Veamos por partes.
+
+Los botones se agrupan con un "Vertical Layout", para que queden
+alineados y en columna. Los seleccionamos todos usando Ctrl+click y
+apretamos el botón de "vertical layout" en la barra de herramientas:
+
+.. figure:: radio-4.print.png
+   :width: 43%
+
+   El layout vertical de botones se ve como un recuadro rojo.
+
+Un layout vertical solo hace que los objetos que contiene queden en
+una columna. Todos tienen el mismo ancho y están espaciados
+regularmente.
+
+Para que los botones queden al lado de la lista, seleccionamos *el layout*
+y la lista, y hacemos un layout horizontal:
+
+.. figure:: radio-5.print.png
+   :width: 43%
+
+   ¡Layouts anidados!
+
+El layout horizontal hace exactamente lo mismo que el vertical, pero
+en vez de una columna forman una fila.
+
+Por último, deberíamos hacer un layout vertical conteniendo el layout
+horizontal que acabamos de crear y el botón que nos queda.
+
+Como ese layout es el "top level" y tiene que cubrir toda la ventana,
+se hace ligeramente distinto: botón derecho en el fondo de la ventana
+y "Lay out" -> "Lay Out Vertically":
+
+.. figure:: radio-6.print.png
+   :width: 43%
+
+   ¡Feo!
+
+Si bien el resultado cumple las cosas que habíamos definido, es
+horrible:
+
+* El botón de cerrar cubre todo el fondo de la ventana.
+* El espaciado de los otros botones es antinatural.
+
+La solución en ambos casos es el uso de espaciadores, que "empujen"
+el botón de abajo hacia la derecha (luego de meterlo en un layout
+horizontal) y los otros hacia arriba:
+
+.. figure:: radio-7.print.png
+   :width: 43%
+
+   ¡Mejor!
+    
+Por supuesto que hay más de una solución para cada problema de cómo
+acomodar widgets:
+
+.. figure:: radio-8.print.png
+   :width: 43%
+
+   ¿Mejor o peor que la anterior? ¡Vean el capítulo siguiente!
+
+
+Acciones
+~~~~~~~~
+
