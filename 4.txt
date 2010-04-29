@@ -659,6 +659,7 @@ Usando ``epydoc``, por ejemplo::
 Produce este tipo de resultado:
 
 .. figure:: gaso3-api.pdf#page=2#viewrect=50,75,500,300
+   :width: 100%
 
    PDF producido por epydoc. También genera HTML.
 
