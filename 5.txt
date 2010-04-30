@@ -174,6 +174,29 @@ acomodar widgets:
 
    ¿Mejor o peor que la anterior? ¡Vean el capítulo siguiente!
 
+El siguiente paso es poner textos [#]_, iconos [#]_, y nombres de objetos
+para que la interfaz empiece a parecer algo útil.
+
+.. [#] Sí, estoy haciendo la interfaz en inglés. Después vamos a ver
+       como traducirla al castellano. Si la hacés directamente en
+       castellano te estás encerrando en un nicho (por lo menos si
+       la aplicación es software libre, como esta).
+
+.. [#] Yo uso los `iconos de Reinhardt <http://kde-look.org/content/show.php?content=6153>`_:
+       me gustan estéticamente, son minimalistas y se ven igual de
+       raros en todos los sistemas operativos. Si querés usar otros,
+       hay millones de iconos gratis dando vueltas. Es cuestión de
+       ser consistente (¡y fijarse la licencia!)
+
+Los iconos se van a cargar en un *archivo de recursos*, ``icons.qrc``:
+
+.. code-block:: xml
+   :include: codigo/5/icons.qrc
+
+El dialogo en sí está definido en el archivo ``radio.ui``.
+
+.. figure:: radio-9.print.jpg
+   :width: 43%
 
 Acciones
 ~~~~~~~~
