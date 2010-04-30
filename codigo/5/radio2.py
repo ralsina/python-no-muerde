@@ -21,6 +21,19 @@ class Main(QtGui.QDialog):
                 os.path.dirname(__file__)),'radio.ui')
         uic.loadUi(uifile, self)
 
+
+class AddRadio(QtGui.QDialog):
+    """El diálogo de agregar una radio"""
+    def __init__(self, parent):
+        QtGui.QDialog.__init__(self, parent)
+
+        # Cargamos la interfaz desde el archivo .ui
+        uifile = os.path.join(
+            os.path.abspath(
+                os.path.dirname(__file__)),'addradio.ui')
+        uic.loadUi(uifile, self)
+
+
 def main():
     app = QtGui.QApplication(sys.argv)
     window=Main()
