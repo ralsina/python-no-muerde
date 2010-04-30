@@ -252,13 +252,13 @@ Signals/Slots
 .. figure:: radio-12.print.jpg
    :width: 45%
 
-   Son similares. ¡Hasta tienen algunos problemas similares!
-
 Pasemos a una comparativa lado a lado de los objetos
 terminados:
 
 .. figure:: radio-13.print.jpg
    :width: 90% 
+
+   Son similares. ¡Hasta tienen algunos problemas similares!
 
 Acciones
 ~~~~~~~~
