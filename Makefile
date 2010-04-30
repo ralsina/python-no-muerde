@@ -151,5 +151,6 @@ middleware2.graph.png: middleware2.dot
        radio-9.print.jpg\
        radio-10.print.jpg\
        radio-11.print.jpg\
-         radio-12.print.jpg\
-         radio-13.print.jpg
+       radio-12.print.jpg\
+       radio-13.print.jpg\
+       codigo/5/radio1.py

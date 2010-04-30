@@ -112,7 +112,7 @@ conectadas ninguna, una o muchas señales.
 Hasta es posible "encadenar" señales: si uno conecta una señal a otra,
 al emitirse una se emita la otra.
 
-Es más, en principio, ni el emisor de la señal ni el receptor de la
+Es más, en principio, ni al emisor de la señal ni al receptor de la
 misma les importa quién es el otro.
 
 La sintaxis de conexión que vamos a usar es la nueva, que sólo está
@@ -131,11 +131,10 @@ Eso significaría "cuando se emita la señal ``clicked`` del botón ``cerrar``,
 entonces ejecutá el método ``accept`` de ``ventana``." Como el método
 ``QDialog.accept`` cierra la ventana, la ventana se cierra.
 
-
-
-
 Ventanas / Diálogos
 ~~~~~~~~~~~~~~~~~~~
+
+Empecemos con la parte divertida: ¡dibujitos!
 
 Radiotray tiene exactamente dos ventanas [#]_:
 
@@ -156,7 +155,7 @@ diseñador de diálogos. [#]_
        eso es lo de menos.
 
 En nuestro caso, como estamos usando PyQt, la herramienta es Qt
-Designer [#].
+Designer [#]_.
 
 .. [#] Lamentablemente una *buena* explicación de Designer requiere
        videos y mucho más detalle del que puedo incluir en un
@@ -354,6 +353,27 @@ terminados:
    :width: 90% 
 
    Son similares. ¡Hasta tienen algunos problemas similares!
+
+Mostrando una Ventana
+~~~~~~~~~~~~~~~~~~~~~
+
+Ya tenemos dos bonitas ventanas creadas, necesitamos hacer que
+la aplicación muestre una de ellas. Esto es código standard, y aquí
+tenemos una aplicación completa que muestra la ventana y no hace
+absolutamente nada:
+
+
+.. class:: titulo-listado
+
+radio1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio1.py
+
 
 Acciones
 ~~~~~~~~
