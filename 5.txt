@@ -405,7 +405,7 @@ radio2.py
    :linenos:
    :linenos_offset:
    :include: codigo/5/radio2.py
-   :start-after: uic.loadUi(uifile, self)
+   :start-after: self.radioList.addItem(nombre)
    :end-at: self.listRadios()
 
 Veamos qué es cada línea:
@@ -440,7 +440,8 @@ ejecuta una única llamada al slot.
 Definimos un método ``on_add_clicked``. Al cargarse la interfaz vía
 ``loadUi`` se permite hacer *autoconexión de slots*. Esto significa
 que si la clase tiene un método que se llame ``on_NOMBRE_SIGNAL``
-queda automáticamente conectado a la señal SIGNAL del objeto NOMBRE.
+queda automáticamente conectado a la señal ``SIGNAL`` del objeto
+``NOMBRE``.
 
 En consecuencia, este método se va a ejecutar cada vez que se haga
 click en el botón que se llama ``add``.
@@ -474,6 +475,22 @@ de qué botón presione el usuario para cerrar el diálogo.
 
 Si dijo "Add", guardamos los datos y refrescamos la lista de radios.
 Si no, no hacemos nada.
+
+Los métodos ``saveRadios``, ``loadRadios`` y ``listRadios`` son
+cortos:
+
+.. class:: titulo-listado
+
+radio2.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio2.py
+   :start-after: self.listRadios()
+   :end-at: self.radioList.addItem(nombre)
 
 
 Acciones
