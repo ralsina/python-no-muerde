@@ -42,7 +42,11 @@ SCREENSHOTS=pyurl1-1.print.jpg\
          radio-6.print.jpg\
          radio-7.print.jpg\
          radio-8.print.jpg\
-         radio-9.print.jpg
+         radio-9.print.jpg\
+         radio-10.print.jpg\
+         radio-11.print.jpg\
+         radio-12.print.jpg\
+         radio-13.print.jpg
        
 
 CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt metalibro.txt
@@ -144,4 +148,8 @@ middleware2.graph.png: middleware2.dot
        radio-6.print.jpg\
        radio-7.print.jpg\
        radio-8.print.jpg\
-       radio-9.print.jpg
+       radio-9.print.jpg\
+       radio-10.print.jpg\
+       radio-11.print.jpg\
+         radio-12.print.jpg\
+         radio-13.print.jpg
