@@ -61,7 +61,12 @@ diseñador de diálogos. [#]_
        eso es lo de menos.
 
 En nuestro caso, como estamos usando PyQt, la herramienta es Qt
-Designer.
+Designer [#].
+
+.. [#] Lamentablemente una *buena* explicación de Designer requiere
+       videos y mucho más detalle del que puedo incluir en un
+       capítulo, pero vamos a tratar de ver lo importante, sin
+       quedarnos en cómo se hace cada cosa exactamente.
 
 .. figure:: radio-2.print.jpg
    :width: 100%
@@ -77,7 +82,7 @@ a ojo los objetos deseados.
        otro proceso de creación de interfaces.
 
 .. figure:: radio-3.print.jpg
-   :width: 43%
+   :width: 40%
 
    El primer borrador.
 
@@ -120,7 +125,7 @@ alineados y en columna. Los seleccionamos todos usando Ctrl+click y
 apretamos el botón de "vertical layout" en la barra de herramientas:
 
 .. figure:: radio-4.print.jpg
-   :width: 43%
+   :width: 40%
 
    El layout vertical de botones se ve como un recuadro rojo.
 
@@ -132,7 +137,7 @@ Para que los botones queden al lado de la lista, seleccionamos *el layout*
 y la lista, y hacemos un layout horizontal:
 
 .. figure:: radio-5.print.jpg
-   :width: 43%
+   :width: 40%
 
    ¡Layouts anidados!
 
@@ -147,7 +152,7 @@ se hace ligeramente distinto: botón derecho en el fondo de la ventana
 y "Lay out" -> "Lay Out Vertically":
 
 .. figure:: radio-6.print.jpg
-   :width: 43%
+   :width: 40%
 
    ¡Feo!
 
@@ -162,7 +167,7 @@ el botón de abajo hacia la derecha (luego de meterlo en un layout
 horizontal) y los otros hacia arriba:
 
 .. figure:: radio-7.print.jpg
-   :width: 43%
+   :width: 40%
 
    ¡Mejor!
     
@@ -170,7 +175,7 @@ Por supuesto que hay más de una solución para cada problema de cómo
 acomodar widgets:
 
 .. figure:: radio-8.print.jpg
-   :width: 43%
+   :width: 40%
 
    ¿Mejor o peor que la anterior? ¡Vean el capítulo siguiente!
 
@@ -193,10 +198,67 @@ Los iconos se van a cargar en un *archivo de recursos*, ``icons.qrc``:
 .. code-block:: xml
    :include: codigo/5/icons.qrc
 
-El dialogo en sí está definido en el archivo ``radio.ui``.
+Ese archivo se compila para generar un módulo python con todas las
+imágenes en su interior. Eso simplifica el deployment.
+
+::
+
+    [codigo/5]$ pyrcc4 icons.qrc -o icons_rc.py
+    [codigo/5]$ ls -lth icons_rc.py
+    -rw-r--r-- 1 ralsina users 58K Apr 30 10:14 icons_rc.py
+
+El diálogo en sí está definido en el archivo ``radio.ui``, y se ve de
+esta manera:
 
 .. figure:: radio-9.print.jpg
-   :width: 43%
+   :width: 40%
+
+   Nuestro clon.
+
+El otro diálogo es mucho más simple, y no voy a mostrar el proceso de
+layout, pero tiene un par de peculiaridades.
+
+Buddies
+    Cuando se tiene una pareja etiqueta/entrada (por ejemplo,
+    "Radio Name:" y el widget donde se ingresa), hay que poner
+    el atajo de teclado en la etiqueta. Para eso se usan "buddies".
+
+    Se elije el modo "Edit Buddies" del designer y se marca la
+    etiqueta y luego el widget de ingreso de datos. De esa forma,
+    el atajo de teclado elegido para la etiqueta activa el
+    widget.
+
+.. figure:: radio-10.print.jpg
+   :width: 45%
+
+Tab Order
+    ¿En qué orden se pasa de un widget a otro usando Tab? Es
+    importante que se siga un orden lógico acorde a lo que se ve
+    en pantalla y no andar saltando de un lado para otro sin
+    una lógica visible.
+
+    Se hace en el modo "Edit Tab Order" de designer.
+
+.. figure:: radio-11.print.jpg
+   :width: 45%
+
+Signals/Slots
+    Los diálogos tienen métodos ``accept`` y ``reject`` que coinciden
+    con el objetivo obvio de los botones. ¡Entonces conectémoslos!
+
+    En el modo "Edit Signals/Slots" de designer, se hace click en
+    el botón y luego en el diálogo en sí, y se elige qué se conecta.
+
+.. figure:: radio-12.print.jpg
+   :width: 45%
+
+    Son similares. ¡Hasta tienen algunos problemas similares!
+
+Pasemos a una comparativa lado a lado de los objetos
+terminados:
+
+.. figure:: radio-13.print.jpg
+   :width: 90% 
 
 Acciones
 ~~~~~~~~
