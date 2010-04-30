@@ -7,6 +7,9 @@ import os,sys
 # Importamos los módulos de Qt
 from PyQt4 import QtCore, QtGui, uic
 
+# Cargamos los iconos
+import icons_rc
+
 class Main(QtGui.QDialog):
     """La ventana principal de la aplicación."""
     def __init__(self):
@@ -16,7 +19,7 @@ class Main(QtGui.QDialog):
         uifile = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),'radio.ui')
-        self.ui = uic.loadUi(uifile, self)
+        uic.loadUi(uifile, self)
 
 def main():
     app = QtGui.QApplication(sys.argv)
