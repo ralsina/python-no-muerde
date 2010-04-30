@@ -29,15 +29,110 @@ Hoy en día hay varias maneras de hacerlo:
 * Utilizar un reproductor de medios (Amarok, Banshee, Media Player o similar)
 * Usar `RadioTray <http://radiotray.sf.net>`_
 
-Resulta que mi favorita es la tercera opción por varios motivos que no vienen al
-caso. Nuestro proyecto es crear una aplicación similar, minimalista y fácil de
-entender.
+Resulta que mi favorita es la tercera opción, y nuestro proyecto es
+crear una aplicación similar, minimalista y fácil de entender.
+
+En nuestro caso, como nos estamos basando (en principio) en clonar otra
+aplicación [#]_ no hace falta pensar demasiado el diseño de la interfaz
+o el uso de la misma.
+
+.. [#] Actividad con la que no estoy demasiado contento en general, pero
+       bueno, es con fines educativos. (¡me encanta esa excusa!)
+
+Sin embargo, en el capítulo siguiente vamos a darle una buena repasada a
+lo que creamos en este, y vamos a pulir todos los detalles. No es
+demasiado grave si empezamos con una versión un poco rústica.
 
 Programación con Eventos
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Signals / Slots
-~~~~~~~~~~~~~~~
+La función principal que se ejecuta en cualquier aplicación gráfica,
+en particular en una en PyQt, es sorprendentemente corta, y es igual
+en el 90% de las aplicaciones:
+
+.. class:: titulo-listado
+
+radio1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio1.py
+   :start-at: def main
+
+Esto es porque no hace gran cosa:
+
+1. Crea un objeto "aplicación".
+2. Crea y muestra una ventana.
+3. Lanza el "event loop", y cuando este termina, muere.
+
+Eso es así porque las aplicaciones de escritorio no hacen casi nada
+por su cuenta, son *reactivas*, reaccionan a eventos que suceden.
+
+Estos eventos pueden ser iniciados por el usuario (click en un botón)
+o por el sistema (se enchufó una cámara), u otra cosa (un timer que
+se dispara periódicamente), pero el estado natural de la aplicación
+es estar en el event loop, esperando, justamente, un evento.
+
+Entonces nuestro trabajo es crear todas las cosas que se necesiten
+en la aplicación -- ventanas, diálogos, etc -- esperar que se
+produzcan los eventos y escribir el código que responda a los mismos.
+
+En PyQt, casi siempre esos eventos los vamos a manejar mediante
+Signals (señales) y Slots.
+
+¿Qué son esas cosas? Bueno, son un mecanismo de manejo de eventos ;-)
+
+En particular, una señal es un mensaje. Y un slot es un receptor de
+esos mensajes. Por ejemplo, cuando el usuario aprieta un botón, el
+objeto ``QPushButton`` correspondiente *emite* la señal ``clicked()``.
+
+¿Y qué sucede? Absolutamente nada, porque las señales no tienen
+efectos. Es como si el botón se pusiera a gritar "me apretaron". Eso
+en sí no hace nada.
+
+Pero imaginemos que hay **otro** objeto que está escuchando y tiene
+instrucciones de que si ese botón específico dice "me apretaron", 
+debe cerrar la ventana. Bueno, cerrar la ventana es un slot, y
+el ejemplo es una conexión a un slot.
+
+La conexión *observa* esperando una señal [#]_, y cuando la señal se
+produce, ejecuta una función común y corriente, que es el slot.
+
+.. [#] Hay un "despachador de señales" que se encarga de ejecutar cada
+       slot cuando se emiten las señales conectadas a él.
+
+Pero lo más lindo de señales y slots es que tiene acoplamiento débil
+(es "loosely coupled"). Cada señal de cada objeto puede estar
+conectada a ninguno, a uno, o a muchos slots. Cada slot puede tener
+conectadas ninguna, una o muchas señales.
+
+Hasta es posible "encadenar" señales: si uno conecta una señal a otra,
+al emitirse una se emita la otra.
+
+Es más, en principio, ni el emisor de la señal ni el receptor de la
+misma les importa quién es el otro.
+
+La sintaxis de conexión que vamos a usar es la nueva, que sólo está
+disponible en PyQt 4.7 o superior, porque es mucho más agradable que
+la otra.
+
+Por ejemplo, si ``cerrar`` es un ``QPushButton`` (o sea, un botón
+común y corriente), y ``ventana`` es un ``QDialog`` ( o sea, una
+ventana de diálogo), se pueden conectar así:
+
+.. code-block:: python
+
+   cerrar.clicked.connect(ventana.accept)
+
+Eso significaría "cuando se emita la señal ``clicked`` del botón ``cerrar``,
+entonces ejecutá el método ``accept`` de ``ventana``." Como el método
+``QDialog.accept`` cierra la ventana, la ventana se cierra.
+
+
+
 
 Ventanas / Diálogos
 ~~~~~~~~~~~~~~~~~~~
