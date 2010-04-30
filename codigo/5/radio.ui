@@ -14,8 +14,8 @@
    <string>Radios</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/codigo/5/antenna.svg</normaloff>:/codigo/5/antenna.svg</iconset>
+   <iconset resource="icons.qrc">
+    <normaloff>:/antenna.svg</normaloff>:/antenna.svg</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
