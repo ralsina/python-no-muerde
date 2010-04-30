@@ -10,6 +10,9 @@ from PyQt4 import QtCore, QtGui, uic
 # Cargamos los iconos
 import icons_rc
 
+# JSON para guardar la lista de radios a disco
+import json
+
 class Main(QtGui.QDialog):
     """La ventana principal de la aplicación."""
     def __init__(self):
@@ -21,6 +24,44 @@ class Main(QtGui.QDialog):
                 os.path.dirname(__file__)),'radio.ui')
         uic.loadUi(uifile, self)
 
+        self.loadRadios()
+        self.listRadios()
+
+    def loadRadios(self):
+        "Carga la lista de radios de disco"
+        try:
+            f = open(os.path.expanduser('~/.radios'))
+            data = f.read()
+            f.close()
+            self.radios = json.loads(data)
+        except:
+            self.radios = []
+
+        if self.radios is None:
+            # El archivo estaba vacío
+            self.radios = []
+
+    def saveRadios(self):
+        "Guarda las radios a disco"
+        f = open(os.path.expanduser('~/.radios'),'w')
+        f.write(json.dumps(self.radios))
+        f.close()
+
+    def listRadios(self):
+        "Muestra las radios en la lista"
+        self.radioList.clear()
+        for nombre,url in self.radios:
+            self.radioList.addItem(nombre)
+
+    @QtCore.pyqtSlot()
+    def on_add_clicked(self):
+        addDlg = AddRadio(self)
+        r = addDlg.exec_()
+        if r: # O sea, apretaron "Add"
+            self.radios.append ((unicode(addDlg.name.text()),
+                                 unicode(addDlg.url.text())))
+            self.saveRadios()
+            self.listRadios()
 
 class AddRadio(QtGui.QDialog):
     """El diálogo de agregar una radio"""

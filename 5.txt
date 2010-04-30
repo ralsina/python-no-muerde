@@ -378,17 +378,103 @@ radio1.py
 
 El que Main y AddRadio sean casi exactamente iguales debería
 sugerir que esto es código standard... y es cierto, es *siempre lo
-mismo*.
+mismo*:
 
 Creamos una clase cuya interfaz está definida por un archivo .ui
 que se carga en tiempo de ejecución. Toda la interfaz está definida
-en el ``.ui``, toda la lógica en el ``.py``.
+en el ``.ui``, (casi) toda la lógica en el ``.py``.
 
 Normalmente, por prolijidad, usaríamos un módulo para cada clase,
 pero en esta aplicación, y por organización de los ejemplos, no
 vale la pena.
 
-¡Bueno, hagamos que haga algo entonces!
+¡Que haga algo!
+~~~~~~~~~~~~~~~
+
+Un lugar fácil para empezar es hacer que apretar "Add" muestre el
+diálogo de agregar una radio. Bueno, es casi tan fácil como decirlo,
+tan solo hay que agregar un método a la clase ``Main``:
+
+.. class:: titulo-listado
+
+radio2.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio2.py
+   :start-after: uic.loadUi(uifile, self)
+   :end-at: self.listRadios()
+
+Veamos qué es cada línea:
+
+.. code-block:: python
+
+    @QtCore.pyqtSlot()
+
+Para explicar esta línea hay que dar un rodeo:
+
+En C++, se pueden tener dos métodos que se llamen igual pero difieran
+en el tipo de sus argumentos. Y de acuerdo al tipo de los argumentos
+con que se lo llame, se ejecuta uno u otro.
+
+La señal ``clicked`` se emite dos veces. Una con un argumento (que se
+llama ``checked`` y es booleano) y otra sin él. En C++ no es problema,
+si ``on_add_clicked`` recibe un argumento booleano, entonces se ejecuta,
+si no, no.
+
+En Python no es así por como funcionan los tipos. En consecuencia,
+``on_add_clicked`` se ejecutaría dos veces, una al llamarla con
+``checked`` y la otra sin.
+
+Si bien dije que un slot es simplemente una función, este decorador
+declara que este es un slot *sin argumentos*. De esa manera sólo se
+ejecuta una única llamada al slot.
+
+.. code-block:: python
+
+    def on_add_clicked(self):
+
+Definimos un método ``on_add_clicked``. Al cargarse la interfaz vía
+``loadUi`` se permite hacer *autoconexión de slots*. Esto significa
+que si la clase tiene un método que se llame ``on_NOMBRE_SIGNAL``
+queda automáticamente conectado a la señal SIGNAL del objeto NOMBRE.
+
+En consecuencia, este método se va a ejecutar cada vez que se haga
+click en el botón que se llama ``add``.
+
+
+.. code-block:: python
+
+        addDlg = AddRadio(self)
+
+Creamos un objeto ``AddRadio`` con ``parent`` nuestro diálogo
+principal. Cuando un diálogo tiene "padre" se muestra centrado sobre
+él, y el sistema operativo tiene algunas ideas de como mostrarlo
+mejor.
+
+.. code-block:: python
+
+        r = addDlg.exec_()
+
+Mostramos este diálogo para que el usuario interactúe con él. Se
+muestra por default de forma modal, es decir que bloquea la
+interacción con el diálogo "padre". El valor de ``r`` va a depender
+de qué botón presione el usuario para cerrar el diálogo.
+
+.. code-block:: python
+
+        if r: # O sea, apretaron "ok"
+            self.radios.append ((unicode(addDlg.name.text()),
+                                 unicode(addDlg.url.text())))
+            self.saveRadios()
+            self.listRadios()
+
+Si dijo "Add", guardamos los datos y refrescamos la lista de radios.
+Si no, no hacemos nada.
+
 
 Acciones
 ~~~~~~~~
