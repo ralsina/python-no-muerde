@@ -131,6 +131,9 @@ Eso significaría "cuando se emita la señal ``clicked`` del botón ``cerrar``,
 entonces ejecutá el método ``accept`` de ``ventana``." Como el método
 ``QDialog.accept`` cierra la ventana, la ventana se cierra.
 
+También es posible usar *autoconexión* de signals y slots, pero eso lo
+vemos más adelante.
+
 Ventanas / Diálogos
 ~~~~~~~~~~~~~~~~~~~
 
@@ -359,9 +362,8 @@ Mostrando una Ventana
 
 Ya tenemos dos bonitas ventanas creadas, necesitamos hacer que
 la aplicación muestre una de ellas. Esto es código standard, y aquí
-tenemos una aplicación completa que muestra la ventana y no hace
-absolutamente nada:
-
+tenemos una aplicación completa que muestra la ventana principal
+y no hace absolutamente nada:
 
 .. class:: titulo-listado
 
@@ -374,6 +376,19 @@ radio1.py
    :linenos_offset:
    :include: codigo/5/radio1.py
 
+El que Main y AddRadio sean casi exactamente iguales debería
+sugerir que esto es código standard... y es cierto, es *siempre lo
+mismo*.
+
+Creamos una clase cuya interfaz está definida por un archivo .ui
+que se carga en tiempo de ejecución. Toda la interfaz está definida
+en el ``.ui``, toda la lógica en el ``.py``.
+
+Normalmente, por prolijidad, usaríamos un módulo para cada clase,
+pero en esta aplicación, y por organización de los ejemplos, no
+vale la pena.
+
+¡Bueno, hagamos que haga algo entonces!
 
 Acciones
 ~~~~~~~~
