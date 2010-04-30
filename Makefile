@@ -26,22 +26,22 @@ FIGURAS_WEB=dependencias.graph.png\
             share.svg.png\
             gaso3-api.png
 
-SCREENSHOTS=pyurl1-1.print.png\
-	 pyurl2-1.print.png\
-	 pyurl2-2.print.png\
-	 pyurl2-3.print.png\
-	 pyurl2-4.print.png\
-	 pyurl3-1.print.png\
-	 pyurl3-2.print.png\
-	 pyurl3-3.print.png\
-         radio-1.print.png\
-         radio-2.print.png\
-         radio-3.print.png\
-         radio-4.print.png\
-         radio-5.print.png\
-         radio-6.print.png\
-         radio-7.print.png\
-         radio-8.print.png
+SCREENSHOTS=pyurl1-1.print.jpg\
+	 pyurl2-1.print.jpg\
+	 pyurl2-2.print.jpg\
+	 pyurl2-3.print.jpg\
+	 pyurl2-4.print.jpg\
+	 pyurl3-1.print.jpg\
+	 pyurl3-2.print.jpg\
+	 pyurl3-3.print.jpg\
+         radio-1.print.jpg\
+         radio-2.print.jpg\
+         radio-3.print.jpg\
+         radio-4.print.jpg\
+         radio-5.print.jpg\
+         radio-6.print.jpg\
+         radio-7.print.jpg\
+         radio-8.print.jpg
        
 
 CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt metalibro.txt
@@ -55,7 +55,7 @@ LISTADOS=codigo/4/gaso1.py\
 	 codigo/2/views/usuario.tpl
 
 
-%.print.png: %.screen.png
+%.print.jpg: %.screen.png
 	convert -resize 1600 $< $@
 
 %.svg.pdf: %.svg
@@ -135,11 +135,11 @@ middleware2.graph.png: middleware2.dot
        codigo/1/singleton1.py
 
 5.pdf: 5.txt\
-       radio-1.print.png\
-       radio-2.print.png\
-       radio-3.print.png\
-       radio-4.print.png\
-       radio-5.print.png\
-       radio-6.print.png\
-       radio-7.print.png\
-       radio-8.print.png
+       radio-1.print.jpg\
+       radio-2.print.jpg\
+       radio-3.print.jpg\
+       radio-4.print.jpg\
+       radio-5.print.jpg\
+       radio-6.print.jpg\
+       radio-7.print.jpg\
+       radio-8.print.jpg

@@ -276,7 +276,7 @@ Para probarlo, alcanza con ``python pyurl1.py`` y sale esto en la consola::
 Apuntando un navegador a esa URL podemos verificar que cada función responde en
 la URL correcta y hace lo que tiene que hacer:
 
-.. figure:: pyurl1-1.print.png
+.. figure:: pyurl1-1.print.jpg
    :width: 57%
 
    La aplicación de prueba funcionando.
@@ -453,23 +453,23 @@ pyurl2.py
 
 ¿Funciona?
 
-.. figure:: pyurl2-1.print.png
+.. figure:: pyurl2-1.print.jpg
    :width: 44%
 
    El sitio muestra una pantalla de login (Es fea porque es la que
    viene por default)
 
-.. figure:: pyurl2-2.print.png
+.. figure:: pyurl2-2.print.jpg
    :width: 100%
 
    Tal vez, el proveedor de OpenID pide usuario/password
 
-.. figure:: pyurl2-3.print.png
+.. figure:: pyurl2-3.print.jpg
    :width: 100%
 
    Por una única vez se pide autorizar al otro sitio. 
 
-.. figure:: pyurl2-4.print.png
+.. figure:: pyurl2-4.print.jpg
    :width: 43%
 
    Estamos autenticados y nuestra aplicación de prueba funciona como antes.
@@ -654,17 +654,17 @@ Necesitamos 3 páginas en HTML:
 No voy a mostrar el detalle de cada página, mi HTML es básico, sólo veamos
 algunas capturas de las páginas:
 
-.. figure:: pyurl3-1.print.png
+.. figure:: pyurl3-1.print.jpg
    :width: 100%
 
    Pantalla de invitado.
   
-.. figure:: pyurl3-2.print.png
+.. figure:: pyurl3-2.print.jpg
    :width: 100%
 
    Pantalla de usuario.
 
-.. figure:: pyurl3-3.print.png
+.. figure:: pyurl3-3.print.jpg
    :width: 100%
 
    Usuario editando un atajo.

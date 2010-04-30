@@ -44,7 +44,7 @@ Ventanas / Diálogos
 
 Radiotray tiene exactamente dos ventanas [#]_:
 
-.. figure:: radio-1.print.png
+.. figure:: radio-1.print.jpg
    :width: 63%
 
    El diálogo de administración de radios y el de añadir radio.
@@ -63,7 +63,7 @@ diseñador de diálogos. [#]_
 En nuestro caso, como estamos usando PyQt, la herramienta es Qt
 Designer.
 
-.. figure:: radio-2.print.png
+.. figure:: radio-2.print.jpg
    :width: 100%
 
    Designer a punto de crear un diálogo vacío.
@@ -76,7 +76,7 @@ a ojo los objetos deseados.
        vida real, este trabajo se basaría en wireframing, o algún
        otro proceso de creación de interfaces.
 
-.. figure:: radio-3.print.png
+.. figure:: radio-3.print.jpg
    :width: 43%
 
    El primer borrador.
@@ -119,7 +119,7 @@ Los botones se agrupan con un "Vertical Layout", para que queden
 alineados y en columna. Los seleccionamos todos usando Ctrl+click y
 apretamos el botón de "vertical layout" en la barra de herramientas:
 
-.. figure:: radio-4.print.png
+.. figure:: radio-4.print.jpg
    :width: 43%
 
    El layout vertical de botones se ve como un recuadro rojo.
@@ -131,7 +131,7 @@ regularmente.
 Para que los botones queden al lado de la lista, seleccionamos *el layout*
 y la lista, y hacemos un layout horizontal:
 
-.. figure:: radio-5.print.png
+.. figure:: radio-5.print.jpg
    :width: 43%
 
    ¡Layouts anidados!
@@ -146,7 +146,7 @@ Como ese layout es el "top level" y tiene que cubrir toda la ventana,
 se hace ligeramente distinto: botón derecho en el fondo de la ventana
 y "Lay out" -> "Lay Out Vertically":
 
-.. figure:: radio-6.print.png
+.. figure:: radio-6.print.jpg
    :width: 43%
 
    ¡Feo!
@@ -161,7 +161,7 @@ La solución en ambos casos es el uso de espaciadores, que "empujen"
 el botón de abajo hacia la derecha (luego de meterlo en un layout
 horizontal) y los otros hacia arriba:
 
-.. figure:: radio-7.print.png
+.. figure:: radio-7.print.jpg
    :width: 43%
 
    ¡Mejor!
@@ -169,7 +169,7 @@ horizontal) y los otros hacia arriba:
 Por supuesto que hay más de una solución para cada problema de cómo
 acomodar widgets:
 
-.. figure:: radio-8.print.png
+.. figure:: radio-8.print.jpg
    :width: 43%
 
    ¿Mejor o peor que la anterior? ¡Vean el capítulo siguiente!
