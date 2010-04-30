@@ -11,48 +11,72 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Radios</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/codigo/5/antenna.svg</normaloff>:/codigo/5/antenna.svg</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QListView" name="listView"/>
+      <widget class="QListView" name="radios"/>
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="add">
          <property name="text">
-          <string>PushButton</string>
+          <string>&amp;Add</string>
+         </property>
+         <property name="icon">
+          <iconset resource="icons.qrc">
+           <normaloff>:/filenew.svg</normaloff>:/filenew.svg</iconset>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="edit">
          <property name="text">
-          <string>PushButton</string>
+          <string>&amp;Edit</string>
+         </property>
+         <property name="icon">
+          <iconset resource="icons.qrc">
+           <normaloff>:/configure.svg</normaloff>:/configure.svg</iconset>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="remove">
          <property name="text">
-          <string>PushButton</string>
+          <string>&amp;Remove</string>
+         </property>
+         <property name="icon">
+          <iconset resource="icons.qrc">
+           <normaloff>:/delete.svg</normaloff>:/delete.svg</iconset>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="up">
          <property name="text">
-          <string>PushButton</string>
+          <string>&amp;Up</string>
+         </property>
+         <property name="icon">
+          <iconset resource="icons.qrc">
+           <normaloff>:/1uparrow.svg</normaloff>:/1uparrow.svg</iconset>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="down">
          <property name="text">
-          <string>PushButton</string>
+          <string>&amp;Down</string>
+         </property>
+         <property name="icon">
+          <iconset resource="icons.qrc">
+           <normaloff>:/1downarrow.svg</normaloff>:/1downarrow.svg</iconset>
          </property>
         </widget>
        </item>
@@ -91,7 +115,7 @@
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>PushButton</string>
+        <string>&amp;Close</string>
        </property>
       </widget>
      </item>
@@ -99,6 +123,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>
