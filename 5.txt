@@ -49,7 +49,7 @@ Radiotray tiene exactamente dos ventanas [#]_:
 
    El diálogo de administración de radios y el de añadir radio.
 
-.. [#] Bueno, mentira, tienen también  una ventana "Acerca de"
+.. [#] Bueno, mentira, tiene también  una ventana "Acerca de".
 
 No creo en hacer ventanas a mano. Creo que acomodar los widgets en el
 lugar adonde van es un problema resuelto, y la solución es usar un
