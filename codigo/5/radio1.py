@@ -34,6 +34,15 @@ class AddRadio(QtGui.QDialog):
         uic.loadUi(uifile, self)
 
 
+class EditRadio(AddRadio):
+    """El diálogo de editar una radio.
+    Es exactamente igual a AddRadio, excepto
+    que cambia el texto de un botón."""
+    def __init__(self, parent):
+        AddRadio.__init__(self, parent)
+        self.addButton.setText("&Save")
+
+
 def main():
     app = QtGui.QApplication(sys.argv)
     window=Main()

@@ -124,6 +124,7 @@ class AddRadio(QtGui.QDialog):
                 os.path.dirname(__file__)),'addradio.ui')
         uic.loadUi(uifile, self)
 
+
 class EditRadio(AddRadio):
     """El diálogo de editar una radio.
     Es exactamente igual a AddRadio, excepto
