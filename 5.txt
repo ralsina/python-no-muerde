@@ -527,6 +527,93 @@ terminada:
 
 Empecemos por la primera...
 
+Icono de Notificación
+~~~~~~~~~~~~~~~~~~~~~
+
+No es muy difícil, porque PyQt trae una clase para hacer esto en forma
+multiplataforma sin demasiado esfuerzo.
+
+Tan solo hay que cambiar la función ``main`` de esta forma:
+
+.. class:: titulo-listado
+
+radio3.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio3.py
+   :start-at: class TrayIcon
+   :end-at:     sys.exit(app.exec_())
+
+Esta versión de la aplicación muestra el icono de una antena en el
+área de notificación... y no permite ninguna interacción.
+
+Lo que queremos es un menú al hacer click con el botón izquierdo
+mostrando las radios disponibles, y la opción "Apagar la radio",
+y otro menú con click del botón derecho para las opciones de
+"Configuración", "Acerca de", y "Salir".
+
+Para eso, vamos a tener que aprender Acciones...
+
 Acciones
 ~~~~~~~~
+
+Una Acción (una instancia de ``QAction``) es una abstracción de un
+elemento de interfaz con el que el usuario interactúa. Una acción
+puede verse como un botón en una barra de herramientas, o
+como una entrada en un menú, o como un atajo de teclado.
+
+La idea es que al usar acciones, uno las integra en la interfaz en
+los lugares que desee, y si, por ejemplo, deseo hacer que la acción
+tenga un estado "deshabilitado", el efecto se produce tanto para el
+atajo de teclado como para el botón en la barra de herramientas, como
+para la entrada en el menú.
+
+Realmente simplifica mucho el código.
+
+Entonces, para cada entrada en los menúes de contexto del icono de
+área de notificación, debemos crear una acción. Si estuviéramos
+trabajando con una ventana, podríamos usar designer [#]_ que tiene un
+cómodo editor de acciones.
+
+.. [#] Podríamos hacer trampa y definir las acciones en el diálogo de
+       cofiguración de radios, pero es una chanchada.
+
+De todas formas no es complicado. Comencemos con el menú de botón
+derecho:
+
+.. class:: titulo-listado
+
+radio4.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio4.py
+   :start-at: class TrayIcon
+   :end-at: self.setContextMenu(self.rmbMenu)
+
+
+Por supuesto, necesitamos que las acciones que creamos... bueno,
+hagan algo. Necesitamos conectar sus señales ``triggered`` a distintos
+métodos que hagan lo que corresponda:
+
+.. class:: titulo-listado
+
+radio4.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio4.py
+   :start-after: # Conectamos las acciones
+   :end-at: QtCore.QCoreApplication.instance().quit)
+
 

@@ -159,6 +159,18 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         # Ponemos este menú como menú de contexto
         self.setContextMenu(self.rmbMenu)
 
+        # Conectamos las acciones
+        self.configAction.triggered.connect(self.showConfig)
+        self.aboutAction.triggered.connect(self.showAbout)
+        self.quitAction.triggered.connect(
+            QtCore.QCoreApplication.instance().quit)
+
+    def showConfig(self):
+        pass
+    
+    def showAbout(self):
+        pass
+
 def main():
     app = QtGui.QApplication(sys.argv)
     tray = TrayIcon()
