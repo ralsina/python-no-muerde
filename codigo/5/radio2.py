@@ -90,15 +90,25 @@ class Main(QtGui.QDialog):
     def on_up_clicked(self):
         "Sube la radio seleccionada una posicion."
         curIdx = self.radioList.currentRow()
-        self.saveRadios()
-        self.listRadios()
+        if curIdx > 0:
+            self.radios=self.radios[:curIdx-1]+\
+                [self.radios[curIdx], self.radios[curIdx-1]]+\
+                self.radios[curIdx+1:]
+            self.saveRadios()
+            self.listRadios()
+            self.radioList.setCurrentRow(curIdx-1)
 
     @QtCore.pyqtSlot()
     def on_down_clicked(self):
         "Baja la radio seleccionada una posicion."
         curIdx = self.radioList.currentRow()
-        self.saveRadios()
-        self.listRadios()
+        if curIdx < len(self.radios):
+            self.radios=self.radios[:curIdx]+\
+                [self.radios[curIdx+1], self.radios[curIdx]]+\
+                self.radios[curIdx+2:]
+            self.saveRadios()
+            self.listRadios()
+            self.radioList.setCurrentRow(curIdx+1)
 
 class AddRadio(QtGui.QDialog):
     """El diálogo de agregar una radio"""
