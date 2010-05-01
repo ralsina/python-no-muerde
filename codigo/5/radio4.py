@@ -165,11 +165,19 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         self.quitAction.triggered.connect(
             QtCore.QCoreApplication.instance().quit)
 
+    @QtCore.pyqtSlot()
     def showConfig(self):
-        pass
+        "Muestra diálogo de configuración"
+        self.confDlg = Main()
+        self.confDlg.exec_()
     
+    @QtCore.pyqtSlot()
     def showAbout(self):
-        pass
+        QtGui.QMessageBox.about(None, u"Radio",
+            u"Example app from 'Python No Muerde'<br>"\
+            u"© 2010 Roberto Alsina<br>"\
+            u"More information: http://nomuerde.netmanagers.com.ar"
+         )
 
 def main():
     app = QtGui.QApplication(sys.argv)

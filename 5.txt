@@ -616,4 +616,7 @@ radio4.py
    :start-after: # Conectamos las acciones
    :end-at: QtCore.QCoreApplication.instance().quit)
 
+Obviamente falta implementar ``showConfig`` y ``showAbout``, pero no
+tienen nada que no hayamos visto antes:
+
 
