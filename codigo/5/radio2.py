@@ -63,6 +63,14 @@ class Main(QtGui.QDialog):
             self.saveRadios()
             self.listRadios()
 
+    @QtCore.pyqtSlot()
+    def on_remove_clicked(self):
+        "Borra la radio actualmente seleccionada"
+        curIdx = self.radioList.currentRow()
+        del (self.radios[curIdx])
+        self.saveRadios()
+        self.listRadios()
+
 class AddRadio(QtGui.QDialog):
     """El diálogo de agregar una radio"""
     def __init__(self, parent):
@@ -73,6 +81,14 @@ class AddRadio(QtGui.QDialog):
             os.path.abspath(
                 os.path.dirname(__file__)),'addradio.ui')
         uic.loadUi(uifile, self)
+
+class EditRadio(AddRadio):
+    """El diálogo de editar una radio.
+    Es exactamente igual a AddRadio, excepto
+    que cambia el texto de un botón."""
+    def __init__(self, parent):
+        AddRadio.__init__(self, parent)
+        self.addButton.setText("&Save")
 
 
 def main():
