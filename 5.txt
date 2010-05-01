@@ -498,7 +498,7 @@ radio2.py
    :end-at: self.radioList.addItem(nombre)
 
 Finalmente, estos son los métodos para editar una radio, eliminarla,
-y moverla en la lista, sin explicación, deberían ser bastante obvios:
+y moverla en la lista, sin explicación. Deberían ser bastante obvios:
 
 .. class:: titulo-listado
 
