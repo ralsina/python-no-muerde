@@ -146,6 +146,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         self.aboutAction = QtGui.QAction(
             "&About...",self )
         self.quitAction = QtGui.QAction(
+            QtGui.QIcon(":/exit.svg"),
             "&Quit",self )
 
         # Armamos el menú con las acciones
