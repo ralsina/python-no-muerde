@@ -136,7 +136,27 @@ class EditRadio(AddRadio):
 class TrayIcon(QtGui.QSystemTrayIcon):
     "Icono en area de notificación"
     def __init__(self):
-        QtGui.QSystemTrayIcon.__init__ (self,QtGui.QIcon(":/antenna.svg"))
+        QtGui.QSystemTrayIcon.__init__ (self,
+            QtGui.QIcon(":/antenna.svg"))
+
+        # Acciones del menú de botón derecho
+        self.configAction = QtGui.QAction(
+            QtGui.QIcon(":/configure.svg"),
+            "&Configure",self )
+        self.aboutAction = QtGui.QAction(
+            "&About...",self )
+        self.quitAction = QtGui.QAction(
+            "&Quit",self )
+
+        # Armamos el menú con las acciones
+        self.rmbMenu=QtGui.QMenu()
+        self.rmbMenu.addActions([
+            self.configAction,
+            self.aboutAction,
+            self.quitAction
+            ])
+        # Ponemos este menú como menú de contexto
+        self.setContextMenu(self.rmbMenu)
 
 def main():
     app = QtGui.QApplication(sys.argv)

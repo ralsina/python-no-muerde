@@ -136,7 +136,8 @@ class EditRadio(AddRadio):
 class TrayIcon(QtGui.QSystemTrayIcon):
     "Icono en area de notificación"
     def __init__(self):
-        QtGui.QSystemTrayIcon.__init__ (self,QtGui.QIcon(":/antenna.svg"))
+        QtGui.QSystemTrayIcon.__init__ (self,
+            QtGui.QIcon(":/antenna.svg"))
 
 def main():
     app = QtGui.QApplication(sys.argv)
