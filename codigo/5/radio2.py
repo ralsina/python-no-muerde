@@ -62,7 +62,8 @@ class Main(QtGui.QDialog):
                                  unicode(addDlg.url.text())))
             self.saveRadios()
             self.listRadios()
-            
+
+    # XXX1
     @QtCore.pyqtSlot()
     def on_edit_clicked(self):
         "Edita la radio actualmente seleccionada"
@@ -77,6 +78,7 @@ class Main(QtGui.QDialog):
                                  unicode(editDlg.url.text())]
             self.saveRadios()
             self.listRadios()
+            self.radioList.setCurrentRow(curIdx)
 
     @QtCore.pyqtSlot()
     def on_remove_clicked(self):
@@ -109,6 +111,7 @@ class Main(QtGui.QDialog):
             self.saveRadios()
             self.listRadios()
             self.radioList.setCurrentRow(curIdx+1)
+    # XXX2
 
 class AddRadio(QtGui.QDialog):
     """El diálogo de agregar una radio"""

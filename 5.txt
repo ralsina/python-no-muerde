@@ -433,6 +433,9 @@ Si bien dije que un slot es simplemente una función, este decorador
 declara que este es un slot *sin argumentos*. De esa manera sólo se
 ejecuta una única llamada al slot.
 
+Si en cambio hubiera sido ``@QtCore.pyqtSlot(int)`` hubiera sido un
+slot que toma un argumento de tipo entero.
+
 .. code-block:: python
 
     def on_add_clicked(self):
@@ -477,7 +480,9 @@ Si dijo "Add", guardamos los datos y refrescamos la lista de radios.
 Si no, no hacemos nada.
 
 Los métodos ``saveRadios``, ``loadRadios`` y ``listRadios`` son
-cortos:
+cortos, y me parece que son lo bastante tontos como para que no
+valga la pena hacer un backend de datos "serio" para esta
+aplicación:
 
 .. class:: titulo-listado
 
@@ -491,6 +496,23 @@ radio2.py
    :include: codigo/5/radio2.py
    :start-after: self.listRadios()
    :end-at: self.radioList.addItem(nombre)
+
+Finalmente, estos son los métodos para editar una radio, eliminarla,
+y moverla en la lista, sin explicación, deberían ser bastante obvios:
+
+.. class:: titulo-listado
+
+radio2.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio2.py
+   :start-after: # XXX1
+   :end-before: # XXX2
+    
 
 
 Acciones
