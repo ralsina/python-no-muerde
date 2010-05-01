@@ -514,6 +514,18 @@ radio2.py
    :end-before: # XXX2
     
 
+Con esto, ya tenemos una aplicación que permite agregar, editar, y
+eliminar radios identificadas por nombre, con una URL asociada.
+
+Nos faltan solamente dos cosas para que esta aplicación esté
+terminada:
+
+1. El icono en area de notificación, que es la forma normal de
+   operación de Radiotray.
+
+2. ¡Que sirva para escuchar la radio!
+
+Empecemos por la primera...
 
 Acciones
 ~~~~~~~~
