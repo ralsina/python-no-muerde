@@ -6,7 +6,7 @@ import urllib
 from ConfigParser import RawConfigParser
 
 def parse_pls(url):
-    """
+    u"""
     Dada una URL, baja el contenido, y devuelve una lista de [título,url]
     obtenida del PLS al que la URL apunta.
 

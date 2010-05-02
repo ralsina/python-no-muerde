@@ -665,3 +665,66 @@ a playURL, no tendríamos manera de saber *cuál* radio queremos escuchar.
 ¿Se acuerdan que les dije que signals y slots tienen "acoplamiento
 débil"? Bueno, este es el lado malo de eso. No es terrible, la
 solución son dos líneas de código, pero... tampoco es obvio.
+
+En este momento, nuestra aplicación tiene todos los elementos de
+interfaz terminados. Tan solo falta que, dada la URL de una radio,
+produzca sonido.
+
+Por suerte, Qt es muy completo. Tan completo que tiene casi todo
+lo que necesitamos para hacer eso. Veámoslo en detalle...
+
+Ruido
+~~~~~
+
+Comencemos con un ejemplo de una radio por Internet. Es gratis, y me
+gusta escucharla mientras escribo o programo, y se llama Blue Mars [#]_.
+Pueden ver más información en http://bluemars.org
+
+.. [#] De hecho son tres estaciones, vamos a probar la que se llama
+       Blue Mars.
+
+En el sitio dice "Tune in to BLUEMARS" y da la URL de un archivo
+`listen.pls <http://207.200.96.225:8020/listen.pls>`_.
+
+Ese archivo es el "playlist", y a su vez contiene la URL desde donde
+se baja el audio. El contenido es algo así:
+
+.. code-block:: ini
+
+    [playlist]
+    NumberOfEntries=1
+    File1=http://207.200.96.225:8020/
+
+El formato es muy sencillo, hay una explicación completa `en
+Wikipedia <http://en.wikipedia.org/wiki/PLS_(file_format)>`_ pero
+básicamente es un archivo INI, que:
+
+* DEBE tener una sección ``playlist``
+* DEBE tener una entrara ``NumberOfEntries``
+* Tiene una cantidad de entradas llamadas ``File1``...``FileN``,
+  que son URLs de los audios, y (opcionalmente) ``Title1``...``TitleN``
+  y ``Length1``...``LengthN`` para títulos y duraciones.
+
+Seguramente en alguna parte hay un módulo para parsear estos archivos
+y/o todos los otros formatos de playlist que hay dando vueltas por el
+mundo, pero esto es un programa de ejemplo, y me conformo con cumplir
+las leyes del TDD:
+
+* Hacé un test que falle
+* Programá hasta que el test no falle
+* Pará de programar
+
+Así que... les presento una función que puede parsear exactamente este
+playlist y probablemente ningún otro:
+
+.. class:: titulo-listado
+
+plsparser.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: codigo/5/plsparser.py
+
+Teniendo esto, podemos comenzar a implementar ``playURL``:

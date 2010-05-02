@@ -156,4 +156,5 @@ middleware2.graph.png: middleware2.dot
        codigo/5/radio1.py\
        codigo/5/radio2.py\
        codigo/5/radio3.py\
-       codigo/5/radio4.py
+       codigo/5/radio4.py\
+       codigo/5/plsparser.py
