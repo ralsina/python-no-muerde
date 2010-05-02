@@ -8,7 +8,7 @@ qué es lo que querés poner ahí, la infinitud de los caminos que se te abren
 es paralizante.
 
 Este capítulo no te va a ayudar en absoluto con ese problema, si no que vamos
-a tratar de resolver su opuesto: sabiendo qué querés hacer, cómo se hace?
+a tratar de resolver su opuesto: sabiendo qué querés hacer: ¿cómo se hace?
 
 Vamos a aprender a hacer programas sencillos usando PyQt, un toolkit de
 interfaz gráfica potente, multiplataforma, y relativamente sencillo de usar.
