@@ -727,4 +727,43 @@ plsparser.py
    :linenos:
    :include: codigo/5/plsparser.py
 
-Teniendo esto, podemos comenzar a implementar ``playURL``:
+Teniendo esto, podemos comenzar a implementar ``playURL``. Preparáte
+para entrar al arduo mundo de la multimedia...
+
+Primero, necesitamos importar un par de cosas:
+
+.. class:: titulo-listado
+
+radio5.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio5.py
+   :start-at:    # Soporte de sonido
+   :end-at: from plsparser import parse_pls
+
+Y esta es ``playURL`` completa:
+
+.. class:: titulo-listado
+
+radio5.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio5.py
+   :start-after: # XXX9
+   :end-before: # XXX10
+
+Y efectivamente, ``radio5.py`` permite escuchar (algunas) radios de
+internet. Tiene montones de problemas y algunos features aún no
+están implementados (por ejemplo, "Stop" no hace nada), pero es una
+aplicación funcional. Rústica, pero funcional.
+
+En el siguiente capítulo la vamos a pulir. Y la vamos a pulir hasta
+que **brille**.

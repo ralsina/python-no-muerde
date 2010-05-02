@@ -13,6 +13,11 @@ import icons_rc
 # JSON para guardar la lista de radios a disco
 import json
 
+# Soporte de sonido
+from PyQt4.phonon import Phonon
+
+# Parser de playlists
+from plsparser import parse_pls
 
 def _loadRadios(self):
     "Carga la lista de radios de disco"
@@ -174,6 +179,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         # XXX5
         # Conectamos el botón izquierdo
         self.activated.connect(self.activatedSlot)
+        self.player = None
 
     def activatedSlot(self, reason):
         """El usuario activó este icono"""
@@ -197,9 +203,23 @@ class TrayIcon(QtGui.QSystemTrayIcon):
             # Mostramos el menú en la posición del cursor
             self.lmbMenu.exec_(QtGui.QCursor.pos())
 
+    # XXX9
     def playURL(self, url):
-        print url
+        """Toma la URL de un playlist, y empieza a hacer ruido"""
+        data = parse_pls(url)
+        if data: # Tengo una URL
+            # Sí, tomamos el primer stream y listo.
+            url = data[0][1]
 
+            self.player = Phonon.createPlayer(Phonon.MusicCategory,
+                Phonon.MediaSource(url))
+            self.player.play()
+            
+        else: # Pasó algo malo
+            QtGui.QMessageBox.information(None,
+                "Radio - Error reading playlist",
+                "Sorry, error starting this radio.")
+    # XXX10
     # XXX3
     @QtCore.pyqtSlot()
     def showConfig(self):
