@@ -165,6 +165,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         self.quitAction.triggered.connect(
             QtCore.QCoreApplication.instance().quit)
 
+    # XXX3
     @QtCore.pyqtSlot()
     def showConfig(self):
         "Muestra diálogo de configuración"
@@ -178,6 +179,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
             u"© 2010 Roberto Alsina<br>"\
             u"More information: http://nomuerde.netmanagers.com.ar"
          )
+    # XXX4
 
 def main():
     app = QtGui.QApplication(sys.argv)
