@@ -171,6 +171,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         self.quitAction.triggered.connect(
             QtCore.QCoreApplication.instance().quit)
 
+        # XXX5
         # Conectamos el botón izquierdo
         self.activated.connect(self.activatedSlot)
 
@@ -184,6 +185,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
 
             self.lmbMenu=QtGui.QMenu()
             self.lmbMenu.addAction(self.stopAction)
+            self.lmbMenu.addSeparator()
 
             self.loadRadios()
             self.radioActions = []

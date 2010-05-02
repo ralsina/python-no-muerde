@@ -619,4 +619,37 @@ radio4.py
 Obviamente falta implementar ``showConfig`` y ``showAbout``, pero no
 tienen nada que no hayamos visto antes:
 
+.. class:: titulo-listado
 
+radio4.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio4.py
+   :start-after:     # XXX3
+   :end-before:     # XXX4
+
+
+El menú del botón izquierdo es un poco más complicado. Para empezar,
+tiene una entrada "normal" como las que vimos antes, pero las otras
+son dinámicas y dependen de cuáles radios están definidas.
+
+Para mostrar un menú ante un click de botón izquierdo, debemos
+conectarnos a la señal ``activated`` (las primeras líneas son parte
+de ``TrayIcon.__init__``):
+
+.. class:: titulo-listado
+
+radio4.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/5/radio4.py
+   :start-after: # XXX5
+   :end-before:     # XXX3
