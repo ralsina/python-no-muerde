@@ -13,6 +13,21 @@ import icons_rc
 # JSON para guardar la lista de radios a disco
 import json
 
+
+def _loadRadios(self):
+    "Carga la lista de radios de disco"
+    try:
+        f = open(os.path.expanduser('~/.radios'))
+        data = f.read()
+        f.close()
+        self.radios = json.loads(data)
+    except:
+        self.radios = []
+
+    if self.radios is None:
+        # El archivo estaba vacío
+        self.radios = []
+
 class Main(QtGui.QDialog):
     """La ventana principal de la aplicación."""
     def __init__(self):
@@ -27,19 +42,7 @@ class Main(QtGui.QDialog):
         self.loadRadios()
         self.listRadios()
 
-    def loadRadios(self):
-        "Carga la lista de radios de disco"
-        try:
-            f = open(os.path.expanduser('~/.radios'))
-            data = f.read()
-            f.close()
-            self.radios = json.loads(data)
-        except:
-            self.radios = []
-
-        if self.radios is None:
-            # El archivo estaba vacío
-            self.radios = []
+    loadRadios = _loadRadios
 
     def saveRadios(self):
         "Guarda las radios a disco"
@@ -135,11 +138,14 @@ class EditRadio(AddRadio):
 
 class TrayIcon(QtGui.QSystemTrayIcon):
     "Icono en area de notificación"
+
+    loadRadios = _loadRadios
+    
     def __init__(self):
         QtGui.QSystemTrayIcon.__init__ (self,
             QtGui.QIcon(":/antenna.svg"))
 
-        # Acciones del menú de botón derecho
+        ## Acciones del menú de botón derecho
         self.configAction = QtGui.QAction(
             QtGui.QIcon(":/configure.svg"),
             "&Configure",self )
@@ -165,11 +171,26 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         self.quitAction.triggered.connect(
             QtCore.QCoreApplication.instance().quit)
 
-        # El menú del botón izquierdo
-        self.stopAction=QtGui.QAction(
-            QtGui.QIcon(":/stop.svg"),
-            "&Turn Off Radio",self )
-            ) 
+        # Conectamos el botón izquierdo
+        self.activated.connect(self.activatedSlot)
+
+    def activatedSlot(self, reason):
+        """El usuario activó este icono"""
+        if reason == QtGui.QSystemTrayIcon.Trigger:
+            # El menú del botón izquierdo
+            self.stopAction=QtGui.QAction(
+                QtGui.QIcon(":/stop.svg"),
+                "&Turn Off Radio",self )
+
+            self.lmbMenu=QtGui.QMenu()
+            self.lmbMenu.addAction(self.stopAction)
+
+            self.loadRadios()
+            self.radioActions = [QtGui.QAction(r[0], self) for r in self.radios]
+            self.lmbMenu.addActions(self.radioActions)
+
+            # Mostramos el menú en la posición del cursor
+            self.lmbMenu.exec_(QtGui.QCursor.pos())
 
     # XXX3
     @QtCore.pyqtSlot()
