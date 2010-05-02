@@ -165,6 +165,12 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         self.quitAction.triggered.connect(
             QtCore.QCoreApplication.instance().quit)
 
+        # El menú del botón izquierdo
+        self.stopAction=QtGui.QAction(
+            QtGui.QIcon(":/stop.svg"),
+            "&Turn Off Radio",self )
+            ) 
+
     # XXX3
     @QtCore.pyqtSlot()
     def showConfig(self):
