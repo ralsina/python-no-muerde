@@ -629,7 +629,7 @@ consecuencia, para CSS y demás simplemente busqué algo fácil de usar y lo us�
 Todo el "look" del sitio va a estar basado en `BlueTrip <http://bluetrip.org/>`_,
 un framework de CSS.
 
-Dado que no pienso diseñar mucho, ¡gracias BluTrip!
+Dado que no pienso diseñar mucho, ¡gracias BlueTrip!
 
 Necesitamos 3 páginas en HTML:
 
