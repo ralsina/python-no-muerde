@@ -653,3 +653,15 @@ radio4.py
    :include: codigo/5/radio4.py
    :start-after: # XXX5
    :end-before:     # XXX3
+
+En vez de crear las ``QAction`` a mano, dejamos que el menú las cree
+implícitamente con ``addAction`` y --esta es la parte rara-- creamos
+un "receptor" ``lambda`` para cada señal, que llama a ``playURL`` con la URL
+que corresponde a cada radio.
+
+¿Porqué tenemos que hacer eso? Porque si conectáramos todas las señales
+a playURL, no tendríamos manera de saber *cuál* radio queremos escuchar.
+
+¿Se acuerdan que les dije que signals y slots tienen "acoplamiento
+débil"? Bueno, este es el lado malo de eso. No es terrible, la
+solución son dos líneas de código, pero... tampoco es obvio.
