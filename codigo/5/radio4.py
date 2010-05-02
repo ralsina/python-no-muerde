@@ -186,11 +186,17 @@ class TrayIcon(QtGui.QSystemTrayIcon):
             self.lmbMenu.addAction(self.stopAction)
 
             self.loadRadios()
-            self.radioActions = [QtGui.QAction(r[0], self) for r in self.radios]
-            self.lmbMenu.addActions(self.radioActions)
+            self.radioActions = []
+            for r in self.radios:
+                receiver = lambda url=r[1]: self.playURL(url)
+                self.lmbMenu.addAction(
+                    r[0], receiver)
 
             # Mostramos el menú en la posición del cursor
             self.lmbMenu.exec_(QtGui.QCursor.pos())
+
+    def playURL(self, url):
+        print url
 
     # XXX3
     @QtCore.pyqtSlot()
