@@ -218,6 +218,9 @@ class TrayIcon(QtGui.QSystemTrayIcon):
 
 def main():
     app = QtGui.QApplication(sys.argv)
+    # Como corre en tray, no debe salir cuando cierra
+    # la última ventana.
+    app.setQuitOnLastWindowClosed ( False )
     tray = TrayIcon()
     tray.show()
     sys.exit(app.exec_())
