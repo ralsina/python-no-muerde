@@ -26,29 +26,30 @@ también que te gusta escuchar radios online.
 Hoy en día hay varias maneras de hacerlo:
 
 * Ir al sitio de la radio.
-* Utilizar un reproductor de medios (Amarok, Banshee, Media Player o similar)
-* Usar `RadioTray <http://radiotray.sf.net>`_
+* Utilizar un reproductor de medios (Amarok, Banshee, Media Player o similar).
+* Usar `RadioTray <http://radiotray.sf.net>`_.
 
 Resulta que mi favorita es la tercera opción, y nuestro proyecto es
 crear una aplicación similar, minimalista y fácil de entender.
 
 En nuestro caso, como nos estamos basando (en principio) en clonar otra
 aplicación [#]_ no hace falta pensar demasiado el diseño de la interfaz
-o el uso de la misma.
+o el uso de la misma (de ahí eso de que este capítulo no te va a ayudar
+a saber qué hacer).
 
 .. [#] Actividad con la que no estoy demasiado contento en general, pero
        bueno, es con fines educativos. (¡me encanta esa excusa!)
 
 Sin embargo, en el capítulo siguiente vamos a darle una buena repasada a
-lo que creamos en este, y vamos a pulir todos los detalles. No es
-demasiado grave si empezamos con una versión un poco rústica.
+lo que creamos en este, y vamos a pulir todos los detalles. ¡No es
+demasiado grave si empezamos con una versión un poco rústica!
 
 Programación con Eventos
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 La función principal que se ejecuta en cualquier aplicación gráfica,
 en particular en una en PyQt, es sorprendentemente corta, y es igual
-en el 90% de las aplicaciones:
+en el 90% de los casos:
 
 .. class:: titulo-listado
 

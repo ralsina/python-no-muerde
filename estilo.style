@@ -99,8 +99,8 @@
         "colWidths": ["1cm", null]
     }],
     [ "titulo-listado" , {
-        "parent": "bodytext",
-        "fontName": "stdBold",
+        "parent": "heading",
+        "fontName": "stdMonoBold",
         "alignment": "right",
         "spaceBefore": 0
       }]

@@ -85,6 +85,9 @@ cuadrados.py
    # Creamos una lista con los cuadrados de los números impares
    cuadrados = [ x**2 for x in numeros if x%2 > 0 ]
 
+En ese ejemplo, debería haber, en los ejemplos que acompañan al libro,
+un archivo ``codigo/X/cuadrados.py`` donde ``X`` es el número del
+capítulo en el que el listado aparece.
 
 Lenguaje
 ~~~~~~~~
