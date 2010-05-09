@@ -20,6 +20,12 @@ que ayudan a que uno no cree interfaces *demasiado* horribles, o a veces hasta a
   está buena la cabina de un Concord, lo que te digo es que para hacer tostadas
   es demasiado.
 
+
+  .. figure:: concord.jpg
+     :width: 80%
+
+     Concord cockpit by wynner3, licencia CC-BY-NC (http://www.flickr.com/photos/wynner3/3805698150/)
+
   En general, dado que uno no tiene la habilidad (en principio) de crear
   asombrosas interfaces, lo mejor es crear lo menos posible. ¡Lo que no está
   ahí no puede estar *tan* mal!
