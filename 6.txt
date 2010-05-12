@@ -53,3 +53,64 @@ que ayudan a que uno no cree interfaces *demasiado* horribles, o a veces hasta a
 Más allá de esos criterios, en este capítulo vamos a tomar la interfaz creada en el
 capítulo anterior y la vamos a rehacer, pero bien. Porque esa era la de
 desarrollo, y la vamos a tirar.
+
+Proyecto
+--------
+
+Asumamos que la aplicación de streaming de radio que desarrollamos en el
+capítulo anterior funciona correctamente y carece de bugs [#]_...
+¿Qué hay que hacer ahora?
+
+.. [#] No es así, pero estoy escuchando música con ella ¡En este mismo
+       momento!
+
+Bueno, falta resolver todas las cosas que **no** son bugs desde el punto de
+vista de funcionamiento pero que están mal.
+
+Diseño de la Interfaz Gráfica
+-----------------------------
+
+Empecemos con la ventana de configuración, viendo algunos problemas
+de base en el diseño.
+
+.. figure:: radio-14.screen.png
+
+   Funciona, pero tiene problemas.
+
+Esa ventana tiene *muchos* problemas.
+
+.. figure:: radio-15.screen.png
+
+   Botón "Close" no alineado.
+
+Normalmente no vas a ver este caso cubierto en las guías de diseño de
+interfaz porque estamos usando un layout "columna de botones" que no
+es de lo más standard.
+
+Si hubiera más de un botón abajo, entonces tal vez "Close" se vería
+como perteneciente a ese elemento visual, sin embargo, al estar solo,
+se lo vé como un elemento de la columna, aunque "destacado" por la
+separación vertical.
+
+Al ser "absorbido" por esa columna, queda muy raro que no tenga el
+mismo ancho que los otros botones.
+
+Como no debemos asignar anchos fijos a los botones (por motivos que
+vamos a ver más adelante) debemos solucionarlo usando layout
+managers.
+
+Una manera de resolverlo es una matriz 2x2 con un grid layout:
+
+.. figure:: radio-18.screen.png
+
+   Botón "Close" alineado.
+
+.. figure:: radio-16.screen.png
+
+   Etiquetas centradas con iconos a la izquierda.
+
+.. figure:: radio-17.screen.png
+
+   Espacio muerto.
+
+
