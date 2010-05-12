@@ -46,7 +46,13 @@ SCREENSHOTS=pyurl1-1.print.jpg\
          radio-10.print.jpg\
          radio-11.print.jpg\
          radio-12.print.jpg\
-         radio-13.print.jpg
+         radio-13.print.jpg\
+         radio-14.print.jpg\
+         radio-15.print.jpg\
+         radio-16.print.jpg\
+         radio-17.print.jpg\
+         radio-18.print.jpg\
+         radio-19.print.jpg
        
 
 CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt metalibro.txt
@@ -158,3 +164,12 @@ middleware2.graph.png: middleware2.dot
        codigo/5/radio3.py\
        codigo/5/radio4.py\
        codigo/5/plsparser.py
+
+6.pdf: 6.txt\
+       concord.jpg\
+       radio-14.print.jpg\
+       radio-15.print.jpg\
+       radio-16.print.jpg\
+       radio-17.print.jpg\
+       radio-18.print.jpg\
+       radio-19.print.jpg\

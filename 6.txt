@@ -71,15 +71,20 @@ Diseño de la Interfaz Gráfica
 -----------------------------
 
 Empecemos con la ventana de configuración, viendo algunos problemas
-de base en el diseño.
+de base en el diseño. Desde ya que el 90% de lo que veamos ahora es
+discutible. Es más, como no soy un experto en el tema, es probable
+que el 90% esté **equivocado**. Sin embargo, hasta que consiga un
+experto en UI que le pegue una revisada... es lo que hay.
 
-.. figure:: radio-14.screen.png
+.. figure:: radio-14.print.jpg
+   :width: 40%
 
    Funciona, pero tiene problemas.
 
 Esa ventana tiene *muchos* problemas.
 
-.. figure:: radio-15.screen.png
+.. figure:: radio-15.print.jpg
+   :width: 40%
 
    Botón "Close" no alineado.
 
@@ -89,11 +94,11 @@ es de lo más standard.
 
 Si hubiera más de un botón abajo, entonces tal vez "Close" se vería
 como perteneciente a ese elemento visual, sin embargo, al estar solo,
-se lo vé como un elemento de la columna, aunque "destacado" por la
+se lo ve como un elemento de la columna, aunque "destacado" por la
 separación vertical.
 
-Al ser "absorbido" por esa columna, queda muy raro que no tenga el
-mismo ancho que los otros botones.
+Al ser "absorbido" visualmente por esa columna, queda muy raro que
+no tenga el mismo ancho que los otros botones.
 
 Como no debemos asignar anchos fijos a los botones (por motivos que
 vamos a ver más adelante) debemos solucionarlo usando layout
@@ -101,16 +106,41 @@ managers.
 
 Una manera de resolverlo es una matriz 2x2 con un grid layout:
 
-.. figure:: radio-18.screen.png
+.. figure:: radio-18.print.jpg
+   :width: 40%
 
    Botón "Close" alineado.
 
-.. figure:: radio-16.screen.png
+El resultado final es bastante más armónico, y divide visualmente
+el diálogo en dos componentes claros, la lista a la izquierda, los
+controles a la derecha.
 
-   Etiquetas centradas con iconos a la izquierda.
+Lo que nos lleva al segundo problema:
 
-.. figure:: radio-17.screen.png
+.. figure:: radio-17.print.jpg
+   :width: 40%
 
    Espacio muerto.
 
+Si el layout es "dos columnas" entonces no tiene sentido que la lista
+termine antes del fondo del diálogo. Nuevamente, si hubiera dos
+botones abajo (por ejemplo, "Accept" y "Reject"), entonces sí tendría
+sentido extender ese componente visual hacia la izquierda.
+
+Al tener sólo uno, ese espacio vacío es innecesario y antifuncional.
+
+Entonces cambiamos el esquema de layouts, y terminamos con un layout
+horizontal de dos elementos, el derecho un layout vertical conteniendo
+todos los botones:
+
+.. figure:: radio-19.print.jpg
+   :width: 40%
+
+   Resultado con layout horizontal.
+
+
+.. figure:: radio-16.print.jpg
+   :width: 40%
+
+   Etiquetas centradas con iconos a la izquierda.
 
