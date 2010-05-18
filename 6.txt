@@ -190,7 +190,7 @@ racional de la versión nueva, y olvidemos la vieja.
 ----------------------
 
 Pensemos el objetivo, la tarea a realizar. Es controlar una lista de
-radios. Lo mínimo es esto:
+radios. Lo mínimo sería esto:
 
 * Agregar radios nuevas (Add).
 * Cambiar algo en una radio ya existente (Edit).
@@ -278,4 +278,28 @@ radio6.py
    :start-after: # XXX1
    :end-before: # XXX2
 
+¿Es esto todo lo que está mal? Vaya que no.
 
+Pulido
+------
+
+Los iconos que venimos usando son del set "Reinhardt" que a mí
+personalmente me gusta mucho, pero algunos de sus iconos no son
+exactamente obvios. Por ejemplo, esto te dice "Agregar"?
+
+.. figure:: filenew.svg
+   :width: 25%
+
+Bueno, en cierta forma sí, pero está pensado para documentos. Sería
+mejor por ejemplo un signo +. De la misma forma, si bien la X funciona
+como "remove", si usamos un + para "Add", es mejor un - para "Remove".
+
+Y para "Edit" es mejor usar un lápiz y no un destornillador. El
+problema ahí es usar el mismo icono que para "Configure". Si bien
+ambos casos son acciones relacionadas, son lo suficientemente
+distintas para merecer su propio icono.
+
+.. figure:: radio-22.print.jpg
+   :width: 54%
+
+   ¡Shiny!

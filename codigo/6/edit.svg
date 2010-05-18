@@ -14,16 +14,15 @@
    height="162.5"
    id="svg101"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="delete.svg">
+   sodipodi:docname="configure.svg">
   <metadata
-     id="metadata10">
+     id="metadata9">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,42 +37,27 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1440"
      inkscape:window-height="852"
-     id="namedview8"
+     id="namedview7"
      showgrid="false"
      inkscape:zoom="1.4523077"
-     inkscape:cx="-161.81144"
+     inkscape:cx="-40.28072"
      inkscape:cy="81.25"
      inkscape:window-x="-4"
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg101" />
   <defs
-     id="defs7">
+     id="defs6">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="0 : 81.25 : 1"
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_z="162.5 : 81.25 : 1"
        inkscape:persp3d-origin="81.25 : 54.166667 : 1"
-       id="perspective12" />
-    <inkscape:perspective
-       id="perspective3600"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective2822"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
+       id="perspective11" />
   </defs>
   <path
-     style="fill:none;stroke:#4a4b4f;stroke-width:30;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-     d="m 127.0392,81.25 -91.578395,0"
-     id="path2818-4-4"
-     sodipodi:nodetypes="cc" />
+     d="m 123.39507,21.891036 c -0.12649,-0.126492 17.17674,17.176738 17.17674,17.176738 0,0 -95.947358,95.694376 -95.947358,95.694376 0,0 -22.656036,5.80317 -22.687243,5.84664 -0.269606,0.0731 5.593658,-22.94022 5.593658,-22.94022 0,0 95.544233,-95.753809 95.864203,-95.777534 z"
+     style="font-size:12px;fill:#4a4b4f;fill-opacity:1;fill-rule:evenodd;stroke:#4a4b4f;stroke-width:5.07730293000000010;stroke-linecap:round;stroke-linejoin:round"
+     id="path260" />
 </svg>

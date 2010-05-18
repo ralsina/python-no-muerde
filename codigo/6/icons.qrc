@@ -9,5 +9,6 @@
     <file>antenna.svg</file>
     <file>exit.svg</file>
     <file>stop.svg</file>
+    <file>edit.svg</file>
   </qresource>
 </RCC>
