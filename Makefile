@@ -92,7 +92,7 @@ sitio: .phony ${FIGURAS_WEB} fuentes.zip ${CAPITULOS}
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 	(cd sitio; sed --in-place 's/print\.jpg/screen\.png/g' *html)
 	(cd sitio; sed --in-place 's/api\.pdf/api\.png/g' *html)
-	(cd sitio; sed --in-place 's/filenew\.pdf/api\.png/g' *html)
+	(cd sitio; sed --in-place 's/filenew\.pdf/filenew\.png/g' *html)
 
 commit:
 	touch indice.txt ; make python_no_muerde.pdf
