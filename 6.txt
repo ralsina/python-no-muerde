@@ -285,7 +285,7 @@ Pulido
 
 Los iconos que venimos usando son del set "Reinhardt" que a mí
 personalmente me gusta mucho, pero algunos de sus iconos no son
-exactamente obvios. Por ejemplo, esto te dice "Agregar"?
+exactamente obvios. ¿Por ejemplo, esto te dice "Agregar"?
 
 .. figure:: filenew.svg
    :width: 25%
