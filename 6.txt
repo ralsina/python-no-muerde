@@ -1,10 +1,17 @@
 Diseño de Interfaz Gráfica
 --------------------------
 
-    ¿Cómo se hace una estatua de un elefante? Empezás con un bloque de mármol
-    y sacás todo lo que no parece un elefante.
+    "¿Cómo se hace una estatua de un elefante? Empezás con un bloque
+    de mármol y sacás todo lo que no parece un elefante."
 
     -- Anónimo.
+
+    "Abandonen la esperanza del valor añadido a través de la rareza.
+    Es mejor usar técnicas de interacción consistentes que le den a
+    los usuarios el poder de enfocarse en tu contenido, en vez de
+    preguntarse como se llega a él."
+
+    -- Jakob Nielsen
 
 ¿Siendo un programador, qué sabe uno de diseños de interfaces? La respuesta,
 al menos en mi caso es poco y nada. Sin embargo, hay unos cuantos principios
@@ -74,7 +81,12 @@ Empecemos con la ventana de configuración, viendo algunos problemas
 de base en el diseño. Desde ya que el 90% de lo que veamos ahora es
 discutible. Es más, como no soy un experto en el tema, es probable
 que el 90% esté **equivocado**. Sin embargo, hasta que consiga un
-experto en UI que le pegue una revisada... es lo que hay.
+experto en UI que le pegue una revisada... es lo que hay [#]_.
+
+.. [#] De hecho, pedí ayuda en twitter/identi.ca y `mi blog <http://lateral.netmanagers.com.ar/weblog/posts/BB889.html>`_ y salieron
+       unas cuantas respuestas, incluyendo un `post en
+       otro blog <http://thesmithfam.org/blog/2010/05/16/whats-wrong-with-this-dialog/>`_.
+       ¡Con mockups y todo!
 
 .. figure:: radio-14.print.jpg
    :width: 40%
@@ -138,9 +150,32 @@ todos los botones:
 
    Resultado con layout horizontal.
 
+El siguiente problema es que al tener iconos y texto, y al estar
+centrado el contenido de los botones, se ve horrible:
 
 .. figure:: radio-16.print.jpg
    :width: 40%
 
    Etiquetas centradas con iconos a la izquierda.
+
+Hay varias soluciones para esto:
+
+* Podemos no poner iconos: El texto centrado no molesta tanto
+  visualmente.
+
+* Podemos no centrar el contenido de los botones: Se ve mejor,
+  pero es muy poco standard [#]_
+
+.. [#] Ver la cita de Nielsen al principio del capítulo.
+
+* Podemos no poner texto en el botón sino en un tooltip: Funciona,
+  es standard, resuelve el alineamiento, hace la interfaz levemente
+  menos obvia.
+
+* Mover algunos elementos inline en cada item (los que afectan a un
+  único item) y mover los demás a una línea horizontal por debajo de
+  la lista.
+
+
+
 
