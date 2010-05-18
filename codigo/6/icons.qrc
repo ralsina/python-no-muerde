@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="/">
+    <file>ok.svg</file>
+    <file>configure.svg</file>
+    <file>filenew.svg</file>
+    <file>delete.svg</file>
+    <file>1downarrow.svg</file>
+    <file>1uparrow.svg</file>
+    <file>antenna.svg</file>
+    <file>exit.svg</file>
+    <file>stop.svg</file>
+  </qresource>
+</RCC>

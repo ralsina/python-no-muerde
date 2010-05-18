@@ -102,6 +102,7 @@
         "parent": "heading",
         "fontName": "stdMonoBold",
         "alignment": "right",
-        "spaceBefore": 0
+        "spaceBefore": 0,
+        "keepWithNext": false
       }]
 ]}

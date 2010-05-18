@@ -15,7 +15,8 @@ Diseño de Interfaz Gráfica
 
 ¿Siendo un programador, qué sabe uno de diseños de interfaces? La respuesta,
 al menos en mi caso es poco y nada. Sin embargo, hay unos cuantos principios
-que ayudan a que uno no cree interfaces *demasiado* horribles, o a veces hasta agradables.
+que ayudan a que uno no cree interfaces *demasiado* horribles, o a
+veces hasta agradables.
 
 * Aprender de otros.
 
@@ -74,8 +75,8 @@ capítulo anterior funciona correctamente y carece de bugs [#]_...
 Bueno, falta resolver todas las cosas que **no** son bugs desde el punto de
 vista de funcionamiento pero que están mal.
 
-Diseño de la Interfaz Gráfica
------------------------------
+Corrigiendo la Interfaz Gráfica
+-------------------------------
 
 Empecemos con la ventana de configuración, viendo algunos problemas
 de base en el diseño. Desde ya que el 90% de lo que veamos ahora es
@@ -176,6 +177,105 @@ Hay varias soluciones para esto:
   único item) y mover los demás a una línea horizontal por debajo de
   la lista.
 
+O ... podemos dejar de ponerle lapiz de labios al chancho y admitir
+que es un chancho.
 
+El problema de este diálogo no es que los botones estén desalineados,
+es que no sabemos siquiera porqué los botones están.
+
+Así que, teniendo una interfaz que funciona, hagamos un desarrollo
+racional de la versión nueva, y olvidemos la vieja.
+
+¿Qué estamos haciendo?
+----------------------
+
+Pensemos el objetivo, la tarea a realizar. Es controlar una lista de
+radios. Lo mínimo es esto:
+
+* Agregar radios nuevas (Add).
+* Cambiar algo en una radio ya existente (Edit).
+* Sacar radios que no nos gustan  más (Delete).
+* Cerrar el diálogo (Close) [#]_
+
+.. [#] Podríamos tener "Apply", "Cancel", etc, pero me gusta más
+       la idea de este diálogo como de aplicación instantánea,
+       "aplicar cambios" es un concepto nerd. La manipulación
+       directa es la metáfora moderna. Bah, es una opinión.
+
+Adicionalmente teníamos esto:
+
+* Cambiar el orden de las radios en la lista
+
+¿Pero... porqué estaba? En nuestro caso es porque nos robamos la
+interfaz de RadioTray, pero... ¿alguien necesita hacerlo? ¿Porqué?
+
+Veamos las justificaciones que se me ocurren:
+
+1) Poner las radios más usadas al principio.
+
+   Pero... ¿No sería mejor si el programa mostrara las últimas radios
+   usadas al principio en forma automática?
+   
+2) Organizarlas por tipo de radio (ejemplo: tener todas las de
+   música country juntas)
+
+   Para hacer esto correctamente, creo que sería mejor tener múltiples
+   niveles de menúes. También podríamos agregarle a cada radio un
+   campo "género" o tags, y usar eso para clasificarlas.
+
+En ambos casos, me parece que el ordenamiento manual no es la manera
+correcta de resolver el problema. Es casi lo contrario de un feature.
+Es un anti-feature que sólo sirve para que a los que realmente querrían
+un feature determinado se les pueda decir "usá los botones de ordenar".
+
+Si existe algún modelo de uso para el que mover las radios usando
+flechitas es el modo de interacción correcta... no se me ocurre y
+perdón desde ya.
+
+Por lo tanto, este "feature" va a desaparecer por ahora.
+
+Si no tenemos los botones de subir y bajar, no tiene tanto sentido
+la idea de una columna de botones a la derecha, y podemos pasar
+a un layout con botones horizontales:
+
+.. figure:: radio-20.print.jpg
+   :width: 54%
+
+   Repensando el diálogo. Ya que estamos "Done" es más adecuado para
+   el botón que "Close".
+
+¿En qué se parecen y en qué se diferencian esos cuatro botones que
+tenemos ahí abajo?
+
+* Edit y Remove afectan a una radio que esté seleccionada.
+* Add y Done no dependen de la selección en la lista.
+
+¿Que pasaría si pusiéramos Edit y Remove en los items mismos? Bueno,
+lo primero que pasaría es que tendríamos que cambiar código porque
+el QListWidget soporta una sola columna y tenemos que pasar a un
+QTreeWidget. Veamos como funciona en la GUI:
+
+.. figure:: radio-21.print.jpg
+   :width: 54%
+
+   ¡Less is more!
+
+También al no tener más botones de Edit y Remove, hay que mover un
+poco el código porque ahora responde a otras señales.
+
+La parte interesante (no mucho) del código es esta:
+
+.. class:: titulo-listado
+
+radio6.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/6/radio6.py
+   :start-after: # XXX1
+   :end-before: # XXX2
 
 
