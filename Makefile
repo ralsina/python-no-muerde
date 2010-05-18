@@ -86,7 +86,7 @@ python_no_muerde.pdf: tapa.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile esti
 
 sitio: .phony ${FIGURAS_WEB} fuentes.zip ${CAPITULOS}
 	(cd web ; ln -sf ../codigo .)
-	(cd sitio ; ln -sf ../*.graph.png ../*.pdf ../*screen.png ../fuentes.zip ../*api.png .)
+	(cd sitio ; ln -sf ../*.graph.png ../*.pdf ../*screen.png ../fuentes.zip ../*api.png concord.jpg .)
 	(for C in ${CAPITULOS}; do touch -r $$C web/$$C ; done)
 	python r2w.py rst2web.ini
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
