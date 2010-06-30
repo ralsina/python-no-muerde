@@ -50,11 +50,6 @@ Código
     directiva ``code-block`` pero no es parte del restructured text standard.
     En consecuencia, tuve que emparchar rest2web para que la use [#]_
 
-    .. code-block:: Makefile
-
-        %.graph.pdf: %.dot
-                dot -Tpdf $< > $@ -Efontname="DejaVu Sans" \
-                    -Nfontname="DejaVu Sans"
 
 .. [#] Por suerte la directiva es completamente genérica, funciona para HTML
        igual que para PDF. Esto es lo que tuve que agregar al principio
@@ -86,10 +81,18 @@ Build
 
     Por ejemplo, así se reconstruye el PDF de un diagrama::
 
+    .. code-block:: Makefile
+
+        %.graph.pdf: %.dot
+                dot -Tpdf $< > $@ -Efontname="DejaVu Sans" \
+                    -Nfontname="DejaVu Sans"
+
+    Y se ejecuta así:
+
         $ make loop-n-y-medio.graph.pdf
         dot -Tpdf loop-n-y-medio.dot > loop-n-y-medio.graph.pdf -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
 
-    Y normalmente no hace falta hacerlo manualmente, pues se hace, de ser
+    Normalmente no hace falta hacerlo manualmente, pues se hace, de ser
     necesario, cuando se publica al sitio o a PDF.
 
 Feedback
