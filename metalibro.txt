@@ -90,7 +90,8 @@ Build
     Y se ejecuta así::
 
         $ make loop-n-y-medio.graph.pdf
-        dot -Tpdf loop-n-y-medio.dot > loop-n-y-medio.graph.pdf -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
+        dot -Tpdf loop-n-y-medio.dot > loop-n-y-medio.graph.pdf
+        -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
 
     Normalmente no hace falta hacerlo manualmente, pues se hace, de ser
     necesario, cuando se publica al sitio o a PDF.
