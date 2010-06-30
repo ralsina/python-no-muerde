@@ -79,15 +79,15 @@ Build
     estas cosas, la respuesta es ``make``. Será medio críptico de a ratos,
     pero hace lo que hace.
 
-    Por ejemplo, así se reconstruye el PDF de un diagrama::
+    Por ejemplo, así se reconstruye el PDF de un diagrama:
 
     .. code-block:: Makefile
 
-        %.graph.pdf: %.dot
+       %.graph.pdf: %.dot
                 dot -Tpdf $< > $@ -Efontname="DejaVu Sans" \
                     -Nfontname="DejaVu Sans"
 
-    Y se ejecuta así:
+    Y se ejecuta así::
 
         $ make loop-n-y-medio.graph.pdf
         dot -Tpdf loop-n-y-medio.dot > loop-n-y-medio.graph.pdf -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
