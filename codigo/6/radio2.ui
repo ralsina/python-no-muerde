@@ -26,6 +26,19 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTreeWidget" name="radioList">
+     <property name="whatsThis">
+      <string>This is a list of radio stations you have configured.
+
+To change one of them, click on &quot;Edit&quot; next to its name, and to remove it from the list, click on &quot;Remove&quot;.
+
+If you want to add more stations, click the &quot;Add&quot; button, and if you are finished, click &quot;Done&quot;.</string>
+     </property>
+     <property name="accessibleName">
+      <string>List of Radios</string>
+     </property>
+     <property name="accessibleDescription">
+      <string>This is a list of radio stations you have configured.</string>
+     </property>
      <property name="editTriggers">
       <set>QAbstractItemView::NoEditTriggers</set>
      </property>
@@ -104,6 +117,15 @@
          <height>0</height>
         </size>
        </property>
+       <property name="whatsThis">
+        <string>This button lets you add a new radio station.</string>
+       </property>
+       <property name="accessibleName">
+        <string>Add</string>
+       </property>
+       <property name="accessibleDescription">
+        <string>Add a new radio station</string>
+       </property>
        <property name="text">
         <string>&amp;Add</string>
        </property>
@@ -139,6 +161,15 @@
          <width>80</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="whatsThis">
+        <string>This button closes this dialog.</string>
+       </property>
+       <property name="accessibleName">
+        <string>Done</string>
+       </property>
+       <property name="accessibleDescription">
+        <string>This button closes this dialog.</string>
        </property>
        <property name="text">
         <string>&amp;Done</string>
