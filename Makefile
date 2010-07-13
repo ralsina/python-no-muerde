@@ -55,7 +55,9 @@ SCREENSHOTS=pyurl1-1.print.jpg\
          radio-19.print.jpg\
          radio-20.print.jpg\
          radio-21.print.jpg\
-         radio-22.print.jpg
+         radio-22.print.jpg\
+         radio-23.print.jpg\
+         radio-24.print.jpg
        
 
 CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt metalibro.txt
@@ -180,4 +182,6 @@ middleware2.graph.png: middleware2.dot
        radio-20.print.jpg\
        radio-21.print.jpg\
        radio-22.print.jpg\
+       radio-23.print.jpg\
+       radio-24.print.jpg\
        filenew.svg
