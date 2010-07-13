@@ -343,3 +343,4 @@ Probar esta aplicación en su estado actual muestra varias partes que fallan esa
 
   Esto es bastante más complicado, porque involucra varias partes del diseño, y podría hasta ser suficiente para hacernos repensar la idea del "Edit/Remove" dentro de la lista. Veamos qué podemos hacer al respecto.
 
+
