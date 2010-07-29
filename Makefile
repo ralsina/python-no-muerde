@@ -185,3 +185,5 @@ middleware2.graph.png: middleware2.dot
        radio-23.print.jpg\
        radio-24.print.jpg\
        filenew.svg
+       codigo/6/radio6.py
+       codigo/6/radio7.py
