@@ -41,7 +41,7 @@ class Main(QtGui.QDialog):
         # Cargamos la interfaz desde el archivo .ui
         uifile = os.path.join(
             os.path.abspath(
-                os.path.dirname(__file__)),'radio2.ui')
+                os.path.dirname(__file__)),'radio3.ui')
         uic.loadUi(uifile, self)
 
         self.loadRadios()
