@@ -78,7 +78,7 @@ class Main(QtGui.QDialog):
         items = self.radioList.selectedItems()
         if items: # Si no hay ninguno seleccionado,
                   # no hay que hacer nada
-            # Simulamos un click en la segunda columna de ese
+            # Simulamos un click en la tercera columna de ese
             # item.
             item = items[0]
             self.on_radioList_clicked(self.radioList.indexFromItem(item,2))
