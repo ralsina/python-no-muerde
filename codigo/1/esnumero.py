@@ -6,9 +6,9 @@ def es_numero(x):
     '''Verifica que x sea convertible a número'''
     s = str(x)
     for c in s:
-        if c not in string.digits+'.'
+        if c not in string.digits+'.':
             return False
-        return True
+    return True
 
 s=raw_input()
 if es_numero(s):
