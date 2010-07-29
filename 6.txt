@@ -347,3 +347,18 @@ Probar esta aplicación en su estado actual muestra varias partes que fallan esa
 El primer problema es que la lista de radios está configurada para no aceptar selección, con lo que no hay manera de elegir un item. Eso lo cambiamos en designer, poniendo la propiedad ``selectionMode`` en ``SingleSelection``.
 
 Con eso, será posible seleccionar una radio. Luego, debemos permitir que se apliquen acciones a la misma. Una manera es habilitar atajos de teclado para ``Edit`` y ``Remove``, por ejemplo "Ctrl+E" y "Delete".
+
+La forma más sencilla es crear dos acciones (clase ``QAction``) con esos atajos y hacer que hagan lo correcto.
+
+.. class:: titulo-listado
+
+radio7.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/6/radio7.py
+   :start-after: # XXX11
+   :end-before: # XXX12

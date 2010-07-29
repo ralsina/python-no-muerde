@@ -53,7 +53,38 @@ class Main(QtGui.QDialog):
         header.setResizeMode(1, QtGui.QHeaderView.ResizeToContents)
         header.setResizeMode(2, QtGui.QHeaderView.ResizeToContents)
 
+#XXX11
+        # Acciones para atajos de teclado
+        self.editAction = QtGui.QAction("Edit", self,
+            triggered = self.editRadio)
+        self.editAction.setShortcut(QtGui.QKeySequence("Ctrl+E"))
+        self.removeAction = QtGui.QAction("Remove", self,
+            triggered = self.removeRadio)
+        self.removeAction.setShortcut(QtGui.QKeySequence("Del"))
+        self.addActions([self.editAction, self.removeAction])
+
+    def editRadio(self, b=None):
+        # Simulamos un click en Edit
+        items = self.radioList.selectedItems()
+        if items: # Si no hay ninguno seleccionado,
+                  # no hay que hacer nada
+            # Simulamos un click en la segunda columna de ese
+            # item.
+            item = items[0]
+            self.on_radioList_clicked(self.radioList.indexFromItem(item,1))
+
+    def removeRadio(self, b=None):
+        # Simulamos un click en Remove
+        items = self.radioList.selectedItems()
+        if items: # Si no hay ninguno seleccionado,
+                  # no hay que hacer nada
+            # Simulamos un click en la segunda columna de ese
+            # item.
+            item = items[0]
+            self.on_radioList_clicked(self.radioList.indexFromItem(item,2))
+
     loadRadios = _loadRadios
+#XXX12
 
     def saveRadios(self):
         "Guarda las radios a disco"
