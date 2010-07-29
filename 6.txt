@@ -360,5 +360,5 @@ radio7.py
    :linenos:
    :linenos_offset:
    :include: codigo/6/radio7.py
-   :start-after: # XXX11
-   :end-before: # XXX12
+   :start-after: #XXX11
+   :end-before: #XXX12

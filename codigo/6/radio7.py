@@ -82,9 +82,8 @@ class Main(QtGui.QDialog):
             # item.
             item = items[0]
             self.on_radioList_clicked(self.radioList.indexFromItem(item,2))
-
-    loadRadios = _loadRadios
 #XXX12
+    loadRadios = _loadRadios
 
     def saveRadios(self):
         "Guarda las radios a disco"
