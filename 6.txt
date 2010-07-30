@@ -63,7 +63,7 @@ capítulo anterior y la vamos a rehacer, pero bien. Porque esa era la de
 desarrollo, y la vamos a tirar.
 
 Proyecto
---------
+~~~~~~~~
 
 Asumamos que la aplicación de streaming de radio que desarrollamos en el
 capítulo anterior funciona correctamente y carece de bugs [#]_...
@@ -76,7 +76,7 @@ Bueno, falta resolver todas las cosas que **no** son bugs desde el punto de
 vista de funcionamiento pero que están mal.
 
 Corrigiendo la Interfaz Gráfica
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Empecemos con la ventana de configuración, viendo algunos problemas
 de base en el diseño. Desde ya que el 90% de lo que veamos ahora es
@@ -187,7 +187,7 @@ Así que, teniendo una interfaz que funciona, hagamos un desarrollo
 racional de la versión nueva, y olvidemos la vieja.
 
 ¿Qué estamos haciendo?
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Pensemos el objetivo, la tarea a realizar. Es controlar una lista de
 radios. Lo mínimo sería esto:
@@ -281,7 +281,7 @@ radio6.py
 ¿Es esto todo lo que está mal? Vaya que no.
 
 Pulido
-------
+~~~~~~
 
 Los iconos que venimos usando son del set "Reinhardt" que a mí
 personalmente me gusta mucho, pero algunos de sus iconos no son
@@ -307,7 +307,7 @@ distintas para merecer su propio icono.
 ¿Quiere decir que este diálogo ya está terminado? No, en absoluto.
 
 Nombres y Descripciones
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 En algunos sistemas operativos tu ventana va a tener un botń extra, generalmente un signo de pregunta. Eso activa el "What's This?" o "¿Qué es esto?" y tambien se lo accede con un atajo de teclado (muchas veces Shift+F1).
 
@@ -329,7 +329,7 @@ quiere decir **por lo menos** completar los campos ``accessibleName`` y ``access
    Datos de accesibilidad.
 
 Uso Desde el Teclado
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Es importante que una aplicación no *obligue* al uso del mouse a menos que sea absolutamente indispensable. La única manera de hacer eso que conozco es... usándola completa sin tocar el mouse.
 
@@ -364,7 +364,7 @@ radio7.py
    :end-before: #XXX12
 
 Traducciones
-------------
+~~~~~~~~~~~~
 
 Uno no hace aplicaciones para uno mismo, o aún si las hace, está bueno si las pueden usar otros. Y está *muy* bueno si la puede usar gente de otros países. Y para eso es fundamental que puedan tenerla en su propio idioma [#]_
 
