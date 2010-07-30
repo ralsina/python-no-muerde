@@ -454,13 +454,13 @@ Nos olvidamos que no todo nuestro texto visible (y traducible) viene de designer
 
 
 Eso se hace pasando los strings a traducir por el método ``tr`` de la aplicación
-o del widget del que forman parte. Por ejemplo, en vez de hacerlo
+o del widget del que forman parte. Por ejemplo, en vez de hacer así:
 
 .. code-block:: python
 
    item = QtGui.QTreeWidgetItem([nombre,"Edit","Remove"])
    
-Hay que hacer
+Hay que hacer así:
     
 .. code-block:: python
 
