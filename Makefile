@@ -107,7 +107,7 @@ commit:
         rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
 
 commit-web: sitio ${CAPITULOS_PDF}
-	hg commit
+	hg commit || true
 	hg push
 	rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
 
