@@ -59,7 +59,8 @@ SCREENSHOTS=pyurl1-1.print.jpg\
          radio-23.print.jpg\
          radio-24.print.jpg\
          linguist-1.print.jpg\
-         linguist-2.print.jpg
+         linguist-2.print.jpg\
+         linguist-3.print.jpg
        
 
 CAPITULOS=intro.txt 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt 7.txt 8.txt 9.txt 10.txt 11.txt 12.txt licencia.txt gracias.txt metalibro.txt
@@ -190,6 +191,8 @@ middleware2.graph.png: middleware2.dot
        codigo/6/radio6.py\
        codigo/6/radio7.py\
        codigo/6/radio_es.ts\
+       codigo/6/Makefile\
        linguist-1.print.jpg\
-       linguist-2.print.jpg
+       linguist-2.print.jpg\
+       linguist-3.print.jpg
 

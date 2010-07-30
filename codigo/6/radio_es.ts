@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es_AR">
+<!DOCTYPE TS><TS version="1.1" language="es_AR">
 <context>
     <name>Dialog</name>
     <message>
@@ -49,7 +48,7 @@ Si desea añadir más radios, presione el botón &quot;Agregar&quot;, y cuando t
     <message>
         <location filename="radio3.ui" line="37"/>
         <source>List of Radios</source>
-        <translation>Lista de Radios.</translation>
+        <translation>Lista de Radios</translation>
     </message>
     <message>
         <location filename="radio3.ui" line="40"/>
@@ -85,6 +84,60 @@ Si desea añadir más radios, presione el botón &quot;Agregar&quot;, y cuando t
         <location filename="radio3.ui" line="178"/>
         <source>&amp;Done</source>
         <translation>&amp;Cerrar</translation>
+    </message>
+</context>
+<context>
+    <name>EditRadio</name>
+    <message>
+        <location filename="radio8.py" line="155"/>
+        <source>&amp;Save</source>
+        <translation>&amp;Guardar</translation>
+    </message>
+</context>
+<context>
+    <name>Main</name>
+    <message>
+        <location filename="radio8.py" line="99"/>
+        <source>Edit</source>
+        <translation>Editar</translation>
+    </message>
+    <message>
+        <location filename="radio8.py" line="99"/>
+        <source>Remove</source>
+        <translation>Eliminar</translation>
+    </message>
+</context>
+<context>
+    <name>TrayIcon</name>
+    <message>
+        <location filename="radio8.py" line="201"/>
+        <source>&amp;Turn Off Radio</source>
+        <translation>&amp;Apagar la Radio</translation>
+    </message>
+    <message>
+        <location filename="radio8.py" line="232"/>
+        <source>Radio - Error reading playlist</source>
+        <translation>Radio - Error leyendo el playlist</translation>
+    </message>
+    <message>
+        <location filename="radio8.py" line="232"/>
+        <source>Sorry, error starting this radio.</source>
+        <translation>Se ha producido un error al intentar conectarse con esta radio.</translation>
+    </message>
+    <message>
+        <location filename="radio8.py" line="167"/>
+        <source>&amp;Configure</source>
+        <translation>&amp;Configurar</translation>
+    </message>
+    <message>
+        <location filename="radio8.py" line="170"/>
+        <source>&amp;About...</source>
+        <translation>&amp;Acerca de...</translation>
+    </message>
+    <message>
+        <location filename="radio8.py" line="172"/>
+        <source>&amp;Quit</source>
+        <translation>&amp;Salir</translation>
     </message>
 </context>
 </TS>

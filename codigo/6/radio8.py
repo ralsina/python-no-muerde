@@ -55,10 +55,10 @@ class Main(QtGui.QDialog):
 
 #XXX11
         # Acciones para atajos de teclado
-        self.editAction = QtGui.QAction("Edit", self,
+        self.editAction = QtGui.QAction(self.tr("Edit"), self,
             triggered = self.editRadio)
         self.editAction.setShortcut(QtGui.QKeySequence("Ctrl+E"))
-        self.removeAction = QtGui.QAction("Remove", self,
+        self.removeAction = QtGui.QAction(self.tr("Remove"), self,
             triggered = self.removeRadio)
         self.removeAction.setShortcut(QtGui.QKeySequence("Del"))
         self.addActions([self.editAction, self.removeAction])
@@ -96,7 +96,8 @@ class Main(QtGui.QDialog):
         "Muestra las radios en la lista"
         self.radioList.clear()
         for nombre,url in self.radios:
-            item = QtGui.QTreeWidgetItem([nombre,"Edit","Remove"])
+            item = QtGui.QTreeWidgetItem([nombre,self.tr("Edit"),
+                self.tr("Remove")])
             item.setIcon(1,QtGui.QIcon(":/edit.svg"))
             item.setIcon(2,QtGui.QIcon(":/delete.svg"))
             self.radioList.addTopLevelItem(item)
@@ -151,7 +152,7 @@ class EditRadio(AddRadio):
     que cambia el texto de un botón."""
     def __init__(self, parent):
         AddRadio.__init__(self, parent)
-        self.addButton.setText("&Save")
+        self.addButton.setText(self.tr("&Save"))
 
 class TrayIcon(QtGui.QSystemTrayIcon):
     "Icono en area de notificación"
@@ -165,12 +166,12 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         ## Acciones del menú de botón derecho
         self.configAction = QtGui.QAction(
             QtGui.QIcon(":/configure.svg"),
-            "&Configure",self )
+            self.tr("&Configure"),self )
         self.aboutAction = QtGui.QAction(
-            "&About...",self )
+            self.tr("&About..."),self )
         self.quitAction = QtGui.QAction(
             QtGui.QIcon(":/exit.svg"),
-            "&Quit",self )
+            self.tr("&Quit"),self )
 
         # Armamos el menú con las acciones
         self.rmbMenu=QtGui.QMenu()
@@ -199,7 +200,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
             # El menú del botón izquierdo
             self.stopAction=QtGui.QAction(
                 QtGui.QIcon(":/stop.svg"),
-                "&Turn Off Radio",self )
+                self.tr("&Turn Off Radio"),self )
 
             self.lmbMenu=QtGui.QMenu()
             self.lmbMenu.addAction(self.stopAction)
@@ -229,8 +230,8 @@ class TrayIcon(QtGui.QSystemTrayIcon):
             
         else: # Pasó algo malo
             QtGui.QMessageBox.information(None,
-                "Radio - Error reading playlist",
-                "Sorry, error starting this radio.")
+                self.tr("Radio - Error reading playlist"),
+                self.tr("Sorry, error starting this radio."))
     # XXX10
     # XXX3
     @QtCore.pyqtSlot()
@@ -242,9 +243,9 @@ class TrayIcon(QtGui.QSystemTrayIcon):
     @QtCore.pyqtSlot()
     def showAbout(self):
         QtGui.QMessageBox.about(None, u"Radio",
-            u"Example app from 'Python No Muerde'<br>"\
-            u"© 2010 Roberto Alsina<br>"\
-            u"More information: http://nomuerde.netmanagers.com.ar"
+            self.tr(u"Example app from 'Python No Muerde'<br>") +\
+            self.tr(u"© 2010 Roberto Alsina<br>") +\
+            self.tr(u"More information: http://nomuerde.netmanagers.com.ar")
          )
     # XXX4
 

@@ -419,7 +419,82 @@ Linguist es muy interesante porque te muestra cómo queda la interfaz con la tra
 
    Linguist en acción
 
-Entonces uno tradujo todo lo mejor que pudo, ¿cómo hacemos que la aplicación use nuestra traducción?
+Entonces uno tradujo todo lo mejor que pudo, ¿cómo hacemos que la aplicación use nuestra traducción? Por suerte es muy standard. Primero, creamos un archivo "release" de la traducción, con extensión ``.qm``, donde compilamos a un formato más eficiente:
 
+::
+
+    [codigo/6]$ lrelease radio_es.ts -compress -qm radio_es.qm
+    Updating 'radio_es.qm'...
+    Generated 15 translation(s) (15 finished and 0 unfinished)
+
+Del lado del código, debemos decirle a nuestra aplicación donde está el archivo ``.qm``. Asumiendo que está junto con el script principal:
+
+.. class:: titulo-listado
+
+radio7.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/6/radio7.py
+   :start-at: # Cargamos las traducciones de la aplicación
+   :end-at: # Fin de carga de traducciones
+
+
+Y nuestra aplicación está traducida:
+
+.. figure:: linguist-3.print.jpg
+   :width: 53%
+
+   ¡Traducida! ... ¿Traducida?
+
+Nos olvidamos que no todo nuestro texto visible (y traducible) viene de designer. Hay partes que están escritas en el código python, y hay que marcarlas como traducibles, para que ``pylupdate4`` las agregue al archivo ``.ts``.
+
+
+Eso se hace pasando los strings a traducir por el método ``tr`` de la aplicación
+o del widget del que forman parte. Por ejemplo, en vez de hacerlo
+
+.. code-block:: python
+
+   item = QtGui.QTreeWidgetItem([nombre,"Edit","Remove"])
+   
+Hay que hacer
+    
+.. code-block:: python
+
+   item = QtGui.QTreeWidgetItem([nombre,self.tr("Edit"),
+       self.tr("Remove")])
+
+Esta operación hay que repetirla en cada lugar donde queden strings sin traducir. Por ese motivo... **¡hay que marcar para traducción desde el principio!**
+
+Como esto modifica fragmentos de código por todas partes, vamos a crear una nueva versión del programa, ``radio8.py``.
+
+Al agregar nuevos strings que necesitan traducción, es necesario actualizar el archivo ``.ts``::
+
+    [codigo/6]$ pylupdate4 -verbose radio8.py plsparser.py addradio2.ui\
+        radio3.ui -ts radio_es.ts
+    Updating 'radio_es.ts'...
+    Found 24 source texts (9 new and 15 already existing)
+
+Y, luego de traducir con linguist, recompilar el ``.qm``::
+    
+    [codigo/6]$ lrelease radio_es.ts -compress -qm radio_es.qm
+    Updating 'radio_es.qm'...
+    Generated 24 translation(s) (24 finished and 0 unfinished)
+
+Como todo este proceso es muy engorroso, puede ser práctico crear un ``Makefile`` o algún otro mecanismo de automatización de la actualización y compilación de traducciones. Por ejemplo, con este Makefile un ``make traducciones`` se encarga de todo:
+
+.. class:: titulo-listado
+
+Makefile
+
+.. class:: listado
+
+.. code-block:: makefile
+   :linenos:
+   :linenos_offset:
+   :include: codigo/6/Makefile
 
 
