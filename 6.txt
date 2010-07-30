@@ -362,3 +362,64 @@ radio7.py
    :include: codigo/6/radio7.py
    :start-after: #XXX11
    :end-before: #XXX12
+
+Traducciones
+------------
+
+Uno no hace aplicaciones para uno mismo, o aún si las hace, está bueno si las pueden usar otros. Y está *muy* bueno si la puede usar gente de otros países. Y para eso es fundamental que puedan tenerla en su propio idioma [#]_
+
+.. [#] Yo personalmente es rarísimo que use las aplicaciones traducidas, pero para otros es necesario.
+
+Esta parte es una de esas que dependen **mucho** de como sea lo que se está programando. Vamos a hacer un ejemplo con las herramientas de Qt, para otros desarrolos hay cosas parecidas.
+
+Hay varios pasos, extracción de strings, traducción, y compilación de los strings generados a un formato usable.
+
+A fin de poder traducir lo que un programa dice, necesitamos saber exactamente *qué dice*. Las herramientas de extracción de strings se encargan de buscar todas esas cosas en nuestro código y ponerlas en un archivo para que podamos trabajar con ellas.
+
+En la versión actual de nuestro programa, tenemos los siguientes archivos:
+
+* radio7.py (nuestro programa principal)
+* plsparser.py (parser de archivos .pls, no tiene interfaz)
+* addradio2.ui (diálogo de agregar una radio)
+* radio3.ui (diálogo de configuración)
+    
+¡Extraigamos esos strings! Este comando crea un archivo ``radio.ts`` con todo lo traducible de esos archivos, para crear una traducción al castellano::
+
+    [codigo/6]$ pylupdate4 radio7.py plsparser.py addradio2.ui \
+        radio3.ui -ts radio_es.ts
+
+Los archivos ``.ts`` son un XML bastante obvio. Este es un ejemplo de una traducción al castellano:
+
+.. class:: titulo-listado
+
+radio_es.ts
+
+.. class:: listado
+
+.. code-block:: xml
+   :linenos:
+   :linenos_offset:
+   :include: codigo/6/radio_es.ts
+   :end-at: </message>
+
+
+Otras herramientas crean archivos en otros formatos, más o menos fáciles de editar a mano, y/o proveen herramientas para editarlos.
+
+¿Ahora, como editamos la traducción? Usando Linguist, que viene con Qt. Lo primero que hará es preguntarnos a qué idioma queremos traducir:
+
+.. figure:: linguist-1.print.jpg
+   :width: 43%
+
+   Diálogo inicial de Linguist
+
+Linguist es muy interesante porque te muestra cómo queda la interfaz con la traducción **mientras** lo estás traduciendo (por lo menos para los archivos ``.ui``), lo que permite apreciar si estamos haciendo macanas.
+
+.. figure:: linguist-2.print.jpg
+   :width: 43%
+
+   Linguist en acción
+
+Entonces uno tradujo todo lo mejor que pudo, ¿cómo hacemos que la aplicación use nuestra traducción?
+
+
+
