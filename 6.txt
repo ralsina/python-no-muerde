@@ -498,3 +498,7 @@ Makefile
    :include: codigo/6/Makefile
 
 
+Feedback
+~~~~~~~~
+
+En este momento, cuando el usuario elige una radio que desea escuchar, suena. ¿Pero qué está sonando? ¿Cuál radio está escuchando? ¿Que tema están pasando en este momento? Deberíamos brindar esa información, si el usuario la desea, de manera lo menos molesta posible.
