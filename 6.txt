@@ -502,3 +502,30 @@ Feedback
 ~~~~~~~~
 
 En este momento, cuando el usuario elige una radio que desea escuchar, suena. ¿Pero qué está sonando? ¿Cuál radio está escuchando? ¿Que tema están pasando en este momento? Deberíamos brindar esa información, si el usuario la desea, de manera lo menos molesta posible.
+
+En este caso puntual, lo que queremos es el "metadata" del objeto reproductor, y
+un mecanismo posible para mostrar esa información es un OSD (On Screen Display) o usar una de las APIs de notificación del sistema [#]_.
+
+.. [#] Hay pros y contras para cada una de las formas de mostrar notificaciones. Voy a hacer una que tal vez no es óptima, pero que funciona en todas las plataformas.
+
+En cuanto a qué notificar, es sencillo, cada vez que nuestro reproductor de audio emita la señal ``metaDataChanged`` tenemos que ver el resultado de ``metaData()`` y ahí está todo.
+
+Para que quede claro qué modificamos, creamos una nueva versión de nuestro programa, ``radio9.py``, y esta es la parte interesante:
+
+.. class:: titulo-listado
+
+radio9.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/6/radio9.py
+   :start-after: # XXX9
+   :end-before: # XXX3
+
+.. figure:: radio-25.print.jpg
+   :width: 64%
+
+   Musica tranqui.

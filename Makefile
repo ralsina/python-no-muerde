@@ -58,6 +58,7 @@ SCREENSHOTS=pyurl1-1.print.jpg\
          radio-22.print.jpg\
          radio-23.print.jpg\
          radio-24.print.jpg\
+         radio-25.print.jpg\
          linguist-1.print.jpg\
          linguist-2.print.jpg\
          linguist-3.print.jpg
@@ -187,9 +188,12 @@ middleware2.graph.png: middleware2.dot
        radio-22.print.jpg\
        radio-23.print.jpg\
        radio-24.print.jpg\
+       radio-25.print.jpg\
        filenew.svg\
        codigo/6/radio6.py\
        codigo/6/radio7.py\
+       codigo/6/radio8.py\
+       codigo/6/radio9.py\
        codigo/6/radio_es.ts\
        codigo/6/Makefile\
        linguist-1.print.jpg\
