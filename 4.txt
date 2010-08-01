@@ -674,3 +674,8 @@ Igual que con los tests, esperar para documentar tus funciones es una
 garantía de que vas a tener un déficit a remontar. Con un uso
 medianamente inteligente de las herramientas es posible mantener
 la documentación "siguiendo" al código, y actualizada.
+
+
+TODO: http://www.wayforward.net/pycontract/
+TODO: sniffer : http://pypi.python.org/pypi/sniffer/0.1.4
+
