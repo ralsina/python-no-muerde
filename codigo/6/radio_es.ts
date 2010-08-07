@@ -126,8 +126,8 @@ Si desea añadir más radios, presione el botón &quot;Agregar&quot;, y cuando t
     </message>
     <message>
         <location filename="radio8.py" line="167"/>
-        <source>&amp;Configure</source>
-        <translation>&amp;Configurar</translation>
+        <source>&amp;Configure...</source>
+        <translation>&amp;Configurar...</translation>
     </message>
     <message>
         <location filename="radio8.py" line="170"/>

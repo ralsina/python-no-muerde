@@ -165,7 +165,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         ## Acciones del menú de botón derecho
         self.configAction = QtGui.QAction(
             QtGui.QIcon(":/configure.svg"),
-            "&Configure",self )
+            "&Configure...",self )
         self.aboutAction = QtGui.QAction(
             "&About...",self )
         self.quitAction = QtGui.QAction(

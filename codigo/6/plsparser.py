@@ -18,6 +18,13 @@ def parse_pls(url):
 
     """
     try:
+        # Si es un stream directo, entonces lo devolvemos
+        # sin parsear.
+        
+        if url[-4].lower() in ['.ogg','.mp3']:
+            return [['',url]]
+
+        # Si no, suponemos que es un .pls
         parser = RawConfigParser()
         parser.readfp(urllib.urlopen(url))
 

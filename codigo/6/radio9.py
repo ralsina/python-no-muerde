@@ -166,7 +166,7 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         ## Acciones del menú de botón derecho
         self.configAction = QtGui.QAction(
             QtGui.QIcon(":/configure.svg"),
-            self.tr("&Configure"),self )
+            self.tr("&Configure..."),self )
         self.aboutAction = QtGui.QAction(
             self.tr("&About..."),self )
         self.quitAction = QtGui.QAction(
@@ -178,7 +178,6 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         self.rmbMenu.addActions([
             self.configAction,
             self.aboutAction,
-            self.quitAction
             ])
         # Ponemos este menú como menú de contexto
         self.setContextMenu(self.rmbMenu)
@@ -193,34 +192,51 @@ class TrayIcon(QtGui.QSystemTrayIcon):
         # Conectamos el botón izquierdo
         self.activated.connect(self.activatedSlot)
         self.player = None
-
+        
+    # XXX9
     def activatedSlot(self, reason):
         """El usuario activó este icono"""
         if reason == QtGui.QSystemTrayIcon.Trigger:
             # El menú del botón izquierdo
-            self.stopAction=QtGui.QAction(
-                QtGui.QIcon(":/stop.svg"),
-                self.tr("&Turn Off Radio"),self )
-
             self.lmbMenu=QtGui.QMenu()
-            self.lmbMenu.addAction(self.stopAction)
-            self.lmbMenu.addSeparator()
+            
+            if self.player and \
+                    self.player.state() == Phonon.PlayingState:
+                self.stopAction=QtGui.QAction(
+                    QtGui.QIcon(":/stop.svg"),
+                    self.tr("&Turn Off Radio"),self )
+                self.stopAction.triggered.connect(self.player.stop)
+                self.lmbMenu.addAction(self.stopAction)
+                self.lmbMenu.addSeparator()
 
             self.loadRadios()
             self.radioActions = []
             for r in self.radios:
                 receiver = lambda url=r[1]: self.playURL(url)
-                self.lmbMenu.addAction(
-                    r[0], receiver)
+                action = self.lmbMenu.addAction(
+                            r[0], receiver)
+                action.setCheckable(True)
+
+                # Marcamos la radio que estamos escuchando ahora,
+                # si es que estamos escuchando alguna
+                if self.player and \
+                    self.player.state() == Phonon.PlayingState and\
+                    getattr(self,'playingURL','') == r[1]:
+                    action.setChecked(True)
+
+            # Ponemos "Quit" en el menú del botón izquierdo.
+            self.lmbMenu.addSeparator()
+            self.lmbMenu.addAction(self.quitAction)
 
             # Mostramos el menú en la posición del cursor
             self.lmbMenu.exec_(QtGui.QCursor.pos())
 
-    # XXX9
     def playURL(self, url):
         """Toma la URL de un playlist, y empieza a hacer ruido"""
         data = parse_pls(url)
         if data: # Tengo una URL
+            # la anoto
+            self.playingURL = url
             # Sí, tomamos el primer stream y listo.
             url = data[0][1]
 

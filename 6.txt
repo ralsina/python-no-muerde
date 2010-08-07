@@ -510,6 +510,12 @@ un mecanismo posible para mostrar esa información es un OSD (On Screen Display)
 
 En cuanto a qué notificar, es sencillo, cada vez que nuestro reproductor de audio emita la señal ``metaDataChanged`` tenemos que ver el resultado de ``metaData()`` y ahí está todo.
 
+También es importante que se pueda ver qué radio se está escuchando en este momento. Eso lo vamos a hacer mediante una marca junto al nombre de la radio actual.
+
+Ya que estamos, tiene más sentido que "Quit" esté en el menú principal (el del botón izquierdo) que en el secundario, así que lo movemos.
+
+Ah, y implementamos que "Turn Off Radio" solo aparezca si hay una radio en uso (y hacemos que funcione).
+
 Para que quede claro qué modificamos, creamos una nueva versión de nuestro programa, ``radio9.py``, y esta es la parte interesante:
 
 .. class:: titulo-listado
@@ -529,3 +535,4 @@ radio9.py
    :width: 64%
 
    Musica tranqui.
+
