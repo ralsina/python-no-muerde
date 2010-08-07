@@ -253,9 +253,6 @@ def main():
 
     # Cargamos las traducciones de la aplicación
     locale = unicode(QtCore.QLocale.system().name())
-    print os.path.join(os.path.abspath(
-                os.path.dirname(__file__)),
-                "radio_" + unicode(locale))
     translator=QtCore.QTranslator()
     translator.load(os.path.join(os.path.abspath(
                 os.path.dirname(__file__)),
