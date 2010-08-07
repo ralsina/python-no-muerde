@@ -112,7 +112,7 @@ commit-web: sitio ${CAPITULOS_PDF}
 	hg push
 	rsync -rvL --delete sitio/* ralsina@lateral.netmanagers.com.ar:/srv/www/nomuerde
 
-fuentes.zip:
+fuentes.zip: .phony
 	find codigo -name "*~" -exec rm {} \;
 	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*"\
 	 "codigo/2/*sqlite" "*pyc" "*~" "temp"
