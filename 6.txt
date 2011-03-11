@@ -309,7 +309,7 @@ distintas para merecer su propio icono.
 Nombres y Descripciones
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-En algunos sistemas operativos tu ventana va a tener un botń extra, generalmente un signo de pregunta. Eso activa el "What's This?" o "¿Qué es esto?" y tambien se lo accede con un atajo de teclado (muchas veces Shift+F1).
+En algunos sistemas operativos tu ventana va a tener un botón extra, generalmente un signo de pregunta. Eso activa el "What's This?" o "¿Qué es esto?" y tambien se lo accede con un atajo de teclado (muchas veces Shift+F1).
 
 Luego, al hacer click en un elemento de la interfaz, se ve un tooltip extendido con información detallada acerca del mismo. Esta información es útil como ayuda online.
 
