@@ -94,7 +94,7 @@ sitio: .phony ${FIGURAS_WEB} fuentes.zip ${CAPITULOS}
 	(cd web ; ln -sf ../codigo .)
 	(cd sitio ; ln -sf ../*.graph.png ../*.pdf ../*screen.png ../fuentes.zip ../*api.png ../concord.jpg .)
 	(for C in ${CAPITULOS}; do touch -r $$C web/$$C ; done)
-	python r2w.py rst2web.ini
+	python2 r2w.py rst2web.ini
 	(cd sitio; sed --in-place 's/graph\.pdf/graph\.png/g' *html)
 	(cd sitio; sed --in-place 's/print\.jpg/screen\.png/g' *html)
 	(cd sitio; sed --in-place 's/api\.pdf/api\.png/g' *html)
