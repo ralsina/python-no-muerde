@@ -64,7 +64,7 @@ No es exactamente un ejemplo de formalismo, pero este libro tampoco lo es.
 Proyecto
 ~~~~~~~~
 
-Vamos a hacer un programa dividido en capas capas, interfaz/lógica/datos. Vamos a
+Vamos a hacer un programa dividido en tres capas, interfaz/lógica/datos. Vamos a
 implementar dos veces cada capa, para demostrar que una separación clara
 independiza las implementaciones y mejora la claridad conceptual del código.
 
@@ -101,7 +101,7 @@ O pensemos en un sistema de reporte de bugs.
 Bueno, la diferencia principal es cuales datos se asignan por default a 
 cada "tarea". Si tenemos una descripción razonable de cómo debiera ser
 una tarea, entonces debería ser posible implementar estas cosas compartiendo
-much código.
+mucho código.
 
 Entonces dividamos esta teórica aplicación en capas:
 
@@ -179,10 +179,30 @@ Campos
 
 Storm provee `algunos tipos de datos <https://storm.canonical.com/Manual#Table of properties vs. python vs. database types>`_ 
 incluyendo fechas, horas, strings, números, y... Pickle. Pickle es interesante porque permite
-en principio almacenar casi cualquier cosa, mientras no te importe indexar en base a ese
+en principio almacenar casi cualquier cosa, mientras no te interese indexar en base a ese
 campo.
 
+Con un poco de imaginación uno puede guardar cualquier cosa usando Storm y 
+ofrecer una interfaz razonable para su uso.
 
+Diseño
+::::::
+
+Nuestro plan es crear una aplicación bastante genérica, que pueda ser 
+cosas distintas reemplazando pedazos. Para ello es **fundamental** ser claro al 
+definir la interfaz entre las capas. Si no es completamente explícita, si
+tiene suposiciones que ignoramos, si no es clara en lo que hace, entonces
+no vamos a tener capas separadas, vamos a tener un enchastre en el que se
+filtran datos de una capa a otra a través de esos huecos en nuestras definiciones.
+
+Por lo tanto, sería útil tener algún mecanismo de especificación de interfaces.
+Por suerte, lo hay: `Zope.Interface <http://docs.zope.org/zope.interface/README.html>`_
+
+Primero, no dejes que te asuste el nombre. No vamos a implementar una aplicación
+Zope. Zope.Interface es una biblioteca para definir interfaces, nomás.
+
+No vamos a incluir acá un tutorial de Zope.Interface, pero creo que el código 
+es bastante claro.
 
 
 Capa de Lógica: Diseño
