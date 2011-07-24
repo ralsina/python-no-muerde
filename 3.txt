@@ -183,17 +183,19 @@ en principio almacenar casi cualquier cosa, mientras no te interese indexar en b
 campo.
 
 Con un poco de imaginación uno puede guardar cualquier cosa usando Storm y 
-ofrecer una interfaz razonable para su uso.
+ofrecer una interfaz razonable para su uso. Al intentar tener un diseño *tan* genérico
+necesitamos algo adicional: necesitamos poder saber qué campos proveemos y de
+qué tipo es cada uno. Eso se llama introspección.
 
 Diseño
 ::::::
 
-Nuestro plan es crear una aplicación bastante genérica, que pueda ser 
-cosas distintas reemplazando pedazos. Para ello es **fundamental** ser claro al 
-definir la interfaz entre las capas. Si no es completamente explícita, si
-tiene suposiciones que ignoramos, si no es clara en lo que hace, entonces
-no vamos a tener capas separadas, vamos a tener un enchastre en el que se
-filtran datos de una capa a otra a través de esos huecos en nuestras definiciones.
+Nuestro plan es crear una aplicación que pueda ser cosas distintas reemplazando 
+pedazos de la misma. Para ello es **fundamental** ser claro al  definir la 
+interfaz entre las capas. Si no es completamente explícita, si tiene suposiciones 
+que ignoramos, si no es clara en lo que hace, entonces no vamos a tener capas 
+separadas, vamos a tener un enchastre en el que se filtran datos de una capa 
+a otra a través de esos huecos en nuestras definiciones.
 
 Por lo tanto, sería útil tener algún mecanismo de especificación de interfaces.
 Por suerte, lo hay: `Zope.Interface <http://docs.zope.org/zope.interface/README.html>`_
@@ -203,6 +205,37 @@ Zope. Zope.Interface es una biblioteca para definir interfaces, nomás.
 
 No vamos a incluir acá un tutorial de Zope.Interface, pero creo que el código 
 es bastante claro.
+
+Veamos primero la interfaz que queremos proveer para los elementos.
+
+.. class:: titulo-listado
+
+datos1.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/3/datos1.py
+   :start-at: # Definiciones de interfaces
+   :end-at: # Fin de definicion de interfaces
+
+Algunas aclaraciones con respecto a estas interfaces. Hay un elemento que *no* vamos
+a implementar de manera abstracta en la capa de datos que debería, en cualquier
+implementación seria, estar allí: búsquedas.
+
+Normalmente, la interfaz de datos debería proveer algún mecanismo para obtener un
+subconjunto de los elementos, tal vez ordenados por algún criterio. Lamentablemente,
+es *muy* difícil implementar eso sin quedar pegados a la implementación del backend.
+
+Vamos a proveer algunos mecanismos con este fin, pero desde ya sepan que son limitados,
+y hacen que el código sea ineficiente y complicado, comparado con lo que debería
+ser [#]_.
+
+.. [#] ¡Lero lero, es un ejemplo con fines educativos! ¡Esa excusa da para casi todo,
+       che!
+
 
 
 Capa de Lógica: Diseño
