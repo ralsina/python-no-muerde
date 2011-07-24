@@ -113,7 +113,7 @@ conectada a ninguno, a uno, o a muchos slots. Cada slot puede tener
 conectadas ninguna, una o muchas señales.
 
 Hasta es posible "encadenar" señales: si uno conecta una señal a otra,
-al emitirse una se emita la otra.
+al emitirse una se emite la otra.
 
 Es más, en principio, ni al emisor de la señal ni al receptor de la
 misma les importa quién es el otro.
