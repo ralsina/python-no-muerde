@@ -71,29 +71,50 @@ independiza las implementaciones y mejora la claridad conceptual del código.
 El Problema
 ~~~~~~~~~~~
 
-Pensemos en juegos de tablero multijugador. ¿Cómo definirías el juego de damas de forma
-muy genérica?
+Pensemos en una aplicación de tareas pendientes (el clásico TODO list). 
+¿Cómo la podríamos describir de forma súper genérica?
 
-* Hay un tablero de NxN
-* Hay X cantidad de fichas de cada color.
-* Las fichas comienzan el juego en cierta posición.
-* Hay dos jugadores
-* Cada jugador tiene un turno en el que puede mover ciertas fichas
-  según reglas específicas.
-* Luego de una movida, tal vez alguna ficha se saque del tablero.
-* Luego de una movida, tal vez alguna ficha sea reemplazada por otra.
+* Hay una lista de tareas almacenada en alguna parte (por ejemplo,
+  una base de datos).
+* Cada tarea tiene una serie de atributos, por ejemplo, un texto
+  describiéndola, un título, un estado (hecho/pendiente), una fecha
+  límite, etc.
 
-Ok, ahora pensemos en ajedrez. O en go. O en ta-te-ti...
+  Podríamos asignarle a cada tarea una serie de atributos adicionales
+  como categorías (tags), colores, etc. Por ese motivo es probablemente
+  una buena idea poder asignar datos de forma arbitraria, mas allá
+  de un conjunto predefinido.
+* Hay distintas maneras de ver la lista de tareas:
 
-¡Resulta que todos esos juegos se pueden describir de exactamente la misma manera!
+  + Por fecha límite
+  + Por categoría
+  + Por fecha de último update
+  + Por cualquier dato arbitrario que le podamos asignar según mencionamos
+    antes.
+
+* Hay que poder editar esos atributos de alguna forma.
+
+Ahora pensemos en un tablero de `Kanban <http://es.wikipedia.org/wiki/Kanban>`_. 
+O pensemos en un sistema de reporte de bugs.
+
+¿Cuál es exactamente la diferencia en la descripción al nivel que usé antes? 
+Bueno, la diferencia principal es cuales datos se asignan por default a 
+cada "tarea". Si tenemos una descripción razonable de cómo debiera ser
+una tarea, entonces debería ser posible implementar estas cosas compartiendo
+much código.
 
 Entonces dividamos esta teórica aplicación en capas:
 
-* Interfaz: muestra el tablero y las fichas. Acepta las movidas.
-* Lógica: procesa las movidas que manda la interfaz, las valida y acepta
-  o rechaza.
-* Datos: Luego de que una movida es validada, guarda un historial de las
-  mismas, y el estado del tablero y las fichas.
+Interfaz: 
+  Muestra las tareas/bugs/tarjetas/loquesea y permite editarlas.
+
+Lógica: 
+  Procesa los cambios recibidos via la interfaz, los valida y procesa.
+
+Datos: 
+  Luego de que un cambio es validado por la capa de lógica, almacena 
+  el estado en alguna parte, de alguna manera. Es responsable de definir 
+  exactamente qué datos se esperan y/o aceptan.
 
 Vamos a implementar esta aplicación de una manera... peculiar. Cada capa va
 a ser implementada dos veces, de maneras lo más distintas posible.
@@ -104,40 +125,69 @@ La manera más práctica de implementar estas cosas es de atrás para adelante:
 
 Datos -> Lógica -> Interfaz
 
-Capa de Datos: Diseño
-~~~~~~~~~~~~~~~~~~~~~
+Capa de Datos: Diseño e Implementación
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Necesitamos describir completamente y de forma genérica todos estos juegos.
+Necesitamos describir completamente y de forma genérica todas estas aplicaciones.
 
 Qué tenemos en común:
 
-Fichas
-    Son objetos que tienen un tipo ("alfil negro", "cruz", "piedrita blanca"),
-    una posición en el tablero (o no), y un dueño.
-    
-Jugadores
-    Los dueños de las fichas. Juegan por turno. Aplican acciones a las fichas.
-    Tienen un nombre.
+Elementos
+    Son objetos que tienen un conjunto de datos. Deben incluir una especificación
+    de cuales campos son requeridos y cuales no, y qué tipo de datos es cada uno.
 
-Tablero
-    Donde se ponen las fichas. Tiene una cantidad de posiciones donde una
-    ficha puede ponerse. Esas posiciones se pueden representar en una
-    superficie.
+    Ejemplo: una tarea, un bug, una tarjeta.
 
-Creo que con esos elementos puedo representar cualquier juego de tablero
-común. [#]_
+Campos
+    Cada uno de los datos que "pertenecen" a un elemento. Tiene un tipo (fecha, 
+    texto, color, email, etc). Puede tener una función de validación.
+
+Creo que con esos elementos puedo representar cualquiera de estas aplicaciones. [#]_
 
 .. [#] La ventaja que tengo al ser el autor del libro es que si no es así
        vengo, edito la lista, y parece que tengo todo clarísimo desde el
-       principio. No es el caso.
+       principio. No es ese el caso.
        
-El Tablero
-::::::::::
+Elementos
+:::::::::
 
-Las Fichas
-::::::::::
+Estamos hablando de crear objetos y guardarlos en una base de datos. 
+Hablamos de que esos objetos tienen campos de distintos tipos. Si eso no te
+hace pensar en un `ORM <http://es.wikipedia.org/wiki/Mapeo_objeto-relacional>`_
+por favor contáme en que estabas pensando.
 
-El Jugador
-::::::::::
+Hay montones de ORM disponibles para python. No quiero que este capítulo 
+degenere en una discusión de cuál es mejor, por lo que voy a admitir de
+entrada que el que vamos a usar no lo es, pero que tengo mis motivos para
+usarlo:
+
+* Funciona
+* Es relativamente simple de usar
+* No tiene grandes complejidades escondidas
+* Por todo lo anterior: te lo puedo explicar a la pasada
+
+El ORM que vamos a usar se llama `Storm <http://storm.canonical.com>`__ y 
+ya usamos en el capítulo anterior.
+
+De hecho, uno podría decir "mi capa de datos es el ORM", y que toda la
+definición de campos, etc. es lógica de aplicación, y no sería muy loco.
+En este ejemplo no voy a hacer eso principalmente para poder presentar
+una interfaz uniforme en la capa de datos entre dos implementaciones.
+
+Campos
+::::::
+
+Storm provee `algunos tipos de datos <https://storm.canonical.com/Manual#Table of properties vs. python vs. database types>`_ 
+incluyendo fechas, horas, strings, números, y... Pickle. Pickle es interesante porque permite
+en principio almacenar casi cualquier cosa, mientras no te importe indexar en base a ese
+campo.
 
 
+
+
+Capa de Lógica: Diseño
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+Capa de Interfaz: Diseño
+~~~~~~~~~~~~~~~~~~~~~~~~
