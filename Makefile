@@ -86,7 +86,7 @@ LISTADOS=codigo/4/gaso1.py\
 	inkscape $< --export-png=$@ 
 
 %.pdf: %.txt estilo.style Makefile tapa-capitulo.tmpl
-	rst2pdf -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl --fit-literal-mode=error --inline-footnotes --date-invariant
+	rst2pdf -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo $< -o $@ --custom-cover=tapa-capitulo.tmpl --fit-literal-mode=shrink --inline-footnotes --date-invariant
 
 python_no_muerde.pdf: tapa.tmpl indice.txt ${CAPITULOS} ${FIGURAS} Makefile estilo.style ${LISTADOS} ${SCREENSHOTS}
 	rst2pdf -l es_ES -b1 --smart-quotes=1 -s eightpoint,bw,estilo,tapa indice.txt -o python_no_muerde.pdf --custom-cover=tapa.tmpl --inline-footnotes --date-invariant
