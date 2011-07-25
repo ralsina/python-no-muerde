@@ -34,6 +34,7 @@ SCREENSHOTS=pyurl1-1.print.jpg\
 	 pyurl3-1.print.jpg\
 	 pyurl3-2.print.jpg\
 	 pyurl3-3.print.jpg\
+         pyurl-production.print.jpg\
          radio-1.print.jpg\
          radio-2.print.jpg\
          radio-3.print.jpg\
@@ -147,7 +148,8 @@ middleware2.graph.png: middleware2.dot
 2.pdf: 2.txt estilo.style codigo/2/pyurl1.py\
        codigo/2/pyurl2.py codigo/2/pyurl3.py\
        codigo/2/views/atajo.tpl\
-       codigo/2/views/usuario.tpl
+       codigo/2/views/usuario.tpl\
+       pyurl-production.print.jpg\
 
 1.pdf: 1.txt estilo.style codigo/1/deco1.py\
        codigo/1/deco2.py \

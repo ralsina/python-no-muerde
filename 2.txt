@@ -318,7 +318,7 @@ Google
 Otro proveedor OpenID
     Ingresa el dominio del proveedor o su URL de usuario.
 
-.. [#] O se crean botones "Entrar con tu cuenta de google", etc.
+.. [#] O se crean botones "Entrar con tu cuenta de google", etc. En ``views/invitado.tpl`` puede verse como hacerlo usando `openid-selector <http://code.google.com/p/openid-selector/>`_ una muy interesante solución basada pricipalmente en javascript.
 
 Luego OpenID se encarga de autenticarlo via Yahoo/Google/etc. y darnos el
 usuario autenticado como parte de la sesión.
@@ -473,6 +473,14 @@ pyurl2.py
    :width: 43%
 
    Estamos autenticados y nuestra aplicación de prueba funciona como antes.
+
+¿Puede quedar bueno esto?
+
+.. figure:: pyurl-production.print.jpg
+   :width: 95%
+
+   Este mismo programa, en producción, en http://pyurl.sytes.net
+
 
 Storm
 ~~~~~
@@ -750,7 +758,7 @@ pyurl3.py
    :linenos:
    :linenos_offset:
    :include: codigo/2/pyurl3.py
-   :start-at: @bottle.route('/')
+   :start-at: @bottle.post('/')
    :end-at: return data
 
 Las demás páginas no aportan nada interesante:
@@ -766,7 +774,7 @@ pyurl3.py
    :linenos_offset:
    :include: codigo/2/pyurl3.py
    :start-after: return data
-   :end-before:     bottle.send_file(filename, root='./static/')
+   :end-before: if __name__=='__main__':
 
 Conclusiones
 ~~~~~~~~~~~~
@@ -795,5 +803,4 @@ Y hay muchos features posibles:
 
 Todas esas cosas son posibles... y quien quiera hacerlas, puede ayudar!
 
-Este programa es open source, y tiene un proyecto en googlecode:
-http://py-corta.googlecode.com . Visiten y ayuden!
+Este programa es open source, se aceptan sugerencias Tal vez hasta esté funcionando en http://pyurl.sytes.net ... Visiten y ayuden!
