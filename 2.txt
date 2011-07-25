@@ -793,6 +793,13 @@ de los problemas obvios:
 * Se puede optimizar mucho
 * Necesita protección contra DOS (ejemplo, limitar la frecuencia de
   corrida de los tests)
+* Necesita que correr un test no bloquee todo el sitio.
+* Necesita ser útil para el fin propuesto!
+
+  * Idea: formulario que toma una lista de URLs y devuelve la lista correspondiente
+    de enlaces acortados.
+
+* Necesita *muchísimo* laburo de "UI".
 
 Y hay muchos features posibles:
 
