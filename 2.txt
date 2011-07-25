@@ -591,7 +591,7 @@ pyurl3.py
 .. code-block:: pycon
 
     >>> from pyurl3 import Atajo
-    >>> Atajo.initDB()
+    >>> Atajo.init_db()
     >>> a1 = Atajo(u'http://nomuerde.netmanagers.com.ar',
         u'unnombredeusuario')
     >>> a1.slug()
