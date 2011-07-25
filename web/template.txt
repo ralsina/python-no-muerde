@@ -19,10 +19,11 @@
 
         <div id="sidebar" style="float:left; margin: 0px 10px; padding: 0px 10px; border-right: 2px solid #a0a0a0; width: 200px;">
             <small>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">Algunos derechos reservados.</a>.
 <#
 if 'index' not in source_file:
     fname=source_file.split('/')[-1]
-    print '''<a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Este capítulo en Mercurial</a>'''%fname
+    print '''<hr><a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Este capítulo en Mercurial</a>'''%fname
     print '''<hr><a href="%s">Este capítulo en PDF</a>'''%fname.replace('.txt','.pdf')
     print '''<hr><a href="fuentes.zip">Código fuente de los ejemplos</a>'''
 #>
