@@ -5,14 +5,6 @@ crumb: Inicio
 Python No Muerde
 ================
 
-.. raw:: html
-
-   <div style="float: right; width: 200px; margin-left: 12px; padding-left: 12px; border-left: solid grey 2pt; ">
-   <small>
-   <script src="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode"></a><br/>Powered by FeedBurner</p> </noscript>
-   </small>
-   </div>
-
 .. class:: topic-title
 
 O: aprenda a programar en 3217 días

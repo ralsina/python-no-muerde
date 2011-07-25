@@ -414,18 +414,18 @@ en el diagrama):
    autenticado, entonces en vez de mandar datos al template, pasa una excepción
    a ``app`` (Error 401).
 
-   .. class:: titulo-listado
+.. class:: titulo-listado
 
-   pyurl2.py
+pyurl2.py
 
-   .. class:: listado
+.. class:: listado
 
-   .. code-block:: python
-       :linenos:
-       :linenos_offset:
-       :include: codigo/2/pyurl2.py
-       :start-at: @bottle.route('/')
-       :end-before: @bottle.route('/:slug/edit')
+.. code-block:: python
+    :linenos:
+    :linenos_offset:
+    :include: codigo/2/pyurl2.py
+    :start-at: @bottle.route('/')
+    :end-before: @bottle.route('/:slug/edit')
 
 5. Si ``app`` recibe un error 401, en vez de devolverlo al usuario, le dice a
    AuthKit: "hacete cargo". Ahí Authkit muestra el login, llama a yahoo o quien

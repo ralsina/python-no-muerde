@@ -19,15 +19,18 @@
 
         <div id="sidebar" style="float:left; margin: 0px 10px; padding: 0px 10px; border-right: 2px solid #a0a0a0; width: 200px;">
             <small>
-                Último cambio:<br>
-                <strong><% modtime %></strong>
 <#
 if 'index' not in source_file:
     fname=source_file.split('/')[-1]
-    print '''<hr><a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Este capítulo en Mercurial</a>'''%fname
+    print '''<a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Este capítulo en Mercurial</a>'''%fname
     print '''<hr><a href="%s">Este capítulo en PDF</a>'''%fname.replace('.txt','.pdf')
     print '''<hr><a href="fuentes.zip">Código fuente de los ejemplos</a>'''
 #>
+<hr>
+                Último cambio:<br>
+                <strong><% modtime %></strong>
+<hr>
+   <script src="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/Python-no-muerdeProjectUpdates-GoogleCode"></a><br/>Powered by FeedBurner</p> </noscript>
             </small>
             <p/>
     </div>
