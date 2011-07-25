@@ -774,7 +774,7 @@ pyurl3.py
    :linenos_offset:
    :include: codigo/2/pyurl3.py
    :start-after: return data
-   :end-before: if __name__=='__main__':
+   :end-before: if __name__ == '__main__':
 
 Conclusiones
 ~~~~~~~~~~~~
