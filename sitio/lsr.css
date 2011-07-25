@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 160%;
   margin-bottom: 0.5em;
-  border-bottom: 2px solid #aaa;
+/*  border-bottom: 2px solid #aaa;*/
 }
 
 h2 {

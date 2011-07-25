@@ -12,32 +12,37 @@
     <script type="text/javascript" src="http://use.typekit.com/wch2upy.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body style="width: 768px; margin: auto auto auto auto;">
-    <div id="nav">
-        <ul>
-            <# print_crumbs(breadcrumbs) #>
-        </ul>
-    </div>
-    <div id="main">
-        <a name="startcontent" id="startcontent"></a>
+<body>
 
-        <% body %>
 
-        <div id="end" style="position: fixed; right: 20px; top: 20px;">
-        
+<div id="wrapper" style="width: 850px;">
+
+        <div id="sidebar" style="float:left; margin: 0px 10px; padding: 0px 10px; border-right: 2px solid #a0a0a0; width: 200px;">
             <small>
                 Último cambio:<br>
                 <strong><% modtime %></strong>
 <#
 if 'index' not in source_file:
     fname=source_file.split('/')[-1]
-    print '''<hr><a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Historial</a>'''%fname
-    print '''<hr><a href="%s"><img src="pdf.png" alt="PDF" /> Descargar PDF</a>'''%fname.replace('.txt','.pdf')
+    print '''<hr><a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Este capítulo en Mercurial</a>'''%fname
+    print '''<hr><a href="%s">Este capítulo en PDF</a>'''%fname.replace('.txt','.pdf')
     print '''<hr><a href="fuentes.zip">Código fuente de los ejemplos</a>'''
 #>
             </small>
             <p/>
     </div>
+
+    <div id="main" style="float:right; width:600px;">
+
+    <div id="nav">
+        <ul>
+            <# print_crumbs(breadcrumbs) #>
+        </ul>
+    </div>
+
+        <a name="startcontent" id="startcontent"></a>
+
+        <% body %>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -53,6 +58,16 @@ if 'index' not in source_file:
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=nomuerde">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
+
+
+
+
+
+
+
+
+<!-- random javascriptery from now on -->
+
     
 <script type="text/javascript">
 //<![CDATA[
