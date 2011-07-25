@@ -2,7 +2,8 @@ La GUI es la Parte Fácil
 ------------------------
 
 	“There are no original ideas. There are only original people.” 
-	-– Barbara Grizzuti Harrison
+
+	-- Barbara Grizzuti Harrison
 
 Empezar a crear la interfaz gráfica de una aplicación es como empezar a escribir
 un libro. Tenés un espacio en blanco, esperando que hagas algo, y si no sabés
