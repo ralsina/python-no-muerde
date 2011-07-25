@@ -23,32 +23,21 @@
 
         <% body %>
 
-        <div id="end">
+        <div id="end" style="position: fixed; right: 20px; top: 20px;">
         
             <small>
-                Último cambio: <strong><% modtime %></strong>.
+                Último cambio:<br>
+                <strong><% modtime %></strong>
 <#
 if 'index' not in source_file:
     fname=source_file.split('/')[-1]
-    print '''&nbsp;|&nbsp; <a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Historial</a>'''%fname
-    print '''&nbsp;|&nbsp; <a href="%s"><img src="pdf.png" alt="PDF" /></a>'''%fname.replace('.txt','.pdf')
-print '''&nbsp;|&nbsp; <a href="fuentes.zip">Código fuente de los ejemplos</a>'''
+    print '''<hr><a href="http://code.google.com/p/python-no-muerde/source/browse/%s">Historial</a>'''%fname
+    print '''<hr><a href="%s"><img src="pdf.png" alt="PDF" /> Descargar PDF</a>'''%fname.replace('.txt','.pdf')
+    print '''<hr><a href="fuentes.zip">Código fuente de los ejemplos</a>'''
 #>
             </small>
             <p/>
-<div style="border:1px solid black; padding:5px; text-align: center; margin-bottom: 8px; margin-top: 8px;">
-    <script type="text/javascript"><!--
-google_ad_client = "pub-6610363565672416";
-/* 728x15, created 4/8/10 */
-google_ad_slot = "7821168390";
-google_ad_width = 728;
-google_ad_height = 15;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
+    </div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -64,7 +53,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=nomuerde">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
         </div>
-    </div>
     
 <script type="text/javascript">
 //<![CDATA[
