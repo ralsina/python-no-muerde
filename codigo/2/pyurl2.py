@@ -46,16 +46,23 @@ def borrar(slug):
     return "Borrar el slug=%s"%slug
 
 # Un slug está formado sólo por estos caracteres
-@bottle.route('/(?P<slug>[a-zA-Z0-9]+)')
+@bottle.route('/:slug#[a-zA-Z0-9]+#')
 def redir(slug):
     """Redirigir un slug"""
-    return "Redirigir con slug=%s"%slug
+    # Buscamos el atajo correspondiente
+    a = Atajo.get(slug=slug)
+    if not a:
+        bottle.abort(404, 'El atajo no existe')
+    bottle.redirect(a.url)
 
-@bottle.route('/static/:filename')
+@bottle.route('/static/:filename#.*#')
+@bottle.route('/:filename#favicon.*#')
 def static_file(filename):
     """Archivos estáticos (CSS etc)"""
-    bottle.send_file(filename, root='./static/')
-
+    # No permitir volver para atras
+    filename.replace("..",".")
+    # bottle.static_file parece no funcionar en esta version de bottle
+    return open(os.path.join("static", *filename.split("/")))
 
 
 if __name__=='__main__':
