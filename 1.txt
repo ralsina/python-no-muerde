@@ -746,7 +746,7 @@ En un capítulo posterior vamos a ver fragmentos de código como este:
 .. code-block:: python
    :include: codigo/2/pyurl3.py
    :start-at: @bottle.post('/')
-   :end-at: """Crea un nuevo slug"""
+   :end-at: """Crea un nuevo slug."""
    :linenos:
    :linenos_offset: 
 

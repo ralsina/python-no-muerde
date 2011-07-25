@@ -263,6 +263,10 @@ QTreeWidget. Veamos como funciona en la GUI:
 También al no tener más botones de Edit y Remove, hay que mover un
 poco el código porque ahora responde a otras señales.
 
+.. raw:: pdf
+
+   PageBreak
+
 La parte interesante (no mucho) del código es esta:
 
 .. class:: titulo-listado
@@ -349,6 +353,10 @@ El primer problema es que la lista de radios está configurada para no aceptar s
 Con eso, será posible seleccionar una radio. Luego, debemos permitir que se apliquen acciones a la misma. Una manera es habilitar atajos de teclado para ``Edit`` y ``Remove``, por ejemplo "Ctrl+E" y "Delete".
 
 La forma más sencilla es crear dos acciones (clase ``QAction``) con esos atajos y hacer que hagan lo correcto.
+
+.. raw:: pdf
+
+   PageBreak
 
 .. class:: titulo-listado
 
