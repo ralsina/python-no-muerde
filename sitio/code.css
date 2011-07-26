@@ -59,3 +59,10 @@
 .pygments-vg { color: #B8860B } /* Name.Variable.Global */
 .pygments-vi { color: #B8860B } /* Name.Variable.Instance */
 .pygments-il { color: #666666 } /* Literal.Number.Integer.Long */
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em ;
+  font-size: 80%;
+}
+
