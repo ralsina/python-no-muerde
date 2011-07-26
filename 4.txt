@@ -554,8 +554,8 @@ entorno virtual vacío:
 
 ::
 
-    [python-no-muerde]$ cd codigo/4/
-    [4]$ virtualenv virt --no-site-packages --distribute
+    [python-no-muerde]$ cd codigo/2/
+    [2]$ virtualenv virt --no-site-packages --distribute
     New python executable in virt/bin/python
     Installing distribute...................................done.
 
@@ -571,9 +571,9 @@ podés leer el capítulo de deployment.
     
 ::
 
-    [4]$ . virt/bin/activate
-    (virt)[4]$4 which python
-    /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/virt/bin/python
+    [2]$ . virt/bin/activate
+    (virt)[2]$ which python
+    /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/2/virt/bin/python
 
 ¡Fijáte que ahora python es un ejecutable dentro del entorno virtual!
 Eso es activarlo. Todo lo que haga ahora funciona con **ese** entorno,
@@ -582,7 +582,7 @@ si instalo un programa con ``pip`` se instala ahí adentro, etc. El
 
 Probemos nuestro programa::
 
-    (virt)[4]$ python pyurl3.py
+    (virt)[2]$ python pyurl3.py
     Traceback (most recent call last):
         File "pyurl3.py", line 14, in <module>
             from twill.commands import go, code, find, notfind, title
@@ -590,7 +590,7 @@ Probemos nuestro programa::
 
 Bueno, necesitamos ``twill``::
 
-    (virt)[4]$ pip install twill
+    (virt)[2]$ pip install twill
     Downloading/unpacking twill
     Downloading twill-0.9.tar.gz (242Kb): 242Kb downloaded
     Running setup.py egg_info for package twill
@@ -624,7 +624,7 @@ nos reporta un bug, solo necesitamos ver qué versiones tiene de:
 * Los paquetes que instalamos en ``virtualenv``. Podemos ver cuales
   son fácilmente::
 
-    (virt)[4]$ pip freeze
+    (virt)[2]$ pip freeze
     AuthKit==0.4.5
     Beaker==1.5.3
     Paste==1.7.3.1
@@ -647,11 +647,11 @@ tenemos esa lista de requerimientos en un archivo ``req.txt``, entonces
 podemos comenzar con un entorno virtual vacío y "llenarlo" exactamente
 con eso en un solo paso::
 
-    [4]$ virtualenv virt2 --no-site-packages --distribute
+    [2]$ virtualenv virt2 --no-site-packages --distribute
     New python executable in virt2/bin/python
     Installing distribute..............................done.
-    [4]$ . virt2/bin/activate
-    (virt2)[4]$ pip install -r req.txt
+    [2]$ . virt2/bin/activate
+    (virt2)[2]$ pip install -r req.txt
     Downloading/unpacking Beaker==1.5.3 (from -r req.txt (line 2))
       Real name of requirement Beaker is Beaker
       Downloading Beaker-1.5.3.tar.gz (46Kb): 46Kb downloaded
