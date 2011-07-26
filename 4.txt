@@ -287,6 +287,24 @@ Por ejemplo, ``gaso1.py`` pasaría el test de la palabra "la" y
 ``gaso2.py`` fallaría, pero no porque ``gaso1.py`` estuviera
 haciendo algo bien, sino porque respondía de forma afortunada.
 
+
+Límites de los doctests
+~~~~~~~~~~~~~~~~~~~~~~~
+
+¿Entonces hacemos doctests y ya está? No. Los doctests son completamente
+inútiles en ciertos casos.
+
+Por ejemplo: es posible tener un módulo que necesite 200 o 300 tests.
+¿Vamos a meter todo eso en los docstrings? Después vamos a ver mocking, tratar de usarlo
+en doctests es ridículamente antinatural.
+
+Así que no, no alcanza con doctests. Está bueno tenerlos para tener ejemplos en la
+documentación, y está buenísimo que esos ejemplos se ejecuten y así podamos ver que
+siguen siendo válidos, pero para hacer testing en serio necesitás hacer test suites.
+
+Y por suerte, hay una herramienta razonable para eso en la biblioteca standard,
+`el módulo unittest. <http://docs.python.org/library/unittest.html>`_
+
 Cobertura
 ~~~~~~~~~
 
