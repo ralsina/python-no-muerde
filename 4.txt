@@ -298,12 +298,23 @@ Por ejemplo: es posible tener un módulo que necesite 200 o 300 tests.
 ¿Vamos a meter todo eso en los docstrings? Después vamos a ver mocking, tratar de usarlo
 en doctests es ridículamente antinatural.
 
-Así que no, no alcanza con doctests. Está bueno tenerlos para tener ejemplos en la
-documentación, y está buenísimo que esos ejemplos se ejecuten y así podamos ver que
-siguen siendo válidos, pero para hacer testing en serio necesitás hacer test suites.
+Así que no, no alcanza con doctests. Para hacer testing en serio necesitás hacer
+test suites.
 
-Y por suerte, hay una herramienta razonable para eso en la biblioteca standard,
+Son herramientas complementarias. Los doctests son básicamente documentación para
+que los demás sepan cómo se usa. Su componente "test" es principalmente para que la
+documentación sea precisa. Pero por su misma naturaleza, los doctests no pueden ser
+exhaustivos, excepto para funciones triviales, ya que harían que tengas miles
+de líneas de "documentación", y llena de ejemplos que en vez de explicar lo
+importante prueban cada rinconcito exótico del código.
+
+Por suerte, hay una herramienta razonable para eso en la biblioteca standard,
 `el módulo unittest. <http://docs.python.org/library/unittest.html>`_
+
+Lo anterior, hecho distinto
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Reimplementemos los tests que teníamos, pero como un test suite de ``unittest``.
 
 Cobertura
 ~~~~~~~~~
