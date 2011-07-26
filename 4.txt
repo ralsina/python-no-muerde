@@ -287,35 +287,6 @@ Por ejemplo, ``gaso1.py`` pasaría el test de la palabra "la" y
 ``gaso2.py`` fallaría, pero no porque ``gaso1.py`` estuviera
 haciendo algo bien, sino porque respondía de forma afortunada.
 
-
-Límites de los doctests
-~~~~~~~~~~~~~~~~~~~~~~~
-
-¿Entonces hacemos doctests y ya está? No. Los doctests son completamente
-inútiles en ciertos casos.
-
-Por ejemplo: es posible tener un módulo que necesite 200 o 300 tests.
-¿Vamos a meter todo eso en los docstrings? Después vamos a ver mocking, tratar de usarlo
-en doctests es ridículamente antinatural.
-
-Así que no, no alcanza con doctests. Para hacer testing en serio necesitás hacer
-test suites.
-
-Son herramientas complementarias. Los doctests son básicamente documentación para
-que los demás sepan cómo se usa. Su componente "test" es principalmente para que la
-documentación sea precisa. Pero por su misma naturaleza, los doctests no pueden ser
-exhaustivos, excepto para funciones triviales, ya que harían que tengas miles
-de líneas de "documentación", y llena de ejemplos que en vez de explicar lo
-importante prueban cada rinconcito exótico del código.
-
-Por suerte, hay una herramienta razonable para eso en la biblioteca standard,
-`el módulo unittest. <http://docs.python.org/library/unittest.html>`_
-
-Lo anterior, hecho distinto
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Reimplementemos los tests que teníamos, pero como un test suite de ``unittest``.
-
 Cobertura
 ~~~~~~~~~
 
@@ -334,7 +305,7 @@ Veamos una en acción::
 
     [ralsina@hp python-no-muerde]$ nosetests --with-coverage --with-doctest \
         -v gaso3.py buscaacento1.py
-        
+
     Doctest: gaso3.gas ... ok
     Doctest: gaso3.gasear ... ok
     Doctest: buscaacento1.busca_acento ... ok
@@ -377,7 +348,88 @@ demasiado sencillo.
 Coverage también puede crear reportes HTML mostrando cuales líneas
 se usan y cuales no, para ayudar a diseñar tests que las ejerciten.
 
-**FIXME: mostrar captura salida HTML**
+.. note:: FIXME
+
+   Mostrar captura salida HTML**
+
+Límites de los doctests
+~~~~~~~~~~~~~~~~~~~~~~~
+
+¿Entonces hacemos doctests y ya está? No. Los doctests son completamente
+inútiles en ciertos casos.
+
+Por ejemplo: es posible tener un módulo que necesite 200 o 300 tests.
+¿Vamos a meter todo eso en los docstrings? Después vamos a ver mocking, tratar de usarlo
+en doctests es ridículamente antinatural.
+
+Así que no, no alcanza con doctests. Para hacer testing en serio necesitás hacer
+test suites.
+
+Son herramientas complementarias. Los doctests son básicamente documentación para
+que los demás sepan cómo se usa. Su componente "test" es principalmente para que la
+documentación sea precisa. Pero por su misma naturaleza, los doctests no pueden ser
+exhaustivos, excepto para funciones triviales, ya que harían que tengas miles
+de líneas de "documentación", y llena de ejemplos que en vez de explicar lo
+importante prueban cada rinconcito exótico del código.
+
+Por suerte, hay una herramienta razonable para eso en la biblioteca standard,
+`el módulo unittest. <http://docs.python.org/library/unittest.html>`_ Sin embargo,
+no vamos a usar eso, si no, nuevamente, nose. ¿Por qué? Porque es menos burocrático.
+
+Para hacer un test con unittest, tenés que:
+
+* Crear una clase que herede ``unittest.TestCase``.
+* Definir dentro de esa clase una función ``test_algo``.
+
+Con nose podés hacer exactamente lo mismo. O crear una función. O una clase con
+tests adentro que no herede ``TestCase``. Y además soporta correr los doctests
+también.
+
+No es una diferencia enorme, pero es algo menos de laburo, y ``-laburo == bueno``.
+
+Lo anterior, hecho distinto
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. class:: titulo-listado
+
+gaso4.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: codigo/4/gaso4.py
+   :start-at: # Test Suite
+
+Vemos cómo usamos nosetests con este nuevo test suite:
+
+::
+
+    $ nosetests codigo/4/gaso4.py -v
+    Test de palabra aguda. ... ok
+    Test de palabra grave. ... ok
+    Test palabra con acento ortográfico. ... ok
+    Test palabra grave con acento prosódico. ... ok
+
+    ----------------------------------------------------------------------
+    Ran 4 tests in 0.012s
+
+    OK
+
+Algunos detalles a favor de este approach:
+
+* Podemos ponerles descripciones a los tests.
+* Tenemos más libertad de hacer cosas antes y después de la llamada a la función
+  que testeamos.
+* Es más natural y flexible la manera de hacer los ``asserts`` en cada test.
+
+Pero testing no termina ahí. Estos son tests obvios de funciones *muy* fáciles de testear,
+toman u parámetro, dan un resultado, no requieren nada, no tienen efectos secundarios, son
+una bici con rueditas.
+
+Vamos a pasar ahora a un ejemplo bastante más "real". Y las cosas se van a volver
+ligeramente más densas.
 
 Mocking
 ~~~~~~~

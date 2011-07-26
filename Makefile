@@ -157,6 +157,16 @@ middleware2.graph.png: middleware2.dot
        codigo/1/esnumero.py \
        codigo/1/singleton1.py
 
+4.pdf: 4.txt estilo.style \
+	codigo/4/bottle.py \
+	codigo/4/gaso1.py \
+	codigo/4/gaso2.py \
+	codigo/4/gaso3.py \
+	codigo/4/gaso4.py \
+	codigo/4/mock1.py \
+	codigo/4/pyurl3.py
+
+
 5.pdf: 5.txt\
        radio-1.print.jpg\
        radio-2.print.jpg\
