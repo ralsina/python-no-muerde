@@ -140,11 +140,11 @@ dd {
 
 div.admonition, div.note, div.tip, div.caution, div.important {
   margin: 2em 2em;
-  padding: 0em 1em;
-  border-top: 1px solid #aaa;
-  border-left: 1px solid #aaa;
-  border-bottom: 2px solid #555;
-  border-right: 2px solid #555;
+  padding: 1em 1em;
+  border-top: 1px solid #555;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #555;
 }
 
 div.important {
@@ -171,10 +171,12 @@ div.admonition-critical-example {
   background: transparent url('../images/important.png') 10px 2px no-repeat;
 }
 
+p.titulo-listado,
 p.admonition-title {
   font-weight: bold;
   border-bottom: 1px solid #aaa;
   padding-left: 30px;
+  text-align: right;
 }
 
 table.docutils {
