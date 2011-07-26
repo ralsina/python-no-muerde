@@ -163,6 +163,7 @@ middleware2.graph.png: middleware2.dot
 	codigo/4/gaso3.py \
 	codigo/4/gaso4.py \
 	codigo/4/mock1.py \
+	codigo/4/mock2.py \
         codigo/4/req.txt
 
 

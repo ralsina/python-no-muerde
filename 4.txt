@@ -462,8 +462,6 @@ usar el objeto real por diversos motivos, entre otros:
 * Estamos haciendo doctests de un método de una clase: la clase no está
   instanciada al ejecutar el doctest.
 
-
-
 Para resolver este problema se usa mocking. ¿Qué es eso? Es una
 manera de crear objetos falsos que hacen lo que uno quiere y podemos
 usar en lugar del real.
@@ -487,6 +485,46 @@ mock1.py
    :include: codigo/4/mock1.py
    :start-at: def largo_de_pagina
 
+Es especialmente interesante esta parte:
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/4/mock1.py
+   :start-at: >>> largo_de_pagina
+   :end-before: '''
+
+¿Qué es exactamente lo que estamos comprobando en ese doctest?
+
+* Que se llamó exactamente a esas funciones y a ninguna otra.
+* Que se las llamó con los argumentos correctos.
+* Que cuando nuestra función recibió los datos de esta "internet falsa", hizo
+  el cálculo correcto.
+
+Por supuesto es posible hacer algo muy similar en forma de test, en vez de doctest, usando
+otra herramienta de mocking, `Mock <http://www.voidspace.org.uk/python/mock/>`_:
+
+.. class:: titulo-listado
+
+mock2.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/4/mock2.py
+   :start-at: from mock import
+
+
+Ojo que este último ejemplo de mock no hace exactamente lo mismo que el primero.
+Por ejemplo, no se asegura que no llamé o usé otros atributos de los objetos ``Mock``...
+
+Hay otras variantes de mocks, por ejemplo, los mocks "record and replay"
+(que no me gustan mucho, porque producen tests muy opacos, y te tientan a
+tocar acá y allá hasta que el test pase en vez de hacer un test útil).
 
 La Máquina Mágica
 ~~~~~~~~~~~~~~~~~
