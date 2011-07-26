@@ -578,7 +578,8 @@ de todos los módulos y paquetes estás usando.
 
 .. [#] Eso es cuestión de instalar varios Python en paralelo, y
        depende (entre otras cosas) de qué sistema operativo estés
-       usando.
+       usando. Una herramienta interesante es
+       `tox <http://codespeak.net/~hpk/tox/>`_
 
 Tomemos como ejemplo la versión final de la aplicación de reducción
 de URLs del capítulo La vida es corta.
@@ -798,4 +799,7 @@ la documentación "siguiendo" al código, y actualizada.
 .. admonition:: TODO
 
     sniffer : http://pypi.python.org/pypi/sniffer/0.1.4
+    usar tox para correr los tests en multiples virtualenvs
+    hudson/jenkins?
+
 
