@@ -317,7 +317,7 @@ def run_test(slug):
     if a and a.user == usuario:
         a.run_test()
     # FIXME: pasar un mensaje en la sesión
-    bottle.redirect('/')
+    bottle.redirect('/%s/edit'%slug)
 
 # Un slug está formado sólo por estos caracteres
 @bottle.route('/:slug#[a-zA-Z0-9]+#')
