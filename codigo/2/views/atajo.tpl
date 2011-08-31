@@ -41,9 +41,9 @@
     <div>
         <label>Status:</label>
         % if atajo.status:
-            <img src="/weather-clear.png" alt="Success" align="MIDDLE"/>
+            <img src="/static/weather-clear.png" alt="Success" align="MIDDLE"/>
         % else:
-            <img src="/weather-storm.png" alt="Failure" align="MIDDLE"/>
+            <img src="/static/weather-storm.png" alt="Failure" align="MIDDLE"/>
         % end
     </div>
     <div>

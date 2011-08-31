@@ -39,11 +39,11 @@
    % for atajo in atajos:
     <tr>
      % if atajo.status:
-      <td><img src="weather-clear.png" alt="Success"
+      <td><img src="/static/weather-clear.png" alt="Success"
         align="MIDDLE"/>
       <a href="{{atajo.url}}">{{atajo.slug()}}</a>
      % else:
-      <td><img src="weather-storm.png" alt="Failure"
+      <td><img src="/static/weather-storm.png" alt="Failure"
         align="MIDDLE"/>
       <a href="{{atajo.url}}">{{atajo.slug()}}</a>
      % end
