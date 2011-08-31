@@ -217,6 +217,7 @@ def logout():
     bottle.redirect('/')
 
 @bottle.route('/')
+@bottle.post('/')
 @bottle.view('usuario.tpl')
 def alta():
     """Crea un nuevo slug"""
@@ -237,25 +238,32 @@ def alta():
     # Si tenemos un parámetro URL, estamos en esta
     # funcion porque el usuario envió una URL a acortar.
     
-    if 'url' in bottle.request.GET:
+    if 'url' in bottle.request.POST:
         # La acortamos
-        url = bottle.request.GET['url'].decode('utf8')
-        a = Atajo(url=url, user=usuario)    
-        data['short'] = a.slug()
-        data['url'] = url
+        url = bottle.request.POST['url'].decode('utf8')
+        parseada = urlparse.urlparse(url)
+        if not all([parseada.scheme, parseada.netloc]):
+            data['url']=None
+            data['short']=None
+            data['mensaje']=u"""URL caca!"""
+            data['clasemensaje']='error'
+        else:
+            a = Atajo(url=url, user=usuario)    
+            data['short'] = a.slug()
+            data['url'] = url
 
-        # La probamos
-        a.run_test()
+            # La probamos
+            a.run_test()
         
-        # Mensaje para el usuario de que el acortamiento
-        # tuvo éxito.
-        data['mensaje'] = u'''La URL
-        <a href="%(url)s">%(url)s</a> se convirtió en:
-        <a href="%(baseurl)s%(short)s">
-        %(baseurl)s%(short)s</a>'''%data
+            # Mensaje para el usuario de que el acortamiento
+            # tuvo éxito.
+            data['mensaje'] = u'''La URL
+            <a href="%(url)s">%(url)s</a> se convirtió en:
+            <a href="%(baseurl)s%(short)s">
+            %(baseurl)s%(short)s</a>'''%data
 
-        # Clase CSS que muestra las cosas como buenas
-        data['clasemensaje']='success'
+            # Clase CSS que muestra las cosas como buenas
+            data['clasemensaje']='success'
     else:
         # No se acortó nada, no hay nada para mostrar.
         data['url']=None
@@ -269,6 +277,7 @@ def alta():
     return data
 
 @bottle.route('/:slug/edit')
+@bottle.post('/:slug/edit')
 @bottle.view('atajo.tpl')
 def editar(slug):
     """Edita un slug"""
@@ -282,11 +291,11 @@ def editar(slug):
     if not a or a.user != usuario:
         bottle.abort(404, 'El atajo no existe')
 
-    if 'url' in bottle.request.GET:
+    if 'url' in bottle.request.POST:
         # El usuario mandó el form
-        a.url = bottle.request.GET['url'].decode('utf-8')
+        a.url = bottle.request.POST['url'].decode('utf-8')
         a.activo = 'activo' in bottle.request.GET
-        a.test = bottle.request.GET['test'].decode('utf-8')
+        a.test = bottle.request.POST['test'].decode('utf-8')
         a.save()
         bottle.redirect('/')
         
