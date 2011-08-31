@@ -19,7 +19,7 @@
 </div>
 
 <div style="float: right; text-align: left; width: 350px;">
-    <form>
+    <form method="POST">
     <fieldset>
         <legend>Crear nuevo atajo:</legend>
         <div>
