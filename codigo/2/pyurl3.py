@@ -8,8 +8,10 @@
 '''
 
 import os
+import sys
 import string
 import datetime
+import urlparse
 
 from twill.commands import go, code, find, notfind, title
 def minitwill(url, script):
@@ -81,6 +83,8 @@ class Atajo(object):
         _id es automático.'''
 
         # Hace falta crear esto?
+        if not urlparse.urlparse(url).scheme:
+            url='http://'+url
         r = self.store.find(Atajo, user = user, url = url) 
         self.url = url
         self.user = user
@@ -225,7 +229,7 @@ def alta():
 
     # Esto probablemente debería obtenerse de una
     # configuración
-    data['baseurl'] = 'http://localhost:8080/'
+    data['baseurl'] = 'http://pyurl.sytes.net/'
 
     # Si tenemos un parámetro URL, estamos en esta
     # funcion porque el usuario envió una URL a acortar.
@@ -316,10 +320,9 @@ def run_test(slug):
     bottle.redirect('/')
 
 # Un slug está formado sólo por estos caracteres
-@bottle.route('/(?P<slug>[a-zA-Z0-9]+)')
+@bottle.route('/:slug#[a-zA-Z0-9]+#')
 def redir(slug):
     """Redirigir un slug"""
-
     # Buscamos el atajo correspondiente
     a = Atajo.get(slug=slug)
     if not a:
@@ -327,8 +330,7 @@ def redir(slug):
     bottle.redirect(a.url)
 
 # Lo de /:filename es para favicon.ico :-)
-@bottle.route('/:filename')
-@bottle.route('/static/:filename')
+@bottle.route('/static/:filename#.*#')
 def static_file(filename):
     """Archivos estáticos (CSS etc)"""
     bottle.send_file(filename, root='./static/')
@@ -358,4 +360,4 @@ if __name__=='__main__':
     Atajo.init_db()
 
     # Ejecutar aplicación
-    bottle.run(app)
+    bottle.run(app, host="0.0.0.0", port=80)
