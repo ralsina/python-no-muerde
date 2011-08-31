@@ -33,7 +33,10 @@ def minitwill(url, script):
     False
     
     '''
-    go (url)
+    try:
+        go (url)
+    except:
+        return False
     for line in script.splitlines():
         cmd,arg = line.split(' ',1)
         try:
