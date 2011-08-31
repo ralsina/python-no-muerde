@@ -294,7 +294,7 @@ def editar(slug):
     if 'url' in bottle.request.POST:
         # El usuario mandó el form
         a.url = bottle.request.POST['url'].decode('utf-8')
-        a.activo = 'activo' in bottle.request.GET
+        a.activo = 'activo' in bottle.request.POST
         a.test = bottle.request.POST['test'].decode('utf-8')
         a.save()
         bottle.redirect('/')
