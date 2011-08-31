@@ -86,8 +86,6 @@ class Atajo(object):
         _id es automático.'''
 
         # Hace falta crear esto?
-        if not urlparse.urlparse(url).scheme:
-            url='http://'+url
         r = self.store.find(Atajo, user = user, url = url) 
         self.url = url
         self.user = user
@@ -241,6 +239,8 @@ def alta():
     if 'url' in bottle.request.POST:
         # La acortamos
         url = bottle.request.POST['url'].decode('utf8')
+        if not urlparse.urlparse(url).scheme:
+            url='http://'+url
         parseada = urlparse.urlparse(url)
         if not all([parseada.scheme, parseada.netloc]):
             data['url']=None
