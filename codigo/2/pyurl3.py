@@ -214,8 +214,8 @@ def logout():
         del bottle.request.environ['REMOTE_USER']
     bottle.redirect('/')
 
-@bottle.route('/')
 @bottle.post('/')
+@bottle.get('/')
 @bottle.view('usuario.tpl')
 def alta():
     """Crea un nuevo slug"""
@@ -341,11 +341,14 @@ def redir(slug):
         bottle.abort(404, 'El atajo no existe')
     bottle.redirect(a.url)
 
-# Lo de /:filename es para favicon.ico :-)
 @bottle.route('/static/:filename#.*#')
+@bottle.route('/:filename#favicon.*#')
 def static_file(filename):
     """Archivos estáticos (CSS etc)"""
-    bottle.send_file(filename, root='./static/')
+    # No permitir volver para atras
+    filename.replace("..",".")
+    # bottle.static_file parece no funcionar en esta version de bottle
+    return open(os.path.join("static", *filename.split("/")))
 
 
 if __name__=='__main__':
