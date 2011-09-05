@@ -364,7 +364,7 @@ de 1000 líneas llenas de código?  Eso ni siquiera cumple el objetivo de "dar
 algunos ejemplos". Tener 1000 ejemplos es a veces peor que no tener ninguno.
 
 Así que no, no alcanza con doctests. Para hacer testing en serio necesitás hacer
-_test suites_.
+*test suites*.
 
 Son herramientas complementarias. Los doctests son básicamente documentación para
 que los demás sepan cómo se usa. Su componente "test" es principalmente para que la
@@ -534,13 +534,13 @@ La Máquina Mágica
     -- Archer J. P. Martin
 
 Un síntoma de falta de testing es la máquina mágica. Es un equipo
-en particular en el que el programa funciona perfectamente. Nadie
-más puede usarlo, y el desarrollador nunca puede reproducir los
+en particular en el que el programa funciona perfectamente. A nadie
+más le funciona, y el desarrollador nunca puede reproducir los
 errores de los usuarios.
 
 ¿Por qué sucede esto? Porque si no funcionara en la máquina del
-desarrollador, él se habría dado cuenta. Por ese motivo, siempre
-tenemos exactamente la combinación misteriosa de versiones, carpetas,
+desarrollador, él se habría dado cuenta. Por ese motivo, los desarrolladores
+siempre tenemos exactamente la combinación misteriosa de versiones, carpetas,
 software, permisos, etc. que resuelve todo.
 
 Para evitar estas suposiciones implícitas en el código, lo mejor
@@ -578,7 +578,7 @@ de todos los módulos y paquetes estás usando.
 .. [#] Eso es cuestión de instalar varios Python en paralelo, y
        depende (entre otras cosas) de qué sistema operativo estés
        usando. Una herramienta interesante es
-       `tox <http://codespeak.net/~hpk/tox/>`_
+       `tox <http://codespeak.net/~hpk/tox/>`__
 
 Tomemos como ejemplo la versión final de la aplicación de reducción
 de URLs del capítulo La vida es corta.
@@ -715,17 +715,185 @@ De ahora en más, si te interesa la compatibilidad con distintas
 versiones de otros módulos, podés tener una serie de entornos
 virtuales y testear contra cada uno.
 
-Automatizando tests en virtualenv: Tox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sacando tu programa a pasear: Tox
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Cita copada aquí
-    -- Yo
+    There are many factors in the environment that are “problems” that require “solutions”.
+
+    --  Iris Saxer and/or Alfred L. Rosenberger
+
+Como mencioné antes, los tests sólo prueban (como máximo) que tu programa se va a
+comportar correctamente en un entorno exactamente igual al tuyo, y es mejor
+probarlo contra distintos ambientes de ejecución, para asegurarse de que
+funciona correctamente para una mayor cantidad de gente.
+
+Esto es más importante para aplicaciones "de escritorio" que para servers. Si las
+instrucciones de instalación de un server incluyen "necesita pirucho 1.4"... bueno,
+se consigue uno y se instala, aunque sea sólo para esa aplicación. Los deployments
+en servers suelen hacerse así, tratando de satisfacer los pedidos de lo que estás
+instalando.
+
+Pero si queremos decir "funciona con módulo X versiones Y y Z"... tenemos que por lo
+menos correr los tests contra esas versiones.
+
+Ya expliqué que ``virtualenv`` es una manera de hacer eso. Por favor, decíme que
+mientras leías eso pensabas "¡claro, puedo hacer un script que me arme los
+virtualenvs y corra los tests!" [#]_
+
+.. [#] Si no lo pensaste.... *vergüenza debería darte* ;-)
+
+Por otro lado, es obvio que alguien tiene que haberlo pensado. Y alguien tiene
+que haberlo escrito. Y alguien tiene que haberlo publicado como open source.
+
+Y sí, ese alguien es el autor de `Tox <http://codespeak.net/~hpk/tox>`__, una
+herramienta para automatizar la creación de virtualenvs y la corrida de tests
+en los mismos. ¡Y está buena!
+
+Supongamos que queremos probar los tests de nuestro traductor al rosarino
+(``gaso4.py``)con python 2 y python 3.
+
+Lo primero que vamos a necesitar es un ``setup.py``. Lamentablemente, explicar como
+crear uno es tarea para más adelante en el libro, pero vamos a crear uno *muy* sencillito.
+
+.. class:: titulo-listado
+
+setup.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :linenos_offset:
+   :include: codigo/4/setup.py
+
+Luego creamos un archivo ``tox.ini`` que le dice a Tox que necesitamos:
+
+.. class:: titulo-listado
+
+tox.ini
+
+.. class:: listado
+
+.. code-block:: ini
+   :linenos:
+   :linenos_offset:
+   :include: codigo/4/tox.ini
+
+
+
+
+Y al ejecutar ``tox``, primero crea un "paquete" de nuestro módulo::
+
+    [ralsina@archie 4]$ tox
+    _____________________________ [tox sdist] _____________________________
+    [TOX] ***creating sdist package
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4$ /usr/b
+    in/python2 setup.py sdist --formats=zip --dist-dir .tox/dist >.tox/log/
+    0.log
+    [TOX] ***copying new sdistfile to '/home/ralsina/.tox/distshare/gaso4-1
+    .0.zip'
+
+Luego crea un ``virtualenv`` con python 2.7::
+
+    _________________________ [tox testenv:py27] __________________________
+    [TOX] ***creating virtualenv py27
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox$ /
+    usr/bin/python2.7 ../../../../../../../../usr/lib/python2.7/site-packag
+    es/tox-1.1-py2.7.egg/tox/virtualenv.py --distribute --no-site-packages
+    py27 >py27/log/0.log
+    [TOX] ***installing dependencies: nose
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/py
+    27/log$ ../bin/pip install --download-cache=/home/ralsina/Desktop/proye
+    ctos/python-no-muerde/codigo/4/.tox/_download nose >1.log
+    [TOX] ***installing sdist
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/py
+    27/log$ ../bin/pip install --download-cache=/home/ralsina/Desktop/proye
+    ctos/python-no-muerde/codigo/4/.tox/_download ../../dist/gaso4-1.0.zip
+    >2.log
+
+Y ejecuta los tests (exitosamente)::
+
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4$ .tox/p
+    y27/bin/nosetests gaso4.py
+    ....
+    ----------------------------------------------------------------------
+    Ran 4 tests in 0.016s
+
+    OK
+
+Hace lo mismo con python 3.2::
+
+    _________________________ [tox testenv:py32] __________________________
+    [TOX] ***creating virtualenv py32
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox$ /
+    usr/bin/python3.2 ../../../../../../../../usr/lib/python2.7/site-packag
+    es/tox-1.1-py2.7.egg/tox/virtualenv.py --no-site-packages py32 >py32/lo
+    g/0.log
+    [TOX] ***installing dependencies: nose
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/py
+    32/log$ ../bin/pip install --download-cache=/home/ralsina/Desktop/proye
+    ctos/python-no-muerde/codigo/4/.tox/_download nose >1.log
+    [TOX] ***installing sdist
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/py
+    32/log$ ../bin/pip install --download-cache=/home/ralsina/Desktop/proye
+    ctos/python-no-muerde/codigo/4/.tox/_download ../../dist/gaso4-1.0.zip
+    >2.log
+
+Pero los tests fallan miserablemente::
+
+    [TOX] /home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4$ .tox/
+    py32/bin/nosetests gaso4.py
+    E
+    ======================================================================
+    ERROR: Failure: SyntaxError (invalid syntax (gaso4.py, line 21))
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+    File "/home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/p
+    y32/lib/python3.2/site-packages/nose/failure.py", line 37, in runTest
+        raise self.exc_class(self.exc_val).with_traceback(self.tb)
+    File "/home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/p
+    y32/lib/python3.2/site-packages/nose/loader.py", line 390, in loadTest
+    sFromName
+        addr.filename, addr.module)
+    File "/home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/p
+    y32/lib/python3.2/site-packages/nose/importer.py", line 39, in importF
+    romPath
+        return self.importFromDir(dir_path, fqname)
+    File "/home/ralsina/Desktop/proyectos/python-no-muerde/codigo/4/.tox/p
+    y32/lib/python3.2/site-packages/nose/importer.py", line 86, in importF
+    romDir
+        mod = load_module(part_fqname, fh, filename, desc)
+    File "<string>", line None
+    SyntaxError: invalid syntax (gaso4.py, line 21)
+
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.002s
+
+    FAILED (errors=1)
+    [TOX] ERROR: InvocationError: '.tox/py32/bin/nosetests gaso4.py'
+
+Y al final, un resumen::
+
+    ____________________________ [tox summary] ____________________________
+    [TOX] py27: commands succeeded
+    [TOX] ERROR: py32: commands failed
+
+
+Cosas que no tuve que hacer para cada ``virtualenv``:
+
+* Crearlo y/o activarlo.
+* Copiar mi código.
+* Instalar dependencias.
+* Correr los tests manualmente.
+* Juntar los resultados de cada corrida de tests.
+
+Si bien cada paso es relativamente sencillo, son muchos. Y Tox automatiza todo.
 
 Testear todo el tiempo: Sniffer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
     Cita copada aquí
+
     -- Yo
 
 Integración continua: Jenkins
@@ -733,6 +901,7 @@ Integración continua: Jenkins
 
 
     Cita copada aquí
+
     -- Yo
 
 
