@@ -141,20 +141,8 @@ Vas a tener un déficit de tests, vas a tener que ponerte un día sólo
 a escribir tests, y vas a decir que testear es aburrido.
 
 ¿Cómo sé yo que ``selecciona_lineas`` hace lo que yo quiero?
-¡Porque la probé! Como no soy el mago del código que lo escribe y las expresiones regulares
+¡Porque la probé! Como no soy el mago del código que lo escribe y 
 le anda a la primera, hice esto en el intérprete interactivo:
-
-.. code-block:: pycon
-
-    >>> import re
-    >>> palabra=u'cámara'
-    >>> print re.sub(u'([\xe1\xe9\xed\xf3\xfa])',
-    ...     lambda x: x.group(0)+'gas'+x.group(0),palabra,1)
-    
-    cágasámara
-
-¿Y como sé que la función ``gas`` hace lo que quiero? Porque
-hice esto:
 
 .. code-block:: pycon
 
@@ -167,7 +155,7 @@ hice esto:
 Y dije, sí, ok, eso es coherente.
 
 Si no hubiera hecho ese test manual no tendría la más mínima
-confianza en este código, y creo que casi todos hacemos esta clase
+confianza en este código, y creo que todos hacemos esta clase
 de cosas, ¿o no?.
 
 El problema con este testing manual ad hoc es que lo hacemos una
@@ -177,7 +165,8 @@ momento), y nos olvidamos.
 Por suerte *no tiene Por qué ser así*, gracias a los doctests.
 
 De hecho, el doctest es poco más que cortar y pegar esos tests
-informales que mostré arriba. Veamos la versión con doctests:
+informales que mostré arriba. Veamos una versión con algunos
+doctests:
 
 .. class:: titulo-listado
 
@@ -188,6 +177,7 @@ jack2.py
 .. code-block:: python
    :linenos:
    :include: codigo/4/jack2.py
+   :end-at: yield(l)
 
 Eso es todo lo que se necesita para implementar doctests. ¡En serio!.
 ¿Y cómo hago para saber si los tests pasan o fallan? Hay muchas
@@ -197,39 +187,40 @@ fácil.
 
 ::
 
-    $ nosetests --with-doctest -v gaso2.py
-    Doctest: gaso2.gas ... ok
-    Doctest: gaso2.gasear ... ok
+    $ nosetests --with-doctest -v jack2.py
+    Doctest: jack2.selecciona_lineas ... ok
 
-    ----------------------------------------------------------
-    Ran 2 tests in 0.035s
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.019s
 
     OK
-    
 
 Lo que hizo ``nosetests`` es "descubrimiento de tests" (test discovery).
 Toma la carpeta actual o el archivo que indiquemos (en este caso
-``gaso2.py``), encuentra las cosas que parecen tests y las usa.
+``jack2.py``), encuentra las cosas que parecen tests y las usa.
 El parámetro ``--with-doctest`` es para que reconozca doctests
 (por default los ignora), y el ``-v`` es para que muestre cada cosa
 que prueba.
 
 De ahora en más, cada vez que el programa se modifique, volvemos a
-correr el test suite (eso significa "un conjunto de tests").
-Si falla alguno que antes andaba, es una regresión, paramos de
-romper y la arreglamos. Si pasa alguno que antes fallaba, es un
-avance, nos felicitamos y nos damos un caramelo.
+correr los tests. Si falla alguno que antes andaba, es una regresión,
+paramos de romper y la arreglamos. Si pasa alguno que antes fallaba,
+es un avance, nos felicitamos y nos damos un caramelo.
 
 Dentro del limitado alcance de nuestro programa actual, lo que hace,
-lo hace bien. Obviamente hay muchas cosas que hace mal:
+lo hace bien. Obviamente hay muchas cosas que no hace, por ejemplo
+cortar por columnas. Agreguemos una función selecciona_columnas:
 
-.. code-block:: pycon
+.. class:: titulo-listado
 
-    >>> import gaso2
-    >>> gaso2.gasear('rosarino')
-    'rosarino'
-    >>> print 'OH NO!'
-    OH NO!
+jack2.py
+
+.. class:: listado
+
+.. code-block:: python
+   :linenos:
+   :include: codigo/4/jack2.py
+   :start-at: def selecciona_columnas
 
 ¿Qué hacemos entonces? ¡Agregamos un test que falla! Bienvenido al
 mundo del TDD o "Desarrollo impulsado por tests" (Test Driven
