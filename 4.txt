@@ -162,7 +162,7 @@ El problema con este testing manual ad hoc es que lo hacemos una
 vez, la función hace lo que se supone debe hacer (al menos por el
 momento), y nos olvidamos.
 
-Por suerte *no tiene Por qué ser así*, gracias a los doctests.
+Por suerte *no tiene que ser así*, gracias a los doctests.
 
 De hecho, el doctest es poco más que cortar y pegar esos tests
 informales que mostré arriba. Veamos una versión con algunos
