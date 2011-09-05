@@ -142,7 +142,7 @@ a escribir tests, y vas a decir que testear es aburrido.
 
 ¿Cómo sé yo que ``selecciona_lineas`` hace lo que yo quiero?
 ¡Porque la probé! Como no soy el mago del código que lo escribe y 
-le anda a la primera, hice esto en el intérprete interactivo:
+le anda sin errores off-by-one, hice esto en el intérprete interactivo:
 
 .. code-block:: pycon
 
