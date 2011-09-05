@@ -168,7 +168,8 @@ middleware2.graph.png: middleware2.dot
         codigo/4/tox.ini \
         codigo/4/setup.py\
         codigo/4/jack1.py\
-        codigo/4/jack2.py
+        codigo/4/jack2.py\
+        codigo/4/jack3.py
 
 
 5.pdf: 5.txt\

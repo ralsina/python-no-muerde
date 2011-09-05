@@ -181,6 +181,7 @@ jack2.py
 .. code-block:: python
    :linenos:
    :include: codigo/4/jack2.py
+   :end-at: return resultado
 
 Eso es todo lo que se necesita para implementar doctests. ¡En serio!.
 ¿Y cómo hago para saber si los tests pasan o fallan? Hay muchas
@@ -231,26 +232,61 @@ rota.
        porque al fallar no sabés por qué. Eso se llama granularidad
        de los tests y es muy importante.
 
-Entonces, el problema de ``gaso2.py`` es que no funciona cuando no
-hay acentos ortográficos. ¿Solución? Una función que diga donde
-está el acento prosódico en una palabra [#]_.
+Un problema de ``jack2.py`` es que no es un script, sino un módulo.
+Yo quiero que al llamarlo desde la línea de comando haga algo interesante.
+¿Cómo lo hago? Bueno, hay muchas maneras, acá les voy a mostrar la más fácil,
+el módulo `commandline <http://pypi.python.org/pypi/commandline/>`_
 
-.. [#] Y en este momento agradezcan que esto es castellano, que es un
-       idioma casi obsesivo compulsivo en su regularidad.
-
-Modificamos ``gasear`` así:
+Todo lo que se necesita es crear una función que tome los argumentos que queremos
+pasar por línea de comandos, y muy poco más:
 
 .. class:: titulo-listado
 
-gaso3.py
+jack2.py
 
 .. class:: listado
 
 .. code-block:: python
    :linenos:
+   :include: codigo/4/jack2.py
    :linenos_offset:
-   :include: codigo/4/gaso3.py
-   :start-at: def gasear(palabra):
+   :start-at: def procesa
+
+
+¿Qué pasa ahora si usamos jack2 como un script cualquiera?
+
+::
+
+    $ python2 jack2.py  --help
+    Usage: jack2.py archivo [fila1 [fila2 [col1 [col2]]]] [Options]
+
+    Options:
+    -h, --help         show this help message and exit
+    --fila1=FILA1      default=0
+    --fila2=FILA2      default=9223372036854775807
+    --col1=COL1        default="none"
+    --col2=COL2        default="none"
+    --archivo=ARCHIVO  default="none"
+
+    Abre un archivo y lo corta según se pida.
+
+¿No está bueno? Muy sencillo, y suficiente para lo que necesitamos.
+Además, al ser el parseo de la línea de comandos muy obvio y directo,
+es posible testear el script poniendo tests equivalentes en ``procesa_archivo``.
+
+Entonces... ¿Tiene algún bug este programa? ¡Tiene *muchos*!
+La idea general es una herramienta al estilo unix, como ``tail`` o ``head``, y en ese
+contexto, fracasa miserablemente::
+
+    $ python2 jack2.py /etc/passwd 1 5
+    $
+
+¡No devuelve nada!
+
+
+
+-----------------------------------------
+
 
 ¿Notaste que agregar tests de esta forma no se siente como una carga?
 
@@ -962,4 +998,3 @@ Igual que con los tests, esperar para documentar tus funciones es una
 garantía de que vas a tener un déficit a remontar. Con un uso
 medianamente inteligente de las herramientas es posible mantener
 la documentación "siguiendo" al código, y actualizada.
-
