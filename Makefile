@@ -116,7 +116,7 @@ commit-web: sitio ${CAPITULOS_PDF}
 fuentes.zip: .phony
 	find codigo -name "*~" -exec rm {} \;
 	zip -r fuentes.zip codigo/ -x "codigo/2/nonces/*" "codigo/2/associations/*"\
-	 "codigo/2/*sqlite" "*pyc" "*~" "temp"
+	 "codigo/2/*sqlite" "*pyc" "*~" "temp" ".tox"
 
 dependencias.graph.pdf: dependencias.dot
 	neato -Tpdf $< > $@ -Efontname="DejaVu Sans" -Nfontname="DejaVu Sans"
