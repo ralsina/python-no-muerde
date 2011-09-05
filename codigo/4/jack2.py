@@ -21,7 +21,7 @@ def selecciona_lineas(lineas, desde=0, hasta=-1):
             yield(l)
 
 
-def selecciona_columnas(lineas, desde=0, hasta=-1):
+def selecciona_columnas(lineas, desde=None, hasta=None):
     """Filtra el texto dejando sólo las columnas [desde:hasta].
 
     Soporta índices positivos y negativos con la misma semántica
