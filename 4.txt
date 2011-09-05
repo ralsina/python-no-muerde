@@ -210,7 +210,7 @@ fácil.
     OK
     
 
-Lo que hizo nose es "descubrimiento de tests" (test discovery).
+Lo que hizo ``nosetests`` es "descubrimiento de tests" (test discovery).
 Toma la carpeta actual o el archivo que indiquemos (en este caso
 ``gaso2.py``), encuentra las cosas que parecen tests y las usa.
 El parámetro ``--with-doctest`` es para que reconozca doctests
@@ -359,18 +359,17 @@ Límites de los doctests
 inútiles en ciertos casos.
 
 Por ejemplo: es posible tener un módulo que necesite 200 o 300 tests.
-¿Vamos a meter todo eso en los docstrings? Después vamos a ver mocking, tratar de usarlo
-en doctests es ridículamente antinatural.
+¿Vamos a meter todo eso en los docstrings? ¿Y vamos a tener docstrings
+de 1000 líneas llenas de código?  Eso ni siquiera cumple el objetivo de "dar
+algunos ejemplos". Tener 1000 ejemplos es a veces peor que no tener ninguno.
 
 Así que no, no alcanza con doctests. Para hacer testing en serio necesitás hacer
-test suites.
+_test suites_.
 
 Son herramientas complementarias. Los doctests son básicamente documentación para
 que los demás sepan cómo se usa. Su componente "test" es principalmente para que la
 documentación sea precisa. Pero por su misma naturaleza, los doctests no pueden ser
-exhaustivos, excepto para funciones triviales, ya que harían que tengas miles
-de líneas de "documentación", y llena de ejemplos que en vez de explicar lo
-importante prueban cada rinconcito exótico del código.
+exhaustivos, excepto para funciones triviales.
 
 Por suerte, hay una herramienta razonable para eso en la biblioteca standard,
 `el módulo unittest. <http://docs.python.org/library/unittest.html>`_ Sin embargo,
@@ -716,6 +715,27 @@ De ahora en más, si te interesa la compatibilidad con distintas
 versiones de otros módulos, podés tener una serie de entornos
 virtuales y testear contra cada uno.
 
+Automatizando tests en virtualenv: Tox
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Cita copada aquí
+    -- Yo
+
+Testear todo el tiempo: Sniffer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+    Cita copada aquí
+    -- Yo
+
+Integración continua: Jenkins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+    Cita copada aquí
+    -- Yo
+
+
 Documentos, por favor
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -794,12 +814,4 @@ Igual que con los tests, esperar para documentar tus funciones es una
 garantía de que vas a tener un déficit a remontar. Con un uso
 medianamente inteligente de las herramientas es posible mantener
 la documentación "siguiendo" al código, y actualizada.
-
-
-.. admonition:: TODO
-
-    sniffer : http://pypi.python.org/pypi/sniffer/0.1.4
-    usar tox para correr los tests en multiples virtualenvs
-    hudson/jenkins?
-
 
