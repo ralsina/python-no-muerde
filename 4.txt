@@ -1,7 +1,7 @@
 Documentación y Testing
 -----------------------
 
-    "Si lo que dice ahí no está en el manual está equivocado. Si está en el manual
+    "Si lo que dice ahí no está en el manual, está equivocado. Si está en el manual
     es redundante."
 
     -- Califa Omar, Alejandría, Año 634.
@@ -14,6 +14,8 @@ Documentación y Testing
     2. Cambiar el orden de las subsecciones (probablemente)
 
     3. ¿Poner este capítulo después del de deployment?
+
+    4. Con el ejemplo nuevo, meter setUp / tearDown
 
 ¿Pero cómo sabemos si el programa hace *exactamente* lo que dice el manual?
 
