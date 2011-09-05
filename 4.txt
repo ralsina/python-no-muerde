@@ -8,14 +8,11 @@ Documentación y Testing
 
 .. admonition:: FIXME
 
-    1. Tengo que buscar un mejor ejemplo, que pueda servir para todo
-       el capítulo.
+    #. Cambiar el orden de las subsecciones (probablemente)
 
-    2. Cambiar el orden de las subsecciones (probablemente)
+    #. ¿Poner este capítulo después del de deployment?
 
-    3. ¿Poner este capítulo después del de deployment?
-
-    4. Con el ejemplo nuevo, meter setUp / tearDown
+    #. Con el ejemplo nuevo, meter setUp / tearDown
 
 ¿Pero cómo sabemos si el programa hace *exactamente* lo que dice el manual?
 
@@ -38,14 +35,14 @@ Cobertura
 
 Integración
    Los tests tienen que ser ejecutados ante cada cambio, y las
-   diferencias de resultado explicadas. (integración)
+   diferencias de resultado explicadas.
 
 Ganas
    El programador y el documentador y el tester (o sea uno) tiene que
    aceptar que hacer tests es necesario. Si se lo ve como una carga,
    no vale la pena: vas a aprender a ignorar las fallas, a hacer
    "pasar" los tests, a no hacer tests de las cosas que sabés que
-   son difíciles. (ganas)
+   son difíciles.
 
 Por suerte en Python hay muchas herramientas que hacen que testear
 sea, si no divertido, por lo menos tolerable.
@@ -53,44 +50,46 @@ sea, si no divertido, por lo menos tolerable.
 Docstrings
 ~~~~~~~~~~
 
-Tomemos un ejemplo zonzo: una función para traducir al rosarino [#]_.
+Tomemos un ejemplo semi-zonzo: una función para cortar pedazos de archivos [#]_.
 
-.. [#] Este ejemplo surgió de una discusión de PyAr. El código que
-       contiene es tal vez un poco denso. No te asustes, lo
-       importante no es el código, si no lo que hay alrededor.
+.. [#] Ejemplo idea de Facundo Batista.
 
-.. admonition:: Lenguaje Rosarino
+.. admonition:: jack.py
 
-   Inventado (o popularizado) por Alberto Olmedo, el rosarino es un
-   lenguaje en el cual la vocal acentuada X se reemplaza por XgasX
-   con el acento al final (á por agasá, e por egasé, etc).
+   ``jack.py`` va a ser un programa que permita cortar pedazos de archivos en
+   dos ejes. Es decir que le podemos indicar:
 
-   Algunos ejemplos:
+   * De la línea A a la línea B
+   * De la columna X a la columna Y
 
-   rosarino => rosarigasino
-   
-   té => té (no se expanden monosílabos)
-   
-   brújula => brugasújula
-
-   queso => quegaseso
+   Va a recibir esos parámetros, un nombre de archivo, y produce el corte en la
+   salida standard.
 
 
-Aquí tenemos una primera versión, que funciona sólo en palabras con
-acento ortográfico:
+Comencemos con una función que corta en el eje vertical, cortando por filas:
+
+.. admonition:: Generadores
+
+   Esta función que usa ``yield`` es lo que se llama un `generador. <http://docs.python.org.ar/tutorial/classes.html#generadores>`_
+
+   Trabajar de esta manera es más eficiente. Por ejemplo, si ``lineas``
+   fuera un objeto archivo, esto funciona *sin leer todo el archivo
+   en memoria*.
+
+   Y si ``lineas`` es una lista... bueno, igual funciona.
 
 .. class:: titulo-listado
 
-gaso1.py
+jack1.py
 
 .. class:: listado
 
 .. code-block:: python
    :linenos:
-   :include: codigo/4/gaso1.py
+   :include: codigo/4/jack1.py
 
-Esas cadenas debajo de cada ``def`` se llaman docstrings y *siempre*
-hay que usarlas. ¿Por qué?
+Esa cadena debajo del ``def`` se llama docstring y *siempre*
+hay que usarla. ¿Por qué?
 
 * Es el lugar "oficial" para explicar qué hace cada función
 
@@ -98,16 +97,16 @@ hay que usarlas. ¿Por qué?
 
   .. code-block:: pycon
 
-    >>> import gaso1
-    >>> help(gaso1.gas)
+      >>> import jack1
+      >>> help(jack1.selecciona_lineas)
 
-  Help on function gas in module gaso1:
+      Help on function selecciona_lineas in module jack1:
 
-  gas(letra)
-      Dada una letra X devuelve XgasX excepto si X es una vocal
-      acentuada, en cuyo caso devuelve la primera X sin acento.
+      selecciona_lineas(lineas, desde=0, hasta=-1)
+          Filtra el texto dejando sólo las lineas [desde:hasta].
 
-      El uso de normalize lo saqué de google.
+          A diferencia de los iterables en python, no soporta índices
+          negativos.
 
 * Usando una herramienta como `epydoc <http://epydoc.sourceforge.net/>`_
   se pueden usar para generar una guía de referencia de tu módulo
@@ -141,11 +140,9 @@ a esperar a que la función sea "interesante", ya va a ser muy tarde.
 Vas a tener un déficit de tests, vas a tener que ponerte un día sólo
 a escribir tests, y vas a decir que testear es aburrido.
 
-¿Cómo sé yo que esa regexp en ``gaso1.py`` hace lo que yo quiero?
-¡Porque la probé! Como no soy el mago de las expresiones regulares
-que las saca de la galera y le andan a la primera, hice esto en el
-intérprete interactivo (reemplacé la funcion ``gas`` con una versión
-boba):
+¿Cómo sé yo que ``selecciona_lineas`` hace lo que yo quiero?
+¡Porque la probé! Como no soy el mago del código que lo escribe y las expresiones regulares
+le anda a la primera, hice esto en el intérprete interactivo:
 
 .. code-block:: pycon
 
@@ -161,15 +158,13 @@ hice esto:
 
 .. code-block:: pycon
 
-    >>> import unicodedata
-    >>> def gas(letra):
-    ...     return u'%sgas%s'%(unicodedata.normalize('NFKD',
-    ...         letra).encode('ASCII', 'ignore'), letra)
-    >>> print gas(u'á')
-    agasá
-    >>> print gas(u'a')
-    agasa
+    >>> from jack1 import selecciona_lineas
+    >>> print range(10)[5:10]
+    [5, 6, 7, 8, 9]
+    >>> print list(selecciona_lineas(range(10), 5, 10))
+    [5, 6, 7, 8, 9]
 
+Y dije, sí, ok, eso es coherente.
 
 Si no hubiera hecho ese test manual no tendría la más mínima
 confianza en este código, y creo que casi todos hacemos esta clase
@@ -186,13 +181,13 @@ informales que mostré arriba. Veamos la versión con doctests:
 
 .. class:: titulo-listado
 
-gaso2.py
+jack2.py
 
 .. class:: listado
 
 .. code-block:: python
    :linenos:
-   :include: codigo/4/gaso2.py
+   :include: codigo/4/jack2.py
 
 Eso es todo lo que se necesita para implementar doctests. ¡En serio!.
 ¿Y cómo hago para saber si los tests pasan o fallan? Hay muchas
