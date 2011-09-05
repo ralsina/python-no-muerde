@@ -35,3 +35,21 @@ def selecciona_columnas(lineas, desde=None, hasta=None):
 
     for l in lineas:
         yield(l[desde:hasta])
+
+
+def selecciona_fragmento(lineas, fila1, fila2, col1, col2):
+    """Filtra el texto dejando solo lo seleccionado.
+
+    La selección es un "rectángulo" marcado por las filas
+    y columnas especificadas.
+
+    >>> datos = ("ornitorrinco",) * 10
+    >>> list(selecciona_fragmento(datos, 0, 5, 5, 10))
+    ['orrin', 'orrin', 'orrin', 'orrin', 'orrin']
+    >>> list(selecciona_fragmento(datos, 0, 5, 0, None))
+    ['ornitorrinco', 'ornitorrinco', 'ornitorrinco', 'ornitorrinco', 'ornitorrinco']
+    """
+
+    lineas = selecciona_lineas(lineas, fila1, fila2)
+    resultado = selecciona_columnas(lineas, col1, col2)
+    return resultado

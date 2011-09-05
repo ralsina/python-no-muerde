@@ -166,7 +166,11 @@ Por suerte *no tiene que ser así*, gracias a los doctests.
 
 De hecho, el doctest es poco más que cortar y pegar esos tests
 informales que mostré arriba. Veamos una versión con algunos
-doctests:
+doctests, y más funciones.
+
+.. raw:: pdf
+
+   PageBreak
 
 .. class:: titulo-listado
 
@@ -177,7 +181,6 @@ jack2.py
 .. code-block:: python
    :linenos:
    :include: codigo/4/jack2.py
-   :end-at: yield(l)
 
 Eso es todo lo que se necesita para implementar doctests. ¡En serio!.
 ¿Y cómo hago para saber si los tests pasan o fallan? Hay muchas
@@ -188,10 +191,12 @@ fácil.
 ::
 
     $ nosetests --with-doctest -v jack2.py
+    Doctest: jack2.selecciona_columnas ... ok
+    Doctest: jack2.selecciona_fragmento ... ok
     Doctest: jack2.selecciona_lineas ... ok
 
     ----------------------------------------------------------------------
-    Ran 1 test in 0.019s
+    Ran 3 tests in 0.051s
 
     OK
 
@@ -207,31 +212,17 @@ correr los tests. Si falla alguno que antes andaba, es una regresión,
 paramos de romper y la arreglamos. Si pasa alguno que antes fallaba,
 es un avance, nos felicitamos y nos damos un caramelo.
 
-Dentro del limitado alcance de nuestro programa actual, lo que hace,
-lo hace bien. Obviamente hay muchas cosas que no hace, por ejemplo
-cortar por columnas. Agreguemos una función selecciona_columnas:
-
-.. class:: titulo-listado
-
-jack2.py
-
-.. class:: listado
-
-.. code-block:: python
-   :linenos:
-   :include: codigo/4/jack2.py
-   :start-at: def selecciona_columnas
-
-¿Qué hacemos entonces? ¡Agregamos un test que falla! Bienvenido al
+Pero supongamos que lo que queremos es un nuevo feature. ¿Qué hacemos
+entonces? ¡Agregamos un test que falla! Bienvenido al
 mundo del TDD o "Desarrollo impulsado por tests" (Test Driven
 Development). La idea es que, en general, si sabemos que hay un
-bug, seguimos este proceso:
+bug, o falta un feature, seguimos este proceso:
 
 * Creamos un test que falla.
 * Arreglamos el código para que no falle el test.
 * Verificamos que no rompimos otra cosa usando el test suite.
 
-Un test que falla es **bueno** porque nos marca qué hay que corregir.
+Un test que falla es **bueno** porque nos marca que cosas hay que corregir.
 Si los tests son piolas, y cada uno prueba una sola cosa [#]_ ,
 entonces hasta nos va a indicar qué parte del código es la que está
 rota.
