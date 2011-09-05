@@ -1,7 +1,7 @@
 Documentación y Testing
 -----------------------
 
-    "Si no está en el manual está equivocado. Si está en el manual
+    "Si lo que dice ahí no está en el manual está equivocado. Si está en el manual
     es redundante."
 
     -- Califa Omar, Alejandría, Año 634.
